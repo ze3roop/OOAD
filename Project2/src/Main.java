@@ -5,9 +5,12 @@ public class Main {
 
 		
 		//instantiate FNCD object/class. 
-		for(int i = 0; i < 30; i++) {
-			//run all FNCD methods in order. 
-		}
+//		for(int i = 0; i < 30; i++) {
+//			//run all FNCD methods in order. 
+//		}
+		
+		FNCD f = new FNCD(1);
+		f.Selling();
 	}
 
 } 

@@ -4,6 +4,7 @@ public class Staff {
 	public String name;
 	public Double salary;
 	public Integer JobsDone;
+	public Double dailySalary;
 	
 	// the Staff constructor
 	public Staff()
@@ -16,11 +17,11 @@ public class Staff {
 		return null;
 	}
 	
-	public void SetDailySalary(Double s) {
-		salary = s;
+	public void SetDailySalary() {
+		salary = salary + dailySalary;
 	}
 	
-	public Double getDailySalary()
+	public Double GetDailySalary()
 	{
 		return salary;
 	}
@@ -48,7 +49,7 @@ class Salespeople extends Staff
 
 	public Salespeople() {
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
-		salary = (double) 1; // whatever the base salary for SalesPeople is 
+		dailySalary = (double) 1; // whatever the base salary for SalesPeople is 
 	}
 	
 }
@@ -60,7 +61,7 @@ class Mechanics extends Staff
 
 	public Mechanics() {
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
-		salary = (double) 1; // whatever the base salary for Mechanics is 
+		dailySalary = (double) 1; // whatever the base salary for Mechanics is 
 		JobsDone = 0; // start with 0 jobsdone
 	}
 	public Integer GetJobsDone() {
@@ -79,7 +80,7 @@ class Interns extends Staff
 
 	public Interns() {
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
-		salary = (double) 1; // whatever the base salary for Interns is 
+		dailySalary = (double) 1; // whatever the base salary for Interns is 
 		JobsDone = 0; // start with 0 jobsdone
 	}
 	public Integer GetJobsDone() {

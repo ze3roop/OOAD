@@ -8,18 +8,31 @@ public class Buyer {
 	
 	public String[] chanceOfBuying = {"Just Looking", "Wants One", "Needs One"};
 	public String[] vehicleTypes = {"Performance Car", "Car", "Pickup"};
-	public String chance;
+	public String chanceStr;
+	public Double chance;
 	public String preference; 
 	
 	public Buyer()
 	{
 		int randomInt1 = ThreadLocalRandom.current().nextInt(0,3);
-		chance = chanceOfBuying[randomInt1];//randomly determined to be just looking, wants one, or needs one
+		chanceStr = chanceOfBuying[randomInt1];//randomly determined to be just looking, wants one, or needs one
+		if(chanceStr == "Just Looking") {
+			chance = 10.0;
+		}
+		else if (chanceStr == "Wants One") {
+			chance = 40.0;
+		}
+		else if (chanceStr == "Needs One") {
+			chance = 70.0;
+		}
 		int randomInt2 = ThreadLocalRandom.current().nextInt(0,3);
 		preference = vehicleTypes[randomInt2];//randomly determined to be performance car, car, pickup
 	}
 	
 	public String GetPreference() {
 		return preference; 
+	}
+	public Double GetChance() {
+		return chance; 
 	}
 }
