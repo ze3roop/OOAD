@@ -62,7 +62,8 @@ class Salespeople extends Staff
 	
 	public Salespeople(String name) {
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
-		dailySalary = (double) 1; // whatever the base salary for SalesPeople is 
+		dailySalary = (double) 500; // whatever the base salary for SalesPeople is 
+		totalSalary = 0.0;
 		CreateName(name); 
 		bonus_ = 0.0;
 	}

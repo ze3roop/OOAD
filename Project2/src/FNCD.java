@@ -190,7 +190,7 @@ public class FNCD {
 					var d = Math.random() * 100;
 					if (d <= 10) { //check this one first, since it is included in 80% chance. Whereas if I called 80% chance first and it was 10% it wouldn't be called. 
 						// 10% chance
-						dirtyVehicles.get(0).SetCondition("sparkling");
+						dirtyVehicles.get(0).SetCleanliness("sparkling");
 						interns.get(i).Bonus(dirtyVehicles.get(0).GetVehicleType());      //IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
 						sparklingVehicles.add(dirtyVehicles.get(0));
 						dirtyVehicles.remove(0);
@@ -213,13 +213,13 @@ public class FNCD {
 					var d = Math.random() * 100;
 					if(d <= 5) {
 						//5% chance of becoming dirty?
-						cleanVehicles.get(0).SetCondition("dirty");
+						cleanVehicles.get(0).SetCleanliness("dirty");
 						dirtyVehicles.add(cleanVehicles.get(0));
 						cleanVehicles.remove(0);
 					}
 					else if (d <= 30) {
 						//30% chance of making the car sparkling.
-						cleanVehicles.get(0).SetCondition("sparkling");
+						cleanVehicles.get(0).SetCleanliness("sparkling");
 						interns.get(i).Bonus(cleanVehicles.get(0).GetVehicleType());//IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
 						sparklingVehicles.add(cleanVehicles.get(0));
 						cleanVehicles.remove(0);
@@ -341,7 +341,7 @@ public class FNCD {
 						
 						//add fixed vehicle to the usedList, and remove it from the brokenList. 
 						usedVehicles.add(brokenVehicles.get(0));
-						brokenVehicles.remove(0); 
+						brokenVehicles.remove(0);
 					}
 					else {
 						if(brokenVehicles.get(0).GetCleanliness() == "sparkling"){
@@ -458,33 +458,34 @@ public class FNCD {
 		
 		
 		/*=== INSTANTIATE AN ALL VEHICLES ARRAY LIST, EXCLUDING BROKEN VEHICLES ===*/
-		ArrayList<PerformanceCars> drivablePerfCars	= performanceCars;
-		ArrayList<Cars> drivableCars = cars;
-		ArrayList<Pickups> drivablePickups = pickups; 
-		
-		
+		ArrayList<PerformanceCars> brokenPerf = new ArrayList<PerformanceCars>();
+		ArrayList<Cars> brokenCar = new ArrayList<Cars>();
+		ArrayList<Pickups> brokenPickup = new ArrayList<Pickups>();
 		
 		for ( int i = 0; i < performanceCars.size(); i++) {
-			if(drivablePerfCars.get(i).GetCondition() == "Broken")
+			if(performanceCars.get(i).GetCondition() == "Broken")
 			{
-				drivablePerfCars.remove(i);
+				brokenPerf.add(performanceCars.get(i));
+				performanceCars.remove(i);
 			}
 		}
 		for ( int i = 0; i < cars.size(); i++) {
-			if(drivableCars.get(i).GetCondition() == "Broken")
+			if(cars.get(i).GetCondition() == "Broken")
 			{
-				drivableCars.remove(i);
+				brokenCar.add(cars.get(i));
+				cars.remove(i);
 			}
 		}
 		for ( int i = 0; i < pickups.size(); i++) {
-			if(drivablePickups.get(i).GetCondition() == "Broken")
+			if(pickups.get(i).GetCondition() == "Broken")
 			{
-				drivablePickups.remove(i);
+				brokenPickup.add(pickups.get(i));
+				pickups.remove(i);
 			}
 		}
-		Collections.sort(drivablePerfCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
-		Collections.sort(drivableCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
-		Collections.sort(drivablePickups, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+		Collections.sort(performanceCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+		Collections.sort(cars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+		Collections.sort(pickups, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 		
 		
 		
@@ -501,38 +502,37 @@ public class FNCD {
 			salesPeople.get(randomNum2); // get a random salesPerson. 
 			
 			if(buyers.get(i).GetPreference() == "Performance Car") {
-				if(drivablePerfCars.size() >= 1) {
+				if(performanceCars.size() >= 1) {
 					//sell the one in the first spot, since that is the highest priced one.	
 					//BUT FIRST CHECK IF WE CAN INCREASE SALESCHANCE 
 					//WE COULD UPDATE SALESCHANCE IN THE SUB CLASS, BUT WE WOULD HAVE TO UPDATE EACH ITERATION IN REPAIRING AND CLEANING. OR WE CAN JUST CHECK HERE
 					
 					chance = buyers.get(i).GetChance();
 					
-					if(drivablePerfCars.get(0).GetCleanliness() == "sparkling") {
+					if(performanceCars.get(0).GetCleanliness() == "sparkling") {
 						//chance of sales up 10%.
 						chance = chance + 10.0;
 					}
-					if(drivablePerfCars.get(0).GetCondition() == "Like New") {
+					if(performanceCars.get(0).GetCondition() == "Like New") {
 						//chance of sales up 10%.
 						chance = chance + 10.0;
 					}
 					//NOW SELL VEHICLE WITH UPDATED CHANCE. 
 					var d = Math.random() * 100;
 					if (d <= chance) {
-						totalSalesPerDay = totalSalesPerDay + drivablePerfCars.get(0).GetSalesPrice();
-						salesPeople.get(randomNum2).Bonus(drivablePerfCars.get(0).GetVehicleType());
-						budget_ = budget_ + drivablePerfCars.get(0).GetSalesPrice();
-						soldVehicles.add( drivablePerfCars.get(0) );
-						Collections.sort(performanceCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+						totalSalesPerDay = totalSalesPerDay + performanceCars.get(0).GetSalesPrice();
+						salesPeople.get(randomNum2).Bonus(performanceCars.get(0).GetVehicleType());
+						budget_ = budget_ + performanceCars.get(0).GetSalesPrice();
+						soldVehicles.add( performanceCars.get(0) );
+						//Collections.sort(performanceCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 						performanceCars.remove(0); 
-						drivablePerfCars.remove(0);
 					}
 				}
 				else {
 					//WE DON'T HAVE ANY PERFORMANCE CARS, SO 
 					ArrayList<Vehicles> drivableVehicles = new ArrayList<Vehicles>();
-					drivableVehicles.addAll(drivableCars);
-					drivableVehicles.addAll(drivablePickups);
+					drivableVehicles.addAll(cars);
+					drivableVehicles.addAll(pickups);
 					Collections.sort(drivableVehicles, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 					//NOW SELL FIRST ELEMENT OF DRIVABLE VEHICLES. 
 					
@@ -570,38 +570,37 @@ public class FNCD {
 				}
 			}
 			else if(buyers.get(i).GetPreference() == "Car") {
-				if(drivablePerfCars.size() >= 1) {
+				if(cars.size() >= 1) {
 					//sell the one in the first spot, since that is the highest priced one.	
 					//BUT FIRST CHECK IF WE CAN INCREASE SALESCHANCE 
 					//WE COULD UPDATE SALESCHANCE IN THE SUB CLASS, BUT WE WOULD HAVE TO UPDATE EACH ITERATION IN REPAIRING AND CLEANING. OR WE CAN JUST CHECK HERE
 					
 					chance = buyers.get(i).GetChance();
 					
-					if(drivableCars.get(0).GetCleanliness() == "sparkling") {
+					if(cars.get(0).GetCleanliness() == "sparkling") {
 						//chance of sales up 10%.
 						chance = chance + 10.0;
 					}
-					if(drivableCars.get(0).GetCondition() == "Like New") {
+					if(cars.get(0).GetCondition() == "Like New") {
 						//chance of sales up 10%.
 						chance = chance + 10.0;
 					}
 					//NOW SELL VEHICLE WITH UPDATED CHANCE. 
 					var d = Math.random() * 100;
 					if (d <= chance) {
-						totalSalesPerDay = totalSalesPerDay + drivableCars.get(0).GetSalesPrice();
-						salesPeople.get(randomNum2).Bonus(drivableCars.get(0).GetVehicleType());
-						budget_ = budget_ + drivableCars.get(0).GetSalesPrice();
-						soldVehicles.add( drivableCars.get(0) );
+						totalSalesPerDay = totalSalesPerDay + cars.get(0).GetSalesPrice();
+						salesPeople.get(randomNum2).Bonus(cars.get(0).GetVehicleType());
+						budget_ = budget_ + cars.get(0).GetSalesPrice();
+						soldVehicles.add( cars.get(0) );
 						Collections.sort(cars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 						cars.remove(0); 
-						drivableCars.remove(0);
 					}
 				}
 				else {		
 					//WE DON'T HAVE ANY DRIVABLE CARS, SO SELL ONE OF THE PERFORMANCE CARS OR THE PICKUP, WHICH EVER IS THE HIGHEST PRICE. 
 					ArrayList<Vehicles> drivableVehicles = new ArrayList<Vehicles>();
-					drivableVehicles.addAll(drivablePerfCars);
-					drivableVehicles.addAll(drivablePickups);
+					drivableVehicles.addAll(performanceCars);
+					drivableVehicles.addAll(pickups);
 					Collections.sort(drivableVehicles, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 					//NOW SELL FIRST ELEMENT OF DRIVABLE VEHICLES. 
 					
@@ -640,38 +639,37 @@ public class FNCD {
 			}
 			else if(buyers.get(i).GetPreference() == "Pickup") {
 				
-				if(drivablePickups.size() >= 1) {
+				if(pickups.size() >= 1) {
 					//sell the one in the first spot, since that is the highest priced one.	
 					//BUT FIRST CHECK IF WE CAN INCREASE SALESCHANCE 
 					//WE COULD UPDATE SALESCHANCE IN THE SUB CLASS, BUT WE WOULD HAVE TO UPDATE EACH ITERATION IN REPAIRING AND CLEANING. OR WE CAN JUST CHECK HERE
 					
 					chance = buyers.get(i).GetChance();
 					
-					if(drivablePickups.get(0).GetCleanliness() == "sparkling") {
+					if(pickups.get(0).GetCleanliness() == "sparkling") {
 						//chance of sales up 10%.
 						chance = chance + 10.0;
 					}
-					if(drivablePickups.get(0).GetCondition() == "Like New") {
+					if(pickups.get(0).GetCondition() == "Like New") {
 						//chance of sales up 10%.
 						chance = chance + 10.0;
 					}
 					//NOW SELL VEHICLE WITH UPDATED CHANCE. 
 					var d = Math.random() * 100;
 					if (d <= chance) {
-						totalSalesPerDay = totalSalesPerDay + drivablePickups.get(0).GetSalesPrice();
-						salesPeople.get(randomNum2).Bonus(drivablePickups.get(0).GetVehicleType());
-						budget_ = budget_ + drivablePickups.get(0).GetSalesPrice();
-						soldVehicles.add( drivablePickups.get(0) );
+						totalSalesPerDay = totalSalesPerDay + pickups.get(0).GetSalesPrice();
+						salesPeople.get(randomNum2).Bonus(pickups.get(0).GetVehicleType());
+						budget_ = budget_ + pickups.get(0).GetSalesPrice();
+						soldVehicles.add( pickups.get(0) );
 						Collections.sort(pickups, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 						pickups.remove(0); 
-						drivablePickups.remove(0);
 					}
 				}
 				else {		
 					//WE DON'T HAVE ANY DRIVABLE CARS, SO SELL ONE OF THE PERFORMANCE CARS OR THE PICKUP, WHICH EVER IS THE HIGHEST PRICE. 
 					ArrayList<Vehicles> drivableVehicles = new ArrayList<Vehicles>();
-					drivableVehicles.addAll(drivablePerfCars);
-					drivableVehicles.addAll(drivableCars);
+					drivableVehicles.addAll(performanceCars);
+					drivableVehicles.addAll(cars);
 					Collections.sort(drivableVehicles, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 					//NOW SELL FIRST ELEMENT OF DRIVABLE VEHICLES. 
 					
@@ -698,12 +696,10 @@ public class FNCD {
 						if(drivableVehicles.get(0).GetVehicleType() == "Performance Car") {
 							Collections.sort(performanceCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 							performanceCars.remove(0); 
-							drivableVehicles.remove(0);
 						}
 						else if(drivableVehicles.get(0).GetVehicleType() == "Car") {
 							Collections.sort(cars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 							cars.remove(0); 
-							drivableVehicles.remove(0);
 						}				
 					}
 				}
@@ -711,6 +707,11 @@ public class FNCD {
 				
 			}
 		}
+		
+		performanceCars.addAll( brokenPerf );
+		cars.addAll(brokenCar);
+		pickups.addAll(brokenPickup);
+		
 		Ending();
 		
 	}
@@ -794,25 +795,25 @@ public class FNCD {
 		/* ============== REST OF THE REPORT ============ */
 			//Inventory - List of all Vehicles with Name, Cost, Sale Price, Condition, Cleanliness, Sold or In Stock
 			//Total $ in operating budget, total sales $ for the day.
-		System.out.printf("%-20s%-20s%-20s%-20s%-20s%-20s\n", "Name",
+		System.out.printf("%-40s%-20s%-20s%-20s%-20s%-20s\n", "Name",
 				"Cost", "Sale Price", "Condition", "Cleanliness", "Sold or In Stock");
 		for(int i = 0; i < performanceCars.size(); i++) {
-			System.out.printf("%-20s%-20f%-20f%-20s%-20s%-20s\n", performanceCars.get(i).GetName(), 
+			System.out.printf("%-40s%-20f%-20f%-20s%-20s%-20s\n", performanceCars.get(i).GetName(), 
 					performanceCars.get(i).GetCost(), performanceCars.get(i).GetSalesPrice(),
 					performanceCars.get(i).GetCondition(), performanceCars.get(i).GetCleanliness(), "In Stock");
 		}
 		for(int i = 0; i < cars.size(); i++) {
-			System.out.printf("%-20s%-20f%-20f%-20s%-20s%-20s\n", cars.get(i).GetName(), 
+			System.out.printf("%-40s%-20f%-20f%-20s%-20s%-20s\n", cars.get(i).GetName(), 
 					cars.get(i).GetCost(), cars.get(i).GetSalesPrice(),
 					cars.get(i).GetCondition(), cars.get(i).GetCleanliness(), "In Stock");
 		}
 		for(int i = 0; i < pickups.size(); i++) {
-			System.out.printf("%-20s%-20f%-20f%-20s%-20s%-20s\n", pickups.get(i).GetName(), 
+			System.out.printf("%-40s%-20f%-20f%-20s%-20s%-20s\n", pickups.get(i).GetName(), 
 					pickups.get(i).GetCost(), pickups.get(i).GetSalesPrice(),
 					pickups.get(i).GetCondition(), pickups.get(i).GetCleanliness(), "In Stock");
 		}
 		for(int i = 0; i < soldVehicles.size(); i++) {
-			System.out.printf("%-20s%-20f%-20f%-20s%-20s%-20s\n", soldVehicles.get(i).GetName(), 
+			System.out.printf("%-40s%-20f%-20f%-20s%-20s%-20s\n", soldVehicles.get(i).GetName(), 
 					soldVehicles.get(i).GetCost(), soldVehicles.get(i).GetSalesPrice(),
 					soldVehicles.get(i).GetCondition(), soldVehicles.get(i).GetCleanliness(), "Sold");
 		}

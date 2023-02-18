@@ -46,7 +46,7 @@ public class Vehicles {
 
 	public String CreateName() {
 		int randInt = ThreadLocalRandom.current().nextInt(0,1000);
-		return vehicleType + ": " + randInt; //unique name algorithm goes here..
+		return vehicleType + "_" + randInt; //unique name algorithm goes here..
 	}
 	public String GetName() {
 		return name;
@@ -98,7 +98,6 @@ class PerformanceCars extends Vehicles {
 		DetermineCost();
 		salesPrice = cost * 2.0;
 	}
-	
 }
 
 /* =============================================== CARS ============================================== */
