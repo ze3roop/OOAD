@@ -14,31 +14,58 @@ public class FNCD {
 	public Integer carAmount = 4;
 	public Double budget_; //this is going to be private. 
 	public ArrayList<Vehicles> soldVehicles = new ArrayList<Vehicles>();
+	public ArrayList<Staff> departedStaff = new ArrayList<Staff>();
 	
 	public String[] daysOfTheWeek_ = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 	public int totalDayCount_;
 	public int dayCount_; 
 	public String day_; 
 	public int daysToSimulate_;
+	public Double totalSalesPerDay;
 	
 	public FNCD(int daysToSimulate)
 	{
 		budget_ = (double) 500000; //INITIAL OPERATING BUDGET 
 		totalDayCount_ = 0;
 		dayCount_ = 1; 
+		totalSalesPerDay = 0.0;
 		day_ = "Monday"; // gonna use something like, day = daysOfTheWeek[dayCount]. When dayCount gets to 6, we will make it equal to 0. But 
 		//We will keep increasing totalDayCount without taking anything away, for the sake of a simulation duration tracker. 
 		//Also when calling this FNCD object, we could instantiate with an argument for the amount of days it should run. Then, on open, 
 		//we check if totalDayCount is equal to the argument. We can also call the next function in the class. so Opening() will call Cleaning() next,
 		//and so on and so forth.
 		daysToSimulate_ = daysToSimulate;
+		
+		//initialize staff and vehicles
+		for (int a = 0; a<staffPerType; a++) {
+			interns.add( new Interns() );
+		}
+		for (int b = 0; b<staffPerType; b++) {
+			mechanics.add( new Mechanics() );
+		}
+		for (int c = 0; c<staffPerType; c++) {
+			salesPeople.add( new Salespeople() );
+		}
+
+		for (int a = 0; a < carAmount; a++) {
+			performanceCars.add(new PerformanceCars() );
+		}
+		for (int a = 0; a < carAmount; a++) {
+			cars.add( new Cars() );
+		}
+		for (int a = 0; a < carAmount; a++) {
+			pickups.add(new Pickups() );
+		}
 	}
 	
-	public Double GetBudget() {
-		return budget_;
-	}
-	public void SetBudget( Double amount ) {
-		budget_ = budget_ - amount;
+	public void Start() {
+		for (int i = 0; i < daysToSimulate_; i++) {
+			Opening();
+			Washing();
+			Repairing();
+			Selling();
+			Ending();
+		}
 	}
 	
 	public void Opening() {
@@ -47,10 +74,7 @@ public class FNCD {
 		
 		
 		
-		
-		
-		
-		
+
 		
 		//NOTE: EVERY TIME MONEY IS TAKEN OUT OF THE BUDGET, CHECK IF BUDGET IS <= IF IT IS THEN ADD $250,000 TO THE OPERATING BUDGET, AND ANNOUNCE IT.
 		
@@ -64,7 +88,7 @@ public class FNCD {
 		
 		
 		//There should be four of each type of Vehicle in inventory. If there are not for any reason, additional vehicles will be sent to the FNCD.
-		//These newly instantiated vehciles must be paid for, reducing the operating  budget by the cost of the Vehicle. The Vehicles will then be
+		//These newly instantiated vehicles must be paid for, reducing the operating  budget by the cost of the Vehicle. The Vehicles will then be
 		//part of the FNCD inventory.
 		
 		if(performanceCars.size() < carAmount) {
@@ -400,6 +424,7 @@ public class FNCD {
 					//NOW SELL VEHICLE WITH UPDATED CHANCE. 
 					var d = Math.random() * 100;
 					if (d <= chance) {
+						totalSalesPerDay = totalSalesPerDay + drivablePerfCars.get(0).GetSalesPrice();
 						salesPeople.get(randomNum2).Bonus(drivablePerfCars.get(0).GetVehicleType());
 						budget_ = budget_ + drivablePerfCars.get(0).GetSalesPrice();
 						soldVehicles.add( drivablePerfCars.get(0) );
@@ -432,6 +457,7 @@ public class FNCD {
 					//NOW SELL VEHICLE, BUT DECREASES SALES CHANCE BY 20%.
 					var d = Math.random() * 100;
 					if (d <= chance - 20.0) {
+						totalSalesPerDay = totalSalesPerDay + drivableVehicles.get(0).GetSalesPrice();
 						salesPeople.get(randomNum2).Bonus(drivableVehicles.get(0).GetVehicleType());
 						budget_ = budget_ + drivableVehicles.get(0).GetSalesPrice();
 						soldVehicles.add( drivableVehicles.get(0) );
@@ -467,6 +493,7 @@ public class FNCD {
 					//NOW SELL VEHICLE WITH UPDATED CHANCE. 
 					var d = Math.random() * 100;
 					if (d <= chance) {
+						totalSalesPerDay = totalSalesPerDay + drivableCars.get(0).GetSalesPrice();
 						salesPeople.get(randomNum2).Bonus(drivableCars.get(0).GetVehicleType());
 						budget_ = budget_ + drivableCars.get(0).GetSalesPrice();
 						soldVehicles.add( drivableCars.get(0) );
@@ -499,6 +526,7 @@ public class FNCD {
 					//NOW SELL VEHICLE, BUT DECREASES SALES CHANCE BY 20%.
 					var d = Math.random() * 100;
 					if (d <= chance - 20.0) {
+						totalSalesPerDay = totalSalesPerDay + drivableVehicles.get(0).GetSalesPrice();
 						salesPeople.get(randomNum2).Bonus(drivableVehicles.get(0).GetVehicleType());
 						budget_ = budget_ + drivableVehicles.get(0).GetSalesPrice();
 						soldVehicles.add( drivableVehicles.get(0) );
@@ -535,6 +563,7 @@ public class FNCD {
 					//NOW SELL VEHICLE WITH UPDATED CHANCE. 
 					var d = Math.random() * 100;
 					if (d <= chance) {
+						totalSalesPerDay = totalSalesPerDay + drivablePickups.get(0).GetSalesPrice();
 						salesPeople.get(randomNum2).Bonus(drivablePickups.get(0).GetVehicleType());
 						budget_ = budget_ + drivablePickups.get(0).GetSalesPrice();
 						soldVehicles.add( drivablePickups.get(0) );
@@ -567,6 +596,7 @@ public class FNCD {
 					//NOW SELL VEHICLE, BUT DECREASES SALES CHANCE BY 20%.
 					var d = Math.random() * 100;
 					if (d <= chance - 20.0) {
+						totalSalesPerDay = totalSalesPerDay + drivableVehicles.get(0).GetSalesPrice();
 						salesPeople.get(randomNum2).Bonus(drivableVehicles.get(0).GetVehicleType());
 						budget_ = budget_ + drivableVehicles.get(0).GetSalesPrice();
 						soldVehicles.add( drivableVehicles.get(0) );
@@ -614,23 +644,87 @@ public class FNCD {
 			interns.get(i).SetDailySalary();
 		}
 		
-		var s = Math.random() * 100;
-		if (s <= 10) {
+		
+		System.out.println("============== QUIT: ==============");
+		int acc = 0;
+		var salespeopleChance = Math.random() * 100;
+		if (salespeopleChance <= 10) {
 			int randomNum = ThreadLocalRandom.current().nextInt(0, 5);
+			System.out.println("\t" + salesPeople.get(randomNum).GetName());
+			departedStaff.add(salesPeople.get(randomNum));
 			salesPeople.remove(randomNum);
-			salesPeople.add(randomNum, interns.get(1) ); // HOW DO I MAKE AN INTERN A SALES PERSON 
+			salesPeople.add( new Salespeople (interns.get(0).GetName() ) );
+			interns.remove(0);
 		}
-		var m = Math.random() * 100;
-		if (m <= 10) {
+		else { acc++; }
+		var mechanicChance = Math.random() * 100;
+		if (mechanicChance <= 10) {
 			int randomNum = ThreadLocalRandom.current().nextInt(0, 5);
+			System.out.println("\t" + mechanics.get(randomNum).GetName());
+			departedStaff.add(mechanics.get(randomNum));
 			mechanics.remove(randomNum);
+			mechanics.add( new Mechanics (interns.get(0).GetName() ) );
+			interns.remove(0);
 		}
-		var i = Math.random() * 100;
-		if (i <= 10) {
+		else { acc++; }
+		var internChance = Math.random() * 100;
+		if (internChance <= 10) {
 			int randomNum = ThreadLocalRandom.current().nextInt(0, 5);
+			System.out.println("\t" + interns.get(randomNum).GetName());
+			departedStaff.add(interns.get(randomNum));
 			interns.remove(randomNum);
 		}
+		else { acc++; }
+		if(acc == 3) {
+			System.out.println("NONE QUIT");
+		}
+		System.out.println("============== WORKING: ==============");
+		System.out.println("===== SALESPEOPLE: =====");
+		for (int i = 0; i < salesPeople.size(); i++) {
+			System.out.println("\t" + salesPeople.get(i).GetName());
+			System.out.println("\t \t Total Normal Pay: " + salesPeople.get(i).GetTotalSalary());
+			System.out.println("\t \t Total Bonus Pay: " + salesPeople.get(i).GetTotalBonusPay());
+		}
+		System.out.println("===== MECHANICS: =====");
+		for (int i = 0; i < mechanics.size(); i++) {
+			System.out.println("\t" + mechanics.get(i).GetName());
+			System.out.println("\t \t Pay: " + mechanics.get(i).GetTotalSalary());
+		}
+		System.out.println("===== INTERNS: =====");
+		for (int i = 0; i < interns.size(); i++) {
+			System.out.println("\t" + interns.get(i).GetName());
+		}
 		
+		/* ============== REST OF THE REPORT ============ */
+			//Inventory - List of all Vehicles with Name, Cost, Sale Price, Condition, Cleanliness, Sold or In Stock
+			//Total $ in operating budget, total sales $ for the day.
+		System.out.printf("%-20s%-20s%-20s%-20s%-20s%-20s\n", "Name",
+				"Cost", "Sale Price", "Condition", "Cleanliness", "Sold or In Stock");
+		for(int i = 0; i < performanceCars.size(); i++) {
+			System.out.printf("%-20s%-20f%-20f%-20s%-20s%-20s\n", performanceCars.get(i).GetName(), 
+					performanceCars.get(i).GetCost(), performanceCars.get(i).GetSalesPrice(),
+					performanceCars.get(i).GetCondition(), performanceCars.get(i).GetCleanliness(), "In Stock");
+		}
+		for(int i = 0; i < cars.size(); i++) {
+			System.out.printf("%-20s%-20f%-20f%-20s%-20s%-20s\n", cars.get(i).GetName(), 
+					cars.get(i).GetCost(), cars.get(i).GetSalesPrice(),
+					cars.get(i).GetCondition(), cars.get(i).GetCleanliness(), "In Stock");
+		}
+		for(int i = 0; i < pickups.size(); i++) {
+			System.out.printf("%-20s%-20f%-20f%-20s%-20s%-20s\n", pickups.get(i).GetName(), 
+					pickups.get(i).GetCost(), pickups.get(i).GetSalesPrice(),
+					pickups.get(i).GetCondition(), pickups.get(i).GetCleanliness(), "In Stock");
+		}
+		for(int i = 0; i < soldVehicles.size(); i++) {
+			System.out.printf("%-20s%-20f%-20f%-20s%-20s%-20s\n", soldVehicles.get(i).GetName(), 
+					soldVehicles.get(i).GetCost(), soldVehicles.get(i).GetSalesPrice(),
+					soldVehicles.get(i).GetCondition(), soldVehicles.get(i).GetCleanliness(), "Sold");
+		}
+		System.out.println("===== TOTAL MONEY IN BUDGET: " + budget_ + " =====");
+		System.out.println("===== SALES FOR THE DAY: " + totalSalesPerDay + " ====="); 
+		//have to create a variable that is set to 0 at the opening function, 
+		//but when we make a sale we add the salesprice to this and it accumulates 
+		//over the day for this print statement, then set back to 0 on opening function
 	}
 
 }	

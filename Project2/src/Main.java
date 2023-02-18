@@ -10,7 +10,7 @@ public class Main {
 //		}
 		
 		FNCD f = new FNCD(1);
-		f.Selling();
+		f.Start();
 	}
 
 } 

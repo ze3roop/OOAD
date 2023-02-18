@@ -2,42 +2,45 @@
 /* ============== STAFF SUPER CLASS ============= */
 public class Staff {
 	public String name;
-	public Double salary;
+	public Double totalSalary;
 	public Integer JobsDone;
 	public Double dailySalary;
+	public Double bonus_;
 	
 	// the Staff constructor
 	public Staff()
 	{
-		name = CreateName(); //random name generator 
-		// Should I even let salary be in the constructor. There should be a default salary amount for each type 
 	}
 	
-	public String CreateName() {
-		return null;
+	public void CreateName(String str) {
+		name = str;
 	}
 	
 	public void SetDailySalary() {
-		salary = salary + dailySalary;
+		totalSalary = totalSalary + dailySalary;
 	}
 	
-	public Double GetDailySalary()
+	public Double GetTotalSalary()
 	{
-		return salary;
+		return totalSalary;
+	}
+	public Double GetTotalBonusPay()
+	{
+		return bonus_;
 	}
 	
 	public void Bonus(String vehicleType) {
 		if(vehicleType == "Performance Car")
 		{
-			salary = salary + 5000;
+			bonus_ = bonus_ + 5000;
 		}
 		else if(vehicleType == "Car")
 		{
-			salary = salary + 2500; 
+			bonus_ = bonus_ + 2500; 
 		}
 		else if(vehicleType == "Pickup")
 		{
-			salary = salary + 2000; 
+			bonus_ = bonus_ + 2000; 
 		}
 	}
 }
@@ -50,8 +53,19 @@ class Salespeople extends Staff
 	public Salespeople() {
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
 		dailySalary = (double) 1; // whatever the base salary for SalesPeople is 
+		totalSalary = 0.0;
+		bonus_ = 0.0;
 	}
 	
+	public Salespeople(String name) {
+		super(); // invoking base-class Staff constructor. (This will call the createName() function
+		dailySalary = (double) 1; // whatever the base salary for SalesPeople is 
+		CreateName(name); 
+		bonus_ = 0.0;
+	}
+	public String GetName() {
+		return name;
+	}
 }
 
 
@@ -63,6 +77,16 @@ class Mechanics extends Staff
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
 		dailySalary = (double) 1; // whatever the base salary for Mechanics is 
 		JobsDone = 0; // start with 0 jobsdone
+		totalSalary = 0.0;
+		bonus_ = 0.0;
+	}
+	public Mechanics(String name) {
+		super(); // invoking base-class Staff constructor. (This will call the createName() function
+		dailySalary = (double) 1; // whatever the base salary for SalesPeople is 
+		JobsDone = 0;
+		CreateName(name); 
+		totalSalary = 0.0;
+		bonus_ = 0.0;
 	}
 	public Integer GetJobsDone() {
 		return JobsDone;
@@ -70,7 +94,9 @@ class Mechanics extends Staff
 	public void SetJobsDone() {
 		JobsDone = JobsDone + 1; 
 	}
-	
+	public String GetName() {
+		return name;
+	}
 }
 
 
@@ -82,12 +108,17 @@ class Interns extends Staff
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
 		dailySalary = (double) 1; // whatever the base salary for Interns is 
 		JobsDone = 0; // start with 0 jobsdone
+		totalSalary = 0.0;
+		bonus_ = 0.0;
 	}
 	public Integer GetJobsDone() {
 		return JobsDone;
 	}
 	public void SetJobsDone() {
 		JobsDone = JobsDone + 1; 
+	}
+	public String GetName() {
+		return name;
 	}
 	
 }
