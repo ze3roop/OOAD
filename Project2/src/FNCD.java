@@ -27,9 +27,9 @@ public class FNCD {
 	{
 		budget_ = (double) 500000; //INITIAL OPERATING BUDGET 
 		totalDayCount_ = 0;
-		dayCount_ = 1; 
+		dayCount_ = 0; 
 		totalSalesPerDay = 0.0;
-		day_ = "Monday"; // gonna use something like, day = daysOfTheWeek[dayCount]. When dayCount gets to 6, we will make it equal to 0. But 
+		day_ = "Sunday"; // gonna use something like, day = daysOfTheWeek[dayCount]. When dayCount gets to 6, we will make it equal to 0. But 
 		//We will keep increasing totalDayCount without taking anything away, for the sake of a simulation duration tracker. 
 		//Also when calling this FNCD object, we could instantiate with an argument for the amount of days it should run. Then, on open, 
 		//we check if totalDayCount is equal to the argument. We can also call the next function in the class. so Opening() will call Cleaning() next,
@@ -37,13 +37,13 @@ public class FNCD {
 		daysToSimulate_ = daysToSimulate;
 		
 		//initialize staff and vehicles
-		for (int a = 0; a<staffPerType; a++) {
+		for (int a = 0; a<staffPerType + 1; a++) {
 			interns.add( new Interns() );
 		}
-		for (int b = 0; b<staffPerType; b++) {
+		for (int b = 0; b<staffPerType + 1; b++) {
 			mechanics.add( new Mechanics() );
 		}
-		for (int c = 0; c<staffPerType; c++) {
+		for (int c = 0; c<staffPerType + 1; c++) {
 			salesPeople.add( new Salespeople() );
 		}
 
@@ -61,22 +61,31 @@ public class FNCD {
 	public void Start() {
 		for (int i = 0; i < daysToSimulate_; i++) {
 			Opening();
-			Washing();
-			Repairing();
-			Selling();
-			Ending();
 		}
 	}
 	
 	public void Opening() {
+		if(day_ == "Sunday") {
+			System.out.println("SUNDAY - CLOSED");
+			dayCount_++;
+			day_= daysOfTheWeek_[dayCount_];
+			totalDayCount_++;
+			return;
+		}
+		//THIS IS WHERE WE SHOULD CHECK WHAT DAY IT IS, AND ADD TO ALL OF THE ACCUMULATORS.
 		
-		//THIS IS WHERE WE SHOULD CHECK WHAT DAY IT IS, AND ADD TO ALL OF THE ACCUMULATORS. 
+		if(dayCount_ >= 6) {
+			dayCount_ = 0;
+		}
+		day_ = daysOfTheWeek_[dayCount_];
+		totalDayCount_++;
+		dayCount_++;
 		
 		
 		
 
 		
-		//NOTE: EVERY TIME MONEY IS TAKEN OUT OF THE BUDGET, CHECK IF BUDGET IS <= IF IT IS THEN ADD $250,000 TO THE OPERATING BUDGET, AND ANNOUNCE IT.
+		//NOTE: EVERY TIME MONEY IS TAKEN OUT OF THE BUDGET, CHECK IF BUDGET IS <= 0. IF IT IS THEN ADD $250,000 TO THE OPERATING BUDGET, AND ANNOUNCE IT.
 		
 		
 		//if interns are less than three interns, hire (e.g. add) new interns to the FNCD to bring the count back to three. 
@@ -113,6 +122,8 @@ public class FNCD {
 			}
 		}
 		
+		Washing(); 
+		
 	}
 	
 	public void Washing() {
@@ -121,13 +132,13 @@ public class FNCD {
 		//run a for loop through each type of car. 
 		//if a vehicle is dirty, add to dirty vehicles array 
 		for(int i = 0; i<carAmount; i++) {
-			if(performanceCars.get(i).GetCondition() == "dirty") {
+			if(performanceCars.get(i).GetCleanliness() == "dirty") {
 				dirtyVehicles.add( performanceCars.get(i) );
 			}
-			if(cars.get(i).GetCondition() == "dirty") {
+			if(cars.get(i).GetCleanliness() == "dirty") {
 				dirtyVehicles.add( cars.get(i) );
 			}
-			if(pickups.get(i).GetCondition() == "dirty") {
+			if(pickups.get(i).GetCleanliness() == "dirty") {
 				dirtyVehicles.add( pickups.get(i) );
 			}
 		}
@@ -141,13 +152,13 @@ public class FNCD {
 		//run a for loop through each type of car. 
 		//if a vehicle is dirty, add to dirty vehicles array 
 		for(int i = 0; i<carAmount; i++) {
-			if(performanceCars.get(i).GetCondition() == "clean") {
+			if(performanceCars.get(i).GetCleanliness() == "clean") {
 				cleanVehicles.add( performanceCars.get(i) );
 			}
-			if(cars.get(i).GetCondition() == "clean") {
+			if(cars.get(i).GetCleanliness() == "clean") {
 				cleanVehicles.add( cars.get(i) );
 			}
-			if(pickups.get(i).GetCondition() == "clean") {
+			if(pickups.get(i).GetCleanliness() == "clean") {
 				cleanVehicles.add( pickups.get(i) );
 			}
 		}
@@ -156,20 +167,20 @@ public class FNCD {
 		//run a for loop through each type of car. 
 		//if a vehicle is dirty, add to dirty vehicles array 
 		for(int i = 0; i<carAmount; i++) {
-			if(performanceCars.get(i).GetCondition() == "sparkling") {
+			if(performanceCars.get(i).GetCleanliness() == "sparkling") {
 				sparklingVehicles.add( performanceCars.get(i) );
 			}
-			if(cars.get(i).GetCondition() == "sparkling") {
+			if(cars.get(i).GetCleanliness() == "sparkling") {
 				sparklingVehicles.add( cars.get(i) );
 			}
-			if(pickups.get(i).GetCondition() == "sparkling") {
+			if(pickups.get(i).GetCleanliness() == "sparkling") {
 				sparklingVehicles.add( pickups.get(i) );
 			}
 		}
 		
 		for (int i = 0; i<staffPerType; i++) { //So, loop through every intern one at a time, if we have dirty vehicles, and the intern still has jobs to do, then iterate through the while loop.
 			//Once either the intern has done all available jobs for himself, then we go to the next intern. 
-			while(interns.get(i).GetJobsDone() > 0 || (dirtyVehicles.size() == 0 && cleanVehicles.size() == 0)) { //GROUP the logic that both dirtyVehicles and cleanVehicles lists need to be empty.
+			while(interns.get(i).GetJobsDone() < 2 || (dirtyVehicles.size() == 0 && cleanVehicles.size() == 0)) { //GROUP the logic that both dirtyVehicles and cleanVehicles lists need to be empty.
 				if (dirtyVehicles.size() > 0) 
 				{
 					//Clean car, make a call to an intern. 
@@ -179,16 +190,16 @@ public class FNCD {
 					var d = Math.random() * 100;
 					if (d <= 10) { //check this one first, since it is included in 80% chance. Whereas if I called 80% chance first and it was 10% it wouldn't be called. 
 						// 10% chance
-						dirtyVehicles.get(i).SetCondition("sparkling");
-						interns.get(i).Bonus(dirtyVehicles.get(i).GetVehicleType());      //IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
-						sparklingVehicles.add(dirtyVehicles.get(i));
-						dirtyVehicles.remove(i);
+						dirtyVehicles.get(0).SetCondition("sparkling");
+						interns.get(i).Bonus(dirtyVehicles.get(0).GetVehicleType());      //IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
+						sparklingVehicles.add(dirtyVehicles.get(0));
+						dirtyVehicles.remove(0);
 						
 					}
 					else if (d <= 80) {
 						// 80% chance
-						cleanVehicles.add(dirtyVehicles.get(i));
-						dirtyVehicles.remove(i);
+						cleanVehicles.add(dirtyVehicles.get(0));
+						dirtyVehicles.remove(0);
 					}
 					interns.get(i).SetJobsDone(); //regardless of whether or not they cleaned a car add one to the amount of jobs the intern has done. 
 					    
@@ -202,16 +213,16 @@ public class FNCD {
 					var d = Math.random() * 100;
 					if(d <= 5) {
 						//5% chance of becoming dirty?
-						cleanVehicles.get(i).SetCondition("dirty");
-						dirtyVehicles.add(cleanVehicles.get(i));
-						cleanVehicles.remove(i);
+						cleanVehicles.get(0).SetCondition("dirty");
+						dirtyVehicles.add(cleanVehicles.get(0));
+						cleanVehicles.remove(0);
 					}
 					else if (d <= 30) {
 						//30% chance of making the car sparkling.
-						cleanVehicles.get(i).SetCondition("sparkling");
-						interns.get(i).Bonus(dirtyVehicles.get(i).GetVehicleType());//IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
-						sparklingVehicles.add(dirtyVehicles.get(i));
-						cleanVehicles.remove(i);
+						cleanVehicles.get(0).SetCondition("sparkling");
+						interns.get(i).Bonus(cleanVehicles.get(0).GetVehicleType());//IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
+						sparklingVehicles.add(cleanVehicles.get(0));
+						cleanVehicles.remove(0);
 					}
 					//how to go about cleaning a car. 
 					interns.get(i).SetJobsDone(); //regardless of whether or not they cleaned a car add one to the amount of jobs the intern has done. 
@@ -219,6 +230,46 @@ public class FNCD {
 			}
 			
 		}
+		performanceCars.clear();
+		cars.clear();
+		pickups.clear();
+		
+		//drivableVehicles.addAll(drivablePerfCars);
+		for(int i = 0; i < dirtyVehicles.size(); i++) {
+			if(dirtyVehicles.get(i).GetVehicleType() == "Performance Car") {
+				performanceCars.add((PerformanceCars) dirtyVehicles.get(i));
+			}
+			else if(dirtyVehicles.get(i).GetVehicleType() == "Car") {
+				cars.add((Cars) dirtyVehicles.get(i));
+			}
+			else if(dirtyVehicles.get(i).GetVehicleType() == "Pickup") {
+				pickups.add((Pickups) dirtyVehicles.get(i));
+			}
+		}
+		for(int i = 0; i < cleanVehicles.size(); i++) {
+			if(cleanVehicles.get(i).GetVehicleType() == "Performance Car") {
+				performanceCars.add((PerformanceCars) cleanVehicles.get(i));
+			}
+			else if(cleanVehicles.get(i).GetVehicleType() == "Car") {
+				cars.add((Cars) cleanVehicles.get(i));
+			}
+			else if(cleanVehicles.get(i).GetVehicleType() == "Pickup") {
+				pickups.add((Pickups) cleanVehicles.get(i));
+			}
+		}
+		for(int i = 0; i < sparklingVehicles.size(); i++) {
+			if(sparklingVehicles.get(i).GetVehicleType() == "Performance Car") {
+				performanceCars.add((PerformanceCars) sparklingVehicles.get(i));
+			}
+			else if(sparklingVehicles.get(i).GetVehicleType() == "Car") {
+				cars.add((Cars) sparklingVehicles.get(i));
+			}
+			else if(sparklingVehicles.get(i).GetVehicleType() == "Pickup") {
+				pickups.add((Pickups) sparklingVehicles.get(i));
+			}
+		}
+		
+		Repairing();
 	}
 	
 	public void Repairing() {
@@ -248,7 +299,7 @@ public class FNCD {
 			if(performanceCars.get(i).GetCondition() == "Used") {
 				usedVehicles.add( performanceCars.get(i) );
 			}
-			if(cars.get(i).GetCondition() == "Used") {
+ 			if(cars.get(i).GetCondition() == "Used") {
 				usedVehicles.add( cars.get(i) );
 			}
 			if(pickups.get(i).GetCondition() == "Used") {
@@ -269,35 +320,35 @@ public class FNCD {
 			}
 		}
 		
-		for (int i = 0; i<staffPerType; i++) {  
-			while(mechanics.get(i).GetJobsDone() > 0 || (brokenVehicles.size() == 0 && usedVehicles.size() == 0)) {
+		for (int i = 0; i<=staffPerType; i++) {  
+			while(mechanics.get(i).GetJobsDone() < 2 || (brokenVehicles.size() == 0 && usedVehicles.size() == 0)) {
 				if (brokenVehicles.size() > 0) 
 				{
 					var d = Math.random() * 100;
 					if (d <= 80) {
 						//80% chance to fix a vehicle
 						//give mechanic a bonus for fixing a vehicle by vehicle type
-						mechanics.get(i).Bonus(brokenVehicles.get(i).GetVehicleType());
+						mechanics.get(i).Bonus(brokenVehicles.get(0).GetVehicleType());
 						//bring vehicle down a level of cleanliness
-						if(brokenVehicles.get(i).GetCleanliness() == "sparkling"){
-							brokenVehicles.get(i).SetCleanliness("clean");
+						if(brokenVehicles.get(0).GetCleanliness() == "sparkling"){
+							brokenVehicles.get(0).SetCleanliness("clean");
 						}
-						else if(brokenVehicles.get(i).GetCleanliness() == "clean"){
-							brokenVehicles.get(i).SetCleanliness("dirty");
+						else if(brokenVehicles.get(0).GetCleanliness() == "clean"){
+							brokenVehicles.get(0).SetCleanliness("dirty");
 						}
 						//A vehicle that becomes used has its sales price increased 50%. 
-						brokenVehicles.get(i).SetSalesPrice(.5);
+						brokenVehicles.get(0).SetSalesPrice(.5);
 						
 						//add fixed vehicle to the usedList, and remove it from the brokenList. 
-						usedVehicles.add(brokenVehicles.get(i));
-						brokenVehicles.remove(i); 
+						usedVehicles.add(brokenVehicles.get(0));
+						brokenVehicles.remove(0); 
 					}
 					else {
-						if(brokenVehicles.get(i).GetCleanliness() == "sparkling"){
-							brokenVehicles.get(i).SetCleanliness("clean");
+						if(brokenVehicles.get(0).GetCleanliness() == "sparkling"){
+							brokenVehicles.get(0).SetCleanliness("clean");
 						}
-						else if(brokenVehicles.get(i).GetCleanliness() == "clean"){
-							brokenVehicles.get(i).SetCleanliness("dirty");
+						else if(brokenVehicles.get(0).GetCleanliness() == "clean"){
+							brokenVehicles.get(0).SetCleanliness("dirty");
 						}
 					}
 					
@@ -310,27 +361,27 @@ public class FNCD {
 					if (d <= 80) {
 						//80% chance to fix a vehicle
 						//give mechanic a bonus for fixing a vehicle by vehicle type
-						mechanics.get(i).Bonus(usedVehicles.get(i).GetVehicleType());
+						mechanics.get(i).Bonus(usedVehicles.get(0).GetVehicleType());
 						//bring vehicle down a level of cleanliness
-						if(usedVehicles.get(i).GetCleanliness() == "sparkling"){
-							usedVehicles.get(i).SetCleanliness("clean");
+						if(usedVehicles.get(0).GetCleanliness() == "sparkling"){
+							usedVehicles.get(0).SetCleanliness("clean");
 						}
-						else if(usedVehicles.get(i).GetCleanliness() == "clean"){
-							usedVehicles.get(i).SetCleanliness("dirty");
+						else if(usedVehicles.get(0).GetCleanliness() == "clean"){
+							usedVehicles.get(0).SetCleanliness("dirty");
 						}
 						//A vehicle that becomes used has its sales price increased 25%. 
-						usedVehicles.get(i).SetSalesPrice(.25);
+						usedVehicles.get(0).SetSalesPrice(.25);
 						
-						//add fixed vehicle to the usedList, and remove it from the usedList. 
-						likeNewVehicles.add(usedVehicles.get(i));
-						usedVehicles.remove(i); 
+						//add fixed vehicle to the likeNewVehicles, and remove it from the usedList. 
+						likeNewVehicles.add(usedVehicles.get(0));
+						usedVehicles.remove(0); 
 					}
 					else {
-						if(usedVehicles.get(i).GetCleanliness() == "sparkling"){
-							usedVehicles.get(i).SetCleanliness("clean");
+						if(usedVehicles.get(0).GetCleanliness() == "sparkling"){
+							usedVehicles.get(0).SetCleanliness("clean");
 						}
-						else if(usedVehicles.get(i).GetCleanliness() == "clean"){
-							usedVehicles.get(i).SetCleanliness("dirty");
+						else if(usedVehicles.get(0).GetCleanliness() == "clean"){
+							usedVehicles.get(0).SetCleanliness("dirty");
 						}
 					}
 					
@@ -339,6 +390,47 @@ public class FNCD {
 			}
 			
 		}
+		
+		performanceCars.clear();
+		cars.clear();
+		pickups.clear();
+		
+		//drivableVehicles.addAll(drivablePerfCars);
+		for(int i = 0; i < brokenVehicles.size(); i++) {
+			if(brokenVehicles.get(i).GetVehicleType() == "Performance Car") {
+				performanceCars.add((PerformanceCars) brokenVehicles.get(i));
+			}
+			if(brokenVehicles.get(i).GetVehicleType() == "Car") {
+				cars.add((Cars) brokenVehicles.get(i));
+			}
+			if(brokenVehicles.get(i).GetVehicleType() == "Pickup") {
+				pickups.add((Pickups) brokenVehicles.get(i));
+			}
+		}
+		for(int a = 0; a < usedVehicles.size(); a++) {
+			if(usedVehicles.get(a).GetVehicleType() == "Performance Car") {
+				performanceCars.add((PerformanceCars) usedVehicles.get(a));
+			}
+			if(usedVehicles.get(a).GetVehicleType() == "Car") {
+				cars.add((Cars) usedVehicles.get(a));
+			}
+			if(usedVehicles.get(a).GetVehicleType() == "Pickup") {
+				pickups.add((Pickups) usedVehicles.get(a));
+			}
+		}
+		for(int b = 0; b < likeNewVehicles.size(); b++) {
+			if(likeNewVehicles.get(b).GetVehicleType() == "Performance Car") {
+				performanceCars.add((PerformanceCars) likeNewVehicles.get(b));
+			}
+			if(likeNewVehicles.get(b).GetVehicleType() == "Car") {
+				cars.add((Cars) likeNewVehicles.get(b));
+			}
+			if(likeNewVehicles.get(b).GetVehicleType() == "Pickup") {
+				pickups.add((Pickups) likeNewVehicles.get(b));
+			}
+		}
+		
+		Selling();
 	}
 	
 	public void Selling() {
@@ -390,6 +482,9 @@ public class FNCD {
 				drivablePickups.remove(i);
 			}
 		}
+		Collections.sort(drivablePerfCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+		Collections.sort(drivableCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+		Collections.sort(drivablePickups, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 		
 		
 		
@@ -402,11 +497,11 @@ public class FNCD {
 			Double chance; 
 			
 			//INSTANTIATE OUR SALESPERSON HERE AS WELL ( RANDOMLY )
-			int randomNum2 = ThreadLocalRandom.current().nextInt(0, 5); 
+			int randomNum2 = ThreadLocalRandom.current().nextInt(0, 4); 
 			salesPeople.get(randomNum2); // get a random salesPerson. 
 			
 			if(buyers.get(i).GetPreference() == "Performance Car") {
-				if(drivablePerfCars.size() > 1) {
+				if(drivablePerfCars.size() >= 1) {
 					//sell the one in the first spot, since that is the highest priced one.	
 					//BUT FIRST CHECK IF WE CAN INCREASE SALESCHANCE 
 					//WE COULD UPDATE SALESCHANCE IN THE SUB CLASS, BUT WE WOULD HAVE TO UPDATE EACH ITERATION IN REPAIRING AND CLEANING. OR WE CAN JUST CHECK HERE
@@ -475,7 +570,7 @@ public class FNCD {
 				}
 			}
 			else if(buyers.get(i).GetPreference() == "Car") {
-				if(drivablePerfCars.size() > 1) {
+				if(drivablePerfCars.size() >= 1) {
 					//sell the one in the first spot, since that is the highest priced one.	
 					//BUT FIRST CHECK IF WE CAN INCREASE SALESCHANCE 
 					//WE COULD UPDATE SALESCHANCE IN THE SUB CLASS, BUT WE WOULD HAVE TO UPDATE EACH ITERATION IN REPAIRING AND CLEANING. OR WE CAN JUST CHECK HERE
@@ -545,7 +640,7 @@ public class FNCD {
 			}
 			else if(buyers.get(i).GetPreference() == "Pickup") {
 				
-				if(drivablePickups.size() > 1) {
+				if(drivablePickups.size() >= 1) {
 					//sell the one in the first spot, since that is the highest priced one.	
 					//BUT FIRST CHECK IF WE CAN INCREASE SALESCHANCE 
 					//WE COULD UPDATE SALESCHANCE IN THE SUB CLASS, BUT WE WOULD HAVE TO UPDATE EACH ITERATION IN REPAIRING AND CLEANING. OR WE CAN JUST CHECK HERE
@@ -616,6 +711,7 @@ public class FNCD {
 				
 			}
 		}
+		Ending();
 		
 	}
 	

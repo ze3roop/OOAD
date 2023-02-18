@@ -9,7 +9,7 @@ public class Main {
 //			//run all FNCD methods in order. 
 //		}
 		
-		FNCD f = new FNCD(1);
+		FNCD f = new FNCD(30);
 		f.Start();
 	}
 

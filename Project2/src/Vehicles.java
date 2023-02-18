@@ -81,6 +81,9 @@ public class Vehicles {
 		return salesPrice;
 		
 	}
+	public Vehicles thisVehicle() {
+		return this;
+	}
 }
 
 

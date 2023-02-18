@@ -1,3 +1,4 @@
+import java.util.concurrent.ThreadLocalRandom;
 
 /* ============== STAFF SUPER CLASS ============= */
 public class Staff {
@@ -52,7 +53,9 @@ class Salespeople extends Staff
 
 	public Salespeople() {
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
-		dailySalary = (double) 1; // whatever the base salary for SalesPeople is 
+		Integer randomInt = ThreadLocalRandom.current().nextInt(000000, 100000);
+		name = "Salespersons_" + randomInt; 
+		dailySalary = (double) 500; // whatever the base salary for SalesPeople is 
 		totalSalary = 0.0;
 		bonus_ = 0.0;
 	}
@@ -75,7 +78,9 @@ class Mechanics extends Staff
 
 	public Mechanics() {
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
-		dailySalary = (double) 1; // whatever the base salary for Mechanics is 
+		Integer randomInt = ThreadLocalRandom.current().nextInt(000000, 100000);
+		name = "Mechanic_" + randomInt; 
+		dailySalary = (double) 400; // whatever the base salary for Mechanics is 
 		JobsDone = 0; // start with 0 jobsdone
 		totalSalary = 0.0;
 		bonus_ = 0.0;
@@ -106,7 +111,9 @@ class Interns extends Staff
 
 	public Interns() {
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
-		dailySalary = (double) 1; // whatever the base salary for Interns is 
+		dailySalary = (double) 100; // whatever the base salary for Interns is 
+		Integer randomInt = ThreadLocalRandom.current().nextInt(000000, 100000);
+		name = "Intern_" + randomInt; 
 		JobsDone = 0; // start with 0 jobsdone
 		totalSalary = 0.0;
 		bonus_ = 0.0;
