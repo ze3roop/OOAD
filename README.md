@@ -11,4 +11,4 @@
   2. Also, I wasn't sure when we were supposed to display the total departed staff, so I just put that after the 30 days of the simulation were over. 
   
 ### Note:
-Unfortunately, Aaron could not assist with this project due to health problem, he has told me that he has emailed the professor about it. 
+ - I'm sorry this is late. Unfortunately, Aaron could not assist with this project due to health problems. He has told me that he has emailed the professor about the situation.
