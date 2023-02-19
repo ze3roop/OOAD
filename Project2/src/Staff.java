@@ -21,6 +21,10 @@ public class Staff {
 		totalSalary = totalSalary + dailySalary;
 	}
 	
+	public Double GetDailySalary() {
+		return dailySalary;
+	}
+	
 	public Double GetTotalSalary()
 	{
 		return totalSalary;
@@ -88,7 +92,7 @@ class Mechanics extends Staff
 	}
 	public Mechanics(String name) {
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
-		dailySalary = (double) 1; // whatever the base salary for SalesPeople is 
+		dailySalary = (double) 400; // whatever the base salary for SalesPeople is 
 		JobsDone = 0;
 		CreateName(name); 
 		totalSalary = 0.0;
