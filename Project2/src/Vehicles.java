@@ -1,23 +1,22 @@
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Vehicles {
-	public String name;
-	public Double salesPrice;
-	public String[] condition = {"Like New", "Used", "Broken"};
-	public String conditionType;
-	public String type; 
-	public String[] cleanliness = {"dirty", "clean", "sparkling"};
-	public String cleanType; 
-	public Double cost; 
+public class Vehicles { // INHERITANCE 
+	protected String name; // ENCAPSULATION
+	protected Double salesPrice; // ENCAPSULATION
+	protected String[] condition = {"Like New", "Used", "Broken"}; // ENCAPSULATION
+	protected String conditionType; // ENCAPSULATION
+	protected String[] cleanliness = {"dirty", "clean", "sparkling"}; // ENCAPSULATION
+	protected String cleanType;  // ENCAPSULATION
+	protected Double cost;  // ENCAPSULATION
 	
 	
-	public String vehicleType;
+	protected String vehicleType;
 	
 	public Vehicles()
 	{
 		
 	}
-	public void DetermineCost() {
+	public void DetermineCost() { // POLYMORPHISM AND ABSTRACTION
 			int randomInt1 = ThreadLocalRandom.current().nextInt(0,3);
 			conditionType = condition[randomInt1];//randomly determined to be Like New, Used, or Broken.
 			if(conditionType == "Used") {
@@ -40,57 +39,54 @@ public class Vehicles {
 				cost = cost - (cost * .60); 
 			}
 	}
-	public Double GetCost() {
+	public Double GetCost() { //POLYMORPHISM AND ABSTRACTION
 		return cost;
 	}
 
-	public String CreateName() {
+	public String CreateName() { //POLYMORPHISM AND ABSTRACTION
 		int randInt = ThreadLocalRandom.current().nextInt(0,1000);
 		return vehicleType + "_" + randInt; //unique name algorithm goes here..
 	}
-	public String GetName() {
+	public String GetName() { //POLYMORPHISM  AND ABSTRACTION
 		return name;
 	}
 	
-	public String GetVehicleType() {
+	public String GetVehicleType() { //POLYMORPHISM AND ABSTRACTION
 		return vehicleType;
 		
 	}
 	
-	public String GetCondition() {
+	public String GetCondition() { //POLYMORPHISM AND ABSTRACTION
 		return conditionType;
 		
 	}
-	public void SetCondition(String newCondition) {
+	public void SetCondition(String newCondition) { //POLYMORPHISM AND ABSTRACTION
 		conditionType = newCondition; 
 	}
-	public String GetCleanliness() {
+	public String GetCleanliness() { //POLYMORPHISM AND ABSTRACTION
 		return cleanType; 
 	}
 	
-	public void SetCleanliness(String newCleanliness) {
+	public void SetCleanliness(String newCleanliness) { //POLYMORPHISM AND ABSTRACTION
 		cleanType = newCleanliness;
 	}
 	
-	public void SetSalesPrice(Double amount) {
+	public void SetSalesPrice(Double amount) { //POLYMORPHISM AND ABSTRACTION
 		salesPrice = (salesPrice * amount) + salesPrice; 
 		
 	}
 	
-	public Double GetSalesPrice() {
+	public Double GetSalesPrice() { //POLYMORPHISM AND ABSTRACTION
 		return salesPrice;
 		
-	}
-	public Vehicles thisVehicle() {
-		return this;
 	}
 }
 
 
 /* ===================================== PERFORMANCE CARS ============================================== */
-class PerformanceCars extends Vehicles {
+class PerformanceCars extends Vehicles { // INHERITANCE 
 	
-	public PerformanceCars() {
+	public PerformanceCars() { //IDENTITY
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
 		vehicleType = "Performance Car"; 
 		name = CreateName(); 
@@ -101,8 +97,8 @@ class PerformanceCars extends Vehicles {
 }
 
 /* =============================================== CARS ============================================== */
-class Cars extends Vehicles {
-	public Cars() {
+class Cars extends Vehicles { // INHERITANCE 
+	public Cars() { //IDENTITY
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
 		vehicleType = "Car"; 
 		name = CreateName(); 
@@ -115,8 +111,8 @@ class Cars extends Vehicles {
 }
 
 /* ======================================== PICKUPS ================================================ */
-class Pickups extends Vehicles {
-	public Pickups() {
+class Pickups extends Vehicles { // INHERITANCE 
+	public Pickups() { //IDENTITY
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
 		vehicleType = "Pickup";
 		name = CreateName(); 

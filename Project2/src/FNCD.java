@@ -4,24 +4,25 @@ import java.util.Comparator;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class FNCD {
-	public ArrayList<Salespeople> salesPeople = new ArrayList<Salespeople>();
-	public ArrayList<Mechanics> mechanics = new ArrayList<Mechanics>();
-	public ArrayList<Interns> interns = new ArrayList<Interns>();
-	public Integer staffPerType = 3; 
-	public ArrayList<PerformanceCars> performanceCars = new ArrayList<PerformanceCars>();
-	public ArrayList<Cars> cars = new ArrayList<Cars>();
-	public ArrayList<Pickups> pickups = new ArrayList<Pickups>();
-	public Integer carAmount = 4;
-	public Double budget_; //this is going to be private. 
-	public ArrayList<Vehicles> soldVehicles = new ArrayList<Vehicles>();
-	public ArrayList<Staff> departedStaff = new ArrayList<Staff>();
+	protected ArrayList<Salespeople> salesPeople = new ArrayList<Salespeople>();
+	protected ArrayList<Mechanics> mechanics = new ArrayList<Mechanics>();
+	protected ArrayList<Interns> interns = new ArrayList<Interns>();
+	protected Integer staffPerType = 3; 
+	protected ArrayList<PerformanceCars> performanceCars = new ArrayList<PerformanceCars>();
+	protected ArrayList<Cars> cars = new ArrayList<Cars>();
+	protected ArrayList<Pickups> pickups = new ArrayList<Pickups>();
+	protected Integer carAmount = 4;
+	protected Double budget_; //this is going to be private. 
+	protected ArrayList<Vehicles> soldVehicles = new ArrayList<Vehicles>();
+	protected ArrayList<Vehicles> allSoldVehicles = new ArrayList<Vehicles>();
+	protected ArrayList<Staff> departedStaff = new ArrayList<Staff>();
 	
-	public String[] daysOfTheWeek_ = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-	public int totalDayCount_;
-	public int dayCount_; 
-	public String day_; 
-	public int daysToSimulate_;
-	public Double totalSalesPerDay;
+	protected String[] daysOfTheWeek_ = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+	protected int totalDayCount_;
+	protected int dayCount_; 
+	protected String day_; 
+	protected int daysToSimulate_;
+	protected Double totalSalesPerDay;
 	
 	public FNCD(int daysToSimulate)
 	{
@@ -61,6 +62,11 @@ public class FNCD {
 	public void Start() {
 		for (int i = 0; i < daysToSimulate_; i++) {
 			Opening();
+			totalSalesPerDay = 0.0;
+		}
+		System.out.println("ALL STAFF THAT HAS LEFT: ");
+		for(int i = 0; i < departedStaff.size(); i++) {
+			System.out.println( departedStaff.get(i).GetName());
 		}
 	}
 	
@@ -93,8 +99,8 @@ public class FNCD {
 		
 		
 		//if interns are less than three interns, hire (e.g. add) new interns to the FNCD to bring the count back to three. 
-		if(interns.size() < staffPerType+1) {
-			for (int i = 0; i<staffPerType+1; i++) {
+		if(interns.size() < 4) {
+			for (int i = 0; interns.size()<4; i++) {
 				interns.add( new Interns() );
 				System.out.println("Hired " + interns.get(i).GetName());
 			}
@@ -106,7 +112,7 @@ public class FNCD {
 		//part of the FNCD inventory.
 		
 		if(performanceCars.size() < carAmount) {
-			for (int i = 0; i<carAmount; i++) {
+			for (int i = 0; performanceCars.size()<carAmount; i++) {
 				performanceCars.add( new PerformanceCars() );
 				//take money from operating budget. 
 				budget_ = budget_ - performanceCars.get(i).GetCost(); 
@@ -114,7 +120,7 @@ public class FNCD {
 			}
 		}
 		if(cars.size() < carAmount) {
-			for (int i = 0; i<carAmount; i++) {
+			for (int i = 0; cars.size()<carAmount; i++) {
 				cars.add( new Cars() );
 				//take money from operating budget. 
 				//SetBudget( performanceCars just instantiated.getSalesPrice() ); 
@@ -123,7 +129,7 @@ public class FNCD {
 			}
 		}
 		if(pickups.size() < carAmount) {
-			for (int i = 0; i<carAmount; i++) {
+			for (int i = 0; pickups.size()<carAmount; i++) {
 				pickups.add( new Pickups() );
 				//take money from operating budget. 
 				//SetBudget( pickup just instantiated.getSalesPrice() ); 
@@ -904,6 +910,7 @@ public class FNCD {
 					soldVehicles.get(i).GetCondition(), soldVehicles.get(i).GetCleanliness(), "Sold");
 		}
 		System.out.println("===== TOTAL MONEY IN BUDGET: " + budget_ + " =====");
+		
 		System.out.println("===== SALES FOR THE DAY: " + totalSalesPerDay + " ====="); 
 		//have to create a variable that is set to 0 at the opening function, 
 		//but when we make a sale we add the salesprice to this and it accumulates 

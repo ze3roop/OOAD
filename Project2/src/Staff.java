@@ -1,40 +1,42 @@
 import java.util.concurrent.ThreadLocalRandom;
 
 /* ============== STAFF SUPER CLASS ============= */
-public class Staff {
-	public String name;
-	public Double totalSalary;
-	public Integer JobsDone;
-	public Double dailySalary;
-	public Double bonus_;
+public class Staff { // INHERITANCE 
+	protected String name; // ENCAPSULATION
+	protected Double totalSalary; // ENCAPSULATION
+	protected Integer JobsDone; // ENCAPSULATION
+	protected Double dailySalary; // ENCAPSULATION
+	protected Double bonus_; // ENCAPSULATION
 	
 	// the Staff constructor
 	public Staff()
 	{
 	}
 	
-	public void CreateName(String str) {
+	public void CreateName(String str) { //POLYMORPHISM AND ABSTRACTION
 		name = str;
 	}
-	
-	public void SetDailySalary() {
+	public String GetName() { //POLYMORPHISM AND ABSTRACTION
+		return name;
+	}
+	public void SetDailySalary() { //POLYMORPHISM AND ABSTRACTION
 		totalSalary = totalSalary + dailySalary;
 	}
 	
-	public Double GetDailySalary() {
+	public Double GetDailySalary() { //POLYMORPHISM AND ABSTRACTION
 		return dailySalary;
 	}
 	
-	public Double GetTotalSalary()
+	public Double GetTotalSalary() //POLYMORPHISM AND ABSTRACTION
 	{
 		return totalSalary;
 	}
-	public Double GetTotalBonusPay()
+	public Double GetTotalBonusPay() //POLYMORPHISM AND ABSTRACTION
 	{
 		return bonus_;
 	}
 	
-	public void Bonus(String vehicleType) {
+	public void Bonus(String vehicleType) { //POLYMORPHISM AND ABSTRACTION
 		if(vehicleType == "Performance Car")
 		{
 			bonus_ = bonus_ + 5000;
@@ -52,39 +54,37 @@ public class Staff {
 
 
 /* ============== SALESPEOPLE ============= */
-class Salespeople extends Staff
+class Salespeople extends Staff // INHERITANCE 
 {
 
-	public Salespeople() {
+	public Salespeople() { //IDENTITY
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
 		Integer randomInt = ThreadLocalRandom.current().nextInt(000000, 100000);
-		name = "Salespersons_" + randomInt; 
+		CreateName("Salesperson_" + randomInt);
 		dailySalary = (double) 500; // whatever the base salary for SalesPeople is 
 		totalSalary = 0.0;
 		bonus_ = 0.0;
 	}
 	
-	public Salespeople(String name) {
+	public Salespeople(String name) { //IDENTITY
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
 		dailySalary = (double) 500; // whatever the base salary for SalesPeople is 
 		totalSalary = 0.0;
 		CreateName(name); 
 		bonus_ = 0.0;
 	}
-	public String GetName() {
-		return name;
-	}
+
 }
 
 
 /* ============== MECHANICS ============= */
-class Mechanics extends Staff
+class Mechanics extends Staff // INHERITANCE 
 {
 
 	public Mechanics() {
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
 		Integer randomInt = ThreadLocalRandom.current().nextInt(000000, 100000);
-		name = "Mechanic_" + randomInt; 
+		CreateName("Mechanic_" + randomInt);
 		dailySalary = (double) 400; // whatever the base salary for Mechanics is 
 		JobsDone = 0; // start with 0 jobsdone
 		totalSalary = 0.0;
@@ -104,21 +104,19 @@ class Mechanics extends Staff
 	public void SetJobsDone() {
 		JobsDone = JobsDone + 1; 
 	}
-	public String GetName() {
-		return name;
-	}
+
 }
 
 
 /* =============== INTERNS ============== */
-class Interns extends Staff
+class Interns extends Staff // INHERITANCE 
 {
 
 	public Interns() {
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
 		dailySalary = (double) 100; // whatever the base salary for Interns is 
 		Integer randomInt = ThreadLocalRandom.current().nextInt(000000, 100000);
-		name = "Intern_" + randomInt; 
+		CreateName("Intern_" + randomInt);
 		JobsDone = 0; // start with 0 jobsdone
 		totalSalary = 0.0;
 		bonus_ = 0.0;
@@ -129,8 +127,6 @@ class Interns extends Staff
 	public void SetJobsDone() {
 		JobsDone = JobsDone + 1; 
 	}
-	public String GetName() {
-		return name;
-	}
+
 	
 }

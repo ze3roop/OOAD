@@ -6,11 +6,11 @@ public class Buyer {
 	//, each with a base chance of buying a vehicle: Just Looking (10%), Wants One (40%), Needs One (70%).
 	//The buyers will have a type of vehicle they want (Performance Car, Car, Pickup) randomly determined.
 	
-	public String[] chanceOfBuying = {"Just Looking", "Wants One", "Needs One"};
-	public String[] vehicleTypes = {"Performance Car", "Car", "Pickup"};
-	public String chanceStr;
-	public Double chance;
-	public String preference; 
+	protected String[] chanceOfBuying = {"Just Looking", "Wants One", "Needs One"}; // ENCAPSULATION
+	protected String[] vehicleTypes = {"Performance Car", "Car", "Pickup"}; // ENCAPSULATION
+	protected String chanceStr; // ENCAPSULATION
+	protected Double chance; // ENCAPSULATION 
+	protected String preference;  // ENCAPSULATION
 	
 	public Buyer()
 	{

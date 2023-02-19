@@ -1,0 +1,2161 @@
+SUNDAY - CLOSED
+FNCD DAY 1
+Opening...
+Washing...
+Intern_36506 washed Performance Car_624 and made it clean
+Intern_36506 washed Car_780 and made it sparkling
+Intern_74200 washed Performance Car_389 and made it clean
+Intern_53709 washed Car_778 and made it clean
+Repairing...
+Mechanic_68079 just repaired Performance Car_389 and made it Used
+Mechanic_68079 just repaired Performance Car_523 and made it Used
+Mechanic_85665 just repaired Car_780 and made it Used
+Mechanic_85665 just repaired Car_981 and made it Like New
+Mechanic_86767 just repaired Pickup_355 and made it Like New
+Mechanic_86767 just repaired Car_507 and made it Like New
+Mechanic_63528 just repaired Pickup_134 and made it Like New
+Mechanic_63528 just repaired Performance Car_389 and made it Like New
+Selling...
+Salesperson_25136 just sold Pickup_985 for 62699.645443623296
+Salesperson_25136 just sold Pickup_727 for 24130.90678158291
+Salesperson_71900 just sold Performance Car_453 for 31003.90167110735
+Salesperson_79314 just sold Car_778 for 12750.746023106927
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_25136
+	 	 Total Normal Pay: 500.0
+	 	 Total Bonus Pay: 4000.0
+	Salesperson_71900
+	 	 Total Normal Pay: 500.0
+	 	 Total Bonus Pay: 5000.0
+	Salesperson_79314
+	 	 Total Normal Pay: 500.0
+	 	 Total Bonus Pay: 2500.0
+	Salesperson_27336
+	 	 Total Normal Pay: 500.0
+	 	 Total Bonus Pay: 0.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 400.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 400.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 400.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 400.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_36506
+	 	 Total Normal Pay: 100.0
+	 	 Total Bonus Pay: 2500.0
+	Intern_74200
+	 	 Total Normal Pay: 100.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 100.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 100.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               In Stock            
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Car_507                                 6179.337884         15448.344710        Used                dirty               In Stock            
+Car_981                                 5023.739237         12559.348092        Used                dirty               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Pickup_727                              12065.453391        24130.906782        Like New            clean               In Stock            
+Pickup_355                              5443.757812         13609.394529        Used                dirty               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+===== TOTAL MONEY IN BUDGET: 629729.711317338 =====
+===== SALES FOR THE DAY: 133729.71131733796 =====
+FNCD DAY 2
+Opening...
+Purchased Performance Car_624. For: 14016.10553632669
+Purchased Car_507. For: 6179.337884021797
+Purchased Pickup_727. For: 12065.453390791456
+Purchased Pickup_355. For: 5443.757811647109
+Washing...
+Repairing...
+Selling...
+Salesperson_71900 just sold Pickup_301 for 39989.20801843268
+Salesperson_71900 just sold Pickup_355 for 13609.394529117772
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_25136
+	 	 Total Normal Pay: 1000.0
+	 	 Total Bonus Pay: 4000.0
+	Salesperson_71900
+	 	 Total Normal Pay: 1000.0
+	 	 Total Bonus Pay: 9000.0
+	Salesperson_79314
+	 	 Total Normal Pay: 1000.0
+	 	 Total Bonus Pay: 2500.0
+	Salesperson_27336
+	 	 Total Normal Pay: 1000.0
+	 	 Total Bonus Pay: 0.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 800.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 800.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 800.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 800.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_36506
+	 	 Total Normal Pay: 200.0
+	 	 Total Bonus Pay: 2500.0
+	Intern_74200
+	 	 Total Normal Pay: 200.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 200.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 200.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               In Stock            
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Car_507                                 6179.337884         15448.344710        Used                dirty               In Stock            
+Car_981                                 5023.739237         12559.348092        Used                dirty               In Stock            
+Car_564                                 6215.445258         12430.890516        Like New            dirty               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Pickup_355                              5443.757812         13609.394529        Used                dirty               In Stock            
+Pickup_31                               5283.084363         10566.168725        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+===== TOTAL MONEY IN BUDGET: 652145.1714945666 =====
+===== SALES FOR THE DAY: 64120.11480001559 =====
+FNCD DAY 3
+Opening...
+Purchased Pickup_355. For: 5443.757811647109
+Purchased Pickup_31. For: 5283.084362683722
+Washing...
+Repairing...
+Selling...
+Salesperson_71900 just sold Car_981 for 12559.348091672986
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_25136
+	 	 Total Normal Pay: 1500.0
+	 	 Total Bonus Pay: 4000.0
+	Salesperson_71900
+	 	 Total Normal Pay: 1500.0
+	 	 Total Bonus Pay: 11500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 1500.0
+	 	 Total Bonus Pay: 2500.0
+	Salesperson_27336
+	 	 Total Normal Pay: 1500.0
+	 	 Total Bonus Pay: 0.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 1200.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 1200.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 1200.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 1200.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_36506
+	 	 Total Normal Pay: 300.0
+	 	 Total Bonus Pay: 2500.0
+	Intern_74200
+	 	 Total Normal Pay: 300.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 300.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 300.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               In Stock            
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Car_507                                 6179.337884         15448.344710        Used                dirty               In Stock            
+Car_564                                 6215.445258         12430.890516        Like New            dirty               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           In Stock            
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               In Stock            
+Pickup_355                              5443.757812         13609.394529        Used                dirty               In Stock            
+Pickup_31                               5283.084363         10566.168725        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+===== TOTAL MONEY IN BUDGET: 649977.6774119087 =====
+===== SALES FOR THE DAY: 12559.348091672986 =====
+FNCD DAY 4
+Opening...
+Purchased Car_507. For: 6179.337884021797
+Washing...
+Repairing...
+Selling...
+Salesperson_27336 just sold Performance Car_33 for 30630.3277997481
+Salesperson_79314 just sold Pickup_578 for 31734.79496734802
+Salesperson_71900 just sold Performance Car_624 for 28032.21107265338
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_25136
+	 	 Total Normal Pay: 2000.0
+	 	 Total Bonus Pay: 4000.0
+	Salesperson_71900
+	 	 Total Normal Pay: 2000.0
+	 	 Total Bonus Pay: 16500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 2000.0
+	 	 Total Bonus Pay: 4500.0
+	Salesperson_27336
+	 	 Total Normal Pay: 2000.0
+	 	 Total Bonus Pay: 5000.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 1600.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 1600.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 1600.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 1600.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_36506
+	 	 Total Normal Pay: 400.0
+	 	 Total Bonus Pay: 2500.0
+	Intern_74200
+	 	 Total Normal Pay: 400.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 400.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 400.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Car_77                                  9495.189301         18990.378601        Like New            clean               In Stock            
+Car_507                                 6179.337884         15448.344710        Used                dirty               In Stock            
+Car_564                                 6215.445258         12430.890516        Like New            dirty               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               In Stock            
+Pickup_355                              5443.757812         13609.394529        Used                dirty               In Stock            
+Pickup_31                               5283.084363         10566.168725        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+===== TOTAL MONEY IN BUDGET: 730195.6733676364 =====
+===== SALES FOR THE DAY: 90397.33383974951 =====
+FNCD DAY 5
+Opening...
+Purchased Performance Car_523. For: 17907.13191908642
+Purchased Performance Car_389. For: 5574.020909405917
+Purchased Pickup_169. For: 8863.142476313276
+Washing...
+Repairing...
+Selling...
+Salesperson_71900 just sold Car_77 for 18990.378601093005
+Salesperson_79314 just sold Car_507 for 15448.344710054494
+Ending...
+============== QUIT: ==============
+	Salesperson_25136
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 2500.0
+	 	 Total Bonus Pay: 19000.0
+	Salesperson_79314
+	 	 Total Normal Pay: 2500.0
+	 	 Total Bonus Pay: 7000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 2500.0
+	 	 Total Bonus Pay: 5000.0
+	Intern_36506
+	 	 Total Normal Pay: 0.0
+	 	 Total Bonus Pay: 0.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 2000.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 2000.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 2000.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 2000.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 500.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 500.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 500.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Car_564                                 6215.445258         12430.890516        Like New            dirty               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Pickup_973                              11860.008781        23720.017563        Used                clean               In Stock            
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               In Stock            
+Pickup_355                              5443.757812         13609.394529        Used                dirty               In Stock            
+Pickup_31                               5283.084363         10566.168725        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+===== TOTAL MONEY IN BUDGET: 728290.1013739782 =====
+===== SALES FOR THE DAY: 34438.7233111475 =====
+FNCD DAY 6
+Opening...
+Hired Intern_74200
+Purchased Car_564. For: 6215.445258104437
+Purchased Car_780. For: 3389.850326303399
+Washing...
+Intern_37240 washed Car_564 and made it clean
+Repairing...
+Selling...
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 3000.0
+	 	 Total Bonus Pay: 19000.0
+	Salesperson_79314
+	 	 Total Normal Pay: 3000.0
+	 	 Total Bonus Pay: 7000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 3000.0
+	 	 Total Bonus Pay: 5000.0
+	Intern_36506
+	 	 Total Normal Pay: 500.0
+	 	 Total Bonus Pay: 0.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 2400.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 2400.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 2400.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 2400.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 600.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 600.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 600.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 100.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Car_13                                  7976.420764         15952.841528        Like New            dirty               In Stock            
+Car_564                                 6215.445258         12430.890516        Like New            dirty               In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Pickup_973                              11860.008781        23720.017563        Used                clean               In Stock            
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               In Stock            
+Pickup_355                              5443.757812         13609.394529        Used                dirty               In Stock            
+Pickup_31                               5283.084363         10566.168725        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+===== TOTAL MONEY IN BUDGET: 714684.8057895703 =====
+===== SALES FOR THE DAY: 0.0 =====
+SUNDAY - CLOSED
+FNCD DAY 8
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 3500.0
+	 	 Total Bonus Pay: 19000.0
+	Salesperson_79314
+	 	 Total Normal Pay: 3500.0
+	 	 Total Bonus Pay: 7000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 3500.0
+	 	 Total Bonus Pay: 5000.0
+	Intern_36506
+	 	 Total Normal Pay: 1000.0
+	 	 Total Bonus Pay: 0.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 2800.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 2800.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 2800.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 2800.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 700.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 700.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 700.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 200.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Car_13                                  7976.420764         15952.841528        Like New            dirty               In Stock            
+Car_564                                 6215.445258         12430.890516        Like New            dirty               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Pickup_973                              11860.008781        23720.017563        Used                clean               In Stock            
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               In Stock            
+Pickup_355                              5443.757812         13609.394529        Used                dirty               In Stock            
+Pickup_31                               5283.084363         10566.168725        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+===== TOTAL MONEY IN BUDGET: 710684.8057895703 =====
+===== SALES FOR THE DAY: 0.0 =====
+FNCD DAY 9
+Opening...
+Washing...
+Repairing...
+Selling...
+Salesperson_79314 just sold Pickup_169 for 17726.284952626553
+Intern_36506 just sold Pickup_169 for 17726.284952626553
+Salesperson_79314 just sold Pickup_355 for 13609.394529117772
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 4000.0
+	 	 Total Bonus Pay: 19000.0
+	Salesperson_79314
+	 	 Total Normal Pay: 4000.0
+	 	 Total Bonus Pay: 11000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 4000.0
+	 	 Total Bonus Pay: 5000.0
+	Intern_36506
+	 	 Total Normal Pay: 1500.0
+	 	 Total Bonus Pay: 2000.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 3200.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 3200.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 3200.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 3200.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 800.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 800.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 800.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 300.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Car_13                                  7976.420764         15952.841528        Like New            dirty               In Stock            
+Car_564                                 6215.445258         12430.890516        Like New            dirty               In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Pickup_31                               5283.084363         10566.168725        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+===== TOTAL MONEY IN BUDGET: 761740.5028339372 =====
+===== SALES FOR THE DAY: 55055.697044366934 =====
+FNCD DAY 10
+Opening...
+Purchased Pickup_31. For: 5283.084362683722
+Purchased Pickup_898. For: 9545.0289329594
+Purchased Pickup_251. For: 25317.896899901054
+Washing...
+Repairing...
+Selling...
+Salesperson_71900 just sold Car_13 for 15952.841527946603
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 4500.0
+	 	 Total Bonus Pay: 21500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 4500.0
+	 	 Total Bonus Pay: 11000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 4500.0
+	 	 Total Bonus Pay: 5000.0
+	Intern_36506
+	 	 Total Normal Pay: 2000.0
+	 	 Total Bonus Pay: 2000.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 3600.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 3600.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 3600.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 3600.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 900.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 900.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 900.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 400.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Car_564                                 6215.445258         12430.890516        Like New            dirty               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           In Stock            
+Pickup_898                              9545.028933         19090.057866        Broken              clean               In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_31                               5283.084363         10566.168725        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+===== TOTAL MONEY IN BUDGET: 733547.3341663396 =====
+===== SALES FOR THE DAY: 15952.841527946603 =====
+FNCD DAY 11
+Opening...
+Purchased Car_564. For: 6215.445258104437
+Washing...
+Repairing...
+Selling...
+Salesperson_27336 just sold Car_596 for 11449.425838470626
+Salesperson_27336 just sold Car_564 for 12430.890516208874
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 5000.0
+	 	 Total Bonus Pay: 21500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 5000.0
+	 	 Total Bonus Pay: 11000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 5000.0
+	 	 Total Bonus Pay: 10000.0
+	Intern_36506
+	 	 Total Normal Pay: 2500.0
+	 	 Total Bonus Pay: 2000.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 4000.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 4000.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 4000.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 4000.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 1000.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 1000.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 1000.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 500.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           In Stock            
+Pickup_31                               5283.084363         10566.168725        Broken              clean               In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_898                              9545.028933         19090.057866        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+===== TOTAL MONEY IN BUDGET: 747212.2052629145 =====
+===== SALES FOR THE DAY: 23880.3163546795 =====
+FNCD DAY 12
+Opening...
+Purchased Car_535. For: 3257.6578929049
+Purchased Car_780. For: 3389.850326303399
+Washing...
+Repairing...
+Selling...
+Salesperson_79314 just sold Pickup_251 for 50635.79379980211
+Salesperson_27336 just sold Car_393 for 33282.03972352822
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 5500.0
+	 	 Total Bonus Pay: 21500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 5500.0
+	 	 Total Bonus Pay: 13000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 5500.0
+	 	 Total Bonus Pay: 12500.0
+	Intern_36506
+	 	 Total Normal Pay: 3000.0
+	 	 Total Bonus Pay: 2000.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 4400.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 4400.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 4400.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 4400.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 1100.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 1100.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 1100.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 600.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Car_230                                 7957.175713         15914.351427        Broken              sparkling           In Stock            
+Pickup_898                              9545.028933         19090.057866        Broken              clean               In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_31                               5283.084363         10566.168725        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           Sold                
+Car_393                                 16641.019862        33282.039724        Like New            sparkling           Sold                
+===== TOTAL MONEY IN BUDGET: 820482.5305670365 =====
+===== SALES FOR THE DAY: 83917.83352333034 =====
+SUNDAY - CLOSED
+FNCD DAY 14
+Opening...
+Purchased Car_780. For: 3389.850326303399
+Purchased Pickup_898. For: 9545.0289329594
+Washing...
+Repairing...
+Selling...
+Salesperson_27336 just sold Car_739 for 27588.464992674653
+Salesperson_71900 just sold Pickup_363 for 23548.03909019311
+Salesperson_71900 just sold Pickup_638 for 9281.828277024717
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 6000.0
+	 	 Total Bonus Pay: 25500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 6000.0
+	 	 Total Bonus Pay: 13000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 6000.0
+	 	 Total Bonus Pay: 15000.0
+	Intern_36506
+	 	 Total Normal Pay: 3500.0
+	 	 Total Bonus Pay: 2000.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 4800.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 4800.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 4800.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 4800.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 1200.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 1200.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 1200.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 700.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Car_230                                 7957.175713         15914.351427        Broken              sparkling           In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_898                              9545.028933         19090.057866        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           Sold                
+Car_393                                 16641.019862        33282.039724        Like New            sparkling           Sold                
+Car_739                                 13794.232496        27588.464993        Used                sparkling           Sold                
+Pickup_363                              11774.019545        23548.039090        Used                sparkling           Sold                
+Pickup_31                               5283.084363         10566.168725        Broken              clean               Sold                
+===== TOTAL MONEY IN BUDGET: 865250.3241160088 =====
+===== SALES FOR THE DAY: 61702.672808235206 =====
+FNCD DAY 15
+Opening...
+Purchased Car_535. For: 3257.6578929049
+Purchased Pickup_638. For: 4640.9141385123585
+Purchased Pickup_898. For: 9545.0289329594
+Washing...
+Repairing...
+Selling...
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 6500.0
+	 	 Total Bonus Pay: 25500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 6500.0
+	 	 Total Bonus Pay: 13000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 6500.0
+	 	 Total Bonus Pay: 15000.0
+	Intern_36506
+	 	 Total Normal Pay: 4000.0
+	 	 Total Bonus Pay: 2000.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 5200.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 5200.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 5200.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 5200.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 1300.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 1300.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 1300.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 800.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Car_581                                 6150.256577         12300.513154        Used                clean               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Car_230                                 7957.175713         15914.351427        Broken              sparkling           In Stock            
+Pickup_827                              22660.105423        45320.210845        Like New            sparkling           In Stock            
+Pickup_789                              11650.078898        23300.157795        Broken              clean               In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_898                              9545.028933         19090.057866        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           Sold                
+Car_393                                 16641.019862        33282.039724        Like New            sparkling           Sold                
+Car_739                                 13794.232496        27588.464993        Used                sparkling           Sold                
+Pickup_363                              11774.019545        23548.039090        Used                sparkling           Sold                
+Pickup_31                               5283.084363         10566.168725        Broken              clean               Sold                
+===== TOTAL MONEY IN BUDGET: 843806.7231516321 =====
+===== SALES FOR THE DAY: 0.0 =====
+FNCD DAY 16
+Opening...
+Washing...
+Repairing...
+Selling...
+Intern_36506 just sold Car_581 for 12300.513154451415
+Salesperson_79314 just sold Pickup_638 for 9281.828277024717
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 7000.0
+	 	 Total Bonus Pay: 25500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 7000.0
+	 	 Total Bonus Pay: 15000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 7000.0
+	 	 Total Bonus Pay: 15000.0
+	Intern_36506
+	 	 Total Normal Pay: 4500.0
+	 	 Total Bonus Pay: 4500.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 5600.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 5600.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 5600.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 5600.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 1400.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 1400.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 1400.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 900.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Car_230                                 7957.175713         15914.351427        Broken              sparkling           In Stock            
+Pickup_898                              9545.028933         19090.057866        Broken              clean               In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_789                              11650.078898        23300.157795        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           Sold                
+Car_393                                 16641.019862        33282.039724        Like New            sparkling           Sold                
+Car_739                                 13794.232496        27588.464993        Used                sparkling           Sold                
+Pickup_363                              11774.019545        23548.039090        Used                sparkling           Sold                
+Pickup_31                               5283.084363         10566.168725        Broken              clean               Sold                
+Car_581                                 6150.256577         12300.513154        Used                clean               Sold                
+Pickup_827                              22660.105423        45320.210845        Like New            sparkling           Sold                
+===== TOTAL MONEY IN BUDGET: 897427.4471511635 =====
+===== SALES FOR THE DAY: 57620.72399953139 =====
+FNCD DAY 17
+Opening...
+Purchased Car_535. For: 3257.6578929049
+Purchased Pickup_898. For: 9545.0289329594
+Washing...
+Repairing...
+Selling...
+Salesperson_27336 just sold Pickup_101 for 35109.418258804144
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 7500.0
+	 	 Total Bonus Pay: 25500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 7500.0
+	 	 Total Bonus Pay: 15000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 7500.0
+	 	 Total Bonus Pay: 17000.0
+	Intern_36506
+	 	 Total Normal Pay: 5000.0
+	 	 Total Bonus Pay: 4500.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 6000.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 6000.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 6000.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 6000.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 1500.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 1500.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 1500.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 1000.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Car_735                                 7605.298158         15210.596317        Used                clean               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Car_230                                 7957.175713         15914.351427        Broken              sparkling           In Stock            
+Pickup_789                              11650.078898        23300.157795        Broken              clean               In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_898                              9545.028933         19090.057866        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           Sold                
+Car_393                                 16641.019862        33282.039724        Like New            sparkling           Sold                
+Car_739                                 13794.232496        27588.464993        Used                sparkling           Sold                
+Pickup_363                              11774.019545        23548.039090        Used                sparkling           Sold                
+Pickup_31                               5283.084363         10566.168725        Broken              clean               Sold                
+Car_581                                 6150.256577         12300.513154        Used                clean               Sold                
+Pickup_827                              22660.105423        45320.210845        Like New            sparkling           Sold                
+Pickup_101                              17554.709129        35109.418259        Like New            clean               Sold                
+===== TOTAL MONEY IN BUDGET: 915734.1785841032 =====
+===== SALES FOR THE DAY: 35109.418258804144 =====
+FNCD DAY 18
+Opening...
+Purchased Pickup_789. For: 11650.078897625674
+Washing...
+Repairing...
+Selling...
+Salesperson_71900 just sold Pickup_638 for 9281.828277024717
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 8000.0
+	 	 Total Bonus Pay: 27500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 8000.0
+	 	 Total Bonus Pay: 15000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 8000.0
+	 	 Total Bonus Pay: 17000.0
+	Intern_36506
+	 	 Total Normal Pay: 5500.0
+	 	 Total Bonus Pay: 4500.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 6400.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 6400.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 6400.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 6400.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 1600.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 1600.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 1600.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 1100.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Car_735                                 7605.298158         15210.596317        Used                clean               In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Car_230                                 7957.175713         15914.351427        Broken              sparkling           In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_789                              11650.078898        23300.157795        Broken              clean               In Stock            
+Pickup_107                              5965.583486         11931.166972        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           Sold                
+Car_393                                 16641.019862        33282.039724        Like New            sparkling           Sold                
+Car_739                                 13794.232496        27588.464993        Used                sparkling           Sold                
+Pickup_363                              11774.019545        23548.039090        Used                sparkling           Sold                
+Pickup_31                               5283.084363         10566.168725        Broken              clean               Sold                
+Car_581                                 6150.256577         12300.513154        Used                clean               Sold                
+Pickup_827                              22660.105423        45320.210845        Like New            sparkling           Sold                
+Pickup_101                              17554.709129        35109.418259        Like New            clean               Sold                
+Pickup_898                              9545.028933         19090.057866        Broken              clean               Sold                
+===== TOTAL MONEY IN BUDGET: 919174.1575523964 =====
+===== SALES FOR THE DAY: 19090.0578659188 =====
+SUNDAY - CLOSED
+FNCD DAY 20
+Opening...
+Purchased Pickup_638. For: 4640.9141385123585
+Washing...
+Repairing...
+Selling...
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 8500.0
+	 	 Total Bonus Pay: 27500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 8500.0
+	 	 Total Bonus Pay: 15000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 8500.0
+	 	 Total Bonus Pay: 17000.0
+	Intern_36506
+	 	 Total Normal Pay: 6000.0
+	 	 Total Bonus Pay: 4500.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 6800.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 6800.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 6800.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 6800.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 1700.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 1700.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 1700.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 1200.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Car_735                                 7605.298158         15210.596317        Used                clean               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Car_230                                 7957.175713         15914.351427        Broken              sparkling           In Stock            
+Pickup_789                              11650.078898        23300.157795        Broken              clean               In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_650                              7597.152811         15194.305623        Broken              dirty               In Stock            
+Pickup_107                              5965.583486         11931.166972        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           Sold                
+Car_393                                 16641.019862        33282.039724        Like New            sparkling           Sold                
+Car_739                                 13794.232496        27588.464993        Used                sparkling           Sold                
+Pickup_363                              11774.019545        23548.039090        Used                sparkling           Sold                
+Pickup_31                               5283.084363         10566.168725        Broken              clean               Sold                
+Car_581                                 6150.256577         12300.513154        Used                clean               Sold                
+Pickup_827                              22660.105423        45320.210845        Like New            sparkling           Sold                
+Pickup_101                              17554.709129        35109.418259        Like New            clean               Sold                
+Pickup_898                              9545.028933         19090.057866        Broken              clean               Sold                
+===== TOTAL MONEY IN BUDGET: 910533.2434138841 =====
+===== SALES FOR THE DAY: 0.0 =====
+FNCD DAY 21
+Opening...
+Washing...
+Repairing...
+Selling...
+Intern_36506 just sold Car_735 for 15210.596316868976
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 9000.0
+	 	 Total Bonus Pay: 27500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 9000.0
+	 	 Total Bonus Pay: 15000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 9000.0
+	 	 Total Bonus Pay: 17000.0
+	Intern_36506
+	 	 Total Normal Pay: 6500.0
+	 	 Total Bonus Pay: 7000.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 7200.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 7200.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 7200.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 7200.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 1800.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 1800.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 1800.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 1300.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Car_230                                 7957.175713         15914.351427        Broken              sparkling           In Stock            
+Pickup_789                              11650.078898        23300.157795        Broken              clean               In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_650                              7597.152811         15194.305623        Broken              dirty               In Stock            
+Pickup_107                              5965.583486         11931.166972        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           Sold                
+Car_393                                 16641.019862        33282.039724        Like New            sparkling           Sold                
+Car_739                                 13794.232496        27588.464993        Used                sparkling           Sold                
+Pickup_363                              11774.019545        23548.039090        Used                sparkling           Sold                
+Pickup_31                               5283.084363         10566.168725        Broken              clean               Sold                
+Car_581                                 6150.256577         12300.513154        Used                clean               Sold                
+Pickup_827                              22660.105423        45320.210845        Like New            sparkling           Sold                
+Pickup_101                              17554.709129        35109.418259        Like New            clean               Sold                
+Pickup_898                              9545.028933         19090.057866        Broken              clean               Sold                
+Car_735                                 7605.298158         15210.596317        Used                clean               Sold                
+===== TOTAL MONEY IN BUDGET: 921743.8397307531 =====
+===== SALES FOR THE DAY: 15210.596316868976 =====
+FNCD DAY 22
+Opening...
+Purchased Car_535. For: 3257.6578929049
+Washing...
+Repairing...
+Selling...
+Salesperson_71900 just sold Pickup_638 for 9281.828277024717
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 9500.0
+	 	 Total Bonus Pay: 29500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 9500.0
+	 	 Total Bonus Pay: 15000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 9500.0
+	 	 Total Bonus Pay: 17000.0
+	Intern_36506
+	 	 Total Normal Pay: 7000.0
+	 	 Total Bonus Pay: 7000.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 7600.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 7600.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 7600.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 7600.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 1900.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 1900.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 1900.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 1400.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Car_193                                 12145.792137        24291.584274        Used                sparkling           In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Car_230                                 7957.175713         15914.351427        Broken              sparkling           In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_650                              7597.152811         15194.305623        Broken              dirty               In Stock            
+Pickup_107                              5965.583486         11931.166972        Broken              clean               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           Sold                
+Car_393                                 16641.019862        33282.039724        Like New            sparkling           Sold                
+Car_739                                 13794.232496        27588.464993        Used                sparkling           Sold                
+Pickup_363                              11774.019545        23548.039090        Used                sparkling           Sold                
+Pickup_31                               5283.084363         10566.168725        Broken              clean               Sold                
+Car_581                                 6150.256577         12300.513154        Used                clean               Sold                
+Pickup_827                              22660.105423        45320.210845        Like New            sparkling           Sold                
+Pickup_101                              17554.709129        35109.418259        Like New            clean               Sold                
+Pickup_898                              9545.028933         19090.057866        Broken              clean               Sold                
+Car_735                                 7605.298158         15210.596317        Used                clean               Sold                
+Pickup_789                              11650.078898        23300.157795        Broken              clean               Sold                
+===== TOTAL MONEY IN BUDGET: 937786.3396330995 =====
+===== SALES FOR THE DAY: 23300.157795251347 =====
+FNCD DAY 23
+Opening...
+Purchased Pickup_638. For: 4640.9141385123585
+Washing...
+Repairing...
+Selling...
+Intern_36506 just sold Pickup_638 for 9281.828277024717
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 10000.0
+	 	 Total Bonus Pay: 29500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 10000.0
+	 	 Total Bonus Pay: 15000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 10000.0
+	 	 Total Bonus Pay: 17000.0
+	Intern_36506
+	 	 Total Normal Pay: 7500.0
+	 	 Total Bonus Pay: 9000.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 8000.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_85665
+	 	 Total Normal Pay: 8000.0
+	 	 Total Bonus Pay: 5000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 8000.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 8000.0
+	 	 Total Bonus Pay: 7000.0
+===== INTERNS: =====
+	Intern_74200
+	 	 Total Normal Pay: 2000.0
+	 	 Total Bonus Pay: 0.0
+	Intern_53709
+	 	 Total Normal Pay: 2000.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 2000.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 1500.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Car_193                                 12145.792137        24291.584274        Used                sparkling           In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Car_230                                 7957.175713         15914.351427        Broken              sparkling           In Stock            
+Pickup_107                              5965.583486         11931.166972        Broken              clean               In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_650                              7597.152811         15194.305623        Broken              dirty               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           Sold                
+Car_393                                 16641.019862        33282.039724        Like New            sparkling           Sold                
+Car_739                                 13794.232496        27588.464993        Used                sparkling           Sold                
+Pickup_363                              11774.019545        23548.039090        Used                sparkling           Sold                
+Pickup_31                               5283.084363         10566.168725        Broken              clean               Sold                
+Car_581                                 6150.256577         12300.513154        Used                clean               Sold                
+Pickup_827                              22660.105423        45320.210845        Like New            sparkling           Sold                
+Pickup_101                              17554.709129        35109.418259        Like New            clean               Sold                
+Pickup_898                              9545.028933         19090.057866        Broken              clean               Sold                
+Car_735                                 7605.298158         15210.596317        Used                clean               Sold                
+Pickup_789                              11650.078898        23300.157795        Broken              clean               Sold                
+Pickup_293                              27221.918159        54443.836318        Like New            sparkling           Sold                
+===== TOTAL MONEY IN BUDGET: 983589.2618130598 =====
+===== SALES FOR THE DAY: 54443.83631847258 =====
+FNCD DAY 24
+Opening...
+Purchased Pickup_107. For: 5965.583486085045
+Washing...
+Repairing...
+Selling...
+Intern_36506 just sold Car_193 for 24291.58427413551
+Ending...
+============== QUIT: ==============
+	Mechanic_85665
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 10500.0
+	 	 Total Bonus Pay: 29500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 10500.0
+	 	 Total Bonus Pay: 15000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 10500.0
+	 	 Total Bonus Pay: 17000.0
+	Intern_36506
+	 	 Total Normal Pay: 8000.0
+	 	 Total Bonus Pay: 11500.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 8400.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 8400.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 8400.0
+	 	 Total Bonus Pay: 7000.0
+	Intern_74200
+	 	 Total Normal Pay: 0.0
+	 	 Total Bonus Pay: 0.0
+===== INTERNS: =====
+	Intern_53709
+	 	 Total Normal Pay: 2100.0
+	 	 Total Bonus Pay: 0.0
+	Intern_37240
+	 	 Total Normal Pay: 2100.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 1600.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        53721.395757        Broken              clean               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Car_780                                 3389.850326         10169.550979        Broken              clean               In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Car_230                                 7957.175713         15914.351427        Broken              sparkling           In Stock            
+Pickup_913                              19605.681674        39211.363349        Used                sparkling           In Stock            
+Pickup_107                              5965.583486         11931.166972        Broken              clean               In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_650                              7597.152811         15194.305623        Broken              dirty               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           Sold                
+Car_393                                 16641.019862        33282.039724        Like New            sparkling           Sold                
+Car_739                                 13794.232496        27588.464993        Used                sparkling           Sold                
+Pickup_363                              11774.019545        23548.039090        Used                sparkling           Sold                
+Pickup_31                               5283.084363         10566.168725        Broken              clean               Sold                
+Car_581                                 6150.256577         12300.513154        Used                clean               Sold                
+Pickup_827                              22660.105423        45320.210845        Like New            sparkling           Sold                
+Pickup_101                              17554.709129        35109.418259        Like New            clean               Sold                
+Pickup_898                              9545.028933         19090.057866        Broken              clean               Sold                
+Car_735                                 7605.298158         15210.596317        Used                clean               Sold                
+Pickup_789                              11650.078898        23300.157795        Broken              clean               Sold                
+Pickup_293                              27221.918159        54443.836318        Like New            sparkling           Sold                
+Car_193                                 12145.792137        24291.584274        Used                sparkling           Sold                
+===== TOTAL MONEY IN BUDGET: 997915.2626011103 =====
+===== SALES FOR THE DAY: 24291.58427413551 =====
+SUNDAY - CLOSED
+FNCD DAY 26
+Opening...
+Hired Intern_53709
+Purchased Car_780. For: 3389.850326303399
+Washing...
+Intern_24715 washed Performance Car_389 and made it clean
+Intern_24715 washed Pickup_638 and made it clean
+Repairing...
+Intern_74200 just repaired Performance Car_523 and made it Used
+Intern_74200 just repaired Car_780 and made it Used
+Selling...
+Salesperson_79314 just sold Pickup_913 for 39211.36334887103
+Salesperson_79314 just sold Pickup_638 for 9281.828277024717
+Ending...
+============== QUIT: ==============
+	Intern_37240
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 11000.0
+	 	 Total Bonus Pay: 29500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 11000.0
+	 	 Total Bonus Pay: 19000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 11000.0
+	 	 Total Bonus Pay: 17000.0
+	Intern_36506
+	 	 Total Normal Pay: 8500.0
+	 	 Total Bonus Pay: 11500.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 8800.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 8800.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 8800.0
+	 	 Total Bonus Pay: 7000.0
+	Intern_74200
+	 	 Total Normal Pay: 400.0
+	 	 Total Bonus Pay: 7500.0
+===== INTERNS: =====
+	Intern_53709
+	 	 Total Normal Pay: 2200.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 1700.0
+	 	 Total Bonus Pay: 0.0
+	Intern_85720
+	 	 Total Normal Pay: 100.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        80582.093636        Broken              dirty               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Car_780                                 3389.850326         15254.326468        Broken              dirty               In Stock            
+Car_446                                 3911.408285         7822.816570         Broken              clean               In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Car_230                                 7957.175713         15914.351427        Broken              sparkling           In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_650                              7597.152811         15194.305623        Broken              dirty               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           Sold                
+Car_393                                 16641.019862        33282.039724        Like New            sparkling           Sold                
+Car_739                                 13794.232496        27588.464993        Used                sparkling           Sold                
+Pickup_363                              11774.019545        23548.039090        Used                sparkling           Sold                
+Pickup_31                               5283.084363         10566.168725        Broken              clean               Sold                
+Car_581                                 6150.256577         12300.513154        Used                clean               Sold                
+Pickup_827                              22660.105423        45320.210845        Like New            sparkling           Sold                
+Pickup_101                              17554.709129        35109.418259        Like New            clean               Sold                
+Pickup_898                              9545.028933         19090.057866        Broken              clean               Sold                
+Car_735                                 7605.298158         15210.596317        Used                clean               Sold                
+Pickup_789                              11650.078898        23300.157795        Broken              clean               Sold                
+Pickup_293                              27221.918159        54443.836318        Like New            sparkling           Sold                
+Car_193                                 12145.792137        24291.584274        Used                sparkling           Sold                
+Pickup_913                              19605.681674        39211.363349        Used                sparkling           Sold                
+Pickup_107                              5965.583486         11931.166972        Broken              clean               Sold                
+===== TOTAL MONEY IN BUDGET: 1041667.942595848 =====
+===== SALES FOR THE DAY: 51142.53032104112 =====
+FNCD DAY 27
+Opening...
+Hired Intern_53709
+Purchased Pickup_638. For: 4640.9141385123585
+Purchased Pickup_650. For: 7597.152811411666
+Washing...
+Intern_85720 washed Performance Car_523 and made it sparkling
+Repairing...
+Selling...
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 11500.0
+	 	 Total Bonus Pay: 29500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 11500.0
+	 	 Total Bonus Pay: 19000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 11500.0
+	 	 Total Bonus Pay: 17000.0
+	Intern_36506
+	 	 Total Normal Pay: 9000.0
+	 	 Total Bonus Pay: 11500.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 9200.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 9200.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 9200.0
+	 	 Total Bonus Pay: 7000.0
+	Intern_74200
+	 	 Total Normal Pay: 800.0
+	 	 Total Bonus Pay: 7500.0
+===== INTERNS: =====
+	Intern_53709
+	 	 Total Normal Pay: 2300.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 1800.0
+	 	 Total Bonus Pay: 0.0
+	Intern_85720
+	 	 Total Normal Pay: 200.0
+	 	 Total Bonus Pay: 5000.0
+	Intern_1636
+	 	 Total Normal Pay: 100.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        80582.093636        Broken              sparkling           In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Car_230                                 7957.175713         15914.351427        Broken              sparkling           In Stock            
+Car_446                                 3911.408285         7822.816570         Broken              clean               In Stock            
+Car_780                                 3389.850326         15254.326468        Broken              dirty               In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Pickup_953                              23007.086213        46014.172427        Like New            sparkling           In Stock            
+Pickup_358                              12933.563621        25867.127242        Like New            dirty               In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_650                              7597.152811         15194.305623        Broken              dirty               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           Sold                
+Car_393                                 16641.019862        33282.039724        Like New            sparkling           Sold                
+Car_739                                 13794.232496        27588.464993        Used                sparkling           Sold                
+Pickup_363                              11774.019545        23548.039090        Used                sparkling           Sold                
+Pickup_31                               5283.084363         10566.168725        Broken              clean               Sold                
+Car_581                                 6150.256577         12300.513154        Used                clean               Sold                
+Pickup_827                              22660.105423        45320.210845        Like New            sparkling           Sold                
+Pickup_101                              17554.709129        35109.418259        Like New            clean               Sold                
+Pickup_898                              9545.028933         19090.057866        Broken              clean               Sold                
+Car_735                                 7605.298158         15210.596317        Used                clean               Sold                
+Pickup_789                              11650.078898        23300.157795        Broken              clean               Sold                
+Pickup_293                              27221.918159        54443.836318        Like New            sparkling           Sold                
+Car_193                                 12145.792137        24291.584274        Used                sparkling           Sold                
+Pickup_913                              19605.681674        39211.363349        Used                sparkling           Sold                
+Pickup_107                              5965.583486         11931.166972        Broken              clean               Sold                
+===== TOTAL MONEY IN BUDGET: 1025429.875645924 =====
+===== SALES FOR THE DAY: 0.0 =====
+FNCD DAY 28
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+============== QUIT: ==============
+NONE QUIT
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 12000.0
+	 	 Total Bonus Pay: 29500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 12000.0
+	 	 Total Bonus Pay: 19000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 12000.0
+	 	 Total Bonus Pay: 17000.0
+	Intern_36506
+	 	 Total Normal Pay: 9500.0
+	 	 Total Bonus Pay: 11500.0
+===== MECHANICS: =====
+	Mechanic_68079
+	 	 Total Normal Pay: 9600.0
+	 	 Total Bonus Pay: 10000.0
+	Mechanic_86767
+	 	 Total Normal Pay: 9600.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 9600.0
+	 	 Total Bonus Pay: 7000.0
+	Intern_74200
+	 	 Total Normal Pay: 1200.0
+	 	 Total Bonus Pay: 7500.0
+===== INTERNS: =====
+	Intern_53709
+	 	 Total Normal Pay: 2400.0
+	 	 Total Bonus Pay: 0.0
+	Intern_24715
+	 	 Total Normal Pay: 1900.0
+	 	 Total Bonus Pay: 0.0
+	Intern_85720
+	 	 Total Normal Pay: 300.0
+	 	 Total Bonus Pay: 5000.0
+	Intern_1636
+	 	 Total Normal Pay: 200.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        80582.093636        Broken              sparkling           In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Car_230                                 7957.175713         15914.351427        Broken              sparkling           In Stock            
+Car_446                                 3911.408285         7822.816570         Broken              clean               In Stock            
+Car_780                                 3389.850326         15254.326468        Broken              dirty               In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Pickup_953                              23007.086213        46014.172427        Like New            sparkling           In Stock            
+Pickup_358                              12933.563621        25867.127242        Like New            dirty               In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_650                              7597.152811         15194.305623        Broken              dirty               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           Sold                
+Car_393                                 16641.019862        33282.039724        Like New            sparkling           Sold                
+Car_739                                 13794.232496        27588.464993        Used                sparkling           Sold                
+Pickup_363                              11774.019545        23548.039090        Used                sparkling           Sold                
+Pickup_31                               5283.084363         10566.168725        Broken              clean               Sold                
+Car_581                                 6150.256577         12300.513154        Used                clean               Sold                
+Pickup_827                              22660.105423        45320.210845        Like New            sparkling           Sold                
+Pickup_101                              17554.709129        35109.418259        Like New            clean               Sold                
+Pickup_898                              9545.028933         19090.057866        Broken              clean               Sold                
+Car_735                                 7605.298158         15210.596317        Used                clean               Sold                
+Pickup_789                              11650.078898        23300.157795        Broken              clean               Sold                
+Pickup_293                              27221.918159        54443.836318        Like New            sparkling           Sold                
+Car_193                                 12145.792137        24291.584274        Used                sparkling           Sold                
+Pickup_913                              19605.681674        39211.363349        Used                sparkling           Sold                
+Pickup_107                              5965.583486         11931.166972        Broken              clean               Sold                
+===== TOTAL MONEY IN BUDGET: 1021429.875645924 =====
+===== SALES FOR THE DAY: 0.0 =====
+FNCD DAY 29
+Opening...
+Washing...
+Repairing...
+Selling...
+Salesperson_79314 just sold Pickup_638 for 9281.828277024717
+Ending...
+============== QUIT: ==============
+	Mechanic_68079
+============== WORKING: ==============
+===== SALESPEOPLE: =====
+	Salesperson_71900
+	 	 Total Normal Pay: 12500.0
+	 	 Total Bonus Pay: 29500.0
+	Salesperson_79314
+	 	 Total Normal Pay: 12500.0
+	 	 Total Bonus Pay: 21000.0
+	Salesperson_27336
+	 	 Total Normal Pay: 12500.0
+	 	 Total Bonus Pay: 17000.0
+	Intern_36506
+	 	 Total Normal Pay: 10000.0
+	 	 Total Bonus Pay: 11500.0
+===== MECHANICS: =====
+	Mechanic_86767
+	 	 Total Normal Pay: 10000.0
+	 	 Total Bonus Pay: 4500.0
+	Mechanic_63528
+	 	 Total Normal Pay: 10000.0
+	 	 Total Bonus Pay: 7000.0
+	Intern_74200
+	 	 Total Normal Pay: 1600.0
+	 	 Total Bonus Pay: 7500.0
+	Intern_53709
+	 	 Total Normal Pay: 0.0
+	 	 Total Bonus Pay: 0.0
+===== INTERNS: =====
+	Intern_24715
+	 	 Total Normal Pay: 2000.0
+	 	 Total Bonus Pay: 0.0
+	Intern_85720
+	 	 Total Normal Pay: 400.0
+	 	 Total Bonus Pay: 5000.0
+	Intern_1636
+	 	 Total Normal Pay: 300.0
+	 	 Total Bonus Pay: 0.0
+Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+Performance Car_523                     17907.131919        80582.093636        Broken              sparkling           In Stock            
+Performance Car_820                     10137.769245        20275.538490        Broken              sparkling           In Stock            
+Performance Car_389                     5574.020909         20902.578410        Broken              dirty               In Stock            
+Performance Car_866                     16613.384850        33226.769701        Broken              sparkling           In Stock            
+Car_230                                 7957.175713         15914.351427        Broken              sparkling           In Stock            
+Car_446                                 3911.408285         7822.816570         Broken              clean               In Stock            
+Car_780                                 3389.850326         15254.326468        Broken              dirty               In Stock            
+Car_535                                 3257.657893         6515.315786         Broken              clean               In Stock            
+Pickup_358                              12933.563621        25867.127242        Like New            dirty               In Stock            
+Pickup_638                              4640.914139         9281.828277         Used                dirty               In Stock            
+Pickup_650                              7597.152811         15194.305623        Broken              dirty               In Stock            
+Pickup_985                              31349.822722        62699.645444        Like New            sparkling           Sold                
+Pickup_134                              10910.167272        27275.418180        Used                dirty               Sold                
+Performance Car_453                     15501.950836        31003.901671        Like New            dirty               Sold                
+Car_778                                 6375.373012         12750.746023        Like New            dirty               Sold                
+Pickup_301                              19994.604009        39989.208018        Like New            sparkling           Sold                
+Pickup_727                              12065.453391        24130.906782        Like New            clean               Sold                
+Car_981                                 5023.739237         12559.348092        Used                dirty               Sold                
+Performance Car_33                      15315.163900        30630.327800        Like New            dirty               Sold                
+Pickup_578                              15867.397484        31734.794967        Like New            sparkling           Sold                
+Performance Car_624                     14016.105536        28032.211073        Like New            dirty               Sold                
+Car_77                                  9495.189301         18990.378601        Like New            clean               Sold                
+Car_507                                 6179.337884         15448.344710        Used                dirty               Sold                
+Pickup_973                              11860.008781        23720.017563        Used                clean               Sold                
+Pickup_169                              8863.142476         17726.284953        Like New            dirty               Sold                
+Pickup_355                              5443.757812         13609.394529        Used                dirty               Sold                
+Car_13                                  7976.420764         15952.841528        Like New            dirty               Sold                
+Car_596                                 5724.712919         11449.425838        Used                dirty               Sold                
+Car_564                                 6215.445258         12430.890516        Like New            dirty               Sold                
+Pickup_251                              25317.896900        50635.793800        Used                sparkling           Sold                
+Car_393                                 16641.019862        33282.039724        Like New            sparkling           Sold                
+Car_739                                 13794.232496        27588.464993        Used                sparkling           Sold                
+Pickup_363                              11774.019545        23548.039090        Used                sparkling           Sold                
+Pickup_31                               5283.084363         10566.168725        Broken              clean               Sold                
+Car_581                                 6150.256577         12300.513154        Used                clean               Sold                
+Pickup_827                              22660.105423        45320.210845        Like New            sparkling           Sold                
+Pickup_101                              17554.709129        35109.418259        Like New            clean               Sold                
+Pickup_898                              9545.028933         19090.057866        Broken              clean               Sold                
+Car_735                                 7605.298158         15210.596317        Used                clean               Sold                
+Pickup_789                              11650.078898        23300.157795        Broken              clean               Sold                
+Pickup_293                              27221.918159        54443.836318        Like New            sparkling           Sold                
+Car_193                                 12145.792137        24291.584274        Used                sparkling           Sold                
+Pickup_913                              19605.681674        39211.363349        Used                sparkling           Sold                
+Pickup_107                              5965.583486         11931.166972        Broken              clean               Sold                
+Pickup_953                              23007.086213        46014.172427        Like New            sparkling           Sold                
+===== TOTAL MONEY IN BUDGET: 1063444.048072776 =====
+===== SALES FOR THE DAY: 46014.17242685212 =====
+ALL STAFF THAT HAS LEFT: 
+Salesperson_25136
+Mechanic_85665
+Intern_37240
+Mechanic_68079
