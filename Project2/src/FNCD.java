@@ -60,7 +60,7 @@ public class FNCD {
 	}
 	
 	public void Start() {
-		for (int i = 0; i < daysToSimulate_; i++) {
+		for (int i = 0; i <= daysToSimulate_; i++) {
 			Opening();
 			totalSalesPerDay = 0.0;
 		}
