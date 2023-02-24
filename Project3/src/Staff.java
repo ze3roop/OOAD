@@ -1,68 +1,132 @@
+import java.util.concurrent.ThreadLocalRandom;
+
 /* ============== STAFF SUPER CLASS ============= */
-public class Staff extends Person{	
-
-	protected Integer daysWorked;
-	protected Double salary;
-	protected Double bonus;
-	protected Integer jobs_completed;
-
+public class Staff { // INHERITANCE 
+	protected String name; // ENCAPSULATION
+	protected Double totalSalary; // ENCAPSULATION
+	protected Integer JobsDone; // ENCAPSULATION
+	protected Double dailySalary; // ENCAPSULATION
+	protected Double bonus_; // ENCAPSULATION
+	
 	// the Staff constructor
 	public Staff()
 	{
-		super();
-
-		daysWorked = 0;
-		salary = 0.0;
-		bonus = 0.0;
-
-		jobs_completed = 0;
-
 	}
 	
-	public Double GetDailySalary() {
-		return salary;
+	public void CreateName(String str) { //POLYMORPHISM AND ABSTRACTION
+		name = str;
 	}
-
-	public Double GetBonus() {
-		return bonus;
+	public String GetName() { //POLYMORPHISM AND ABSTRACTION
+		return name;
+	}
+	public void SetDailySalary() { //POLYMORPHISM AND ABSTRACTION
+		totalSalary = totalSalary + dailySalary;
 	}
 	
-	public void EarnBonus(String vehicleType) {
-		if(vehicleType == "PerformanceCar")
+	public Double GetDailySalary() { //POLYMORPHISM AND ABSTRACTION
+		return dailySalary;
+	}
+	
+	public Double GetTotalSalary() //POLYMORPHISM AND ABSTRACTION
+	{
+		return totalSalary;
+	}
+	public Double GetTotalBonusPay() //POLYMORPHISM AND ABSTRACTION
+	{
+		return bonus_;
+	}
+	
+	public void Bonus(String vehicleType) { //POLYMORPHISM AND ABSTRACTION
+		if(vehicleType == "Performance Car")
 		{
-			bonus = bonus + 5000.0;
-			System.out.println(name + " Earned a $5000 bonus");
+			bonus_ = bonus_ + 5000;
 		}
 		else if(vehicleType == "Car")
 		{
-			bonus = bonus + 2500.0;
-			System.out.println(name + " Earned a $2500 bonus");
+			bonus_ = bonus_ + 2500; 
 		}
 		else if(vehicleType == "Pickup")
 		{
-			bonus = bonus + 3000.0; 
-			System.out.println(name + " Earned a $3000 bonus");
+			bonus_ = bonus_ + 2000; 
 		}
 	}
+}
 
-	public void RevertBonus() {bonus = 0.0;}
 
-	// returns true if they can do the job
-	// returns false if they cannot do a job
-	public boolean doJob() {
-		if (jobs_completed < 2){
-			jobs_completed = jobs_completed + 1;
-			return true;
-		} else {
-			// System.out.println( name + ": I am not doing that, I have already done " + jobs_completed + "jobs\n");
-			return false;
-		}
+/* ============== SALESPEOPLE ============= */
+class Salespeople extends Staff // INHERITANCE 
+{
+
+	public Salespeople() { //IDENTITY
+		super(); // invoking base-class Staff constructor. (This will call the createName() function
+		Integer randomInt = ThreadLocalRandom.current().nextInt(000000, 100000);
+		CreateName("Salesperson_" + randomInt);
+		dailySalary = (double) 500; // whatever the base salary for SalesPeople is 
+		totalSalary = 0.0;
+		bonus_ = 0.0;
+	}
+	
+	public Salespeople(String name) { //IDENTITY
+		super(); // invoking base-class Staff constructor. (This will call the createName() function
+		dailySalary = (double) 500; // whatever the base salary for SalesPeople is 
+		totalSalary = 0.0;
+		CreateName(name); 
+		bonus_ = 0.0;
 	}
 
-	public void RevertJobs() {jobs_completed = 0;}
+}
 
-	public Boolean quit() {
-		Helper h = new Helper();
-		return h.percentChance(10);
+
+/* ============== MECHANICS ============= */
+class Mechanics extends Staff // INHERITANCE 
+{
+
+	public Mechanics() {
+		super(); // invoking base-class Staff constructor. (This will call the createName() function
+		Integer randomInt = ThreadLocalRandom.current().nextInt(000000, 100000);
+		CreateName("Mechanic_" + randomInt);
+		dailySalary = (double) 400; // whatever the base salary for Mechanics is 
+		JobsDone = 0; // start with 0 jobsdone
+		totalSalary = 0.0;
+		bonus_ = 0.0;
 	}
+	public Mechanics(String name) {
+		super(); // invoking base-class Staff constructor. (This will call the createName() function
+		dailySalary = (double) 400; // whatever the base salary for SalesPeople is 
+		JobsDone = 0;
+		CreateName(name); 
+		totalSalary = 0.0;
+		bonus_ = 0.0;
+	}
+	public Integer GetJobsDone() {
+		return JobsDone;
+	}
+	public void SetJobsDone() {
+		JobsDone = JobsDone + 1; 
+	}
+
+}
+
+
+/* =============== INTERNS ============== */
+class Interns extends Staff // INHERITANCE 
+{
+
+	public Interns() {
+		super(); // invoking base-class Staff constructor. (This will call the createName() function
+		dailySalary = (double) 100; // whatever the base salary for Interns is 
+		Integer randomInt = ThreadLocalRandom.current().nextInt(000000, 100000);
+		CreateName("Intern_" + randomInt);
+		JobsDone = 0; // start with 0 jobsdone
+		totalSalary = 0.0;
+		bonus_ = 0.0;
+	}
+	public Integer GetJobsDone() {
+		return JobsDone;
+	}
+	public void SetJobsDone() {
+		JobsDone = JobsDone + 1; 
+	}
+
+	
 }
