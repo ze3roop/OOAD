@@ -1,97 +1,83 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class FNCD {
-	protected ArrayList<Salespeople> salesPeople = new ArrayList<Salespeople>();
-	protected ArrayList<Mechanics> mechanics = new ArrayList<Mechanics>();
-	protected ArrayList<Interns> interns = new ArrayList<Interns>();
-	protected Integer staffPerType = 3; 
-	protected ArrayList<PerformanceCars> performanceCars = new ArrayList<PerformanceCars>();
-	protected ArrayList<Cars> cars = new ArrayList<Cars>();
-	protected ArrayList<Pickups> pickups = new ArrayList<Pickups>();
-	protected Integer carAmount = 4;
-	protected Double budget_; //this is going to be private. 
-	protected ArrayList<Vehicles> soldVehicles = new ArrayList<Vehicles>();
-	protected ArrayList<Vehicles> allSoldVehicles = new ArrayList<Vehicles>();
+
+	final int REQ_CARS = 4;
+	final int REQ_STAFF = 3;
+
+	protected ArrayList<Salesperson> salesPeople = new ArrayList<Salesperson>();
+	protected ArrayList<Mechanic> mechanics = new ArrayList<Mechanic>();
+	protected ArrayList<Intern> interns = new ArrayList<Intern>();
+
+
+	protected ArrayList<PerformanceCar> performanceCars = new ArrayList<PerformanceCar>();
+	protected ArrayList<Car> cars = new ArrayList<Car>();
+	protected ArrayList<Pickup> pickups = new ArrayList<Pickup>();
+
+	private Double budget = 500000.0; //this is going to be private.
+	private int num_loans = 0;
+
+	protected ArrayList<Vehicle> soldVehicles = new ArrayList<Vehicle>();
+	protected ArrayList<Vehicle> allSoldVehicles = new ArrayList<Vehicle>();
 	protected ArrayList<Staff> departedStaff = new ArrayList<Staff>();
 	
-	protected String[] daysOfTheWeek_ = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-	protected int totalDayCount_;
-	protected int dayCount_; 
-	protected String day_; 
-	protected int daysToSimulate_;
+	static protected String[] daysOfTheWeek_ = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+	static protected int dayCount = 0; 
+	static protected int daysToSimulate = 0;
+
 	protected Double totalSalesPerDay;
 	
 	public FNCD(int daysToSimulate)
-	{
-		budget_ = (double) 500000; //INITIAL OPERATING BUDGET 
-		totalDayCount_ = 0;
-		dayCount_ = 0; 
-		totalSalesPerDay = 0.0;
-		day_ = "Sunday"; // gonna use something like, day = daysOfTheWeek[dayCount]. When dayCount gets to 6, we will make it equal to 0. But 
-		//We will keep increasing totalDayCount without taking anything away, for the sake of a simulation duration tracker. 
-		//Also when calling this FNCD object, we could instantiate with an argument for the amount of days it should run. Then, on open, 
-		//we check if totalDayCount is equal to the argument. We can also call the next function in the class. so Opening() will call Cleaning() next,
-		//and so on and so forth.
-		daysToSimulate_ = daysToSimulate;
-		
+	{		
 		//initialize staff and vehicles
-		for (int a = 0; a<staffPerType + 1; a++) {
-			interns.add( new Interns() );
+		for (int a = 0; a<REQ_STAFF + 1; a++) {
+			interns.add( new Intern() );
 		}
-		for (int b = 0; b<staffPerType + 1; b++) {
-			mechanics.add( new Mechanics() );
+		for (int b = 0; b<REQ_STAFF + 1; b++) {
+			mechanics.add( new Mechanic() );
 		}
-		for (int c = 0; c<staffPerType + 1; c++) {
-			salesPeople.add( new Salespeople() );
+		for (int c = 0; c<REQ_STAFF + 1; c++) {
+			salesPeople.add( new Salesperson() );
 		}
 
-		for (int a = 0; a < carAmount; a++) {
-			performanceCars.add(new PerformanceCars() );
+		for (int a = 0; a < REQ_STAFF; a++) {
+			performanceCars.add(new PerformanceCar() );
 		}
-		for (int a = 0; a < carAmount; a++) {
-			cars.add( new Cars() );
+		for (int a = 0; a < REQ_STAFF; a++) {
+			cars.add( new Car() );
 		}
-		for (int a = 0; a < carAmount; a++) {
-			pickups.add(new Pickups() );
+		for (int a = 0; a < REQ_STAFF; a++) {
+			pickups.add(new Pickup() );
 		}
 	}
 	
 	public void Start() {
-		for (int i = 0; i <= daysToSimulate_; i++) {
+		for (int i = 0; i <= daysToSimulate; i++) {
 			Opening();
 			totalSalesPerDay = 0.0;
 		}
 		System.out.println("ALL STAFF THAT HAS LEFT: ");
-		for(int i = 0; i < departedStaff.size(); i++) {
+
+		int staff_left = departedStaff.size();
+
+		for(int i = 0; i < staff_left; i++) {
 			System.out.println( departedStaff.get(i).GetName());
 		}
 	}
 	
 	public void Opening() {
-		if(day_ == "Sunday") {
-			System.out.println("SUNDAY - CLOSED");
-			dayCount_++;
-			day_= daysOfTheWeek_[dayCount_];
-			totalDayCount_++;
+
+		System.out.println("FNCD DAY " + dayCount + " - " + daysOfTheWeek_[dayCount % 6]);
+		if (dayCount % 6 == 0) {
+			System.out.println("CLOSED");
 			return;
 		}
-		//THIS IS WHERE WE SHOULD CHECK WHAT DAY IT IS, AND ADD TO ALL OF THE ACCUMULATORS.
-		
-		System.out.println("FNCD DAY " + totalDayCount_);
-		
+
 		System.out.println("Opening..."); 
-		
-		if(dayCount_ >= 6) {
-			dayCount_ = 0;
-		}
-		day_ = daysOfTheWeek_[dayCount_];
-		totalDayCount_++;
-		dayCount_++;
-		
-		
 		
 
 		
@@ -99,9 +85,9 @@ public class FNCD {
 		
 		
 		//if interns are less than three interns, hire (e.g. add) new interns to the FNCD to bring the count back to three. 
-		if(interns.size() < 4) {
-			for (int i = 0; interns.size()<4; i++) {
-				interns.add( new Interns() );
+		if(interns.size() < REQ_STAFF) {
+			for (int i = 0; interns.size()<REQ_STAFF; i++) {
+				interns.add( new Intern() );
 				System.out.println("Hired " + interns.get(i).GetName());
 			}
 		}
@@ -111,29 +97,29 @@ public class FNCD {
 		//These newly instantiated vehicles must be paid for, reducing the operating  budget by the cost of the Vehicle. The Vehicles will then be
 		//part of the FNCD inventory.
 		
-		if(performanceCars.size() < carAmount) {
-			for (int i = 0; performanceCars.size()<carAmount; i++) {
-				performanceCars.add( new PerformanceCars() );
+		if(performanceCars.size() < REQ_CARS) {
+			for (int i = 0; performanceCars.size()<REQ_CARS; i++) {
+				performanceCars.add( new PerformanceCar() );
 				//take money from operating budget. 
-				budget_ = budget_ - performanceCars.get(i).GetCost(); 
+				budget = budget - performanceCars.get(i).GetCost(); 
 				System.out.println("Purchased " + performanceCars.get(i).GetName() + ". For: " + performanceCars.get(i).GetCost());
 			}
 		}
-		if(cars.size() < carAmount) {
-			for (int i = 0; cars.size()<carAmount; i++) {
-				cars.add( new Cars() );
+		if(cars.size() < REQ_CARS) {
+			for (int i = 0; cars.size() < REQ_CARS; i++) {
+				cars.add( new Car() );
 				//take money from operating budget. 
 				//SetBudget( performanceCars just instantiated.getSalesPrice() ); 
-				budget_ = budget_ - cars.get(i).GetCost(); 
+				budget = budget - cars.get(i).GetCost(); 
 				System.out.println("Purchased " + cars.get(i).GetName() + ". For: " + cars.get(i).GetCost());
 			}
 		}
-		if(pickups.size() < carAmount) {
-			for (int i = 0; pickups.size()<carAmount; i++) {
-				pickups.add( new Pickups() );
+		if(pickups.size() < REQ_CARS) {
+			for (int i = 0; pickups.size() < REQ_CARS; i++) {
+				pickups.add( new Pickup() );
 				//take money from operating budget. 
 				//SetBudget( pickup just instantiated.getSalesPrice() ); 
-				budget_ = budget_ - pickups.get(i).GetCost(); 
+				budget = budget - pickups.get(i).GetCost(); 
 				System.out.println("Purchased " + pickups.get(i).GetName() + ". For: " + pickups.get(i).GetCost());
 			}
 		}
@@ -143,150 +129,81 @@ public class FNCD {
 	}
 	
 	public void Washing() {
+		Helper h = new Helper();
+
 		System.out.println("Washing...");
-		ArrayList<Vehicles> dirtyVehicles = new ArrayList<Vehicles>();
-		//Every working day the interns will wash vehicles. 
-		//run a for loop through each type of car. 
-		//if a vehicle is dirty, add to dirty vehicles array 
-		for(int i = 0; i<carAmount; i++) {
-			if(performanceCars.get(i).GetCleanliness() == "dirty") {
-				dirtyVehicles.add( performanceCars.get(i) );
+		ArrayList<Vehicle> dirtyVehicles = new ArrayList<Vehicle>();
+		ArrayList<Vehicle> cleanVehicles = new ArrayList<Vehicle>();
+		ArrayList<Vehicle> sparklingVehicles = new ArrayList<Vehicle>();
+		
+		for(int i = 0; i < REQ_CARS; i++) {
+			if(h.compareString(performanceCars.get(i).GetCleanliness(),"dirty")) {
+				dirtyVehicles.add(performanceCars.get(i));
+				performanceCars.remove(i);
+			} else if (h.compareString(performanceCars.get(i).GetCleanliness(),"clean")) {
+				cleanVehicles.add( performanceCars.get(i));
+				performanceCars.remove(i);
 			}
-			if(cars.get(i).GetCleanliness() == "dirty") {
-				dirtyVehicles.add( cars.get(i) );
+
+			if(h.compareString(cars.get(i).GetCleanliness(), "dirty")) {
+				dirtyVehicles.add( cars.get(i));
+				cars.remove(i);
+			} else if (h.compareString(cars.get(i).GetCleanliness(),"clean")) {
+				cleanVehicles.add( cars.get(i));
+				cars.remove(i);
 			}
-			if(pickups.get(i).GetCleanliness() == "dirty") {
+
+			if(h.compareString(pickups.get(i).GetCleanliness(),"dirty")) {
 				dirtyVehicles.add( pickups.get(i) );
-			}
-		}
-		//have intern wash a random car for dirtyVehicles with a 80% chance of it becoming clean, and a 10% chance of it becoming sparkling. 
-		//if an intern makes a vehicle sparkling, give them a bonus.
-		//also, regardless of whether successful of cleaning or not, add 1 to the amount of jobs done by the intern.
-		//if(dirtyVehicles.size() <= 0)
-		//do the clean vehicles. and initialize a cleanVehicles arrayList in the same was as the dirtyVehicles
-		ArrayList<Vehicles> cleanVehicles = new ArrayList<Vehicles>();
-		//Every working day the interns will wash vehicles. 
-		//run a for loop through each type of car. 
-		//if a vehicle is dirty, add to dirty vehicles array 
-		for(int i = 0; i<carAmount; i++) {
-			if(performanceCars.get(i).GetCleanliness() == "clean") {
-				cleanVehicles.add( performanceCars.get(i) );
-			}
-			if(cars.get(i).GetCleanliness() == "clean") {
-				cleanVehicles.add( cars.get(i) );
-			}
-			if(pickups.get(i).GetCleanliness() == "clean") {
-				cleanVehicles.add( pickups.get(i) );
-			}
-		}
-		ArrayList<Vehicles> sparklingVehicles = new ArrayList<Vehicles>();
-		//Every working day the interns will wash vehicles. 
-		//run a for loop through each type of car. 
-		//if a vehicle is dirty, add to dirty vehicles array 
-		for(int i = 0; i<carAmount; i++) {
-			if(performanceCars.get(i).GetCleanliness() == "sparkling") {
-				sparklingVehicles.add( performanceCars.get(i) );
-			}
-			if(cars.get(i).GetCleanliness() == "sparkling") {
-				sparklingVehicles.add( cars.get(i) );
-			}
-			if(pickups.get(i).GetCleanliness() == "sparkling") {
-				sparklingVehicles.add( pickups.get(i) );
+				pickups.remove(i);
+			} else if (h.compareString(pickups.get(i).GetCleanliness(),"clean")) {
+				cleanVehicles.add( pickups.get(i));
+				pickups.remove(i);
 			}
 		}
 		
-		for (int i = 0; i<staffPerType; i++) { //So, loop through every intern one at a time, if we have dirty vehicles, and the intern still has jobs to do, then iterate through the while loop.
-			//Once either the intern has done all available jobs for himself, then we go to the next intern. 
-			while(interns.get(i).GetJobsDone() < 2 || (dirtyVehicles.size() == 0 && cleanVehicles.size() == 0)) { //GROUP the logic that both dirtyVehicles and cleanVehicles lists need to be empty.
-				if (dirtyVehicles.size() > 0) 
-				{
-					//Clean car, make a call to an intern. 
-					//if car is cleaned. remove from dirtyVehicles array list and put into the cleanVehicles array list. 
-					//if car is cleaned . remove from dirtyVehicles array list and put into the clean vehicles array list.
-					//Add 1 to the amount of jobs an intern has done. 
-					var d = Math.random() * 100;
-					if (d <= 10) { //check this one first, since it is included in 80% chance. Whereas if I called 80% chance first and it was 10% it wouldn't be called. 
-						// 10% chance
-						System.out.println(interns.get(i).GetName() + " washed " + dirtyVehicles.get(0).GetName() + " and made it sparkling" );
-						dirtyVehicles.get(0).SetCleanliness("sparkling");
-						interns.get(i).Bonus(dirtyVehicles.get(0).GetVehicleType());      //IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
-						sparklingVehicles.add(dirtyVehicles.get(0));
-						dirtyVehicles.remove(0);
-						
-					}
-					else if (d <= 80) {
-						// 80% chance
-						System.out.println(interns.get(i).GetName() + " washed " + dirtyVehicles.get(0).GetName() + " and made it clean" );
+		for (int i = 0; i<REQ_STAFF; i++) { //So, loop through every intern one at a time, if we have vehicl to wasj, and the intern still has jobs to do, then iterate through the while loop.
+			// Once either the intern has done all available jobs for himself, then we go to the next intern.
+
+			while (interns.get(i).doJob()) { // if the intern can do their job, do the job
+				if (!dirtyVehicles.isEmpty()){ // if there is a dirty car, wash it
+					if (h.percentChance(80)) { // chanve to be clean
 						cleanVehicles.add(dirtyVehicles.get(0));
 						dirtyVehicles.remove(0);
+					} else if (h.percentChance(5)){ // chance to be sparkling
+						interns.get(i).EarnBonus(dirtyVehicles.get(0).GetVehicleType());
+						sparklingVehicles.add(dirtyVehicles.get(0));
+						dirtyVehicles.remove(0);
 					}
-					interns.get(i).SetJobsDone(); //regardless of whether or not they cleaned a car add one to the amount of jobs the intern has done. 
-					    
-				}
-				else if(cleanVehicles.size() > 0)// if there are no more dirtyVehicles, then iterate through the cleanVehicles list
-				{
-					//Clean car, make a call to an intern.
-					//if car is cleaned. remove from cleanVehicles array list and put into the sparklingVehicle array list. 
-					//if car is cleaned . remove from cleanVehicles array list and put into the sparklingVehicle array list.
-					//Add 1 to the amount of jobs an intern has done. 
-					var d = Math.random() * 100;
-					if(d <= 5) {
-						//5% chance of becoming dirty?
-						System.out.println(interns.get(i).GetName() + " washed " + cleanVehicles.get(0).GetName() + " and made it dirty." );
-						cleanVehicles.get(0).SetCleanliness("dirty");
+				} else if (!cleanVehicles.isEmpty()) { // if there is a clean car to wasj, wash it
+					if (h.percentChance(5)) { // chance to become dirty
 						dirtyVehicles.add(cleanVehicles.get(0));
 						cleanVehicles.remove(0);
-					}
-					else if (d <= 30) {
-						//30% chance of making the car sparkling.
-						System.out.println(interns.get(i).GetName() + " washed " + cleanVehicles.get(0).GetName() + " and made it sparkling." );
-						cleanVehicles.get(0).SetCleanliness("sparkling");
-						interns.get(i).Bonus(cleanVehicles.get(0).GetVehicleType());//IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
+					} else if (h.percentChance(30)){
+						interns.get(i).EarnBonus(dirtyVehicles.get(0).GetVehicleType());
 						sparklingVehicles.add(cleanVehicles.get(0));
 						cleanVehicles.remove(0);
 					}
-					//how to go about cleaning a car. 
-					interns.get(i).SetJobsDone(); //regardless of whether or not they cleaned a car add one to the amount of jobs the intern has done. 
+				} else {
+					// do nothing
 				}
-			}
+			} // Intern cannot work any more
 			
-		}
-		performanceCars.clear();
-		cars.clear();
-		pickups.clear();
-		
-		//drivableVehicles.addAll(drivablePerfCars);
-		for(int i = 0; i < dirtyVehicles.size(); i++) {
-			if(dirtyVehicles.get(i).GetVehicleType() == "Performance Car") {
-				performanceCars.add((PerformanceCars) dirtyVehicles.get(i));
-			}
-			else if(dirtyVehicles.get(i).GetVehicleType() == "Car") {
-				cars.add((Cars) dirtyVehicles.get(i));
-			}
-			else if(dirtyVehicles.get(i).GetVehicleType() == "Pickup") {
-				pickups.add((Pickups) dirtyVehicles.get(i));
-			}
-		}
-		for(int i = 0; i < cleanVehicles.size(); i++) {
-			if(cleanVehicles.get(i).GetVehicleType() == "Performance Car") {
-				performanceCars.add((PerformanceCars) cleanVehicles.get(i));
-			}
-			else if(cleanVehicles.get(i).GetVehicleType() == "Car") {
-				cars.add((Cars) cleanVehicles.get(i));
-			}
-			else if(cleanVehicles.get(i).GetVehicleType() == "Pickup") {
-				pickups.add((Pickups) cleanVehicles.get(i));
-			}
-		}
-		for(int i = 0; i < sparklingVehicles.size(); i++) {
-			if(sparklingVehicles.get(i).GetVehicleType() == "Performance Car") {
-				performanceCars.add((PerformanceCars) sparklingVehicles.get(i));
-			}
-			else if(sparklingVehicles.get(i).GetVehicleType() == "Car") {
-				cars.add((Cars) sparklingVehicles.get(i));
-			}
-			else if(sparklingVehicles.get(i).GetVehicleType() == "Pickup") {
-				pickups.add((Pickups) sparklingVehicles.get(i));
+		} // No more interns to work
+
+		// put the cars back into the inventory
+
+		while (!dirtyVehicles.isEmpty()){
+			string vechicle_type = dirtyVehicles.get(0).GetVehicleType();
+			if (h.compareString(vechicle_type, "PerformanceCCar")){
+				performanceCars.add((PerformanceCar)dirtyVehicles.get(0));
+				dirtyVehicles.remove(0);
+			} else if (h.compareString(vechicle_type, "Pickup")){
+				pickups.add((Pickup)dirtyVehicles.get(0));
+				dirtyVehicles.remove(0);
+			} else if (h.compareString(vechicle_type, "Car")){
+				cars.add((Car)dirtyVehicles.get(0));
+				dirtyVehicles.remove(0);
 			}
 		}
 		
@@ -304,7 +221,7 @@ public class FNCD {
 		
 		System.out.println("Repairing...");
 		
-		ArrayList<Vehicles> brokenVehicles = new ArrayList<Vehicles>();
+		ArrayList<Vehicle> brokenVehicles = new ArrayList<Vehicle>();
 		for(int i = 0; i<carAmount; i++) {
 			if(performanceCars.get(i).GetCondition() == "Broken") {
 				brokenVehicles.add( performanceCars.get(i) );
@@ -317,7 +234,7 @@ public class FNCD {
 			}
 		}
 		
-		ArrayList<Vehicles> usedVehicles = new ArrayList<Vehicles>();
+		ArrayList<Vehicle> usedVehicles = new ArrayList<Vehicle>();
 		for(int i = 0; i<carAmount; i++) {
 			if(performanceCars.get(i).GetCondition() == "Used") {
 				usedVehicles.add( performanceCars.get(i) );
@@ -330,7 +247,7 @@ public class FNCD {
 			}
 		}
 		
-		ArrayList<Vehicles> likeNewVehicles = new ArrayList<Vehicles>();
+		ArrayList<Vehicle> likeNewVehicles = new ArrayList<Vehicle>();
 		for(int i = 0; i<carAmount; i++) {
 			if(performanceCars.get(i).GetCondition() == "Like New") {
 				likeNewVehicles.add( performanceCars.get(i) );
@@ -510,9 +427,9 @@ public class FNCD {
 				pickups.remove(i);
 			}
 		}
-		Collections.sort(performanceCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
-		Collections.sort(cars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
-		Collections.sort(pickups, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+		Collections.sort(performanceCars, Comparator.comparingDouble(Vehicle::GetSalesPrice).reversed());
+		Collections.sort(cars, Comparator.comparingDouble(Vehicle::GetSalesPrice).reversed());
+		Collections.sort(pickups, Comparator.comparingDouble(Vehicle::GetSalesPrice).reversed());
 		
 		
 		
@@ -566,10 +483,10 @@ public class FNCD {
 				}
 				else {
 					//WE DON'T HAVE ANY PERFORMANCE CARS, SO 
-					ArrayList<Vehicles> drivableVehicles = new ArrayList<Vehicles>();
+					ArrayList<Vehicle> drivableVehicles = new ArrayList<Vehicle>();
 					drivableVehicles.addAll(cars);
 					drivableVehicles.addAll(pickups);
-					Collections.sort(drivableVehicles, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+					Collections.sort(drivableVehicles, Comparator.comparingDouble(Vehicle::GetSalesPrice).reversed());
 					//NOW SELL FIRST ELEMENT OF DRIVABLE VEHICLES. 
 					
 					chance = buyers.get(i).GetChance();
@@ -591,7 +508,7 @@ public class FNCD {
 						for(int a = 0; a<drivableVehicles.size(); a++) {
 							if(drivableVehicles.get(a).GetVehicleType() == "Car" && drivableVehicles.get(a).GetCondition()!="Broken") {
 								
-								Collections.sort(performanceCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+								Collections.sort(performanceCars, Comparator.comparingDouble(Vehicle::GetSalesPrice).reversed());
 								System.out.println( salesPeople.get(randomNum2).GetName() + " just sold " + drivableVehicles.get(a).GetName() + " for " + drivableVehicles.get(a).GetSalesPrice());
 								cars.remove(a); 
 								totalSalesPerDay = totalSalesPerDay + drivableVehicles.get(a).GetSalesPrice();
@@ -602,7 +519,7 @@ public class FNCD {
 							}
 							else if(drivableVehicles.get(a).GetVehicleType() == "Pickup" && drivableVehicles.get(a).GetCondition()!="Broken") {
 								
-								Collections.sort(cars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+								Collections.sort(cars, Comparator.comparingDouble(Vehicle::GetSalesPrice).reversed());
 								System.out.println( salesPeople.get(randomNum2).GetName() + " just sold " + drivableVehicles.get(a).GetName() + " for " + drivableVehicles.get(a).GetSalesPrice());
 								pickups.remove(a); 
 								totalSalesPerDay = totalSalesPerDay + drivableVehicles.get(a).GetSalesPrice();
@@ -651,10 +568,10 @@ public class FNCD {
 				}
 				else {		
 					//WE DON'T HAVE ANY DRIVABLE CARS, SO SELL ONE OF THE PERFORMANCE CARS OR THE PICKUP, WHICH EVER IS THE HIGHEST PRICE. 
-					ArrayList<Vehicles> drivableVehicles = new ArrayList<Vehicles>();
+					ArrayList<Vehicle> drivableVehicles = new ArrayList<Vehicle>();
 					drivableVehicles.addAll(performanceCars);
 					drivableVehicles.addAll(pickups);
-					Collections.sort(drivableVehicles, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+					Collections.sort(drivableVehicles, Comparator.comparingDouble(Vehicle::GetSalesPrice).reversed());
 					//NOW SELL FIRST ELEMENT OF DRIVABLE VEHICLES. 
 					
 					chance = buyers.get(i).GetChance();
@@ -677,7 +594,7 @@ public class FNCD {
 						for(int a = 0; a<drivableVehicles.size(); a++) {
 							if(drivableVehicles.get(a).GetVehicleType() == "Performance Car" && drivableVehicles.get(a).GetCondition()!="Broken") {
 								
-								Collections.sort(performanceCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+								Collections.sort(performanceCars, Comparator.comparingDouble(Vehicle::GetSalesPrice).reversed());
 								System.out.println( salesPeople.get(randomNum2).GetName() + " just sold " + drivableVehicles.get(a).GetName() + " for " + drivableVehicles.get(a).GetSalesPrice());
 								performanceCars.remove(a); 
 								totalSalesPerDay = totalSalesPerDay + drivableVehicles.get(a).GetSalesPrice();
@@ -687,7 +604,7 @@ public class FNCD {
 								break;
 							}
 							else if(drivableVehicles.get(a).GetVehicleType() == "Pickup" && drivableVehicles.get(a).GetCondition()!="Broken") {
-								Collections.sort(cars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+								Collections.sort(cars, Comparator.comparingDouble(Vehicle::GetSalesPrice).reversed());
 								System.out.println( salesPeople.get(randomNum2).GetName() + " just sold " + drivableVehicles.get(a).GetName() + " for " + drivableVehicles.get(a).GetSalesPrice());
 								pickups.remove(a); 
 								totalSalesPerDay = totalSalesPerDay + drivableVehicles.get(a).GetSalesPrice();
@@ -738,10 +655,10 @@ public class FNCD {
 				}
 				else {		
 					//WE DON'T HAVE ANY DRIVABLE CARS, SO SELL ONE OF THE PERFORMANCE CARS OR THE PICKUP, WHICH EVER IS THE HIGHEST PRICE. 
-					ArrayList<Vehicles> drivableVehicles = new ArrayList<Vehicles>();
+					ArrayList<Vehicle> drivableVehicles = new ArrayList<Vehicle>();
 					drivableVehicles.addAll(performanceCars);
 					drivableVehicles.addAll(cars);
-					Collections.sort(drivableVehicles, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+					Collections.sort(drivableVehicles, Comparator.comparingDouble(Vehicle::GetSalesPrice).reversed());
 					//NOW SELL FIRST ELEMENT OF DRIVABLE VEHICLES. 
 					
 					chance = buyers.get(i).GetChance();
@@ -762,7 +679,7 @@ public class FNCD {
 					if (d <= chance - 20.0) {
 						for(int a = 0; a<drivableVehicles.size(); a++) {
 							if(drivableVehicles.get(a).GetVehicleType() == "Performance Car" && drivableVehicles.get(a).GetCondition()!="Broken") {
-								Collections.sort(performanceCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+								Collections.sort(performanceCars, Comparator.comparingDouble(Vehicle::GetSalesPrice).reversed());
 								System.out.println( salesPeople.get(randomNum2).GetName() + " just sold " + drivableVehicles.get(a).GetName() + " for " + drivableVehicles.get(a).GetSalesPrice());
 								performanceCars.remove(a); 
 								totalSalesPerDay = totalSalesPerDay + drivableVehicles.get(a).GetSalesPrice();
@@ -772,7 +689,7 @@ public class FNCD {
 								break;
 							}
 							else if(drivableVehicles.get(a).GetVehicleType() == "Car" && drivableVehicles.get(a).GetCondition()!="Broken") {
-								Collections.sort(cars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+								Collections.sort(cars, Comparator.comparingDouble(Vehicle::GetSalesPrice).reversed());
 								System.out.println( salesPeople.get(randomNum2).GetName() + " just sold " + drivableVehicles.get(a).GetName() + " for " + drivableVehicles.get(a).GetSalesPrice());
 								cars.remove(a); 
 								totalSalesPerDay = totalSalesPerDay + drivableVehicles.get(a).GetSalesPrice();
