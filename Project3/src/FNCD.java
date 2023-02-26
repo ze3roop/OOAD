@@ -923,10 +923,10 @@ public class FNCD {
 			System.out.printf("\t" + cars.get(i).getInfo_asString() + "%-20s\n","In Stock");
 		}
 		for(int i = 0; i < pickups.size(); i++) {
-			System.out.printf("\t" + pickups.get(i).getInfo_asString() + "%-20s\n","In Stock");;
+			System.out.printf("\t" + pickups.get(i).getInfo_asString() + "%-20s\n","In Stock");
 		}
 		for(int i = 0; i < soldVehicles.size(); i++) {
-			System.out.printf("\t" + pickups.get(i).getInfo_asString() + "%-20s\n","Sold");;
+			System.out.printf("\t" + soldVehicles.get(i).getInfo_asString() + "%-20s\n","Sold");
 		}
 
 		System.out.printf("\n \t ---- TOTAL MONEY IN BUDGET: %.2f ----\n",budget_);

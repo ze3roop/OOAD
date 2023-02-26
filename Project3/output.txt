@@ -11,21 +11,19 @@ SUNDAY - CLOSED
 FNCD DAY 1
 Opening...
 Washing...
-	Intern_70963 washed Pickup_38 and made it clean
-	Intern_70963 washed PerformanceCar_13 and made it clean
-	Intern_6722 washed PerformanceCar_19 and made it clean
-	Intern_6722 washed Pickup_49 and made it clean
-	Intern_83226 washed Car_19 and made it dirty.
+	Intern_8 washed Car_92 and made it clean
+	Intern_8 washed Pickup_105 and made it clean
+	Intern_16 washed Pickup_113 and made it clean
+	Intern_16 washed PerformanceCar_79 and made it clean
+	Intern_18 washed Pickup_116 and made it clean
 Repairing...
-	Mechanic_37813 just repaired PerformanceCar_13 and made it Used
-	Mechanic_37813 just repaired Car_24 and made it Used
-	Mechanic_38045 just repaired Pickup_38 and made it Used
-	Mechanic_38045 just repaired PerformanceCar_11 and made it Used
-	Mechanic_67199 just repaired Pickup_43 and made it Used
-	Mechanic_67199 just repaired PerformanceCar_19 and made it Like New
-	Mechanic_80752 just repaired Pickup_49 and made it Like New
+	Mechanic_24 just repaired Car_104 and made it Used
+	Mechanic_24 just repaired PerformanceCar_79 and made it Used
+	Mechanic_33 just repaired Pickup_116 and made it Used
+	Mechanic_33 just repaired Car_96 and made it Used
+	Mechanic_35 just repaired Car_92 and made it Like New
 Selling...
-	Salesperson_7907 just sold PerformanceCar_11 for 53023.8297704788
+	Salesperson_53 just sold Car_96 for 17474.42131457445
 Ending...
 
 ============== End of day report ==============
@@ -33,61 +31,61 @@ Ending...
 	 NONE QUIT
 	-------------- WORKING: --------------
 	 SALESPEOPLE:
-	 	Salesperson_46820
+	 	Salesperson_40
 	 	 	 Total Normal Pay: 500.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Salesperson_58289
+	 	Salesperson_49
 	 	 	 Total Normal Pay: 500.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Salesperson_7907
+	 	Salesperson_53
 	 	 	 Total Normal Pay: 500.0
-	 	 	 Total Bonus Pay: 5000.0
-	 	Salesperson_59927
+	 	 	 Total Bonus Pay: 2500.0
+	 	Salesperson_58
 	 	 	 Total Normal Pay: 500.0
 	 	 	 Total Bonus Pay: 0.0
 	  MECHANICS:
-	 	Mechanic_37813
+	 	Mechanic_24
 	 	 	 Total Normal Pay: 400.0
 	 	 	 Total Bonus Pay: 7500.0
-	 	Mechanic_38045
+	 	Mechanic_25
 	 	 	 Total Normal Pay: 400.0
-	 	 	 Total Bonus Pay: 7000.0
-	 	Mechanic_67199
+	 	 	 Total Bonus Pay: 0.0
+	 	Mechanic_33
 	 	 	 Total Normal Pay: 400.0
-	 	 	 Total Bonus Pay: 7000.0
-	 	Mechanic_80752
+	 	 	 Total Bonus Pay: 4500.0
+	 	Mechanic_35
 	 	 	 Total Normal Pay: 400.0
-	 	 	 Total Bonus Pay: 2000.0
+	 	 	 Total Bonus Pay: 2500.0
 	 INTERNS:
-	 	Intern_70963
+	 	Intern_8
 	 	 	 Total Normal Pay: 100.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Intern_6722
+	 	Intern_16
 	 	 	 Total Normal Pay: 100.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Intern_83226
+	 	Intern_18
 	 	 	 Total Normal Pay: 100.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Intern_55459
+	 	Intern_20
 	 	 	 Total Normal Pay: 100.0
 	 	 	 Total Bonus Pay: 0.0
 	 -------------- Inventory: --------------
 	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
-	PerformanceCar_9                        $22248.61            $44497.23            Like New            Sparkling           In Stock            
-	PerformanceCar_19                       $7801.50             $19503.75            Used                Dirty               In Stock            
-	PerformanceCar_13                       $4821.78             $14465.34            Broken              Dirty               In Stock            
-	Car_19                                  $12780.11            $25560.23            Like New            Dirty               In Stock            
-	Car_20                                  $11028.14            $22056.28            Like New            Sparkling           In Stock            
-	Car_31                                  $9937.00             $19873.99            Like New            Sparkling           In Stock            
-	Car_24                                  $4211.32             $12633.95            Broken              Dirty               In Stock            
-	Pickup_43                               $18743.43            $56230.30            Broken              Clean               In Stock            
-	Pickup_44                               $24788.97            $49577.94            Like New            Clean               In Stock            
-	Pickup_49                               $5671.77             $14179.42            Used                Dirty               In Stock            
-	Pickup_38                               $4681.94             $14045.82            Broken              Dirty               In Stock            
-	Pickup_43                               $18743.43            $56230.30            Broken              Clean               Sold                
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $19522.89            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $7110.33             Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
 
- 	 ---- TOTAL MONEY IN BUDGET: 549023.83 ----
-	 ---- SALES FOR THE DAY: 53023.83 ----
+ 	 ---- TOTAL MONEY IN BUDGET: 513474.42 ----
+	 ---- SALES FOR THE DAY: 17474.42 ----
 
 	 ---- ALL STAFF THAT HAS LEFT: ----
 
@@ -96,7 +94,7 @@ Ending...
 
 FNCD DAY 2
 Opening...
-Purchased PerformanceCar_9. For: 22248.61498028819
+Purchased Car_95. For: 10023.272167046172
 Washing...
 Repairing...
 Selling...
@@ -104,231 +102,151 @@ Ending...
 
 ============== End of day report ==============
 	-------------- QUIT: --------------
-	 NONE QUIT
+	Salesperson_49
 	-------------- WORKING: --------------
 	 SALESPEOPLE:
-	 	Salesperson_46820
+	 	Salesperson_40
 	 	 	 Total Normal Pay: 1000.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Salesperson_58289
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 1000.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Salesperson_58
 	 	 	 Total Normal Pay: 1000.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Salesperson_7907
-	 	 	 Total Normal Pay: 1000.0
-	 	 	 Total Bonus Pay: 5000.0
-	 	Salesperson_59927
-	 	 	 Total Normal Pay: 1000.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 0.0
 	 	 	 Total Bonus Pay: 0.0
 	  MECHANICS:
-	 	Mechanic_37813
+	 	Mechanic_24
 	 	 	 Total Normal Pay: 800.0
 	 	 	 Total Bonus Pay: 7500.0
-	 	Mechanic_38045
+	 	Mechanic_25
 	 	 	 Total Normal Pay: 800.0
-	 	 	 Total Bonus Pay: 7000.0
-	 	Mechanic_67199
+	 	 	 Total Bonus Pay: 0.0
+	 	Mechanic_33
 	 	 	 Total Normal Pay: 800.0
-	 	 	 Total Bonus Pay: 7000.0
-	 	Mechanic_80752
+	 	 	 Total Bonus Pay: 4500.0
+	 	Mechanic_35
 	 	 	 Total Normal Pay: 800.0
-	 	 	 Total Bonus Pay: 2000.0
+	 	 	 Total Bonus Pay: 2500.0
 	 INTERNS:
-	 	Intern_70963
+	 	Intern_16
 	 	 	 Total Normal Pay: 200.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Intern_6722
+	 	Intern_18
 	 	 	 Total Normal Pay: 200.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Intern_83226
-	 	 	 Total Normal Pay: 200.0
-	 	 	 Total Bonus Pay: 0.0
-	 	Intern_55459
+	 	Intern_20
 	 	 	 Total Normal Pay: 200.0
 	 	 	 Total Bonus Pay: 0.0
 	 -------------- Inventory: --------------
 	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
-	PerformanceCar_55                       $24161.58            $48323.16            Used                Sparkling           In Stock            
-	PerformanceCar_9                        $22248.61            $44497.23            Like New            Sparkling           In Stock            
-	PerformanceCar_19                       $7801.50             $19503.75            Used                Dirty               In Stock            
-	PerformanceCar_13                       $4821.78             $14465.34            Broken              Dirty               In Stock            
-	Car_19                                  $12780.11            $25560.23            Like New            Dirty               In Stock            
-	Car_20                                  $11028.14            $22056.28            Like New            Sparkling           In Stock            
-	Car_31                                  $9937.00             $19873.99            Like New            Sparkling           In Stock            
-	Car_24                                  $4211.32             $12633.95            Broken              Dirty               In Stock            
-	Pickup_43                               $18743.43            $56230.30            Broken              Clean               In Stock            
-	Pickup_44                               $24788.97            $49577.94            Like New            Clean               In Stock            
-	Pickup_49                               $5671.77             $14179.42            Used                Dirty               In Stock            
-	Pickup_38                               $4681.94             $14045.82            Broken              Dirty               In Stock            
-	Pickup_43                               $18743.43            $56230.30            Broken              Clean               Sold                
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $19522.89            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $7110.33             Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
 
- 	 ---- TOTAL MONEY IN BUDGET: 522775.21 ----
+ 	 ---- TOTAL MONEY IN BUDGET: 499451.15 ----
 	 ---- SALES FOR THE DAY: 0.00 ----
 
 	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
 
 
 ******************************************************************************
 
 FNCD DAY 3
 Opening...
+	Hired Intern_16
 Washing...
+	Intern_20 washed Pickup_113 and made it clean
 Repairing...
 Selling...
-	Salesperson_59927 just sold Pickup_43 for 56230.30179826881
 Ending...
 
 ============== End of day report ==============
 	-------------- QUIT: --------------
-	 NONE QUIT
+	Salesperson_58
 	-------------- WORKING: --------------
 	 SALESPEOPLE:
-	 	Salesperson_46820
+	 	Salesperson_40
 	 	 	 Total Normal Pay: 1500.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Salesperson_58289
+	 	Salesperson_53
 	 	 	 Total Normal Pay: 1500.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 500.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Salesperson_7907
-	 	 	 Total Normal Pay: 1500.0
-	 	 	 Total Bonus Pay: 5000.0
-	 	Salesperson_59927
-	 	 	 Total Normal Pay: 1500.0
-	 	 	 Total Bonus Pay: 2000.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 0.0
+	 	 	 Total Bonus Pay: 0.0
 	  MECHANICS:
-	 	Mechanic_37813
+	 	Mechanic_24
 	 	 	 Total Normal Pay: 1200.0
 	 	 	 Total Bonus Pay: 7500.0
-	 	Mechanic_38045
+	 	Mechanic_25
 	 	 	 Total Normal Pay: 1200.0
-	 	 	 Total Bonus Pay: 7000.0
-	 	Mechanic_67199
+	 	 	 Total Bonus Pay: 0.0
+	 	Mechanic_33
 	 	 	 Total Normal Pay: 1200.0
-	 	 	 Total Bonus Pay: 7000.0
-	 	Mechanic_80752
+	 	 	 Total Bonus Pay: 4500.0
+	 	Mechanic_35
 	 	 	 Total Normal Pay: 1200.0
-	 	 	 Total Bonus Pay: 2000.0
+	 	 	 Total Bonus Pay: 2500.0
 	 INTERNS:
-	 	Intern_70963
+	 	Intern_18
 	 	 	 Total Normal Pay: 300.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Intern_6722
+	 	Intern_20
 	 	 	 Total Normal Pay: 300.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Intern_83226
-	 	 	 Total Normal Pay: 300.0
-	 	 	 Total Bonus Pay: 0.0
-	 	Intern_55459
-	 	 	 Total Normal Pay: 300.0
+	 	Intern_131
+	 	 	 Total Normal Pay: 100.0
 	 	 	 Total Bonus Pay: 0.0
 	 -------------- Inventory: --------------
 	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
-	PerformanceCar_55                       $24161.58            $48323.16            Used                Sparkling           In Stock            
-	PerformanceCar_9                        $22248.61            $44497.23            Like New            Sparkling           In Stock            
-	PerformanceCar_19                       $7801.50             $19503.75            Used                Dirty               In Stock            
-	PerformanceCar_13                       $4821.78             $14465.34            Broken              Dirty               In Stock            
-	Car_19                                  $12780.11            $25560.23            Like New            Dirty               In Stock            
-	Car_20                                  $11028.14            $22056.28            Like New            Sparkling           In Stock            
-	Car_31                                  $9937.00             $19873.99            Like New            Sparkling           In Stock            
-	Car_24                                  $4211.32             $12633.95            Broken              Dirty               In Stock            
-	Pickup_44                               $24788.97            $49577.94            Like New            Clean               In Stock            
-	Pickup_49                               $5671.77             $14179.42            Used                Dirty               In Stock            
-	Pickup_38                               $4681.94             $14045.82            Broken              Dirty               In Stock            
-	Pickup_44                               $24788.97            $49577.94            Like New            Clean               Sold                
-	Pickup_49                               $5671.77             $14179.42            Used                Dirty               Sold                
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $19522.89            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $7110.33             Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
 
- 	 ---- TOTAL MONEY IN BUDGET: 575005.52 ----
-	 ---- SALES FOR THE DAY: 56230.30 ----
+ 	 ---- TOTAL MONEY IN BUDGET: 495451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
 
 	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
 
 
 ******************************************************************************
 
 FNCD DAY 4
 Opening...
-Purchased Pickup_44. For: 24788.968239390873
+	Hired Intern_18
 Washing...
+	Intern_131 washed Pickup_113 and made it clean
+	Intern_131 washed PerformanceCar_86 and made it clean
 Repairing...
-Selling...
-	Salesperson_59927 just sold Pickup_64 for 8017.0145212313055
-Ending...
-
-============== End of day report ==============
-	-------------- QUIT: --------------
-	Mechanic_37813
-	-------------- WORKING: --------------
-	 SALESPEOPLE:
-	 	Salesperson_46820
-	 	 	 Total Normal Pay: 2000.0
-	 	 	 Total Bonus Pay: 0.0
-	 	Salesperson_58289
-	 	 	 Total Normal Pay: 2000.0
-	 	 	 Total Bonus Pay: 0.0
-	 	Salesperson_7907
-	 	 	 Total Normal Pay: 2000.0
-	 	 	 Total Bonus Pay: 5000.0
-	 	Salesperson_59927
-	 	 	 Total Normal Pay: 2000.0
-	 	 	 Total Bonus Pay: 4000.0
-	  MECHANICS:
-	 	Mechanic_38045
-	 	 	 Total Normal Pay: 1600.0
-	 	 	 Total Bonus Pay: 7000.0
-	 	Mechanic_67199
-	 	 	 Total Normal Pay: 1600.0
-	 	 	 Total Bonus Pay: 7000.0
-	 	Mechanic_80752
-	 	 	 Total Normal Pay: 1600.0
-	 	 	 Total Bonus Pay: 2000.0
-	 	Intern_70963
-	 	 	 Total Normal Pay: 0.0
-	 	 	 Total Bonus Pay: 0.0
-	 INTERNS:
-	 	Intern_6722
-	 	 	 Total Normal Pay: 400.0
-	 	 	 Total Bonus Pay: 0.0
-	 	Intern_83226
-	 	 	 Total Normal Pay: 400.0
-	 	 	 Total Bonus Pay: 0.0
-	 	Intern_55459
-	 	 	 Total Normal Pay: 400.0
-	 	 	 Total Bonus Pay: 0.0
-	 -------------- Inventory: --------------
-	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
-	PerformanceCar_55                       $24161.58            $48323.16            Used                Sparkling           In Stock            
-	PerformanceCar_9                        $22248.61            $44497.23            Like New            Sparkling           In Stock            
-	PerformanceCar_19                       $7801.50             $19503.75            Used                Dirty               In Stock            
-	PerformanceCar_13                       $4821.78             $14465.34            Broken              Dirty               In Stock            
-	Car_19                                  $12780.11            $25560.23            Like New            Dirty               In Stock            
-	Car_20                                  $11028.14            $22056.28            Like New            Sparkling           In Stock            
-	Car_31                                  $9937.00             $19873.99            Like New            Sparkling           In Stock            
-	Car_24                                  $4211.32             $12633.95            Broken              Dirty               In Stock            
-	Pickup_49                               $5671.77             $14179.42            Used                Dirty               In Stock            
-	Pickup_64                               $4008.51             $8017.01             Broken              Dirty               In Stock            
-	Pickup_38                               $4681.94             $14045.82            Broken              Dirty               In Stock            
-	Pickup_49                               $5671.77             $14179.42            Used                Dirty               Sold                
-	Pickup_64                               $4008.51             $8017.01             Broken              Dirty               Sold                
-	Pickup_38                               $4681.94             $14045.82            Broken              Dirty               Sold                
-
- 	 ---- TOTAL MONEY IN BUDGET: 595794.48 ----
-	 ---- SALES FOR THE DAY: 49577.94 ----
-
-	 ---- ALL STAFF THAT HAS LEFT: ----
-	Mechanic_37813
-
-
-******************************************************************************
-
-FNCD DAY 5
-Opening...
-	Hired Intern_6722
-Purchased Pickup_49. For: 5671.768962604816
-Washing...
-	Intern_55459 washed Car_19 and made it clean
-	Intern_55459 washed Pickup_49 and made it clean
-Repairing...
-	Intern_70963 just repaired Car_24 and made it Used
-	Intern_70963 just repaired Pickup_64 and made it Used
 Selling...
 Ending...
 
@@ -337,67 +255,142 @@ Ending...
 	 NONE QUIT
 	-------------- WORKING: --------------
 	 SALESPEOPLE:
-	 	Salesperson_46820
-	 	 	 Total Normal Pay: 2500.0
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 2000.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Salesperson_58289
-	 	 	 Total Normal Pay: 2500.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 2000.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 1000.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Salesperson_7907
-	 	 	 Total Normal Pay: 2500.0
-	 	 	 Total Bonus Pay: 5000.0
-	 	Salesperson_59927
-	 	 	 Total Normal Pay: 2500.0
-	 	 	 Total Bonus Pay: 4000.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 500.0
+	 	 	 Total Bonus Pay: 0.0
 	  MECHANICS:
-	 	Mechanic_38045
-	 	 	 Total Normal Pay: 2000.0
-	 	 	 Total Bonus Pay: 7000.0
-	 	Mechanic_67199
-	 	 	 Total Normal Pay: 2000.0
-	 	 	 Total Bonus Pay: 7000.0
-	 	Mechanic_80752
-	 	 	 Total Normal Pay: 2000.0
-	 	 	 Total Bonus Pay: 2000.0
-	 	Intern_70963
-	 	 	 Total Normal Pay: 400.0
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 1600.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 1600.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Mechanic_33
+	 	 	 Total Normal Pay: 1600.0
 	 	 	 Total Bonus Pay: 4500.0
+	 	Mechanic_35
+	 	 	 Total Normal Pay: 1600.0
+	 	 	 Total Bonus Pay: 2500.0
 	 INTERNS:
-	 	Intern_6722
-	 	 	 Total Normal Pay: 500.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 400.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Intern_83226
-	 	 	 Total Normal Pay: 500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 400.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Intern_55459
-	 	 	 Total Normal Pay: 500.0
+	 	Intern_131
+	 	 	 Total Normal Pay: 200.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Intern_75963
+	 	Intern_140
 	 	 	 Total Normal Pay: 100.0
 	 	 	 Total Bonus Pay: 0.0
 	 -------------- Inventory: --------------
 	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
-	PerformanceCar_55                       $24161.58            $48323.16            Used                Sparkling           In Stock            
-	PerformanceCar_9                        $22248.61            $44497.23            Like New            Sparkling           In Stock            
-	PerformanceCar_19                       $7801.50             $19503.75            Used                Dirty               In Stock            
-	PerformanceCar_13                       $4821.78             $14465.34            Broken              Dirty               In Stock            
-	Car_19                                  $12780.11            $25560.23            Like New            Dirty               In Stock            
-	Car_20                                  $11028.14            $22056.28            Like New            Sparkling           In Stock            
-	Car_31                                  $9937.00             $19873.99            Like New            Sparkling           In Stock            
-	Car_24                                  $4211.32             $18950.93            Broken              Dirty               In Stock            
-	Pickup_49                               $5671.77             $14179.42            Used                Dirty               In Stock            
-	Pickup_64                               $7085.94             $14171.87            Like New            Dirty               In Stock            
-	Pickup_38                               $4681.94             $14045.82            Broken              Dirty               In Stock            
-	Pickup_64                               $4008.51             $12025.52            Broken              Dirty               In Stock            
-	Pickup_49                               $5671.77             $14179.42            Used                Dirty               Sold                
-	Pickup_64                               $7085.94             $14171.87            Like New            Dirty               Sold                
-	Pickup_38                               $4681.94             $14045.82            Broken              Dirty               Sold                
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $19522.89            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $7110.33             Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
 
- 	 ---- TOTAL MONEY IN BUDGET: 586122.72 ----
+ 	 ---- TOTAL MONEY IN BUDGET: 491451.15 ----
 	 ---- SALES FOR THE DAY: 0.00 ----
 
 	 ---- ALL STAFF THAT HAS LEFT: ----
-	Mechanic_37813
+	Salesperson_49
+	Salesperson_58
+
+
+******************************************************************************
+
+FNCD DAY 5
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 2500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 2500.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 1500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 1000.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 2000.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 2000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Mechanic_33
+	 	 	 Total Normal Pay: 2000.0
+	 	 	 Total Bonus Pay: 4500.0
+	 	Mechanic_35
+	 	 	 Total Normal Pay: 2000.0
+	 	 	 Total Bonus Pay: 2500.0
+	 INTERNS:
+	 	Intern_18
+	 	 	 Total Normal Pay: 500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_131
+	 	 	 Total Normal Pay: 300.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 200.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $19522.89            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $7110.33             Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 487451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
 
 
 ******************************************************************************
@@ -407,7 +400,6 @@ Opening...
 Washing...
 Repairing...
 Selling...
-	Salesperson_59927 just sold Pickup_64 for 12025.521781846957
 Ending...
 
 ============== End of day report ==============
@@ -415,76 +407,1658 @@ Ending...
 	 NONE QUIT
 	-------------- WORKING: --------------
 	 SALESPEOPLE:
-	 	Salesperson_46820
+	 	Salesperson_40
 	 	 	 Total Normal Pay: 3000.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Salesperson_58289
+	 	Salesperson_53
 	 	 	 Total Normal Pay: 3000.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 2000.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Salesperson_7907
-	 	 	 Total Normal Pay: 3000.0
-	 	 	 Total Bonus Pay: 5000.0
-	 	Salesperson_59927
-	 	 	 Total Normal Pay: 3000.0
-	 	 	 Total Bonus Pay: 6000.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 1500.0
+	 	 	 Total Bonus Pay: 0.0
 	  MECHANICS:
-	 	Mechanic_38045
+	 	Mechanic_24
 	 	 	 Total Normal Pay: 2400.0
-	 	 	 Total Bonus Pay: 7000.0
-	 	Mechanic_67199
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
 	 	 	 Total Normal Pay: 2400.0
-	 	 	 Total Bonus Pay: 7000.0
-	 	Mechanic_80752
+	 	 	 Total Bonus Pay: 0.0
+	 	Mechanic_33
 	 	 	 Total Normal Pay: 2400.0
-	 	 	 Total Bonus Pay: 2000.0
-	 	Intern_70963
-	 	 	 Total Normal Pay: 800.0
 	 	 	 Total Bonus Pay: 4500.0
+	 	Mechanic_35
+	 	 	 Total Normal Pay: 2400.0
+	 	 	 Total Bonus Pay: 2500.0
 	 INTERNS:
-	 	Intern_6722
+	 	Intern_18
 	 	 	 Total Normal Pay: 600.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Intern_83226
+	 	Intern_20
 	 	 	 Total Normal Pay: 600.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Intern_55459
+	 	Intern_131
+	 	 	 Total Normal Pay: 400.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 300.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $19522.89            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $7110.33             Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 483451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+
+
+******************************************************************************
+
+FNCD DAY 7
+SUNDAY - CLOSED
+
+
+******************************************************************************
+
+FNCD DAY 8
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	Mechanic_33
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 3500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 3500.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 2500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 2000.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 2800.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 2800.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Mechanic_35
+	 	 	 Total Normal Pay: 2800.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 0.0
+	 	 	 Total Bonus Pay: 0.0
+	 INTERNS:
+	 	Intern_20
+	 	 	 Total Normal Pay: 700.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_131
+	 	 	 Total Normal Pay: 500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 400.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $19522.89            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $7110.33             Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 479451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+
+
+******************************************************************************
+
+FNCD DAY 9
+Opening...
+	Hired Intern_20
+Washing...
+	Intern_140 washed Pickup_113 and made it clean
+	Intern_140 washed PerformanceCar_86 and made it clean
+Repairing...
+	Intern_18 just repaired PerformanceCar_79 and made it Used
+	Intern_18 just repaired Car_104 and made it Used
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 4000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 4000.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 3000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 2500.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 3200.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 3200.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Mechanic_35
+	 	 	 Total Normal Pay: 3200.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 400.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_20
+	 	 	 Total Normal Pay: 800.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_131
 	 	 	 Total Normal Pay: 600.0
 	 	 	 Total Bonus Pay: 0.0
-	 	Intern_75963
+	 	Intern_140
+	 	 	 Total Normal Pay: 500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
+	 	 	 Total Normal Pay: 100.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $29284.34            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $10665.49            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 475451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+
+
+******************************************************************************
+
+FNCD DAY 10
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	Mechanic_35
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 4500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 4500.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 3500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 3000.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 3600.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 3600.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 800.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 0.0
+	 	 	 Total Bonus Pay: 0.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 700.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 600.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
 	 	 	 Total Normal Pay: 200.0
 	 	 	 Total Bonus Pay: 0.0
 	 -------------- Inventory: --------------
 	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
-	PerformanceCar_55                       $24161.58            $48323.16            Used                Sparkling           In Stock            
-	PerformanceCar_9                        $22248.61            $44497.23            Like New            Sparkling           In Stock            
-	PerformanceCar_19                       $7801.50             $19503.75            Used                Dirty               In Stock            
-	PerformanceCar_13                       $4821.78             $14465.34            Broken              Dirty               In Stock            
-	Car_19                                  $12780.11            $25560.23            Like New            Dirty               In Stock            
-	Car_20                                  $11028.14            $22056.28            Like New            Sparkling           In Stock            
-	Car_31                                  $9937.00             $19873.99            Like New            Sparkling           In Stock            
-	Car_24                                  $4211.32             $18950.93            Broken              Dirty               In Stock            
-	Pickup_64                               $7085.94             $14171.87            Like New            Dirty               In Stock            
-	Pickup_64                               $4008.51             $12025.52            Broken              Dirty               In Stock            
-	Pickup_38                               $4681.94             $14045.82            Broken              Dirty               In Stock            
-	Pickup_64                               $7085.94             $14171.87            Like New            Dirty               Sold                
-	Pickup_64                               $4008.51             $12025.52            Broken              Dirty               Sold                
-	Pickup_38                               $4681.94             $14045.82            Broken              Dirty               Sold                
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $29284.34            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $10665.49            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 471451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
 
 
-*****************************
-Error message in terminal - happens only on occcasion
-Appears to be trying to access elements outside of array bounds
+******************************************************************************
 
-Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 3 out of bounds for length 3
-        at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-        at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) 
-        at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-        at java.base/java.util.Objects.checkIndex(Objects.java:359)
-        at java.base/java.util.ArrayList.get(ArrayList.java:427)
-        at FNCD.Ending(FNCD.java:929)
-        at FNCD.Selling(FNCD.java:822)
-        at FNCD.Repairing(FNCD.java:482)
-        at FNCD.Washing(FNCD.java:317)
-        at FNCD.Opening(FNCD.java:165)
-        at FNCD.Start(FNCD.java:76)
-        at Main.main(Main.java:6)
+FNCD DAY 11
+Opening...
+	Hired Intern_131
+Washing...
+	Intern_147 washed Pickup_113 and made it clean
+	Intern_147 washed PerformanceCar_86 and made it clean
+Repairing...
+	Intern_20 just repaired PerformanceCar_79 and made it Used
+	Intern_20 just repaired Car_104 and made it Used
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 5000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 5000.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 4000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 3500.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 4000.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 4000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 1200.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 400.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 800.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 700.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
+	 	 	 Total Normal Pay: 300.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 100.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 467451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+
+
+******************************************************************************
+
+FNCD DAY 12
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 5500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 5500.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 4500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 4000.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 4400.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 4400.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 1600.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 800.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 900.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 800.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
+	 	 	 Total Normal Pay: 400.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 200.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 463451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+
+
+******************************************************************************
+
+FNCD DAY 13
+SUNDAY - CLOSED
+
+
+******************************************************************************
+
+FNCD DAY 14
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 6000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 6000.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 5000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 4500.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 4800.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 4800.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 2000.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 1200.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 1000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 900.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
+	 	 	 Total Normal Pay: 500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 300.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 459451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+
+
+******************************************************************************
+
+FNCD DAY 15
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 6500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 6500.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 5500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 5000.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 5200.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 5200.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 2400.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 1600.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 1100.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 1000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
+	 	 	 Total Normal Pay: 600.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 400.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 455451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+
+
+******************************************************************************
+
+FNCD DAY 16
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 7000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 7000.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 6000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 5500.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 5600.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 5600.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 2800.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 2000.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 1200.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 1100.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
+	 	 	 Total Normal Pay: 700.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 500.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 451451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+
+
+******************************************************************************
+
+FNCD DAY 17
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 7500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 7500.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 6500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 6000.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 6000.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 6000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 3200.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 2400.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 1300.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 1200.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
+	 	 	 Total Normal Pay: 800.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 600.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 447451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+
+
+******************************************************************************
+
+FNCD DAY 18
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 8000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 8000.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 7000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 6500.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 6400.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 6400.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 3600.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 2800.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 1400.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 1300.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
+	 	 	 Total Normal Pay: 900.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 700.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 443451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+
+
+******************************************************************************
+
+FNCD DAY 19
+SUNDAY - CLOSED
+
+
+******************************************************************************
+
+FNCD DAY 20
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 8500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 8500.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 7500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 7000.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 6800.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 6800.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 4000.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 3200.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 1500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 1400.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
+	 	 	 Total Normal Pay: 1000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 800.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 439451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+
+
+******************************************************************************
+
+FNCD DAY 21
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 9000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 9000.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 8000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 7500.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 7200.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 7200.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 4400.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 3600.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 1600.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 1500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
+	 	 	 Total Normal Pay: 1100.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 900.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 435451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+
+
+******************************************************************************
+
+FNCD DAY 22
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 9500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 9500.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 8500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 8000.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 7600.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 7600.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 4800.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 4000.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 1700.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 1600.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
+	 	 	 Total Normal Pay: 1200.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 1000.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 431451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+
+
+******************************************************************************
+
+FNCD DAY 23
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 10000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 10000.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 9000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 8500.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 8000.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 8000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 5200.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 4400.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 1800.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 1700.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
+	 	 	 Total Normal Pay: 1300.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 1100.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 427451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+
+
+******************************************************************************
+
+FNCD DAY 24
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 10500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 10500.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 9500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 9000.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 8400.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 8400.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 5600.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 4800.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 1900.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 1800.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
+	 	 	 Total Normal Pay: 1400.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 1200.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 423451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+
+
+******************************************************************************
+
+FNCD DAY 25
+SUNDAY - CLOSED
+
+
+******************************************************************************
+
+FNCD DAY 26
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 11000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 11000.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 10000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 9500.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 8800.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 8800.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 6000.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 5200.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 2000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_140
+	 	 	 Total Normal Pay: 1900.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
+	 	 	 Total Normal Pay: 1500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 1300.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 419451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+
+
+******************************************************************************
+
+FNCD DAY 27
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	Intern_140
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 11500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 11500.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 10500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 10000.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 9200.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 9200.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 6400.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 5600.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 2100.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_147
+	 	 	 Total Normal Pay: 1600.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 1400.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 415451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+	Intern_140
+
+
+******************************************************************************
+
+FNCD DAY 28
+Opening...
+	Hired Intern_131
+Washing...
+	Intern_148 washed Pickup_113 and made it clean
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	Intern_147
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 12000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 12000.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 11000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 10500.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 9600.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 9600.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 6800.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 6000.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 2200.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 1500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_156
+	 	 	 Total Normal Pay: 100.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 411451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+	Intern_140
+	Intern_147
+
+
+******************************************************************************
+
+FNCD DAY 29
+Opening...
+	Hired Intern_131
+Washing...
+	Intern_156 washed Pickup_113 and made it clean
+	Intern_156 washed PerformanceCar_86 and made it clean
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 12500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 12500.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 11500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 11000.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 10000.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 10000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 7200.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 6400.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 2300.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 1600.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_156
+	 	 	 Total Normal Pay: 200.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_163
+	 	 	 Total Normal Pay: 100.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 407451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+	Intern_140
+	Intern_147
+
+
+******************************************************************************
+
+FNCD DAY 30
+Opening...
+Washing...
+Repairing...
+Selling...
+Ending...
+
+============== End of day report ==============
+	-------------- QUIT: --------------
+	 NONE QUIT
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_40
+	 	 	 Total Normal Pay: 13000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_53
+	 	 	 Total Normal Pay: 13000.0
+	 	 	 Total Bonus Pay: 2500.0
+	 	Intern_8
+	 	 	 Total Normal Pay: 12000.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_16
+	 	 	 Total Normal Pay: 11500.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_24
+	 	 	 Total Normal Pay: 10400.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Mechanic_25
+	 	 	 Total Normal Pay: 10400.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_18
+	 	 	 Total Normal Pay: 7600.0
+	 	 	 Total Bonus Pay: 7500.0
+	 	Intern_20
+	 	 	 Total Normal Pay: 6800.0
+	 	 	 Total Bonus Pay: 7500.0
+	 INTERNS:
+	 	Intern_131
+	 	 	 Total Normal Pay: 2400.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_148
+	 	 	 Total Normal Pay: 1700.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_156
+	 	 	 Total Normal Pay: 300.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_163
+	 	 	 Total Normal Pay: 200.0
+	 	 	 Total Bonus Pay: 0.0
+	 -------------- Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Sold or In Stock    
+	PerformanceCar_73                       $21891.81            $43783.61            Like New            Clean               In Stock            
+	PerformanceCar_66                       $17416.28            $34832.56            Used                Sparkling           In Stock            
+	PerformanceCar_86                       $11461.29            $22922.57            Like New            Dirty               In Stock            
+	PerformanceCar_79                       $6507.63             $43926.50            Broken              Dirty               In Stock            
+	Car_95                                  $10023.27            $20046.54            Like New            Sparkling           In Stock            
+	Car_123                                 $7000.18             $14000.36            Like New            Clean               In Stock            
+	Car_92                                  $4960.76             $12401.91            Used                Dirty               In Stock            
+	Car_104                                 $2370.11             $15998.24            Broken              Dirty               In Stock            
+	Pickup_122                              $27723.32            $55446.64            Like New            Sparkling           In Stock            
+	Pickup_113                              $9834.83             $19669.66            Used                Dirty               In Stock            
+	Pickup_105                              $5997.71             $11995.42            Like New            Dirty               In Stock            
+	Pickup_116                              $7959.15             $23877.45            Broken              Dirty               In Stock            
+	Car_96                                  $5824.81             $17474.42            Broken              Clean               Sold                
+
+ 	 ---- TOTAL MONEY IN BUDGET: 403451.15 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----
+	Salesperson_49
+	Salesperson_58
+	Mechanic_33
+	Mechanic_35
+	Intern_140
+	Intern_147
+=====================================================
+================= End of Simulation =================
+=====================================================

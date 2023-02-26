@@ -59,8 +59,7 @@ class Salespeople extends Staff // INHERITANCE
 
 	public Salespeople() { //IDENTITY
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
-		Integer randomInt = ThreadLocalRandom.current().nextInt(000000, 100000);
-		CreateName("Salesperson_" + randomInt);
+		CreateName("Salesperson_" + Helper.GenerateUniqueID());
 		dailySalary = (double) 500; // whatever the base salary for SalesPeople is 
 		totalSalary = 0.0;
 		bonus_ = 0.0;
@@ -83,8 +82,7 @@ class Mechanics extends Staff // INHERITANCE
 
 	public Mechanics() {
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
-		Integer randomInt = ThreadLocalRandom.current().nextInt(000000, 100000);
-		CreateName("Mechanic_" + randomInt);
+		CreateName("Mechanic_" + Helper.GenerateUniqueID());
 		dailySalary = (double) 400; // whatever the base salary for Mechanics is 
 		JobsDone = 0; // start with 0 jobsdone
 		totalSalary = 0.0;
@@ -115,8 +113,7 @@ class Interns extends Staff // INHERITANCE
 	public Interns() {
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
 		dailySalary = (double) 100; // whatever the base salary for Interns is 
-		Integer randomInt = ThreadLocalRandom.current().nextInt(000000, 100000);
-		CreateName("Intern_" + randomInt);
+		CreateName("Intern_" + Helper.GenerateUniqueID());
 		JobsDone = 0; // start with 0 jobsdone
 		totalSalary = 0.0;
 		bonus_ = 0.0;
