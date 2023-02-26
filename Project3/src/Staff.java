@@ -36,16 +36,16 @@ public class Staff { // INHERITANCE
 		return bonus_;
 	}
 	
-	public void Bonus(String vehicleType) { //POLYMORPHISM AND ABSTRACTION
-		if(vehicleType == "Performance Car")
+	public void Bonus(Vehicles vehicle) { //POLYMORPHISM AND ABSTRACTION
+		if(vehicle.isPerformanceCar())
 		{
 			bonus_ = bonus_ + 5000;
 		}
-		else if(vehicleType == "Car")
+		else if(vehicle.isCar())
 		{
 			bonus_ = bonus_ + 2500; 
 		}
-		else if(vehicleType == "Pickup")
+		else if(vehicle.isPickup())
 		{
 			bonus_ = bonus_ + 2000; 
 		}
