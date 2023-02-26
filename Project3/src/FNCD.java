@@ -559,7 +559,7 @@ public class FNCD {
 					//BUT FIRST CHECK IF WE CAN INCREASE SALESCHANCE 
 					//WE COULD UPDATE SALESCHANCE IN THE SUB CLASS, BUT WE WOULD HAVE TO UPDATE EACH ITERATION IN REPAIRING AND CLEANING. OR WE CAN JUST CHECK HERE
 					for(int a = 0; a<performanceCars.size(); a++) {
-						if(performanceCars.get(a).isBroken()) {
+						if(!performanceCars.get(a).isBroken()) {
 						
 							chance = buyers.get(i).GetChance();
 							
@@ -613,7 +613,7 @@ public class FNCD {
 					var d = Math.random() * 100;
 					if (d <= chance - 20.0) {
 						for(int a = 0; a<drivableVehicles.size(); a++) {
-							if(drivableVehicles.get(a).isCar() && drivableVehicles.get(a).isBroken()) {
+							if(drivableVehicles.get(a).isCar() && !drivableVehicles.get(a).isBroken()) {
 								
 								Collections.sort(performanceCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 								System.out.println( "\t" + salesPeople.get(randomNum2).GetName() + " just sold " + drivableVehicles.get(a).GetName() + " for " + drivableVehicles.get(a).GetSalesPrice());
@@ -624,7 +624,7 @@ public class FNCD {
 								soldVehicles.add( drivableVehicles.get(a) );
 								break;
 							}
-							else if(drivableVehicles.get(a).isPickup()	 && drivableVehicles.get(a).isBroken()) {
+							else if(drivableVehicles.get(a).isPickup()	 && !drivableVehicles.get(a).isBroken()) {
 								
 								Collections.sort(cars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 								System.out.println( "\t" + salesPeople.get(randomNum2).GetName() + " just sold " + drivableVehicles.get(a).GetName() + " for " + drivableVehicles.get(a).GetSalesPrice());
@@ -646,7 +646,7 @@ public class FNCD {
 					//BUT FIRST CHECK IF WE CAN INCREASE SALESCHANCE 
 					//WE COULD UPDATE SALESCHANCE IN THE SUB CLASS, BUT WE WOULD HAVE TO UPDATE EACH ITERATION IN REPAIRING AND CLEANING. OR WE CAN JUST CHECK HERE
 					for(int a = 0; a<cars.size(); a++) {
-						if(cars.get(a).isBroken()) {
+						if(!cars.get(a).isBroken()) {
 						
 							chance = buyers.get(i).GetChance();
 							
@@ -699,7 +699,7 @@ public class FNCD {
 					
 					if (d <= chance - 20.0) {
 						for(int a = 0; a<drivableVehicles.size(); a++) {
-							if(drivableVehicles.get(a).isPerformanceCar() && drivableVehicles.get(a).isBroken()) {
+							if(drivableVehicles.get(a).isPerformanceCar() && !drivableVehicles.get(a).isBroken()) {
 								
 								Collections.sort(performanceCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 								System.out.println( "\t" + salesPeople.get(randomNum2).GetName() + " just sold " + drivableVehicles.get(a).GetName() + " for " + drivableVehicles.get(a).GetSalesPrice());
@@ -710,7 +710,7 @@ public class FNCD {
 								soldVehicles.add( drivableVehicles.get(a) );
 								break;
 							}
-							else if(drivableVehicles.get(a).isPickup() && drivableVehicles.get(a).isBroken()) {
+							else if(drivableVehicles.get(a).isPickup() && !drivableVehicles.get(a).isBroken()) {
 								Collections.sort(cars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 								System.out.println( "\t" + salesPeople.get(randomNum2).GetName() + " just sold " + drivableVehicles.get(a).GetName() + " for " + drivableVehicles.get(a).GetSalesPrice());
 								pickups.remove(a); 
@@ -733,7 +733,7 @@ public class FNCD {
 					//WE COULD UPDATE SALESCHANCE IN THE SUB CLASS, BUT WE WOULD HAVE TO UPDATE EACH ITERATION IN REPAIRING AND CLEANING. OR WE CAN JUST CHECK HERE
 					
 					for(int a = 0; a<pickups.size(); a++) {
-						if(pickups.get(a).isBroken()) {
+						if(!pickups.get(a).isBroken()) {
 						
 							chance = buyers.get(i).GetChance();
 							
@@ -785,7 +785,7 @@ public class FNCD {
 					var d = Math.random() * 100;
 					if (d <= chance - 20.0) {
 						for(int a = 0; a<drivableVehicles.size(); a++) {
-							if(drivableVehicles.get(a).isPerformanceCar() && drivableVehicles.get(a).isBroken()) {
+							if(drivableVehicles.get(a).isPerformanceCar() && !drivableVehicles.get(a).isBroken()) {
 								Collections.sort(performanceCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 								System.out.println( "\t" + salesPeople.get(randomNum2).GetName() + " just sold " + drivableVehicles.get(a).GetName() + " for " + drivableVehicles.get(a).GetSalesPrice());
 								performanceCars.remove(a); 
@@ -795,7 +795,7 @@ public class FNCD {
 								soldVehicles.add( drivableVehicles.get(a) );
 								break;
 							}
-							else if(drivableVehicles.get(a).isCar() && drivableVehicles.get(a).isBroken()) {
+							else if(drivableVehicles.get(a).isCar() && !drivableVehicles.get(a).isBroken()) {
 								Collections.sort(cars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 								System.out.println( "\t" + salesPeople.get(randomNum2).GetName() + " just sold " + drivableVehicles.get(a).GetName() + " for " + drivableVehicles.get(a).GetSalesPrice());
 								cars.remove(a); 

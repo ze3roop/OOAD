@@ -10,7 +10,7 @@ public class Helper {
         return RandInt(1, 100) <= chance_to_pass;
     }
     static int GenerateUniqueID () {
-        uniqueID += RandInt(0, 9);
+        uniqueID += RandInt(1, 9);
         return uniqueID;
     }
 }
