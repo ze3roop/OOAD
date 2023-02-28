@@ -1,38 +1,59 @@
-import java.util.concurrent.ThreadLocalRandom;
-
 public class Buyer {
 	//Every working day, 0 to 5 buyers will arrive to buy a vehicle (2-8 buyers on Friday/Saturday) from a Salesperson.
 	//Buyers buy from a Salesperson (randomly selected). Buyers are initialized randomly with one of three types of Buying
 	//, each with a base chance of buying a vehicle: Just Looking (10%), Wants One (40%), Needs One (70%).
 	//The buyers will have a type of vehicle they want (Performance Car, Car, Pickup) randomly determined.
+
+	private enum type_of_buying {Just_looking, Want_One, Need_One}
 	
-	protected String[] chanceOfBuying = {"Just Looking", "Wants One", "Needs One"}; // ENCAPSULATION
-	protected String[] vehicleTypes = {"Performance Car", "Car", "Pickup"}; // ENCAPSULATION
+	protected type_of_buying chanceOfBuying; // ENCAPSULATION
+	protected Vehicles.Types_of_Vehicles preference; // ENCAPSULATION
+	
 	protected String chanceStr; // ENCAPSULATION
-	protected Double chance; // ENCAPSULATION 
-	protected String preference;  // ENCAPSULATION
+	protected int chance; // ENCAPSULATION 
+
+	private String name = "Buyer_" + Helper.GenerateUniqueID();
 	
 	public Buyer()
 	{
-		int randomInt1 = ThreadLocalRandom.current().nextInt(0,3);
-		chanceStr = chanceOfBuying[randomInt1];//randomly determined to be just looking, wants one, or needs one
-		if(chanceStr == "Just Looking") {
-			chance = 10.0;
+		int ran = Helper.RandInt(1, type_of_buying.values().length);
+
+		if(ran == 1) {
+			chanceOfBuying = type_of_buying.Just_looking;
+			chance = 10;
+		} else if (ran == 2) {
+			chanceOfBuying = type_of_buying.Want_One;
+			chance = 40;
 		}
-		else if (chanceStr == "Wants One") {
-			chance = 40.0;
+		else if (ran == 3) {
+			chanceOfBuying = type_of_buying.Need_One;
+			chance = 70;
 		}
-		else if (chanceStr == "Needs One") {
-			chance = 70.0;
-		}
-		int randomInt2 = ThreadLocalRandom.current().nextInt(0,3);
-		preference = vehicleTypes[randomInt2];//randomly determined to be performance car, car, pickup
+
+		ran = Helper.RandInt(1,Vehicles.Types_of_Vehicles.values().length);
+		preference = Vehicles.Types_of_Vehicles.values()[ran]; //randomly determined to be performance car, car, pickup
+
 	}
 	
-	public String GetPreference() {
+	public Vehicles.Types_of_Vehicles GetPreference() {
 		return preference; 
 	}
-	public Double GetChance() {
+	public int GetChance() {
 		return chance; 
 	}
+
+	public Boolean WantsPickup() {
+		return preference == Vehicles.Types_of_Vehicles.pickup;
+	}
+
+	public Boolean WantsPerformanceCar() {
+		return preference == Vehicles.Types_of_Vehicles.performanceCar;
+	}
+
+	public Boolean WantsCar() {
+		return preference == Vehicles.Types_of_Vehicles.performanceCar;
+	}
+
+	public String GetName() { return name;}
+
 }
