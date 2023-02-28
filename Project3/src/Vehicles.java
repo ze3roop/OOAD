@@ -1,4 +1,5 @@
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.function.BooleanSupplier;
 
 public class Vehicles { // INHERITANCE
 
@@ -137,6 +138,13 @@ public class Vehicles { // INHERITANCE
 
 		return String.format("%-40s$%-20.2f$%-20.2f%-20s%-20s", name, cost, salesPrice, condition_str, cleanliness_str);
 	}
+
+	public void ReduceCleanliness() {
+		if (cleanliness == Types_of_Cleanliness.sparkling) { cleanliness = Types_of_Cleanliness.clean;}
+		else if (cleanliness == Types_of_Cleanliness.clean) { cleanliness = Types_of_Cleanliness.dirty;}
+	}
+
+	public Boolean isVehicle() {return vehicleType == Types_of_Vehicles.NILL;}
 
 }
 
