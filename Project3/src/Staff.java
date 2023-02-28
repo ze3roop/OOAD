@@ -1,5 +1,3 @@
-import java.util.concurrent.ThreadLocalRandom;
-
 /* ============== STAFF SUPER CLASS ============= */
 public class Staff { // INHERITANCE 
 	protected String name; // ENCAPSULATION
@@ -16,6 +14,7 @@ public class Staff { // INHERITANCE
 	public void CreateName(String str) { //POLYMORPHISM AND ABSTRACTION
 		name = str;
 	}
+	
 	public String GetName() { //POLYMORPHISM AND ABSTRACTION
 		return name;
 	}
@@ -50,6 +49,14 @@ public class Staff { // INHERITANCE
 			bonus_ = bonus_ + 2000; 
 		}
 	}
+	
+public boolean doJob() {
+	if (JobsDone < 2) {
+		JobsDone ++;
+		return true;
+	} else {return false;}
+}
+
 }
 
 
