@@ -122,6 +122,10 @@ public class Vehicles { // INHERITANCE
 		vehicleType = Types_of_Vehicles.performanceCar;
 	}
 
+	public Types_of_Vehicles GetType() {
+		return vehicleType;
+	}
+
 	public String getInfo_asString() {
 		String condition_str = "NILL";
 		String cleanliness_str = "NILL";

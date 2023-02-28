@@ -78,9 +78,9 @@ class Salespeople extends Staff // INHERITANCE
 	
 	public Salespeople(String name) { //IDENTITY
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
+		CreateName(name);
 		dailySalary = (double) 500; // whatever the base salary for SalesPeople is 
 		totalSalary = 0.0;
-		CreateName(name); 
 		bonus_ = 0.0;
 	}
 
@@ -101,9 +101,9 @@ class Mechanics extends Staff // INHERITANCE
 	}
 	public Mechanics(String name) {
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
-		dailySalary = (double) 400; // whatever the base salary for SalesPeople is 
-		JobsDone = 0;
-		CreateName(name); 
+		CreateName(name);
+		dailySalary = (double) 400; // whatever the base salary for Mechanics is 
+		JobsDone = 0; // start with 0 jobsdone
 		totalSalary = 0.0;
 		bonus_ = 0.0;
 	}

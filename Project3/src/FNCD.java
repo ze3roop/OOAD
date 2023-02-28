@@ -1,11 +1,9 @@
 import java.io.FileDescriptor;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
-import java.time.chrono.IsoEra;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class FNCD {
 
@@ -14,9 +12,7 @@ public class FNCD {
 	protected ArrayList<Interns> interns = new ArrayList<Interns>();
 	final protected Integer MIN_STAFF = 3;
 
-	protected ArrayList<PerformanceCars> performanceCars = new ArrayList<PerformanceCars>();
-	protected ArrayList<Cars> cars = new ArrayList<Cars>();
-	protected ArrayList<Pickups> pickups = new ArrayList<Pickups>();
+	protected ArrayList<Vehicles> Inventory = new ArrayList<Vehicles>();
 	final protected Integer MIN_VEHICLES = 4;
 
 	protected Double budget_;
@@ -93,53 +89,64 @@ public class FNCD {
 
 	private void BuyVehicles() {
 		
-		int numCars = cars.size();
-		int numPerformanceCars = performanceCars.size();
-		int numPickups = pickups.size();
+		int numCars = 0;
+		int numPerformanceCars = 0;
+		int numPickups = 0;
 
-		if(performanceCars.size() < MIN_VEHICLES) {
-			for (int i = 0; numPerformanceCars < MIN_VEHICLES; i++) {
-				performanceCars.add( new PerformanceCars() );
+		for (int i = 0; i < Inventory.size(); i++){
+			Vehicles current_Vehicle = Inventory.get(i);
+			if (current_Vehicle.isCar()) {numCars ++;}
+			else if (current_Vehicle.isPerformanceCar()) {numPerformanceCars ++;}
+			else if (current_Vehicle.isPickup()) {numPickups ++;}
+		}
+
+		if(numPerformanceCars < MIN_VEHICLES) {
+			int vehicile_to_buy = MIN_VEHICLES - numPerformanceCars;
+			for (int i = 0; i <  vehicile_to_buy; i++) {
+				PerformanceCars boughtPerformanceCar = new PerformanceCars();
+
+				Inventory.add( boughtPerformanceCar);
 				//take money from operating budget. 
-				budget_ = budget_ - performanceCars.get(i).GetCost(); 
-				System.out.printf("\tPurchased " + performanceCars.get(i).GetName() + ". For: $%.2f\n",performanceCars.get(i).GetCost());
+				budget_ = budget_ - boughtPerformanceCar.GetCost(); 
+				System.out.printf("\tPurchased " + boughtPerformanceCar.GetName() + ". For: $%.2f\n",boughtPerformanceCar.GetCost());
 				numPerformanceCars ++;
 			}
 		}
 
 		if(numCars < MIN_VEHICLES) {
-			for (int i = 0; numCars < MIN_VEHICLES; i++) {
-				cars.add( new Cars() );
+			int vehicile_to_buy = MIN_VEHICLES - numCars;
+			for (int i = 0; i < vehicile_to_buy; i++) {
+				Cars boughtCar = new Cars();
+
+				Inventory.add( boughtCar );
 				//take money from operating budget. 
-				//SetBudget( performanceCars just instantiated.getSalesPrice() ); 
-				budget_ = budget_ - cars.get(i).GetCost(); 
-				System.out.printf("\tPurchased " + cars.get(i).GetName() + ". For: $%.2f\n",cars.get(i).GetCost());
+				budget_ = budget_ - boughtCar.GetCost(); 
+				System.out.printf("\tPurchased " + boughtCar.GetName() + ". For: $%.2f\n",boughtCar.GetCost());
 				numCars ++;
 			}
 		}
 		if(numPickups < MIN_VEHICLES) {
-			for (int i = 0; numPickups < MIN_VEHICLES; i++) {
-				pickups.add( new Pickups() );
+			int vehicile_to_buy = MIN_VEHICLES - numPickups;
+			for (int i = 0; i < vehicile_to_buy; i++) {
+				Pickups boughtPickup = new Pickups();
+				Inventory.add( boughtPickup );
 				//take money from operating budget. 
-				//SetBudget( pickup just instantiated.getSalesPrice() ); 
-				budget_ = budget_ - pickups.get(i).GetCost(); 
-				System.out.printf("\tPurchased " + pickups.get(i).GetName() + ". For: $%.2f\n",pickups.get(i).GetCost());
+				budget_ = budget_ - boughtPickup.GetCost(); 
+				System.out.printf("\tPurchased " + boughtPickup.GetName() + ". For: $%.2f\n",boughtPickup.GetCost());
 				numPickups ++;
 			}
 		}
 
+		printInventory();
+	}
+
+	public void printInventory() {
 		System.out.println("\t -------------- Inventory: --------------");
 		
 		System.out.printf("\t%-40s%-20s%-20s%-20s%-20s%-20s\n", "Name",
 				"Cost", "Sale Price", "Condition", "Cleanliness", "Sold or In Stock");
-		for(int i = 0; i < performanceCars.size(); i++) {
-			System.out.printf("\t" + performanceCars.get(i).getInfo_asString() + "%-20s\n","In Stock");
-		}
-		for(int i = 0; i < cars.size(); i++) {
-			System.out.printf("\t" + cars.get(i).getInfo_asString() + "%-20s\n","In Stock");
-		}
-		for(int i = 0; i < pickups.size(); i++) {
-			System.out.printf("\t" + pickups.get(i).getInfo_asString() + "%-20s\n","In Stock");
+		for(int i = 0; i < Inventory.size(); i++) {
+			System.out.printf("\t" + Inventory.get(i).getInfo_asString() + "%-20s\n","In Stock");
 		}
 	}
 	
@@ -191,10 +198,6 @@ public class FNCD {
 	
 	public void Washing() {
 		System.out.println("Washing...");
-		ArrayList<Vehicles> dirtyVehicles = new ArrayList<Vehicles>(); // local variable to store all the dirty vehicles
-		ArrayList<Vehicles> cleanVehicles = new ArrayList<Vehicles>(); // local variable to store all the clean vehicles
-		ArrayList<Vehicles> sparklingVehicles = new ArrayList<Vehicles>(); // local variable to store all the sparkling vehicles
-
 
 		/*
 		Every working day the interns will wash vehicles. 
@@ -202,105 +205,59 @@ public class FNCD {
 		sort each vehicle into their appropriate list
 		 */
 
-		for(int i = 0; i < MIN_VEHICLES; i++) {
-			Cars current_car = cars.get(i);
-			PerformanceCars current_PerformanceCar = performanceCars.get(i);
-			Pickups current_Pickup = pickups.get(i);
-
-			if (current_PerformanceCar.isDirty()) {dirtyVehicles.add(current_PerformanceCar);}
-			else if (current_PerformanceCar.isClean()) {cleanVehicles.add(current_PerformanceCar);}
-			else if (current_PerformanceCar.isSparkling()) {sparklingVehicles.add(current_PerformanceCar);}
-
-			if (current_Pickup.isDirty()) {dirtyVehicles.add(current_Pickup);}
-			else if (current_Pickup.isClean()) {cleanVehicles.add(current_Pickup);}
-			else if (current_Pickup.isSparkling()) {sparklingVehicles.add(current_Pickup);}
-
-			if (current_car.isDirty()) {dirtyVehicles.add(current_car);}
-			else if (current_car.isClean()) {cleanVehicles.add(current_car);}
-			else if (current_car.isSparkling()) {sparklingVehicles.add(current_car);}
-
-		}
-
-		performanceCars.clear();
-		cars.clear();
-		pickups.clear();
-
 		
 		for (int i = 0; i < MIN_STAFF; i++) {
 			String internName = interns.get(i).GetName();
 
 			while(interns.get(i).doJob()) { //Loop through every intern one at a time, if the can do their job they will, oterwise skip them
+				boolean washedVehicile = false;
+				for(int j = 0; j < Inventory.size(); j++){
+					if (!washedVehicile){
+						if (Inventory.get(j).isDirty()){
+							washedVehicile = true;
+							if (Helper.PercentChance(10)){ // 10 percent chance to make dirty vehicle sparkling
+							
+								System.out.println("\t" + internName + " washed " + Inventory.get(j).GetName() + " and made it sparkling" );
+								interns.get(i).Bonus(Inventory.get(j));      //IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
+								
+								Inventory.get(j).makeSparkling();
+		
+							} else if (Helper.PercentChance(80)){ // 80 percent chance to make dirty vehicle clean
+								
+								System.out.println("\t" + internName + " washed " + Inventory.get(j).GetName() + " and made it clean" );
+								
+								Inventory.get(j).makeClean();
+							} else { System.out.println("\t" + internName + " did not wash " + Inventory.get(j).GetName() + " and did not do his job" ); }
+						}
+					}
+				}
 
-				if (!dirtyVehicles.isEmpty()) { // first check to see if there are dirty vehicles to wash
-					
-					Vehicles working_vehicle = dirtyVehicles.get(0); // remove vehicle from list and store into local temp variable
-					dirtyVehicles.remove((0));
-					
-					if (Helper.PercentChance(10)){ // 10 percent chance to make dirty vehicle sparkling
-						
-						System.out.println("\t" + internName + " washed " + working_vehicle.GetName() + " and made it sparkling" );
-						interns.get(i).Bonus(working_vehicle);      //IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
-						
-						working_vehicle.makeSparkling();
+				if (!washedVehicile){
+					for(int j = 0; j < Inventory.size(); j++){
+						if (!washedVehicile){
+							if (Inventory.get(j).isClean()){
+								washedVehicile = true;
+								if (Helper.PercentChance(30)){ // 30 percent chance to make clean vehicle sparkling
+								
+									System.out.println("\t" + internName + " washed " + Inventory.get(j).GetName() + " and made it sparkling" );
+									interns.get(i).Bonus(Inventory.get(j));      //IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
+									
+									Inventory.get(j).makeSparkling();
+			
+								} else if (Helper.PercentChance(5)){ // 80 percent chance to make clean vehicle dirty
+									
+									System.out.println("\t" + internName + " washed " + Inventory.get(j).GetName() + " and made it dirty" );
+									
+									Inventory.get(j).makeDirty();
+								} else { System.out.println("\t" + internName + " did not wash " + Inventory.get(j).GetName() + " and did not do his job" ); }
+							}
+						}
+					}
+				}
 
-					} else if (Helper.PercentChance(80)){ // 80 percent chance to make dirty vehicle clean
-						
-						System.out.println("\t" + internName + " washed " + working_vehicle.GetName() + " and made it clean" );
-						
-						working_vehicle.makeClean();
-					} else { System.out.println("\t" + internName + " did not wash " + working_vehicle.GetName() + " and did not do his job" ); }
-
-					if (working_vehicle.isClean()) {cleanVehicles.add(working_vehicle);}
-					else if (working_vehicle.isDirty()) {dirtyVehicles.add(working_vehicle);}
-					else if (working_vehicle.isSparkling()) {sparklingVehicles.add(working_vehicle);}
-
-				} else if (!cleanVehicles.isEmpty()) { // then check to see if there are any clean nehicles to wash
-					
-					Vehicles working_vehicle = cleanVehicles.get(0);
-					cleanVehicles.remove(0);
-
-					if(Helper.PercentChance(5)) { // 5 percent chance to make clean vehicle dirty
-
-						System.out.println("\t" + internName + " washed " + working_vehicle.GetName() + " and made it dirty." );
-						working_vehicle.makeDirty();
-
-					} else if (Helper.PercentChance(30)) { // 30 percent chance to make clean vehicle sparkling
-
-						System.out.println("\t" + internName + " washed " + working_vehicle.GetName() + " and made it sparkling." );
-						interns.get(i).Bonus(working_vehicle);      //IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE.
-					} else {System.out.println("\t" + internName + " did not wash " + working_vehicle.GetName() + " and did not do his job" );}
-
-					if (working_vehicle.isClean()) {cleanVehicles.add(working_vehicle);}
-					else if (working_vehicle.isDirty()) {dirtyVehicles.add(working_vehicle);}
-					else if (working_vehicle.isSparkling()) {sparklingVehicles.add(working_vehicle);}
-
-				} else {System.out.println("\t" + internName + " tried to wash a car but there are none" );}
+				if (!washedVehicile) { System.out.println("\t" + internName + " tried to wash a car but there are none"); }
 			}
 		}
-
-		// return cars to inventory lists
-
-		for (int i = 0 ; i < cleanVehicles.size() ; i++){
-			Vehicles current_Vehicle = cleanVehicles.get(i);
-			if (current_Vehicle.isCar()) {cars.add((Cars)current_Vehicle);}
-			else if (current_Vehicle.isPerformanceCar()) {performanceCars.add((PerformanceCars) current_Vehicle);}
-			else if (current_Vehicle.isPickup()) {pickups.add((Pickups)current_Vehicle);}
-		}
-		for (int i = 0; i < dirtyVehicles.size(); i++){
-			Vehicles current_Vehicle = dirtyVehicles.get(i);
-			if (current_Vehicle.isCar()) {cars.add((Cars)current_Vehicle);}
-			else if (current_Vehicle.isPerformanceCar()) {performanceCars.add((PerformanceCars) current_Vehicle);}
-			else if (current_Vehicle.isPickup()) {pickups.add((Pickups)current_Vehicle);}
-
-		}
-		for(int i = 0; i < sparklingVehicles.size(); i++){
-			Vehicles current_Vehicle = sparklingVehicles.get(i);
-			if (current_Vehicle.isCar()) {cars.add((Cars)current_Vehicle);}
-			else if (current_Vehicle.isPerformanceCar()) {performanceCars.add((PerformanceCars) current_Vehicle);}
-			else if (current_Vehicle.isPickup()) {pickups.add((Pickups)current_Vehicle);}
-
-		}
-
 		Repairing();
 	}
 	
@@ -315,10 +272,6 @@ public class FNCD {
 		
 
 		System.out.println("Reparing...");
-		ArrayList<Vehicles> brokenVehicles = new ArrayList<Vehicles>(); // local variable to store all the dirty vehicles
-		ArrayList<Vehicles> usedVehicles = new ArrayList<Vehicles>(); // local variable to store all the clean vehicles
-		ArrayList<Vehicles> likeNewVehicles = new ArrayList<Vehicles>(); // local variable to store all the sparkling vehicles
-
 
 		/*
 		Every working day the interns will wash vehicles. 
@@ -326,83 +279,49 @@ public class FNCD {
 		sort each vehicle into their appropriate list
 		 */
 
-		for(int i = 0; i < MIN_VEHICLES; i++) {
-			Cars current_car = cars.get(i);
-			PerformanceCars current_PerformanceCar = performanceCars.get(i);
-			Pickups current_Pickup = pickups.get(i);
-
-			if (current_PerformanceCar.isBroken()) {brokenVehicles.add(current_PerformanceCar);}
-			else if (current_PerformanceCar.isUsed()) {usedVehicles.add(current_PerformanceCar);}
-			else if (current_PerformanceCar.isLikeNew()) {likeNewVehicles.add(current_PerformanceCar);}
-
-			if (current_Pickup.isBroken()) {brokenVehicles.add(current_Pickup);}
-			else if (current_Pickup.isUsed()) {usedVehicles.add(current_Pickup);}
-			else if (current_Pickup.isLikeNew()) {likeNewVehicles.add(current_Pickup);}
-
-			if (current_car.isBroken()) {brokenVehicles.add(current_car);}
-			else if (current_car.isLikeNew()) {likeNewVehicles.add(current_car);}
-			else if (current_car.isUsed()) {usedVehicles.add(current_car);}
-
-		}
-
-		performanceCars.clear();
-		cars.clear();
-		pickups.clear();
-
 		
 		for (int i = 0; i < MIN_STAFF; i++) {
 			
 			String MechanicName = mechanics.get(i).GetName();
 
 			while(mechanics.get(i).doJob()) { //Loop through every intern one at a time, if the can do their job they will, oterwise skip them
-				if (Helper.PercentChance(80)){
-					if (!brokenVehicles.isEmpty()){
+				boolean fixedCar = false;
 
-						usedVehicles.add(brokenVehicles.get((0)));
-						System.out.println("\t" + MechanicName + " just repaired " + brokenVehicles.get(0).GetName() + " and made it Used");
-						mechanics.get(i).Bonus(brokenVehicles.get(0));
-						brokenVehicles.get(0).ReduceCleanliness();
-						brokenVehicles.get(0).SetSalesPrice(.5);
-						brokenVehicles.remove(0);
-
-					} else if (!usedVehicles.isEmpty()){
-
-						likeNewVehicles.add(usedVehicles.get((0)));
-						System.out.println("\t" + MechanicName + " just repaired " + usedVehicles.get(0).GetName() + " and made it LikeNew");
-						mechanics.get(i).Bonus(usedVehicles.get(0));
-						usedVehicles.get(0).ReduceCleanliness();
-						usedVehicles.get(0).SetSalesPrice(.5);
-						usedVehicles.remove(0);
-
-					} else {System.out.println("\t" + MechanicName + " tried to repair a vehicle but there are none");}
-					
+				for(int j = 0; j < Inventory.size(); j++){
+					if (!fixedCar){
+						if(Inventory.get(j).isBroken()){
+							fixedCar = true;
+							if (Helper.PercentChance(80)){
+								System.out.println("\t" + MechanicName + " just repaired " + Inventory.get(j).GetName() + " and made it Used");
+								Inventory.get(j).makeUsed();
+								Inventory.get(j).ReduceCleanliness();
+								Inventory.get(j).SetSalesPrice(.5);
+							}
+						}
+					}
 				}
+				if (!fixedCar){
+					for(int j = 0; j < Inventory.size(); j++){
+						if (!fixedCar){
+							if(Inventory.get(j).isUsed()){
+								fixedCar = true;
+								if (Helper.PercentChance(80)){
+									System.out.println("\t" + MechanicName + " just repaired " + Inventory.get(j).GetName() + " and made it Like New");
+									Inventory.get(j).makeLikeNew();
+									Inventory.get(j).ReduceCleanliness();
+									Inventory.get(j).SetSalesPrice(.5);
+								}
+							}
+						}
+					}
+				}
+
+				if (!fixedCar) {System.out.println("\t" + MechanicName + " tried to repair a vehicle but there are none");}
+				
+					
 			}
 		}
 
-		// return cars to inventory lists
-
-		for (int i = 0 ; i < brokenVehicles.size() ; i++){
-			Vehicles current_Vehicle = brokenVehicles.get(i);
-			if (current_Vehicle.isCar()) {cars.add((Cars)current_Vehicle);}
-			else if (current_Vehicle.isPerformanceCar()) {performanceCars.add((PerformanceCars) current_Vehicle);}
-			else if (current_Vehicle.isPickup()) {pickups.add((Pickups)current_Vehicle);}
-		}
-		for (int i = 0; i < usedVehicles.size(); i++){
-			Vehicles current_Vehicle = usedVehicles.get(i);
-			if (current_Vehicle.isCar()) {cars.add((Cars)current_Vehicle);}
-			else if (current_Vehicle.isPerformanceCar()) {performanceCars.add((PerformanceCars) current_Vehicle);}
-			else if (current_Vehicle.isPickup()) {pickups.add((Pickups)current_Vehicle);}
-
-		}
-		for(int i = 0; i < likeNewVehicles.size(); i++){
-			Vehicles current_Vehicle = likeNewVehicles.get(i);
-			if (current_Vehicle.isCar()) {cars.add((Cars)current_Vehicle);}
-			else if (current_Vehicle.isPerformanceCar()) {performanceCars.add((PerformanceCars) current_Vehicle);}
-			else if (current_Vehicle.isPickup()) {pickups.add((Pickups)current_Vehicle);}
-
-		}
-		
 		Selling();
 	}
 	
@@ -416,7 +335,7 @@ public class FNCD {
 		if(!isBusy()) {
 			int randomNum = Helper.RandInt(0, 5);
 			
-			for (int i = 0; i<=randomNum; i++)
+			for (int i = 0; i < randomNum; i++)
 			{
 				buyers.add(new Buyer());
 			}
@@ -424,188 +343,65 @@ public class FNCD {
 		} else {
 			int randomNum = Helper.RandInt(2, 8);
 			
-			for (int i = 0; i<=randomNum; i++)
+			for (int i = 0; i < randomNum; i++)
 			{
 				buyers.add(new Buyer());
 			}
 		}
-		
-		/*=== INSTANTIATE ARRAY LISTS, OF SELLABLE VEHICLES ===*/
-		ArrayList<PerformanceCars> SellablePerformanceCars = new ArrayList<PerformanceCars>();
-		ArrayList<Cars> SellableperCars = new ArrayList<Cars>();
-		ArrayList<Pickups> SellablePickups = new ArrayList<Pickups>();
-		
-		for ( int i = 0; i < MIN_VEHICLES; i++ ) {
-			PerformanceCars current_performanceCar = performanceCars.get(i);
-			Cars current_Car = cars.get(i);
-			Pickups current_Pickup = pickups.get(i);
-
-			// create lists of vehicles that contain no broken cars (sellable cars)
-			if(!current_performanceCar.isBroken())
-			{
-				SellablePerformanceCars.add(current_performanceCar);
-			}
-
-			if(!current_Car.isBroken())
-			{
-				SellableperCars.add(current_Car);
-			}
-
-			if(!current_Pickup.isBroken())
-			{
-				SellablePickups.add(current_Pickup);
-			}
-
-		}
-
-		// check to see if there are any vehicles to sell
-		if (SellablePerformanceCars.isEmpty() && SellablePickups.isEmpty() && SellableperCars.isEmpty()){
-			System.out.println("\tNo vehicles to sell...");
-			return;
-		}
 
 		// sort the lists of sellable cars by price (decreasing)
-		Collections.sort(SellablePerformanceCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
-		Collections.sort(SellableperCars, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
-		Collections.sort(SellablePickups, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+		Collections.sort(Inventory, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
 
-		int numBuyers = buyers.size();
-
-		for (int i = 0; i < numBuyers; i++){
-
-			// check to see if there are any vehicles to sell
-			if (SellablePerformanceCars.isEmpty() && SellablePickups.isEmpty() && SellableperCars.isEmpty()){
-				System.out.println("\tNo vehicles to sell...");
-				return;
-			}
-
-			Buyer currentBuyer = buyers.get(i);
+		for (int i = 0; i < buyers.size(); i++){
 			int sellerID = Helper.RandInt(0, MIN_STAFF - 1); // local id for salespeople array
 			int chance = buyers.get(i).GetChance(); // varying chance due to car sold, condtion, cleanliness, and matching buyer preferances
-			Vehicles vehicle_to_sell = new Vehicles(); // local temp variable to referance what car is being sold
 
-			// local vehicles to store which cehicle we will sell
-			PerformanceCars bestPerformanceCar = new PerformanceCars();
-			Cars bestCar = new Cars();
-			Pickups bestPickup = new Pickups();
+			boolean sold_car = false;
 
-			// update local best variables with vehicle if one exsists
-			if (!SellablePerformanceCars.isEmpty()) {bestPerformanceCar = SellablePerformanceCars.get(0);}
-			if (!SellableperCars.isEmpty()) { bestCar = SellableperCars.get(0);}
-			if (!SellablePickups.isEmpty()) { bestPickup = SellablePickups.get(0);}
-			
-			
-
-			// determine what vehicile to sell and if the chance of success decreases due to missmatch
-			if (currentBuyer.WantsCar()){
-				if (bestCar.isVehicle()) {
-					vehicle_to_sell = bestCar;
-				}
-				else if (bestPerformanceCar.isVehicle()){
-					if (bestPickup.isVehicle()){
-						if (bestPerformanceCar.GetSalesPrice() >= bestPickup.GetSalesPrice()){
-							vehicle_to_sell = bestPerformanceCar;
-						}
-						else {
-							vehicle_to_sell = bestPickup;
+			if (!Inventory.isEmpty()){
+				for (int j = 0; j < Inventory.size(); j++){
+					if (!sold_car){
+						if (Inventory.get(j).vehicleType == buyers.get(i).GetPreference()){
+							sold_car = true;
+							if (Inventory.get(j).isSparkling()) { chance += 10;}
+							if (Inventory.get(j).isLikeNew()) { chance += 10;}
+							if (Helper.PercentChance(chance)){
+								// increase the budget
+								budget_ += Inventory.get(j).GetSalesPrice();
+								// display message
+								System.out.printf( "\t" + salesPeople.get(sellerID).GetName() + " just sold " + Inventory.get(j).GetName() + " for $%.2f\n", Inventory.get(j).GetSalesPrice());
+								// increase the daily sales total
+								totalSalesPerDay = totalSalesPerDay + Inventory.get(j).GetSalesPrice();
+								// give bonus to salesperson
+								salesPeople.get(sellerID).Bonus(Inventory.get(j));
+								// add vehicle to sold cars list
+								soldVehicles.add(Inventory.get(j));
+								// remove vehicle from inventory
+								Inventory.remove(j);
+							}
 						}
 					}
-					else {
-						vehicle_to_sell = bestPerformanceCar;
+				}
+				if (!sold_car){
+					chance -= 20;
+					if (Inventory.get(0).isSparkling()) { chance += 10;}
+					if (Inventory.get(0).isLikeNew()) {chance += 10;}
+					if (Helper.PercentChance(chance)){
+						// increase the budget
+						budget_ += Inventory.get(0).GetSalesPrice();
+						// display message
+						System.out.printf( "\t" + salesPeople.get(sellerID).GetName() + " just sold " + Inventory.get(0).GetName() + " for $%.2f\n", Inventory.get(0).GetSalesPrice());
+						// increase the daily sales total
+						totalSalesPerDay = totalSalesPerDay + Inventory.get(0).GetSalesPrice();
+						// give bonus to salesperson
+						salesPeople.get(sellerID).Bonus(Inventory.get(0));
+						// add vehicle to sold cars list
+						soldVehicles.add(Inventory.get(0));
+						// remove vehicle from inventory
+						Inventory.remove(0);
 					}
 				}
-				else {
-					vehicle_to_sell = bestPickup;
-				}
-			}
-			else if (currentBuyer.WantsPerformanceCar()){
-				if (bestPerformanceCar.isVehicle()) {
-					vehicle_to_sell = bestPerformanceCar;
-				}
-				else if (bestCar.isVehicle()){
-					if (bestPickup.isVehicle()){
-						if (bestCar.GetSalesPrice() >= bestPickup.GetSalesPrice()){
-							vehicle_to_sell = bestCar;
-						}
-						else {
-							vehicle_to_sell = bestPickup;
-						}
-					}
-					else {
-						vehicle_to_sell = bestCar;
-					}
-				}
-				else {
-					vehicle_to_sell = bestPickup;
-				}
-			}
-			else if (currentBuyer.WantsPickup()){
-				if (bestPickup.isVehicle()) {
-					vehicle_to_sell = bestPickup;
-				}
-				else if (bestCar.isVehicle()){
-					if (bestPerformanceCar.isVehicle()){
-						if (bestCar.GetSalesPrice() >= bestPerformanceCar.GetSalesPrice()){
-							vehicle_to_sell = bestCar;
-						}
-						else {
-							vehicle_to_sell = bestPerformanceCar;
-						}
-					}
-					else {
-						vehicle_to_sell = bestCar;
-					}
-				}
-				else {
-					vehicle_to_sell = bestPerformanceCar;
-				}
-			}
-
-			// apply bonusus depending on isSparkling and isLikeNew and decrement if type missmatch
-			if (vehicle_to_sell.isSparkling()) {chance += 10;}
-			if (vehicle_to_sell.isLikeNew()) {chance += 10;}
-			if (vehicle_to_sell.isCar() && currentBuyer.GetPreference() != Vehicles.Types_of_Vehicles.Car){chance -= 20;}
-			else if (vehicle_to_sell.isPerformanceCar() && currentBuyer.GetPreference() != Vehicles.Types_of_Vehicles.performanceCar){chance -= 20;}
-			else if (vehicle_to_sell.isPickup() && currentBuyer.GetPreference() != Vehicles.Types_of_Vehicles.pickup){chance -= 20;}
-
-
-			if (Helper.PercentChance(chance)) { // enters if we were able to sell the vehicle based on percent chance
-
-				// remove the vehicle from the appropriate possible to sell list
-				if (vehicle_to_sell.isCar()){
-					SellableperCars.remove(vehicle_to_sell);
-				} else if (vehicle_to_sell.isPickup()){
-					SellablePickups.remove(vehicle_to_sell);
-				} else if (vehicle_to_sell.isPerformanceCar()){
-					SellablePerformanceCars.remove(vehicle_to_sell);
-				}
-
-				double soldPrice = vehicle_to_sell.GetSalesPrice(); // local variable to referance what we sold the car for
-
-				budget_ += soldPrice; // add money to the budget for the price of the car
-				
-				// display message in system
-				System.out.printf( "\t" + salesPeople.get(sellerID).GetName() + " just sold " + vehicle_to_sell.GetName() + " for $%.2f\n", soldPrice);
-
-				// increase total sales for the day
-				totalSalesPerDay = totalSalesPerDay + soldPrice;
-
-				// give bonus to salesperson
-				salesPeople.get(sellerID).Bonus(vehicle_to_sell);
-
-				// add vehicle to sold vehicles list
-				soldVehicles.add( vehicle_to_sell );
-
-				// remove vehicile from inventory
-
-				if (vehicle_to_sell.isCar()){
-					cars.remove(vehicle_to_sell);
-				} else if (vehicle_to_sell.isPerformanceCar()){
-					performanceCars.remove(vehicle_to_sell);
-				} else if (vehicle_to_sell.isPickup()){
-					pickups.remove(vehicle_to_sell);
-				}
-			}
+			} else { System.out.println("\tno vehiciles to sell, out of stock");}
 		}
 		
 		Ending();
@@ -613,23 +409,14 @@ public class FNCD {
 	}
 
 	void Ending() {
-		
-		//give all staff members their daily salary pay for today's work (out of the operating budget) 
-		//It's possible at the end of every day one mechanic, one salesperson, and one intern may quit the FNCD. 
-		//There is a 10% chance for each staff type that one member may quit.
-		//If an intern quits, simply remove them from Staff. If a Mechanic quits or a Salesperson quits, remove them from the store staff
-		//and add a new mechanic or salesperson to the staff (as needed) using an existing intern to provide the name for this new staff member. 
-		//Remove the intern used here from the interns working at the FNCD. (The intern has become the new mechanic or salesperson)
-		//When removing staff from the FNCD, store the leaving instance in a collection of departed staff.
-		
-		//produce a readable tabular report of:
-		//staff members - with total days worked, total normal pay, total bonus pay, working or quit the FNCD
-		//Inventory - List of all Vehicles with Name, Cost, Sale Price, Condition, Cleanliness, Sold or In Stock
-		//Total $ in operating budget, total sales $ for the day.
-		
+
 		System.out.println("Ending...");
-		
-		
+
+		ArrayList<String> Employees_Quit = new ArrayList<>();
+
+		////////////////////////////////////////////
+		// Give all Staff members their daily salary pay for today’s work (out of the operating budget).
+		////////////////////////////////////////////
 		for (int i = 0; i < salesPeople.size(); i++) {
 			salesPeople.get(i).SetDailySalary();
 			budget_ = budget_ - salesPeople.get(i).GetDailySalary();
@@ -642,41 +429,81 @@ public class FNCD {
 			interns.get(i).SetDailySalary();
 			budget_ = budget_ - interns.get(i).GetDailySalary();
 		}
+
+		////////////////////////////////////////////
+		// It’s possible at the end of every day one Mechanic, one Salesperson, and one Intern may quit the FNCD. 
+		////////////////////////////////////////////
+		/*/
+		There is a 10% chance for each Staff type that one member may quit. 
+		If an Intern quits, simply remove them from Staff.
+		If a Mechanic or a Salesperson quits, remove them from the store Staff and add a new Mechanic or Salesperson to the Staff (as needed)
+			using an existing Intern to provide the name for this new Staff member. 
+			Remove the Intern used here from the Interns working at the FNCD. (The Intern has become the new Mechanic or Salesperson.)
+		 When removing Staff from the FNCD, store the leaving instance in a collection of Departed Staff.
+		*/
+
+		// if an intern quits
+		if (Helper.PercentChance(10)) {
+			int InternID = Helper.RandInt(0, interns.size()-1);
+			departedStaff.add(interns.get(InternID));
+			Employees_Quit.add(interns.get(InternID).GetName());
+			interns.remove(InternID); 
+		}
+
+		// if a mechanic quits
+		if (Helper.PercentChance(10)) {
+			
+			int MechanicID = Helper.RandInt(0, mechanics.size()-1);
+
+			departedStaff.add(mechanics.get(MechanicID));
+			Employees_Quit.add(mechanics.get(MechanicID).GetName());
+
+			mechanics.remove(MechanicID);
+
+			int InternID = Helper.RandInt(0, interns.size()-1);
+
+			mechanics.add(new Mechanics("mechanic_" + interns.get(InternID).GetName()));
+			interns.remove(InternID);
+
+		}
+
+		// if a salesperson quits
+		if (Helper.PercentChance(10)) {
+
+			int SalesPersonID = Helper.RandInt(0, salesPeople.size()-1);
+
+			departedStaff.add(salesPeople.get(SalesPersonID));
+			Employees_Quit.add(salesPeople.get(SalesPersonID).GetName());
+
+			salesPeople.remove(SalesPersonID);
+			
+			int InternID = Helper.RandInt(0, interns.size()-1);
+
+			salesPeople.add(new Salespeople("salesperson_" + interns.get(InternID).GetName()));
+			interns.remove(InternID);
+		}
+
+		////////////////////////////////////////////
+		// Produce a readable, tabular report of:
+		////////////////////////////////////////////
+		/*
+		Staff members – with total days worked, total normal pay, total bonus pay, working or quit the FNCD Inventory 
+		– List of all Vehicles with Name, Cost, Sale Price, Condition, Cleanliness, Sold or In Stock Total
+		$ in operating budget
+		total sales $ for day.
+		*/
+
+		// --------- staff who quit for the day
+		System.out.println("\t-------------- Quit: --------------");
+		if (Employees_Quit.isEmpty()){
+			System.out.println("\t none quit");
+		} else {
+			for (int i = 0; i < Employees_Quit.size(); i++){
+				System.out.println("\t" + Employees_Quit.get(i));
+			}
+		}
 		
-		System.out.println("\n============== End of day report ==============");
-		System.out.println("\t-------------- QUIT: --------------");
-		int acc = 0;
-		var salespeopleChance = Math.random() * 100;
-		if (salespeopleChance <= 10) {
-			int randomNum = ThreadLocalRandom.current().nextInt(0, 3);
-			System.out.println("\t" + salesPeople.get(randomNum).GetName());
-			departedStaff.add(salesPeople.get(randomNum));
-			salesPeople.remove(randomNum);
-			salesPeople.add( new Salespeople (interns.get(0).GetName() ) );
-			interns.remove(0);
-		}
-		else { acc++; }
-		var mechanicChance = Math.random() * 100;
-		if (mechanicChance <= 10) {
-			int randomNum = ThreadLocalRandom.current().nextInt(0, 3);
-			System.out.println("\t" + mechanics.get(randomNum).GetName());
-			departedStaff.add(mechanics.get(randomNum));
-			mechanics.remove(randomNum);
-			mechanics.add( new Mechanics (interns.get(0).GetName() ) );
-			interns.remove(0);
-		}
-		else { acc++; }
-		var internChance = Math.random() * 100;
-		if (internChance <= 10) {
-			int randomNum = ThreadLocalRandom.current().nextInt(0, 3);
-			System.out.println("\t" + interns.get(randomNum).GetName());
-			departedStaff.add(interns.get(randomNum));
-			interns.remove(randomNum);
-		}
-		else { acc++; }
-		if(acc == 3) {
-			System.out.println("\t NONE QUIT");
-		}
+		// --------- staff who are still working
 		System.out.println("\t-------------- WORKING: --------------");
 		System.out.println("\t SALESPEOPLE:");
 		for (int i = 0; i < salesPeople.size(); i++) {
@@ -697,36 +524,23 @@ public class FNCD {
 			System.out.println("\t \t \t Total Bonus Pay: " + interns.get(i).GetTotalBonusPay());
 		}
 		
-		/* ============== REST OF THE REPORT ============ */
-			//Inventory - List of all Vehicles with Name, Cost, Sale Price, Condition, Cleanliness, Sold or In Stock
-			//Total $ in operating budget, total sales $ for the day.
-		
-			System.out.println("\t -------------- Inventory: --------------");
-		
-		System.out.printf("\t%-40s%-20s%-20s%-20s%-20s%-20s\n", "Name",
-				"Cost", "Sale Price", "Condition", "Cleanliness", "Sold or In Stock");
-		for(int i = 0; i < performanceCars.size(); i++) {
-			System.out.printf("\t" + performanceCars.get(i).getInfo_asString() + "%-20s\n","In Stock");
-		}
-		for(int i = 0; i < cars.size(); i++) {
-			System.out.printf("\t" + cars.get(i).getInfo_asString() + "%-20s\n","In Stock");
-		}
-		for(int i = 0; i < pickups.size(); i++) {
-			System.out.printf("\t" + pickups.get(i).getInfo_asString() + "%-20s\n","In Stock");
-		}
+		// --------- Inventory
+		printInventory();
 
+		// --------- all sold vehicles
 		System.out.println("\t -------------- Sold Vehicles: --------------");
 
 		for(int i = 0; i < soldVehicles.size(); i++) {
 			System.out.printf("\t" + soldVehicles.get(i).getInfo_asString() + "%-20s\n","Sold");
 		}
 
+		// --------- Budget left
 		System.out.printf("\n \t ---- TOTAL MONEY IN BUDGET: %.2f ----\n",budget_);
 		
+		// --------- total sales for the day
 		System.out.printf("\t ---- SALES FOR THE DAY: %.2f ----\n",totalSalesPerDay); 
-		//have to create a variable that is set to 0 at the opening function, 
-		//but when we make a sale we add the salesprice to this and it accumulates 
-		//over the day for this print statement, then set back to 0 on opening function
+		
+		// --------- all staff that has left
 		System.out.println( "\n\t ---- ALL STAFF THAT HAS LEFT: ----");
 		for(int i = 0; i < departedStaff.size(); i++) {
 			System.out.println("\t" + departedStaff.get(i).GetName());

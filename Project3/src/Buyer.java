@@ -30,7 +30,7 @@ public class Buyer {
 			chance = 70;
 		}
 
-		ran = Helper.RandInt(1,Vehicles.Types_of_Vehicles.values().length);
+		ran = Helper.RandInt(0,Vehicles.Types_of_Vehicles.values().length - 1);
 		preference = Vehicles.Types_of_Vehicles.values()[ran]; //randomly determined to be performance car, car, pickup
 
 	}
