@@ -1,5 +1,4 @@
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.function.BooleanSupplier;
 
 public class Vehicles { // INHERITANCE
 

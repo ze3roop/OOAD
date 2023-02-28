@@ -49,12 +49,16 @@ public class Staff { // INHERITANCE
 			bonus_ = bonus_ + 2000; 
 		}
 	}
-	
+
 public boolean doJob() {
 	if (JobsDone < 2) {
 		JobsDone ++;
 		return true;
-	} else {return false;}
+	}
+	else {
+		// System.out.println("\t" + name + " cannot do any more jobs -- Comment Me Out");
+		return false;
+	}
 }
 
 }
