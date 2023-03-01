@@ -56,9 +56,13 @@ public boolean doJob() {
 		return true;
 	}
 	else {
-		// System.out.println("\t" + name + " cannot do any more jobs -- Comment Me Out");
+		System.out.println("\t" + name + " cannot do any more jobs -- Comment Me Out");
 		return false;
 	}
+}
+
+public void ResetJobsDOne(){
+	JobsDone = 0;
 }
 
 }
@@ -110,9 +114,6 @@ class Mechanics extends Staff // INHERITANCE
 	public Integer GetJobsDone() {
 		return JobsDone;
 	}
-	public void SetJobsDone() {
-		JobsDone = JobsDone + 1; 
-	}
 
 }
 
@@ -131,9 +132,6 @@ class Interns extends Staff // INHERITANCE
 	}
 	public Integer GetJobsDone() {
 		return JobsDone;
-	}
-	public void SetJobsDone() {
-		JobsDone = JobsDone + 1; 
 	}
 
 	

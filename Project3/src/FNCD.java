@@ -136,18 +136,20 @@ public class FNCD {
 				numPickups ++;
 			}
 		}
-
-		printInventory();
 	}
 
-	public void printInventory() {
-		System.out.println("\t -------------- Inventory: --------------");
+	public void printInventory(String tittle) {
+		if (tittle == null) {tittle = "";
+	}
+		System.out.println("\t -------------- " + tittle + " Inventory: --------------");
 		
 		System.out.printf("\t%-40s%-20s%-20s%-20s%-20s%-20s\n", "Name",
 				"Cost", "Sale Price", "Condition", "Cleanliness", "Sold or In Stock");
 		for(int i = 0; i < Inventory.size(); i++) {
 			System.out.printf("\t" + Inventory.get(i).getInfo_asString() + "%-20s\n","In Stock");
 		}
+
+		System.out.println("\t-------------------------------------------------------------");
 	}
 	
 	public void Start() {
@@ -180,6 +182,18 @@ public class FNCD {
 	}
 	
 	public void Opening() {
+
+		// set the employess jobs completed to 0
+		for (int i = 0; i < interns.size(); i++){
+			interns.get(i).ResetJobsDOne();
+		}
+		for (int i = 0; i < mechanics.size(); i++){
+			mechanics.get(i).ResetJobsDOne();
+		}
+		for (int i = 0; i < salesPeople.size(); i++){
+			salesPeople.get(i).ResetJobsDOne();
+		}
+
 		System.out.println("\n\n******************************************************************************\n");
 		System.out.println("FNCD DAY " + day);
 
@@ -198,6 +212,8 @@ public class FNCD {
 	
 	public void Washing() {
 		System.out.println("Washing...");
+
+		printInventory("Washing");
 
 		/*
 		Every working day the interns will wash vehicles. 
@@ -269,9 +285,9 @@ public class FNCD {
 		//A vehicle that becomes used has its sales price increased 50%.
 		//A vehicle that becomes like new has its sales price increased 25%.
 		//Mechanics receive a bonus from each successful repair by Vehicle type. 
-		
 
 		System.out.println("Reparing...");
+		printInventory("Reparing");
 
 		/*
 		Every working day the interns will wash vehicles. 
@@ -284,42 +300,39 @@ public class FNCD {
 			
 			String MechanicName = mechanics.get(i).GetName();
 
-			while(mechanics.get(i).doJob()) { //Loop through every intern one at a time, if the can do their job they will, oterwise skip them
-				boolean fixedCar = false;
+			while (mechanics.get(i).doJob()){
+				boolean fixedVehicle = false;
 
-				for(int j = 0; j < Inventory.size(); j++){
-					if (!fixedCar){
-						if(Inventory.get(j).isBroken()){
-							fixedCar = true;
-							if (Helper.PercentChance(80)){
-								System.out.println("\t" + MechanicName + " just repaired " + Inventory.get(j).GetName() + " and made it Used");
+				if (Helper.PercentChance(80)){
+					for (int j = 0; j < Inventory.size(); j++){
+						if (!fixedVehicle){
+							if (Inventory.get(j).isBroken()){
 								Inventory.get(j).makeUsed();
 								Inventory.get(j).ReduceCleanliness();
-								Inventory.get(j).SetSalesPrice(.5);
+	
+								fixedVehicle = true;
+								System.out.println("\t" + MechanicName + " just repaired " + Inventory.get(j).GetName() + " and made it Used");
 							}
 						}
 					}
-				}
-				if (!fixedCar){
-					for(int j = 0; j < Inventory.size(); j++){
-						if (!fixedCar){
-							if(Inventory.get(j).isUsed()){
-								fixedCar = true;
-								if (Helper.PercentChance(80)){
-									System.out.println("\t" + MechanicName + " just repaired " + Inventory.get(j).GetName() + " and made it Like New");
+
+					if (!fixedVehicle){
+						for (int j = 0; j < Inventory.size(); j++){
+							if (!fixedVehicle){
+								if (Inventory.get(j).isUsed()){
 									Inventory.get(j).makeLikeNew();
 									Inventory.get(j).ReduceCleanliness();
-									Inventory.get(j).SetSalesPrice(.5);
+									mechanics.get(i).Bonus(Inventory.get(j));
+		
+									fixedVehicle = true;
+									System.out.println("\t" + MechanicName + " just repaired " + Inventory.get(j).GetName() + " and made it Like New");
 								}
 							}
 						}
 					}
-				}
-
-				if (!fixedCar) {System.out.println("\t" + MechanicName + " tried to repair a vehicle but there are none");}
-				
-					
+				} else {System.out.println("\t" + MechanicName + " was unable to repair any cars");}
 			}
+
 		}
 
 		Selling();
@@ -328,6 +341,7 @@ public class FNCD {
 	public void Selling() {
 		 
 		System.out.println("Selling...");
+		printInventory("Selling");
 		
 		ArrayList<Buyer> buyers = new ArrayList<Buyer>();
 		
@@ -525,7 +539,7 @@ public class FNCD {
 		}
 		
 		// --------- Inventory
-		printInventory();
+		printInventory("");
 
 		// --------- all sold vehicles
 		System.out.println("\t -------------- Sold Vehicles: --------------");
