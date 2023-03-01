@@ -55,10 +55,8 @@ public boolean doJob() {
 		JobsDone ++;
 		return true;
 	}
-	else {
-		System.out.println("\t" + name + " cannot do any more jobs -- Comment Me Out");
-		return false;
-	}
+	// System.out.println("\t" + name + " cannot do any more jobs -- Comment Me Out");
+	return false;
 }
 
 public void ResetJobsDOne(){

@@ -300,10 +300,10 @@ public class FNCD {
 			
 			String MechanicName = mechanics.get(i).GetName();
 
-			while (mechanics.get(i).doJob()){
+			for (int k = 0; k < 2; k++){
 				boolean fixedVehicle = false;
 
-				if (Helper.PercentChance(80)){
+				if (Helper.PercentChance(100)){ // make 80 percent
 					for (int j = 0; j < Inventory.size(); j++){
 						if (!fixedVehicle){
 							if (Inventory.get(j).isBroken()){
@@ -315,7 +315,6 @@ public class FNCD {
 							}
 						}
 					}
-
 					if (!fixedVehicle){
 						for (int j = 0; j < Inventory.size(); j++){
 							if (!fixedVehicle){
@@ -329,6 +328,8 @@ public class FNCD {
 								}
 							}
 						}
+
+						if (!fixedVehicle) {System.out.println("\t" + MechanicName + " has no cars to repair");}
 					}
 				} else {System.out.println("\t" + MechanicName + " was unable to repair any cars");}
 			}
