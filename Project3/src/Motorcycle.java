@@ -1,4 +1,7 @@
 public class Motorcycle extends Vehicle {
+
+     // ------ Need to add unique features for the class
+
     public Motorcycle() {
 		super(); // invoking base-class Staff constructor.
 		vehicleType = Types_of_Vehicles.motorcycle; 

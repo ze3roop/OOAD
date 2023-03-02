@@ -1,5 +1,7 @@
 public class MonsterTruck extends Vehicle {
 
+     // ------ Need to add unique features for the class
+
         MonsterTruck() {
             super(); // invoking base-class Staff constructor.
 		    vehicleType = Types_of_Vehicles.monsterTruck; 

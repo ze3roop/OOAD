@@ -63,26 +63,23 @@ public class FNCD {
 		int numSalesPeople = salesPeople.size();
 
 		if(numInterns < MIN_STAFF) {
-			for (int i = 0; numInterns < MIN_STAFF; i++) {
+			for (; numInterns < MIN_STAFF; numInterns++) {
 				interns.add( new Intern() );
-				System.out.println("\tHired " + interns.get(i).GetName());
-				numInterns ++;
+				System.out.println("\tHired " + interns.get(numInterns).GetName());
 			}
 		}
 
 		if(numMechanics < MIN_STAFF) {
-			for (int i = 0; numMechanics < MIN_STAFF; i++) {
+			for (; numMechanics < MIN_STAFF; numMechanics++) {
 				mechanics.add( new Mechanic() );
-				System.out.println("\tHired " + mechanics.get(i).GetName());
-				numMechanics ++;
+				System.out.println("\tHired " + mechanics.get(numMechanics).GetName());
 			}
 		}
 
 		if(numSalesPeople < MIN_STAFF) {
-			for (int i = 0; numSalesPeople < MIN_STAFF; i++) {
+			for (; numSalesPeople < MIN_STAFF; numSalesPeople++) {
 				salesPeople.add( new SalesPerson() );
-				System.out.println("\tHired " + salesPeople.get(i).GetName());
-				numSalesPeople ++;
+				System.out.println("\tHired " + salesPeople.get(numSalesPeople).GetName());
 			}
 		}
 	}
