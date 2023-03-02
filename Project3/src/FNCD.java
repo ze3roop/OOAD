@@ -91,7 +91,7 @@ public class FNCD {
 
 		int startingInventorySize = inventory.size();
 		int vehicleCount = 0;
-		int numTypesVehicles = Vehicle.Types_of_Vehicles.values().length - 2;
+		int numTypesVehicles = Vehicle.Types_of_Vehicles.values().length - 1;
 
 		for (int t = 0; t < numTypesVehicles; t++){ // itterate through each type of vehicle
 			vehicleCount = 0; // reset count of vehicle type to 0
@@ -123,6 +123,9 @@ public class FNCD {
 					}
 					else if (vehicle_type == Vehicle.Types_of_Vehicles.pickup){
 						v = new Pickup();
+					}
+					else if (vehicle_type == Vehicle.Types_of_Vehicles.monsterTruck){
+						v = new MonsterTruck();
 					}
 
 					inventory.add(v);
