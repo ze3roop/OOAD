@@ -1,41 +1,24 @@
 /* ============== STAFF SUPER CLASS ============= */
-public class Staff { // INHERITANCE 
-	protected String name; // ENCAPSULATION
-	protected Double totalSalary; // ENCAPSULATION
-	protected Integer JobsDone; // ENCAPSULATION
-	protected Double dailySalary; // ENCAPSULATION
-	protected Double bonus_; // ENCAPSULATION
+public class Staff {
+	protected String name = "NILL";
+	protected Double totalSalary = 0.0;
+	protected Integer JobsDone = 0;
+	protected Double dailySalary = 0.0;
+	protected Double bonus_ = 0.0;
 	
-	// the Staff constructor
-	public Staff()
-	{
-	}
+	// setters
+	public void ResetJobsDOne(){ JobsDone = 0; }
 	
-	public void CreateName(String str) { //POLYMORPHISM AND ABSTRACTION
-		name = str;
-	}
+	//getters
+	public String GetName() { return name; }
+	public Double GetDailySalary() { return dailySalary; }
+	public Double GetTotalSalary() { return totalSalary; }
+	public Double GetBonus() { return bonus_; }
 	
-	public String GetName() { //POLYMORPHISM AND ABSTRACTION
-		return name;
-	}
-	public void SetDailySalary() { //POLYMORPHISM AND ABSTRACTION
-		totalSalary = totalSalary + dailySalary;
-	}
+	// public functions
+	public void pay() { totalSalary = totalSalary + dailySalary; }
 	
-	public Double GetDailySalary() { //POLYMORPHISM AND ABSTRACTION
-		return dailySalary;
-	}
-	
-	public Double GetTotalSalary() //POLYMORPHISM AND ABSTRACTION
-	{
-		return totalSalary;
-	}
-	public Double GetTotalBonusPay() //POLYMORPHISM AND ABSTRACTION
-	{
-		return bonus_;
-	}
-	
-	public void Bonus(Vehicle vehicle) { //POLYMORPHISM AND ABSTRACTION
+	public void Bonus(Vehicle vehicle) {
 		if(vehicle.isPerformanceCar())
 		{
 			bonus_ = bonus_ + 5000;
@@ -49,18 +32,14 @@ public class Staff { // INHERITANCE
 			bonus_ = bonus_ + 2000; 
 		}
 	}
-
-public boolean doJob() {
-	if (JobsDone < 2) {
-		JobsDone ++;
-		return true;
+	
+	public boolean doJob() {
+		if (JobsDone < 2) {
+			JobsDone ++;
+			return true;
+		} else {
+			// System.out.println("\t" + name + " cannot do any more jobs -- Comment Me Out");
+			return false;
+		}
 	}
-	// System.out.println("\t" + name + " cannot do any more jobs -- Comment Me Out");
-	return false;
-}
-
-public void ResetJobsDOne(){
-	JobsDone = 0;
-}
-
 }
