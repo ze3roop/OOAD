@@ -10,6 +10,7 @@ public class FNCD {
 	protected ArrayList<SalesPerson> salesPeople = new ArrayList<SalesPerson>();
 	protected ArrayList<Mechanic> mechanics = new ArrayList<Mechanic>();
 	protected ArrayList<Intern> interns = new ArrayList<Intern>();
+	protected ArrayList<Driver> drivers = new ArrayList<Driver>();
 	final protected Integer MIN_STAFF = 3;
 
 	protected ArrayList<Vehicle> inventory = new ArrayList<Vehicle>();
@@ -61,6 +62,7 @@ public class FNCD {
 		int numInterns = interns.size();
 		int numMechanics = mechanics.size();
 		int numSalesPeople = salesPeople.size();
+		int numDrivers = drivers.size();
 
 		if(numInterns < MIN_STAFF) {
 			for (; numInterns < MIN_STAFF; numInterns++) {
@@ -80,6 +82,13 @@ public class FNCD {
 			for (; numSalesPeople < MIN_STAFF; numSalesPeople++) {
 				salesPeople.add( new SalesPerson() );
 				System.out.println("\tHired " + salesPeople.get(numSalesPeople).GetName());
+			}
+		}
+
+		if (numDrivers < MIN_STAFF){
+			for (; numDrivers < MIN_STAFF; numDrivers++){
+				drivers.add( new Driver());
+				System.out.println("\tHired " + drivers.get(numDrivers).GetName());
 			}
 		}
 	}
