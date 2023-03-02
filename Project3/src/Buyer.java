@@ -7,7 +7,7 @@ public class Buyer {
 	private enum type_of_buying {Just_looking, Want_One, Need_One}
 	
 	protected type_of_buying chanceOfBuying; // ENCAPSULATION
-	protected Vehicles.Types_of_Vehicles preference; // ENCAPSULATION
+	protected Vehicle.Types_of_Vehicles preference; // ENCAPSULATION
 	
 	protected String chanceStr; // ENCAPSULATION
 	protected int chance; // ENCAPSULATION 
@@ -30,12 +30,12 @@ public class Buyer {
 			chance = 70;
 		}
 
-		ran = Helper.RandInt(0,Vehicles.Types_of_Vehicles.values().length - 1);
-		preference = Vehicles.Types_of_Vehicles.values()[ran]; //randomly determined to be performance car, car, pickup
+		ran = Helper.RandInt(0,Vehicle.Types_of_Vehicles.values().length - 1);
+		preference = Vehicle.Types_of_Vehicles.values()[ran]; //randomly determined to be performance car, car, pickup
 
 	}
 	
-	public Vehicles.Types_of_Vehicles GetPreference() {
+	public Vehicle.Types_of_Vehicles GetPreference() {
 		return preference; 
 	}
 	public int GetChance() {
@@ -43,15 +43,15 @@ public class Buyer {
 	}
 
 	public Boolean WantsPickup() {
-		return preference == Vehicles.Types_of_Vehicles.pickup;
+		return preference == Vehicle.Types_of_Vehicles.pickup;
 	}
 
 	public Boolean WantsPerformanceCar() {
-		return preference == Vehicles.Types_of_Vehicles.performanceCar;
+		return preference == Vehicle.Types_of_Vehicles.performanceCar;
 	}
 
 	public Boolean WantsCar() {
-		return preference == Vehicles.Types_of_Vehicles.performanceCar;
+		return preference == Vehicle.Types_of_Vehicles.performanceCar;
 	}
 
 	public String GetName() { return name;}

@@ -7,17 +7,17 @@ import java.util.Comparator;
 
 public class FNCD {
 
-	protected ArrayList<Salespeople> salesPeople = new ArrayList<Salespeople>();
-	protected ArrayList<Mechanics> mechanics = new ArrayList<Mechanics>();
-	protected ArrayList<Interns> interns = new ArrayList<Interns>();
+	protected ArrayList<SalesPerson> salesPeople = new ArrayList<SalesPerson>();
+	protected ArrayList<Mechanic> mechanics = new ArrayList<Mechanic>();
+	protected ArrayList<Intern> interns = new ArrayList<Intern>();
 	final protected Integer MIN_STAFF = 3;
 
-	protected ArrayList<Vehicles> Inventory = new ArrayList<Vehicles>();
+	protected ArrayList<Vehicle> Inventory = new ArrayList<Vehicle>();
 	final protected Integer MIN_VEHICLES = 4;
 
 	protected Double budget_;
-	protected ArrayList<Vehicles> soldVehicles = new ArrayList<Vehicles>();
-	protected ArrayList<Vehicles> allSoldVehicles = new ArrayList<Vehicles>();
+	protected ArrayList<Vehicle> soldVehicles = new ArrayList<Vehicle>();
+	protected ArrayList<Vehicle> allSoldVehicles = new ArrayList<Vehicle>();
 	protected ArrayList<Staff> departedStaff = new ArrayList<Staff>();
 	
 	protected int day;
@@ -64,7 +64,7 @@ public class FNCD {
 
 		if(numInterns < MIN_STAFF) {
 			for (int i = 0; numInterns < MIN_STAFF; i++) {
-				interns.add( new Interns() );
+				interns.add( new Intern() );
 				System.out.println("\tHired " + interns.get(i).GetName());
 				numInterns ++;
 			}
@@ -72,7 +72,7 @@ public class FNCD {
 
 		if(numMechanics < MIN_STAFF) {
 			for (int i = 0; numMechanics < MIN_STAFF; i++) {
-				mechanics.add( new Mechanics() );
+				mechanics.add( new Mechanic() );
 				System.out.println("\tHired " + mechanics.get(i).GetName());
 				numMechanics ++;
 			}
@@ -80,7 +80,7 @@ public class FNCD {
 
 		if(numSalesPeople < MIN_STAFF) {
 			for (int i = 0; numSalesPeople < MIN_STAFF; i++) {
-				salesPeople.add( new Salespeople() );
+				salesPeople.add( new SalesPerson() );
 				System.out.println("\tHired " + salesPeople.get(i).GetName());
 				numSalesPeople ++;
 			}
@@ -94,7 +94,7 @@ public class FNCD {
 		int numPickups = 0;
 
 		for (int i = 0; i < Inventory.size(); i++){
-			Vehicles current_Vehicle = Inventory.get(i);
+			Vehicle current_Vehicle = Inventory.get(i);
 			if (current_Vehicle.isCar()) {numCars ++;}
 			else if (current_Vehicle.isPerformanceCar()) {numPerformanceCars ++;}
 			else if (current_Vehicle.isPickup()) {numPickups ++;}
@@ -103,7 +103,7 @@ public class FNCD {
 		if(numPerformanceCars < MIN_VEHICLES) {
 			int vehicile_to_buy = MIN_VEHICLES - numPerformanceCars;
 			for (int i = 0; i <  vehicile_to_buy; i++) {
-				PerformanceCars boughtPerformanceCar = new PerformanceCars();
+				PerformanceCar boughtPerformanceCar = new PerformanceCar();
 
 				Inventory.add( boughtPerformanceCar);
 				//take money from operating budget. 
@@ -116,7 +116,7 @@ public class FNCD {
 		if(numCars < MIN_VEHICLES) {
 			int vehicile_to_buy = MIN_VEHICLES - numCars;
 			for (int i = 0; i < vehicile_to_buy; i++) {
-				Cars boughtCar = new Cars();
+				Car boughtCar = new Car();
 
 				Inventory.add( boughtCar );
 				//take money from operating budget. 
@@ -128,7 +128,7 @@ public class FNCD {
 		if(numPickups < MIN_VEHICLES) {
 			int vehicile_to_buy = MIN_VEHICLES - numPickups;
 			for (int i = 0; i < vehicile_to_buy; i++) {
-				Pickups boughtPickup = new Pickups();
+				Pickup boughtPickup = new Pickup();
 				Inventory.add( boughtPickup );
 				//take money from operating budget. 
 				budget_ = budget_ - boughtPickup.GetCost(); 
@@ -365,7 +365,7 @@ public class FNCD {
 		}
 
 		// sort the lists of sellable cars by price (decreasing)
-		Collections.sort(Inventory, Comparator.comparingDouble(Vehicles::GetSalesPrice).reversed());
+		Collections.sort(Inventory, Comparator.comparingDouble(Vehicle::GetSalesPrice).reversed());
 
 		for (int i = 0; i < buyers.size(); i++){
 			int sellerID = Helper.RandInt(0, MIN_STAFF - 1); // local id for salespeople array
@@ -477,7 +477,7 @@ public class FNCD {
 
 			int InternID = Helper.RandInt(0, interns.size()-1);
 
-			mechanics.add(new Mechanics("mechanic_" + interns.get(InternID).GetName()));
+			mechanics.add(new Mechanic("mechanic_" + interns.get(InternID).GetName()));
 			interns.remove(InternID);
 
 		}
@@ -494,7 +494,7 @@ public class FNCD {
 			
 			int InternID = Helper.RandInt(0, interns.size()-1);
 
-			salesPeople.add(new Salespeople("salesperson_" + interns.get(InternID).GetName()));
+			salesPeople.add(new SalesPerson("salesperson_" + interns.get(InternID).GetName()));
 			interns.remove(InternID);
 		}
 

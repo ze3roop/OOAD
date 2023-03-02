@@ -1,6 +1,4 @@
-import java.util.concurrent.ThreadLocalRandom;
-
-public class Vehicles { // INHERITANCE
+public class Vehicle { // INHERITANCE
 
 	protected enum Types_of_Vehicles {performanceCar, Car, pickup, NILL}
 	protected enum Types_of_Cleanliness {dirty, clean, sparkling, NILL}
@@ -18,7 +16,7 @@ public class Vehicles { // INHERITANCE
 	
 	protected Types_of_Vehicles vehicleType = Types_of_Vehicles.NILL;
 	
-	public Vehicles() {
+	public Vehicle() {
         int rand = Helper.RandInt(1, 3);
         if (rand == 1) {condition = Types_of_Condition.broken;}
         else if (rand == 2) {condition = Types_of_Condition.likeNew;}
@@ -149,45 +147,4 @@ public class Vehicles { // INHERITANCE
 
 	public Boolean isVehicle() {return vehicleType == Types_of_Vehicles.NILL;}
 
-}
-
-
-/* ===================================== PERFORMANCE CARS ============================================== */
-class PerformanceCars extends Vehicles { // INHERITANCE 
-	
-	public PerformanceCars() { //IDENTITY
-		super(); // invoking base-class Staff constructor.
-		vehicleType = Types_of_Vehicles.performanceCar; 
-		name = "PerformanceCar_" + Helper.GenerateUniqueID();
-		cost = ThreadLocalRandom.current().nextDouble(20000, 40000); //20,000 - 40,000
-		DetermineCost();
-		salesPrice = cost * 2.0;
-	}
-}
-
-/* =============================================== CARS ============================================== */
-class Cars extends Vehicles { // INHERITANCE 
-	public Cars() { //IDENTITY
-		super(); // invoking base-class Staff constructor. (This will call the createName() function
-		vehicleType = Types_of_Vehicles.Car; 
-		name = "Car_" + Helper.GenerateUniqueID(); 
-		cost = ThreadLocalRandom.current().nextDouble(10000, 20000);//10,000 - 20,0000
-		DetermineCost();
-		salesPrice = cost * 2.0; // randomly select a value between $20,000 and $40,0000.
-	}
-	
-	
-}
-
-/* ======================================== PICKUPS ================================================ */
-class Pickups extends Vehicles { // INHERITANCE 
-	public Pickups() { //IDENTITY
-		super(); // invoking base-class Staff constructor. (This will call the createName() function
-		vehicleType = Types_of_Vehicles.pickup;
-		name = "Pickup_" + Helper.GenerateUniqueID(); 
-		cost = ThreadLocalRandom.current().nextDouble(10000, 40000); //10,000 - 40,000
-		DetermineCost();
-		salesPrice = cost * 2.0; // randomly select a value between $20,000 and $40,0000.
-	}
-	
 }
