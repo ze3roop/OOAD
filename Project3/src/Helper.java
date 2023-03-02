@@ -17,6 +17,20 @@ public class Helper {
         return rn.nextDouble(max - min + 1) + min;
     }
 
+    // retuns random intiger folloing clipped gausian deviation based on given range(inclusive), standard deviation, and mean
+    // source: https://stackoverflow.com/questions/58453886/is-there-a-way-in-java-to-generate-random-numbers-following-fixed-mean-and-stand    
+
+    public static double randDouble_Gaus(double min, double max, double mean, double standard_deveation) {
+        Random rand = new Random();
+        double randomValue;
+
+        do {
+            randomValue = rand.nextGaussian() * standard_deveation + mean;
+        } while (randomValue <= min && randomValue >= max); // run this loop again if this falls outside of the range
+
+        return randomValue;
+    }
+
     // returns true chance_to_pass% of the time
     static boolean PercentChance(int chance_to_pass){
         return RandInt(1, 100) <= chance_to_pass;

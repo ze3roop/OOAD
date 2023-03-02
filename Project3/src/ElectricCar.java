@@ -1,10 +1,12 @@
 public class ElectricCar extends Vehicle {
 
-    // ------ Need to add unique features for the class
+    int range = Helper.RandInt(60, 400);
 
     public ElectricCar() {
 		super(); // invoking base-class Staff constructor.
-		vehicleType = Types_of_Vehicles.electricCar; 
+		vehicleType = Types_of_Vehicles.electricCar;
+
+		applyRageBoost();
 		
 		name = "ElectricCar_" + Helper.GenerateUniqueID();
 		
@@ -12,5 +14,18 @@ public class ElectricCar extends Vehicle {
 		DetermineCost();
 		salesPrice = cost * 2.0;
 	}
+
+	// setters
+
+	public void applyRageBoost(){
+		if (isLikeNew()){
+			range += 100;
+		}
+	}
     
+	public void applyRageDecrease(){
+		if (!isLikeNew()){
+			range -= 100;
+		}
+	}
 }
