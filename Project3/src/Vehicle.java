@@ -1,7 +1,7 @@
 public class Vehicle {
 
 	// enums
-	protected enum Types_of_Vehicles {performanceCar, Car, pickup, NILL}
+	protected enum Types_of_Vehicles {performanceCar, car, pickup, electricCar, motorcycle, monsterTruck, NILL}
 	protected enum Types_of_Cleanliness {dirty, clean, sparkling, NILL}
 	protected enum Types_of_Condition {broken, used, likeNew, NILL}
 
@@ -44,7 +44,7 @@ public class Vehicle {
 		
 		// vehicleType
 		public void makePickup() { vehicleType = Types_of_Vehicles.pickup; }
-		public void makeCar() { vehicleType = Types_of_Vehicles.Car; }
+		public void makeCar() { vehicleType = Types_of_Vehicles.car; }
 		public void makePerformanceCar() { vehicleType = Types_of_Vehicles.performanceCar; }
 
 	
@@ -103,7 +103,7 @@ public class Vehicle {
 		public Boolean isLikeNew() { return condition == Types_of_Condition.likeNew; }
 		public Boolean isUsed() { return condition == Types_of_Condition.used; }
 		public Boolean isPickup() { return vehicleType == Types_of_Vehicles.pickup; }
-		public Boolean isCar() { return vehicleType == Types_of_Vehicles.Car; }
+		public Boolean isCar() { return vehicleType == Types_of_Vehicles.car; }
 		public Boolean isPerformanceCar() { return vehicleType == Types_of_Vehicles.performanceCar; }
 		public Boolean isVehicle() {return vehicleType == Types_of_Vehicles.NILL;}
 

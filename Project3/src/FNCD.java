@@ -88,53 +88,51 @@ public class FNCD {
 	}
 
 	private void BuyVehicles() {
-		
-		int numCars = 0;
-		int numPerformanceCars = 0;
-		int numPickups = 0;
 
-		for (int i = 0; i < inventory.size(); i++){
-			Vehicle current_Vehicle = inventory.get(i);
-			if (current_Vehicle.isCar()) {numCars ++;}
-			else if (current_Vehicle.isPerformanceCar()) {numPerformanceCars ++;}
-			else if (current_Vehicle.isPickup()) {numPickups ++;}
-		}
+		int startingInventorySize = inventory.size();
+		int vehicleCount = 0;
+		int numTypesVehicles = Vehicle.Types_of_Vehicles.values().length - 2;
 
-		if(numPerformanceCars < MIN_VEHICLES) {
-			int vehicile_to_buy = MIN_VEHICLES - numPerformanceCars;
-			for (int i = 0; i <  vehicile_to_buy; i++) {
-				PerformanceCar boughtPerformanceCar = new PerformanceCar();
-
-				inventory.add( boughtPerformanceCar);
-				//take money from operating budget. 
-				budget_ = budget_ - boughtPerformanceCar.GetCost(); 
-				System.out.printf("\tPurchased " + boughtPerformanceCar.GetName() + ". For: $%.2f\n",boughtPerformanceCar.GetCost());
-				numPerformanceCars ++;
+		for (int t = 0; t < numTypesVehicles; t++){ // itterate through each type of vehicle
+			vehicleCount = 0; // reset count of vehicle type to 0
+			Vehicle.Types_of_Vehicles vehicle_type = Vehicle.Types_of_Vehicles.values()[t];
+			for (int i = 0; i < startingInventorySize; i++){ // itterate through the inventory
+				if (inventory.get(i).GetType() == vehicle_type){ // searching for the type of vehicle in the moment
+					vehicleCount ++; // if found one, note it is there, to see how many to buy
+				}
 			}
-		}
 
-		if(numCars < MIN_VEHICLES) {
-			int vehicile_to_buy = MIN_VEHICLES - numCars;
-			for (int i = 0; i < vehicile_to_buy; i++) {
-				Car boughtCar = new Car();
+			if (vehicleCount < MIN_VEHICLES){ // if a vehicle type needs to be bought of type vehicle_type (Vehicle.Types_of_Vehicles.values()[t])
+				int vehiclesNeeded = MIN_VEHICLES - vehicleCount;
+				for (int c = 0; c < vehiclesNeeded; c++){
+					Vehicle v = new Vehicle();
+					if (vehicle_type == Vehicle.Types_of_Vehicles.car){
+						v = new Car();
+					}
+					else if (vehicle_type == Vehicle.Types_of_Vehicles.electricCar){
+						v = new ElectricCar();
+					}
+					else if (vehicle_type == Vehicle.Types_of_Vehicles.monsterTruck){
+						v = new MonsterTruck();
+					}
+					else if (vehicle_type == Vehicle.Types_of_Vehicles.motorcycle){
+						v = new Motorcycle();
+					}
+					else if (vehicle_type == Vehicle.Types_of_Vehicles.performanceCar){
+						v = new PerformanceCar();
+					}
+					else if (vehicle_type == Vehicle.Types_of_Vehicles.pickup){
+						v = new Pickup();
+					}
 
-				inventory.add( boughtCar );
-				//take money from operating budget. 
-				budget_ = budget_ - boughtCar.GetCost(); 
-				System.out.printf("\tPurchased " + boughtCar.GetName() + ". For: $%.2f\n",boughtCar.GetCost());
-				numCars ++;
+					inventory.add(v);
+
+					budget_ -= v.GetCost();
+
+					System.out.printf("\tPurchased " + v.GetName() + ". For: $%.2f\n",v.GetCost());
+				}
 			}
-		}
-		if(numPickups < MIN_VEHICLES) {
-			int vehicile_to_buy = MIN_VEHICLES - numPickups;
-			for (int i = 0; i < vehicile_to_buy; i++) {
-				Pickup boughtPickup = new Pickup();
-				inventory.add( boughtPickup );
-				//take money from operating budget. 
-				budget_ = budget_ - boughtPickup.GetCost(); 
-				System.out.printf("\tPurchased " + boughtPickup.GetName() + ". For: $%.2f\n",boughtPickup.GetCost());
-				numPickups ++;
-			}
+
 		}
 	}
 

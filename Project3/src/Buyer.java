@@ -7,15 +7,14 @@ public class Buyer {
 	protected type_of_buying chanceOfBuying = type_of_buying.NILL;
 	protected Vehicle.Types_of_Vehicles preference = Vehicle.Types_of_Vehicles.NILL;
 	
-	protected String chanceStr; // ENCAPSULATION
-	protected int chance; // ENCAPSULATION 
+	protected int chance; 
 
 	private String name = "Buyer_" + Helper.GenerateUniqueID();
 	
 	// constructor
 	public Buyer()
 	{
-		int ran = Helper.RandInt(1, type_of_buying.values().length);
+		int ran = Helper.RandInt(1, 3);
 
 		if(ran == 1) {
 			chanceOfBuying = type_of_buying.Just_looking;
@@ -29,7 +28,7 @@ public class Buyer {
 			chance = 70;
 		}
 
-		ran = Helper.RandInt(0,Vehicle.Types_of_Vehicles.values().length - 1);
+		ran = Helper.RandInt(0,Vehicle.Types_of_Vehicles.values().length - 2); // -1 due to Length, -1 last entry is NILL
 		preference = Vehicle.Types_of_Vehicles.values()[ran]; //randomly determined to be performance car, car, pickup
 
 	}
