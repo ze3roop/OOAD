@@ -17,16 +17,5 @@ public class ElectricCar extends Vehicle {
 	}
 
 	// setters
-
-	public void applyRageBoost(){
-		if (isLikeNew()){
-			range += 100;
-		}
-	}
-    
-	public void applyRageDecrease(){
-		if (!isLikeNew()){
-			range -= 100;
-		}
-	}
+	
 }

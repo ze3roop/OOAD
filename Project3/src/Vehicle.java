@@ -53,6 +53,19 @@ public class Vehicle {
 		public void makeCar() { vehicleType = Types_of_Vehicles.car; }
 		public void makePerformanceCar() { vehicleType = Types_of_Vehicles.performanceCar; }
 
+		// range for electric cars
+		public void applyRageBoost(){
+			if (isLikeNew() && isElectricCar()){
+				range += 100;
+			}
+		}
+		
+		public void applyRageDecrease(){
+			if (!isLikeNew() && isElectricCar()){
+				range -= 100;
+			}
+		}
+
 	
 	// getter
 	public Double GetCost() { return cost; }

@@ -431,7 +431,7 @@ public class FNCD {
 			for (int k = 0; k < 2; k++){
 				boolean fixedVehicle = false;
 
-				if (Helper.PercentChance(100)){ // make 80 percent
+				if (Helper.PercentChance(80)){
 					for (int j = 0; j < inventory.size(); j++){
 						if (!fixedVehicle){
 							if (inventory.get(j).isBroken()){
@@ -449,6 +449,7 @@ public class FNCD {
 								if (inventory.get(j).isUsed()){
 									inventory.get(j).makeLikeNew();
 									inventory.get(j).ReduceCleanliness();
+									inventory.get(j).applyRageBoost();
 									mechanics.get(i).Bonus(inventory.get(j));
 		
 									fixedVehicle = true;
