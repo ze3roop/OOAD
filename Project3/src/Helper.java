@@ -41,4 +41,14 @@ public class Helper {
         uniqueID += RandInt(1, 9);
         return uniqueID;
     }
+
+    // returns true if the array contains the value
+
+    static boolean ArrContainsInt(int[] arr, int val){
+        for(int i : arr){
+            if (i == val){ return true;}
+        }
+
+        return false;
+    }
 }

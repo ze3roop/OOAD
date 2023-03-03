@@ -20,6 +20,7 @@ public class FNCD {
 	protected ArrayList<Vehicle> soldVehicles = new ArrayList<Vehicle>();
 	protected ArrayList<Vehicle> allSoldVehicles = new ArrayList<Vehicle>();
 	protected ArrayList<Staff> departedStaff = new ArrayList<Staff>();
+	protected ArrayList<Driver> hospitalizDrivers = new ArrayList<Driver>();
 	
 	protected int day;
 
@@ -37,26 +38,15 @@ public class FNCD {
 		totalSalesPerDay = 0.0;
 		daysToSimulate_ = daysToSimulate;
 		day = 0;
-		
-		// //initialize staff and vehicles
-		// for (int i = 0; i < MIN_STAFF; i++) {
-		// 	interns.add( new Interns() );
-		// 	mechanics.add( new Mechanics() );
-		// 	salesPeople.add( new Salespeople() );
-		// }
-
-		// for (int i = 0; i < MIN_VEHICLES; i++) {
-		// 	performanceCars.add(new PerformanceCars() );
-		// 	cars.add( new Cars() );
-		// 	pickups.add(new Pickups() );
-		// }
 	}
 
 	private Helper.Names_of_Day GetDay() {return Helper.Week[day % 6];} // function to get the day of the week
 
-	private Boolean isOpen() {return GetDay() != Helper.Names_of_Day.Sunday;} // open every day but sunday
+	// private Boolean isOpen() {return GetDay() != Helper.Names_of_Day.Sunday;} // open every day but sunday
 
 	private Boolean isBusy() { return (GetDay() == Helper.Names_of_Day.Friday) || (GetDay() == Helper.Names_of_Day.Saturday);}
+
+	private Boolean isRaceDay() { return GetDay() == Helper.Names_of_Day.Sunday || (GetDay() == Helper.Names_of_Day.Wednesday);}
 
 	private void HireStaff() {
 		int numInterns = interns.size();
@@ -147,12 +137,18 @@ public class FNCD {
 
 	public void PrintInventory(String tittle) {
 		if (tittle == null) {tittle = "";}
+
+		// sort the inventory by name
+		Collections.sort(inventory, (v1, v2) -> v1.GetName().compareTo(v2.GetName()));
+
 		System.out.println("\t -------------- " + tittle + " Inventory: --------------");
 		
-		System.out.printf("\t%-40s%-20s%-20s%-20s%-20s%-20s\n", "Name",
-				"Cost", "Sale Price", "Condition", "Cleanliness", "Sold or In Stock");
+		System.out.printf("\t%-40s%-20s%-20s%-20s%-20s%-20s%-20s%-20s\n",
+		"Name", "Cost", "Sale Price", "Condition", "Cleanliness", "Range" , "engine size" , "Sold or In Stock");
 		for(int i = 0; i < inventory.size(); i++) {
-			System.out.printf("\t" + inventory.get(i).getInfo_asString() + "%-20s\n","In Stock");
+			String str = "\t" + inventory.get(i).getInfo_asString();
+			str += String.format("%-20s\n","In Stock");
+			System.out.printf(str);
 		}
 
 		System.out.println("\t-------------------------------------------------------------");
@@ -201,19 +197,145 @@ public class FNCD {
 		}
 
 		System.out.println("\n\n******************************************************************************\n");
-		System.out.println("FNCD DAY " + day);
+		System.out.println("---- " + Helper.Week[day % 6] + " - FNCD DAY " + day + " ----");
 
-		if(isOpen()) {
+		HireStaff();
+		BuyVehicles();
+
+		if (isRaceDay()){
+			System.out.println("Race Day...");
+
+			Racing();
+		} else { 
 			System.out.println("Opening...");
 
-			HireStaff();
-			BuyVehicles();
-
 			Washing(); 
-
-		} else { System.out.println("SUNDAY - CLOSED"); }
+		}
 
 		day++;
+	}
+
+	public void Racing() {
+		/*
+		Randomly select a type of vehicle to send to the races (regular Cars and Electric Cars do not race, all other types do).
+		*/
+
+		Vehicle.Types_of_Vehicles race_Type = Vehicle.Types_of_Vehicles.NILL;
+
+		do{
+			race_Type = Vehicle.Types_of_Vehicles.values()[Helper.RandInt(0, Vehicle.Types_of_Vehicles.values().length - 1)];
+		}while ( (race_Type == Vehicle.Types_of_Vehicles.NILL) || (race_Type == Vehicle.Types_of_Vehicles.car) || (race_Type == Vehicle.Types_of_Vehicles.electricCar));
+
+		/*
+		Three of the Vehicles in the current inventory of the selected type will be sent to the races to participate 
+			as long as they are not Broken 
+			(If there are not enough running Vehicles or vehicles of that type,
+			the number sent to the race may be reduced, or the FNCD may be unable to participate at all.) 
+		Each vehicle sent will be associated with one of the FNCD drivers for that race.
+
+		A total of 20 Vehicles (up to 3 of which are from the FNCD) will participate in each Race event.
+
+		*/
+
+		ArrayList <Racer> racers = new ArrayList<Racer>();
+
+		for (int Driver_ID = 0; Driver_ID < drivers.size(); Driver_ID++){
+			Boolean added = false;
+			for (int vehicleID = 0; !added && vehicleID < inventory.size(); vehicleID++){
+				Vehicle v = inventory.get(vehicleID);
+				if (v.GetType() == race_Type && !v.isBroken()){
+					racers.add( new Racer(v, true, drivers.get(Driver_ID).GetName(), vehicleID, Driver_ID));
+					added = true;
+				}
+			}
+		}
+
+		while (racers.size() < 20){ racers.add( new Racer(race_Type) ); }
+		
+		for (Racer r : racers){
+			if (!r.isFNCD){
+				r.vehicle.makeLikeNew();
+			}
+		}
+
+
+		/*
+		For the race, randomly determine a final race position for each FNCD Vehicle from 1 to 20.
+		The first three race positions (1, 2, and 3) are considered Winners
+		 Slotting into one of the last five race positions will label the Vehicles as Damaged.
+
+		If one of the FNCD Vehicles is a Winner, it will increment a count of races won
+			which will be kept as an attribute of that Vehicle instance.
+		The Driver receives a cash bonus if they drove a Winner Vehicle.
+
+		If the Vehicle is in the Damaged category, the Vehicle’s condition goes to Broken,
+			and the Driver of the Vehicle has a 30% chance of being Injured.
+		 */
+
+		int[] positions = new int[20]; // local var to hold the positions to be distributed in a random order
+
+		// add random numbers from 1 to 20 in the positions array
+		for (int i = 0; i < 20; i++){
+			int val = Helper.RandInt(1, 20);
+
+			while (Helper.ArrContainsInt(positions,val)){ val = Helper.RandInt(1, 20); }
+
+			positions[i] = val;
+		}
+
+		// set the position of the racers
+		for (int i = 0; i < 20; i++){ racers.get(i).position = positions[i]; }
+
+		// itterate through the racers, update FNCD if needed, and output the results
+		for (Racer r : racers){
+			// identify the winners
+			if (r.position <= 3){
+				r.isWinner = true;
+			}
+			else if (r.position >= 16){ // identify the cars that broke and determine if racer in injured
+				r.vehicle.makeBroken();
+				if (Helper.PercentChance(30)){
+					r.isInjured = true;
+				}
+			}
+		}
+
+		Collections.sort(racers, Comparator.comparingInt(Racer::getPosition));
+
+		// PrintInventory("Racing");
+
+		System.out.printf("\t%-10s%-20s%-20s%-40s%-30s\n","Position", "Racer", " racing in ", "Vehicle", " message ");
+		for (Racer r : racers) {
+			String message = "";
+			if (r.isInjured){
+				message = "got Injured in an accedent";
+			}
+			else if (r.isWinner){
+				message = "is a winner!";
+			}
+			System.out.printf("\t%-10s%-20s%-20s%-40s%-30s\n",r.position, r.getName(), " racing in ", r.vehicle.GetName(), message);
+
+
+		// take care of FNCD things
+		if (r.isFNCD){
+			inventory.remove(r.FNCD_InventoryID);
+			inventory.add(r.vehicle);
+
+			if (r.isInjured){
+				hospitalizDrivers.add(drivers.get(r.FNCD_DriverID));
+				departedStaff.add(drivers.get(r.FNCD_DriverID));
+				drivers.remove(r.FNCD_DriverID);
+			}
+			else if (r.isWinner){
+				drivers.get(r.FNCD_DriverID).Bonus(r.vehicle);
+				inventory.get(r.FNCD_InventoryID).racesWon ++;
+				drivers.get(r.FNCD_DriverID).increaseRacesWon();
+			}
+		} 
+
+		}
+		
+		Ending();
 	}
 	
 	public void Washing() {
@@ -389,6 +511,8 @@ public class FNCD {
 							if (inventory.get(j).isSparkling()) { chance += 10;}
 							if (inventory.get(j).isLikeNew()) { chance += 10;}
 							if (Helper.PercentChance(chance)){
+								// apply the winner bonus if there is one
+								inventory.get(i).applyWinnerBonus();
 								// increase the budget
 								budget_ += inventory.get(j).GetSalesPrice();
 								// display message
@@ -410,6 +534,8 @@ public class FNCD {
 					if (inventory.get(0).isSparkling()) { chance += 10;}
 					if (inventory.get(0).isLikeNew()) {chance += 10;}
 					if (Helper.PercentChance(chance)){
+						// apply the winner bonus if there is one
+						inventory.get(i).applyWinnerBonus();
 						// increase the budget
 						budget_ += inventory.get(0).GetSalesPrice();
 						// display message
@@ -435,7 +561,7 @@ public class FNCD {
 
 		System.out.println("Ending...");
 
-		ArrayList<String> Employees_Quit = new ArrayList<>();
+		ArrayList<String> employeesQuit = new ArrayList<>();
 
 		////////////////////////////////////////////
 		// Give all Staff members their daily salary pay for today’s work (out of the operating budget).
@@ -469,7 +595,7 @@ public class FNCD {
 		if (Helper.PercentChance(10)) {
 			int InternID = Helper.RandInt(0, interns.size()-1);
 			departedStaff.add(interns.get(InternID));
-			Employees_Quit.add(interns.get(InternID).GetName());
+			employeesQuit.add(interns.get(InternID).GetName());
 			interns.remove(InternID); 
 		}
 
@@ -479,7 +605,7 @@ public class FNCD {
 			int MechanicID = Helper.RandInt(0, mechanics.size()-1);
 
 			departedStaff.add(mechanics.get(MechanicID));
-			Employees_Quit.add(mechanics.get(MechanicID).GetName());
+			employeesQuit.add(mechanics.get(MechanicID).GetName());
 
 			mechanics.remove(MechanicID);
 
@@ -496,7 +622,7 @@ public class FNCD {
 			int SalesPersonID = Helper.RandInt(0, salesPeople.size()-1);
 
 			departedStaff.add(salesPeople.get(SalesPersonID));
-			Employees_Quit.add(salesPeople.get(SalesPersonID).GetName());
+			employeesQuit.add(salesPeople.get(SalesPersonID).GetName());
 
 			salesPeople.remove(SalesPersonID);
 			
@@ -518,11 +644,23 @@ public class FNCD {
 
 		// --------- staff who quit for the day
 		System.out.println("\t-------------- Quit: --------------");
-		if (Employees_Quit.isEmpty()){
+		if (employeesQuit.isEmpty()){
 			System.out.println("\t none quit");
 		} else {
-			for (int i = 0; i < Employees_Quit.size(); i++){
-				System.out.println("\t" + Employees_Quit.get(i));
+			for (int i = 0; i < employeesQuit.size(); i++){
+				System.out.println("\t" + employeesQuit.get(i));
+			}
+		}
+
+		// --------- Drivers who got into an accedent for the day
+		System.out.println("\t-------------- Drivers in accedent: --------------");
+		if (hospitalizDrivers.isEmpty()){
+			System.out.println("\t no drivers gor into an accedent");
+		} else {
+			while (!hospitalizDrivers.isEmpty()){
+				System.out.println("\t" + hospitalizDrivers.get(0).GetName() + "got into an accedent today and will no longer be working");
+				departedStaff.add(hospitalizDrivers.get(0));
+				hospitalizDrivers.remove(0);			
 			}
 		}
 		
@@ -545,6 +683,12 @@ public class FNCD {
 			System.out.println("\t \t" + interns.get(i).GetName());
 			System.out.println("\t \t \t Total Normal Pay: " + interns.get(i).GetTotalSalary());
 			System.out.println("\t \t \t Total Bonus Pay: " + interns.get(i).GetBonus());
+		}
+		System.out.println("\t DRIVERS:");
+		for (int i = 0; i < drivers.size(); i++) {
+			System.out.println("\t \t" + drivers.get(i).GetName());
+			System.out.println("\t \t \t Total Normal Pay: " + drivers.get(i).GetTotalSalary());
+			System.out.println("\t \t \t Total Bonus Pay: " + drivers.get(i).GetBonus());
 		}
 		
 		// --------- Inventory

@@ -1,10 +1,11 @@
 public class ElectricCar extends Vehicle {
 
-    int range = Helper.RandInt(60, 400);
 
     public ElectricCar() {
 		super(); // invoking base-class Staff constructor.
 		vehicleType = Types_of_Vehicles.electricCar;
+
+		range = Helper.RandInt(60, 400);
 
 		applyRageBoost();
 		
