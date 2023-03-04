@@ -308,7 +308,7 @@ public class FNCD {
 		for (Racer r : racers) {
 			String message = "";
 			if (r.isInjured){
-				message = "got Injured in an accedent";
+				message = "got Injured in an accident";
 			}
 			else if (r.isWinner){
 				message = "is a winner!";
@@ -316,22 +316,25 @@ public class FNCD {
 			System.out.printf("\t%-10s%-20s%-20s%-40s%-30s\n",r.position, r.getName(), " racing in ", r.vehicle.GetName(), message);
 
 
-		// take care of FNCD things
-		if (r.isFNCD){
-			inventory.remove(r.FNCD_InventoryID);
-			inventory.add(r.vehicle);
+			// take care of FNCD things
+			if (r.isFNCD){
+				/*BUG: When these are uncommented we get duplicate cars put back into the inventory.
+				When these are commented, we get the cars put back into the inventory as "like new" */
 
-			if (r.isInjured){
-				hospitalizDrivers.add(drivers.get(r.FNCD_DriverID));
-				departedStaff.add(drivers.get(r.FNCD_DriverID));
-				drivers.remove(r.FNCD_DriverID);
-			}
-			else if (r.isWinner){
-				drivers.get(r.FNCD_DriverID).Bonus(r.vehicle);
-				inventory.get(r.FNCD_InventoryID).racesWon ++;
-				drivers.get(r.FNCD_DriverID).increaseRacesWon();
-			}
-		} 
+				// inventory.remove(r.FNCD_InventoryID);
+				// inventory.add(r.vehicle);
+
+				if (r.isInjured){
+					hospitalizDrivers.add(drivers.get(r.FNCD_DriverID));
+					departedStaff.add(drivers.get(r.FNCD_DriverID));
+					drivers.remove(r.FNCD_DriverID);
+				}
+				else if (r.isWinner){
+					drivers.get(r.FNCD_DriverID).Bonus(r.vehicle);
+					inventory.get(r.FNCD_InventoryID).racesWon ++;
+					drivers.get(r.FNCD_DriverID).increaseRacesWon();
+				}
+			} 
 
 		}
 		
@@ -354,11 +357,11 @@ public class FNCD {
 			String internName = interns.get(i).GetName();
 
 			while(interns.get(i).doJob()) { //Loop through every intern one at a time, if the can do their job they will, oterwise skip them
-				boolean washedVehicile = false;
+				boolean washedVehicle = false;
 				for(int j = 0; j < inventory.size(); j++){
-					if (!washedVehicile){
+					if (!washedVehicle){
 						if (inventory.get(j).isDirty()){
-							washedVehicile = true;
+							washedVehicle = true;
 							if (Helper.PercentChance(10)){ // 10 percent chance to make dirty vehicle sparkling
 							
 								System.out.println("\t" + internName + " washed " + inventory.get(j).GetName() + " and made it sparkling" );
@@ -376,11 +379,11 @@ public class FNCD {
 					}
 				}
 
-				if (!washedVehicile){
+				if (!washedVehicle){
 					for(int j = 0; j < inventory.size(); j++){
-						if (!washedVehicile){
+						if (!washedVehicle){
 							if (inventory.get(j).isClean()){
-								washedVehicile = true;
+								washedVehicle = true;
 								if (Helper.PercentChance(30)){ // 30 percent chance to make clean vehicle sparkling
 								
 									System.out.println("\t" + internName + " washed " + inventory.get(j).GetName() + " and made it sparkling" );
@@ -399,7 +402,7 @@ public class FNCD {
 					}
 				}
 
-				if (!washedVehicile) { System.out.println("\t" + internName + " tried to wash a car but there are none"); }
+				if (!washedVehicle) { System.out.println("\t" + internName + " tried to wash a car but there are none"); }
 			}
 		}
 		Repairing();
@@ -511,7 +514,67 @@ public class FNCD {
 							found_car = true;
 							if (inventory.get(j).isSparkling()) { chance += 10;}
 							if (inventory.get(j).isLikeNew()) { chance += 10;}
+							// ========================= DECORATOR ========================
 							if (Helper.PercentChance(chance)){
+								/* TRY TO SELL ADDONS */
+								int extendedWarrantyChance = 25;
+								int undercoatingChance = 10;
+								int roadRescueChance = 5;
+								int satelliteChance = 5;
+								if(Helper.PercentChance(extendedWarrantyChance)){
+									//Sell extended Warranty
+									Vehicle vehicle = inventory.get(j);
+									Vehicle temp = inventory.get(j);
+									vehicle = new ExtendedWarranty(vehicle);
+									temp.name = vehicle.GetName();
+									temp.salesPrice = vehicle.GetSalesPrice();
+									//NOW PUT BACK INTO INVENTORY
+									inventory.set(j, temp);				
+								}
+								if(Helper.PercentChance(undercoatingChance)){
+									//Sell Undercoating
+									Vehicle vehicle = inventory.get(j);
+									Vehicle temp = inventory.get(j);
+									vehicle = new Undercoating(vehicle);
+
+									//KEEP EVERYTHING ABOUT THE ORIGINAL VEHICLE, EXCEPT UPDATE SALESPRICE AND NAME
+									temp.name = vehicle.GetName();
+									temp.salesPrice = vehicle.GetSalesPrice();
+									//NOW PUT BACK INTO INVENTORY
+									inventory.set(j, temp);
+								}
+
+								if(Helper.PercentChance(roadRescueChance)){
+									//Sell RoadRescue Coverage
+									Vehicle vehicle = inventory.get(j);
+									Vehicle temp = inventory.get(j);
+									vehicle = new RoadRescueCoverage(vehicle);
+
+									//KEEP EVERYTHING ABOUT THE ORIGINAL VEHICLE, EXCEPT UPDATE SALESPRICE AND NAME
+									temp.name = vehicle.GetName();
+									temp.salesPrice = vehicle.GetSalesPrice();
+									//NOW PUT BACK INTO INVENTORY
+									inventory.set(j, temp);
+
+								}	
+								
+								if(Helper.PercentChance(satelliteChance)){
+									//Sell Radio Satellite
+									Vehicle vehicle = inventory.get(j);
+									Vehicle temp = inventory.get(j);
+									vehicle = new SatelliteRadio(vehicle);
+
+									//KEEP EVERYTHING ABOUT THE ORIGINAL VEHICLE, EXCEPT UPDATE SALESPRICE AND NAME
+									temp.name = vehicle.GetName();
+									temp.salesPrice = vehicle.GetSalesPrice();
+									//NOW PUT BACK INTO INVENTORY
+									inventory.set(j, temp);
+
+								}
+								else{
+									
+								}	
+
 								// apply the winner bonus if there is one
 								inventory.get(i).applyWinnerBonus();
 								// increase the budget
@@ -534,7 +597,65 @@ public class FNCD {
 					chance -= 20;
 					if (inventory.get(0).isSparkling()) { chance += 10;}
 					if (inventory.get(0).isLikeNew()) {chance += 10;}
+					// ========================= DECORATOR ========================
 					if (Helper.PercentChance(chance)){
+						if (Helper.PercentChance(chance)){
+							/* TRY TO SELL ADDONS */
+							int extendedWarrantyChance = 25;
+							int undercoatingChance = 10;
+							int roadRescueChance = 5;
+							int satelliteChance = 5;
+							if(Helper.PercentChance(extendedWarrantyChance)){
+								//Sell extended Warranty
+								Vehicle vehicle = inventory.get(0);
+								Vehicle temp = inventory.get(0);
+								vehicle = new ExtendedWarranty(vehicle);
+								temp.name = vehicle.GetName();
+								temp.salesPrice = vehicle.GetSalesPrice();
+								//NOW PUT BACK INTO INVENTORY
+								inventory.set(0, temp);				
+							}
+							if(Helper.PercentChance(undercoatingChance)){
+								//Sell Undercoating
+								Vehicle vehicle = inventory.get(0);
+								Vehicle temp = inventory.get(0);
+								vehicle = new Undercoating(vehicle);
+
+								//KEEP EVERYTHING ABOUT THE ORIGINAL VEHICLE, EXCEPT UPDATE SALESPRICE AND NAME
+								temp.name = vehicle.GetName();
+								temp.salesPrice = vehicle.GetSalesPrice();
+								//NOW PUT BACK INTO INVENTORY
+								inventory.set(0, temp);
+							}
+
+							if(Helper.PercentChance(roadRescueChance)){
+								//Sell RoadRescue Coverage
+								Vehicle vehicle = inventory.get(0);
+								Vehicle temp = inventory.get(0);
+								vehicle = new RoadRescueCoverage(vehicle);
+
+								//KEEP EVERYTHING ABOUT THE ORIGINAL VEHICLE, EXCEPT UPDATE SALESPRICE AND NAME
+								temp.name = vehicle.GetName();
+								temp.salesPrice = vehicle.GetSalesPrice();
+								//NOW PUT BACK INTO INVENTORY
+								inventory.set(0, temp);
+
+							}	
+							
+							if(Helper.PercentChance(satelliteChance)){
+								//Sell Radio Satellite
+								Vehicle vehicle = inventory.get(0);
+								Vehicle temp = inventory.get(0);
+								vehicle = new SatelliteRadio(vehicle);
+
+								//KEEP EVERYTHING ABOUT THE ORIGINAL VEHICLE, EXCEPT UPDATE SALESPRICE AND NAME
+								temp.name = vehicle.GetName();
+								temp.salesPrice = vehicle.GetSalesPrice();
+								//NOW PUT BACK INTO INVENTORY
+								inventory.set(0, temp);
+
+							}
+						}
 						// apply the winner bonus if there is one
 						inventory.get(i).applyWinnerBonus();
 						// increase the budget
@@ -653,13 +774,13 @@ public class FNCD {
 			}
 		}
 
-		// --------- Drivers who got into an accedent for the day
-		System.out.println("\t-------------- Drivers in accedent: --------------");
+		// --------- Drivers who got into an accident for the day
+		System.out.println("\t-------------- Drivers in accident: --------------");
 		if (hospitalizDrivers.isEmpty()){
-			System.out.println("\t no drivers gor into an accedent");
+			System.out.println("\t no drivers got into an accident");
 		} else {
 			while (!hospitalizDrivers.isEmpty()){
-				System.out.println("\t" + hospitalizDrivers.get(0).GetName() + "got into an accedent today and will no longer be working");
+				System.out.println("\t" + hospitalizDrivers.get(0).GetName() + "got into an accident today and will no longer be working");
 				departedStaff.add(hospitalizDrivers.get(0));
 				hospitalizDrivers.remove(0);			
 			}
