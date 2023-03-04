@@ -966,27 +966,27 @@ class Tracker implements Observer{
 	String day_;
 	String washing_repairing_sales_;
 	String raceAttendance_results_;
-	Double Staff_Money_; 
-	Double FNCD_Money_;
+	Double Staff_Money_= 0.0; 
+	Double FNCD_Money_ = 0.0;
 	public void update(String day_, String washing_repairing_sales_, String raceAttendance_results_, Double Staff_Money_, Double FNCD_Money_){
 		this.day_ = day_;
 		this.washing_repairing_sales_ = washing_repairing_sales_;
 		this.raceAttendance_results_ = raceAttendance_results_;
-		//this.Staff_Money_ += Staff_Money_;
-		this.FNCD_Money_ += FNCD_Money_;
+		this.Staff_Money_ = this.Staff_Money_ + Staff_Money_;
+		this.FNCD_Money_ = this.FNCD_Money_+ FNCD_Money_;
 	}
-	// public void display(){
+	public void display(){
 		
-	// 	String str = "Tracker";
-	// 	try {
-	// 		// Redirect System.out to a file
-	// 		FileOutputStream fos = new FileOutputStream(str);
-	// 		PrintStream ps = new PrintStream(fos);
-	// 		System.setOut(ps);
-	// 	}
-	// 	catch (Exception e) {
-	// 		e.printStackTrace();
-	// 	}
-	// 	System.out.println("Tracker: Day: " + day_ + System.lineSeparator() + "Total Money made by all Staff: " + Staff_Money_  + System.lineSeparator() + "Total money made by the FNCD: " + FNCD_Money_);
-	// }
+		String str = "Tracker";
+		try {
+			// Redirect System.out to a file
+			FileOutputStream fos = new FileOutputStream(str);
+			PrintStream ps = new PrintStream(fos);
+			System.setOut(ps);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("Tracker: Day: " + day_ + System.lineSeparator() + "Total Money made by all Staff: " + Staff_Money_  + System.lineSeparator() + "Total money made by the FNCD: " + FNCD_Money_);
+	}
 }

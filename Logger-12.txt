@@ -1,12 +1,13 @@
-day: 12
+Day: 12
  Washing, Reparing, and Sales: 
 
 Race Attendance Results: 
-	Racer_1239 is a winner!
-	Racer_1264 is a winner!
-	Driver_49 is a winner!
+	Driver_52 is a winner!
+	Racer_1152 is a winner!
+	Racer_1161 is a winner!
+	Racer_1129 got Injured in an accident
 
 Daily Money made by Staff: 
-71500.0
+69700.0
 Daily money made by FNCD: 
 0.0

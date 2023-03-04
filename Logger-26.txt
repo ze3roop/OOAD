@@ -1,13 +1,11 @@
-day: 26
+Day: 26
  Washing, Reparing, and Sales: 
-	Mechanic_30 just repaired Motorcycle_2214 and made it Like New
-	Salesperson_37 just sold Motorcycle_2214, Extended Warranty
-	salesperson_Intern_630 just sold MonsterTruck_Air_Force_AfterBurner
-	Salesperson_37 just sold PerformanceCar_1605
+	salesperson_Intern_1056 just sold Pickup_1942, Extended Warranty, Undercoating
+	salesperson_Intern_9 just sold MonsterTruck_Stone_Crusher_2, Extended Warranty
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-138800.0
+131300.0
 Daily money made by FNCD: 
-124501.98784251888
+151792.32509352994

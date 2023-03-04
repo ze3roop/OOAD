@@ -1,13 +1,13 @@
-day: 19
+Day: 19
  Washing, Reparing, and Sales: 
-	Mechanic_30 just repaired Motorcycle_153 and made it Used
-	Mechanic_30 just repaired PerformanceCar_1604 and made it Used
-	Mechanic_34 just repaired MonsterTruck_Air_Force_AfterBurner and made it Like New
-	mechanic_Intern_8 just repaired Motorcycle_153 and made it Like New
+	Mechanic_24 just repaired MonsterTruck_Captains_Curse_2 and made it Used
+	Mechanic_24 just repaired PerformanceCar_1221 and made it Used
+	mechanic_Intern_15 just repaired MonsterTruck_Captains_Curse_2 and made it Like New
+	mechanic_Intern_15 just repaired PerformanceCar_1221 and made it Like New
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-140500.0
+122200.0
 Daily money made by FNCD: 
 0.0
