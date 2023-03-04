@@ -1,0 +1,142 @@
+
+
+******************************************************************************
+
+---- Sunday - FNCD DAY 0 ----
+	Hired Intern_2
+	Hired Intern_4
+	Hired Intern_9
+	Hired Mechanic_16
+	Hired Mechanic_20
+	Hired Mechanic_29
+	Hired Salesperson_31
+	Hired Salesperson_33
+	Hired Salesperson_36
+	Hired Driver_41
+	Hired Driver_47
+	Hired Driver_55
+	Purchased PerformanceCar_59. For: $20573.60
+	Purchased PerformanceCar_64. For: $14504.82
+	Purchased PerformanceCar_68. For: $5824.52
+	Purchased PerformanceCar_75. For: $6445.19
+	Purchased Car_80. For: $7450.39
+	Purchased Car_89. For: $8005.08
+	Purchased Car_96. For: $6029.23
+	Purchased Car_105. For: $8030.56
+	Purchased Pickup_110. For: $16388.17
+	Purchased Pickup_119. For: $25315.11
+	Purchased Pickup_125. For: $7424.76
+	Purchased Pickup_128. For: $8424.72
+	Purchased ElectricCar_133. For: $11561.35
+	Purchased ElectricCar_134. For: $16086.44
+	Purchased ElectricCar_142. For: $4340.06
+	Purchased ElectricCar_144. For: $23085.94
+	Purchased Motorcycle_152. For: $11167.85
+	Purchased Motorcycle_157. For: $12319.29
+	Purchased Motorcycle_166. For: $14755.36
+	Purchased Motorcycle_167. For: $11765.75
+	Purchased MonsterTruck_Grave_Digger. For: $32667.30
+	Purchased MonsterTruck_Cyborg. For: $28313.04
+	Purchased MonsterTruck_Nitro_Machine. For: $23898.37
+	Purchased MonsterTruck_Brutus. For: $11042.86
+Race Day...
+	Position  Racer                racing in          Vehicle                                  message                      
+	1         Racer_199            racing in          Motorcycle_207                           is a winner!                 
+	2         Driver_55            racing in          Motorcycle_157                           is a winner!                 
+	3         Racer_322            racing in          Motorcycle_329                           is a winner!                 
+	4         Driver_41            racing in          Motorcycle_157                                                        
+	5         Racer_235            racing in          Motorcycle_244                                                        
+	6         Racer_259            racing in          Motorcycle_263                                                        
+	7         Driver_47            racing in          Motorcycle_157                                                        
+	8         Racer_290            racing in          Motorcycle_297                                                        
+	9         Racer_253            racing in          Motorcycle_254                                                        
+	10        Racer_192            racing in          Motorcycle_197                                                        
+	11        Racer_342            racing in          Motorcycle_346                                                        
+	12        Racer_284            racing in          Motorcycle_285                                                        
+	13        Racer_209            racing in          Motorcycle_218                                                        
+	14        Racer_317            racing in          Motorcycle_318                                                        
+	15        Racer_224            racing in          Motorcycle_229                                                        
+	16        Racer_354            racing in          Motorcycle_355                                                        
+	17        Racer_335            racing in          Motorcycle_340                                                        
+	18        Racer_183            racing in          Motorcycle_185                                                        
+	19        Racer_269            racing in          Motorcycle_275                                                        
+	20        Racer_306            racing in          Motorcycle_312                           got Injured in an accident   
+Ending...
+	-------------- Quit: --------------
+	 none quit
+	-------------- Drivers in accident: --------------
+	 no drivers got into an accident
+	-------------- WORKING: --------------
+	 SALESPEOPLE:
+	 	Salesperson_31
+	 	 	 Total Normal Pay: 500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_33
+	 	 	 Total Normal Pay: 500.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Salesperson_36
+	 	 	 Total Normal Pay: 500.0
+	 	 	 Total Bonus Pay: 0.0
+	  MECHANICS:
+	 	Mechanic_16
+	 	 	 Total Normal Pay: 400.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Mechanic_20
+	 	 	 Total Normal Pay: 400.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Mechanic_29
+	 	 	 Total Normal Pay: 400.0
+	 	 	 Total Bonus Pay: 0.0
+	 INTERNS:
+	 	Intern_2
+	 	 	 Total Normal Pay: 100.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_4
+	 	 	 Total Normal Pay: 100.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Intern_9
+	 	 	 Total Normal Pay: 100.0
+	 	 	 Total Bonus Pay: 0.0
+	 DRIVERS:
+	 	Driver_41
+	 	 	 Total Normal Pay: 0.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Driver_47
+	 	 	 Total Normal Pay: 0.0
+	 	 	 Total Bonus Pay: 0.0
+	 	Driver_55
+	 	 	 Total Normal Pay: 0.0
+	 	 	 Total Bonus Pay: 0.0
+	 --------------  Inventory: --------------
+	Name                                    Cost                Sale Price          Condition           Cleanliness         Range               engine size         Sold or In Stock    
+	Car_105                                                                         $8030.56             $16061.13            Broken              Sparkling           N/A                 N/A                 In Stock            
+	Car_80                                                                          $7450.39             $14900.78            Used                Clean               N/A                 N/A                 In Stock            
+	Car_89                                                                          $8005.08             $16010.17            Like New            Clean               N/A                 N/A                 In Stock            
+	Car_96                                                                          $6029.23             $12058.45            Like New            Dirty               N/A                 N/A                 In Stock            
+	ElectricCar_133                                                                 $11561.35            $23122.71            Like New            Dirty               264                 N/A                 In Stock            
+	ElectricCar_134                                                                 $16086.44            $32172.89            Used                Sparkling           384                 N/A                 In Stock            
+	ElectricCar_142                                                                 $4340.06             $8680.13             Broken              Dirty               213                 N/A                 In Stock            
+	ElectricCar_144                                                                 $23085.94            $46171.88            Like New            Sparkling           176                 N/A                 In Stock            
+	MonsterTruck_Brutus                                                             $11042.86            $22085.71            Broken              Dirty               N/A                 N/A                 In Stock            
+	MonsterTruck_Cyborg                                                             $28313.04            $56626.09            Broken              Sparkling           N/A                 N/A                 In Stock            
+	MonsterTruck_Grave_Digger                                                       $32667.3             $65334.59            Like New            Clean               N/A                 N/A                 In Stock            
+	MonsterTruck_Nitro_Machine                                                      $23898.37            $47796.73            Used                Clean               N/A                 N/A                 In Stock            
+	Motorcycle_152                                                                  $11167.85            $22335.7             Broken              Sparkling           N/A                 485.0               ccIn Stock            
+	Motorcycle_157                                                                  $12319.29            $24638.57            Used                Clean               N/A                 864.32              ccIn Stock            
+	Motorcycle_166                                                                  $14755.36            $29510.72            Used                Clean               N/A                 142.09              ccIn Stock            
+	Motorcycle_167                                                                  $11765.75            $23531.5             Like New            Clean               N/A                 1072.22             ccIn Stock            
+	PerformanceCar_59                                                               $20573.6             $41147.19            Used                Clean               N/A                 N/A                 In Stock            
+	PerformanceCar_64                                                               $14504.82            $29009.65            Like New            Dirty               N/A                 N/A                 In Stock            
+	PerformanceCar_68                                                               $5824.52             $11649.04            Broken              Dirty               N/A                 N/A                 In Stock            
+	PerformanceCar_75                                                               $6445.19             $12890.38            Used                Dirty               N/A                 N/A                 In Stock            
+	Pickup_110                                                                      $16388.17            $32776.34            Used                Clean               N/A                 N/A                 In Stock            
+	Pickup_119                                                                      $25315.11            $50630.21            Used                Sparkling           N/A                 N/A                 In Stock            
+	Pickup_125                                                                      $7424.76             $14849.51            Used                Clean               N/A                 N/A                 In Stock            
+	Pickup_128                                                                      $8424.72             $16849.44            Like New            Dirty               N/A                 N/A                 In Stock            
+	-------------------------------------------------------------
+	 -------------- Sold Vehicles: --------------
+
+ 	 ---- TOTAL MONEY IN BUDGET: 161580.24 ----
+	 ---- SALES FOR THE DAY: 0.00 ----
+
+	 ---- ALL STAFF THAT HAS LEFT: ----

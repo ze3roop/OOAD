@@ -1,0 +1,15 @@
+day: 2
+ Washing, Reparing, and Sales: 
+	Mechanic_26 just repaired Car_102 and made it Used
+	Mechanic_26 just repaired PerformanceCar_70 and made it Used
+	Mechanic_34 just repaired PerformanceCar_71 and made it Used
+	Mechanic_34 just repaired Car_102 and made it Like New
+	Salesperson_46 just sold MonsterTruck_Snake_Bite, Undercoating
+	Salesperson_46 just sold MonsterTruck_Madusa, Undercoating
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+15300.0
+Daily money made by FNCD: 
+145422.52029072715

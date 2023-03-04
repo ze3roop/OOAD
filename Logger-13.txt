@@ -1,0 +1,15 @@
+day: 13
+ Washing, Reparing, and Sales: 
+	Mechanic_30 just repaired Car_1167 and made it Like New
+	Mechanic_34 just repaired MonsterTruck_USA and made it Like New
+	Mechanic_34 just repaired PerformanceCar_1161 and made it Like New
+	mechanic_Intern_8 just repaired PerformanceCar_1164 and made it Like New
+	mechanic_Intern_8 just repaired Pickup_1175 and made it Like New
+	salesperson_Intern_630 just sold MonsterTruck_Swamp_thing, Extended Warranty
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+89000.0
+Daily money made by FNCD: 
+55110.38252365908

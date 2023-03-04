@@ -1,0 +1,12 @@
+day: 10
+ Washing, Reparing, and Sales: 
+	Mechanic_30 just repaired Motorcycle_147 and made it Used
+	Mechanic_34 just repaired Motorcycle_147 and made it Like New
+	salesperson_Intern_630 just sold MonsterTruck_Bounty_Hunter, Undercoating
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+51200.0
+Daily money made by FNCD: 
+81253.88807006502

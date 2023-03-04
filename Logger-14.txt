@@ -1,0 +1,16 @@
+day: 14
+ Washing, Reparing, and Sales: 
+	Mechanic_30 just repaired MonsterTruck_Stone_Crusher and made it Used
+	Mechanic_30 just repaired Pickup_126 and made it Like New
+	Mechanic_34 just repaired MonsterTruck_Stone_Crusher and made it Like New
+	salesperson_Intern_630 just sold Motorcycle_1179, Undercoating
+	salesperson_Intern_630 just sold Car_102
+	salesperson_Intern_630 just sold MonsterTruck_USA, Undercoating, Road Rescue Coverage
+	salesperson_Intern_669 just sold Pickup_1175
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+98500.0
+Daily money made by FNCD: 
+159883.85487512266

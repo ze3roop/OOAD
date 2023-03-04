@@ -1,0 +1,14 @@
+day: 29
+ Washing, Reparing, and Sales: 
+	Mechanic_30 just repaired Motorcycle_2347 and made it Used
+	Mechanic_30 just repaired Motorcycle_2347 and made it Like New
+	salesperson_Intern_630 just sold Pickup_1330
+	Salesperson_37 just sold PerformanceCar_1604, Extended Warranty, Undercoating
+	salesperson_Intern_630 just sold PerformanceCar_70, Extended Warranty, Undercoating
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+164800.0
+Daily money made by FNCD: 
+87633.92852705097
