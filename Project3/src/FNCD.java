@@ -9,11 +9,11 @@ public class FNCD {
 
 	protected ArrayList<SalesPerson> salesPeople = new ArrayList<SalesPerson>();
 	protected ArrayList<Mechanic> mechanics = new ArrayList<Mechanic>();
-	protected ArrayList<Intern> interns = new ArrayList<Intern>();
+	public ArrayList<Intern> interns = new ArrayList<Intern>();
 	protected ArrayList<Driver> drivers = new ArrayList<Driver>();
 	final protected Integer MIN_STAFF = 3;
 
-	protected ArrayList<Vehicle> inventory = new ArrayList<Vehicle>();
+	public ArrayList<Vehicle> inventory = new ArrayList<Vehicle>();
 	final protected Integer MIN_VEHICLES = 4;
 
 	protected Double budget_;
@@ -354,59 +354,20 @@ public class FNCD {
 
 		
 		for (int i = 0; i < MIN_STAFF; i++) {
-			String internName = interns.get(i).GetName();
-
-			while(interns.get(i).doJob()) { //Loop through every intern one at a time, if the can do their job they will, oterwise skip them
-				boolean washedVehicle = false;
+			if(interns.get(i).doJob()){ //automatically checks and adds 1 to job
+				System.out.println(interns.get(i).GetName() + " DID THEIR JOBS");
 				for(int j = 0; j < inventory.size(); j++){
-					if (!washedVehicle){
-						if (inventory.get(j).isDirty()){
-							washedVehicle = true;
-							if (Helper.PercentChance(10)){ // 10 percent chance to make dirty vehicle sparkling
-							
-								System.out.println("\t" + internName + " washed " + inventory.get(j).GetName() + " and made it sparkling" );
-								interns.get(i).Bonus(inventory.get(j));      //IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
-								
-								inventory.get(j).makeSparkling();
-		
-							} else if (Helper.PercentChance(80)){ // 80 percent chance to make dirty vehicle clean
-								
-								System.out.println("\t" + internName + " washed " + inventory.get(j).GetName() + " and made it clean" );
-								
-								inventory.get(j).makeClean();
-							} else { System.out.println("\t" + internName + " did not wash " + inventory.get(j).GetName() + " and did not do his job" ); }
-						}
-					}
+					interns.get(i).Washing(inventory.get(j), interns.get(i));
+					break;	
 				}
-
-				if (!washedVehicle){
-					for(int j = 0; j < inventory.size(); j++){
-						if (!washedVehicle){
-							if (inventory.get(j).isClean()){
-								washedVehicle = true;
-								if (Helper.PercentChance(30)){ // 30 percent chance to make clean vehicle sparkling
-								
-									System.out.println("\t" + internName + " washed " + inventory.get(j).GetName() + " and made it sparkling" );
-									interns.get(i).Bonus(inventory.get(j));      //IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
-									
-									inventory.get(j).makeSparkling();
-			
-								} else if (Helper.PercentChance(5)){ // 80 percent chance to make clean vehicle dirty
-									
-									System.out.println("\t" + internName + " washed " + inventory.get(j).GetName() + " and made it dirty" );
-									
-									inventory.get(j).makeDirty();
-								} else { System.out.println("\t" + internName + " did not wash " + inventory.get(j).GetName() + " and did not do his job" ); }
-							}
-						}
-					}
-				}
-
-				if (!washedVehicle) { System.out.println("\t" + internName + " tried to wash a car but there are none"); }
 			}
 		}
+		// for(int i = 0; i < MIN_STAFF; i++){
+		// 	interns.get(i).JobsDone = 2;
+		// }
 		Repairing();
 	}
+	
 	
 	public void Repairing() {
 		//Each mechanic can fix two vehicles per day. Broken vehicles that are fixed become Used.

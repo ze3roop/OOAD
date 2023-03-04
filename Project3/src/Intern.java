@@ -21,13 +21,16 @@ class Intern extends Staff
 		}
 		
 	}
-	public void Washing(Vehicle vehicle){
-		alg.executeStrategy(vehicle);
+	public void Washing(Vehicle vehicle, Intern intern){
+		alg.executeStrategy(vehicle, intern);
 	}
 }
+
+
+/* =============== STRATEGY =============== */
 //Credit: https://www.tutorialspoint.com/design_pattern/strategy_pattern.htm
 interface Strategy{
-	public void doOperation(Vehicle vehicle); 
+	public void doOperation(Vehicle vehicle, Intern intern); 
 }
 /* 
 Chemical:
@@ -36,26 +39,39 @@ Chemical:
 	o In all cases, a 10% chance of Vehicle becoming Broken (if not already) 
 */
 class Chemical implements Strategy{
-	public void doOperation(Vehicle vehicle){
+	public void doOperation(Vehicle vehicle, Intern intern){
 		if(vehicle.isDirty()){
+			
 			//do percent chance in here
 			boolean chance_of_clean = Helper.PercentChance(80);
 			boolean chance_of_sparkling = Helper.PercentChance(10); 
 			if(chance_of_sparkling){
 				vehicle.makeSparkling();
+				System.out.println("\t" + intern.GetName() + " washed " +
+				 vehicle.GetName() + " and made it sparkling" );
+				intern.Bonus(vehicle);//IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
 			}
 			else if (chance_of_clean){
+				System.out.println("\t" + intern.GetName() + " washed " 
+				+ vehicle.GetName() + " and made it clean" );
 				vehicle.makeClean();
 			}
+			
 		}
 		else if(vehicle.isClean()){
 			//do percent chance in here
+			
 			boolean chance_of_dirty = Helper.PercentChance(10);
 			boolean chance_of_sparkling = Helper.PercentChance(20); 
 			if(chance_of_dirty){
 				vehicle.makeDirty();
+				System.out.println("\t" + intern.GetName() + " washed " 
+				+ vehicle.GetName() + " and made it dirty :(" );
 			}
 			else if (chance_of_sparkling){
+				System.out.println("\t" + intern.GetName() + " washed " + 
+				vehicle.GetName() + " and made it sparkling" );
+				intern.Bonus(vehicle);//IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
 				vehicle.makeSparkling();
 			}
 		}
@@ -64,6 +80,8 @@ class Chemical implements Strategy{
 			boolean chance_of_broken = Helper.PercentChance(10);
 			if(chance_of_broken){
 				vehicle.makeBroken();
+				System.out.println("\t" + intern.GetName() + " washed " 
+				+ vehicle.GetName() + " and made it Broken :((((" );
 			}
 		}
 	}	
@@ -76,15 +94,22 @@ Elbow Grease:
 	o In all cases, 10% chance of Vehicle becoming Like New (if not already)
 */
 class ElbowGrease implements Strategy{
-	public void doOperation(Vehicle vehicle){
+	public void doOperation(Vehicle vehicle, Intern intern){
 		if(vehicle.isDirty()){
 			//do percent chance in here
 			boolean chance_of_clean = Helper.PercentChance(70);
 			boolean chance_of_sparkling = Helper.PercentChance(5); 
 			if(chance_of_sparkling){
+
+				System.out.println("\t" + intern.GetName() + " washed " + 
+				vehicle.GetName() + " and made it sparkling" );
+				
+				intern.Bonus(vehicle);//IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE.
 				vehicle.makeSparkling();
 			}
 			else if (chance_of_clean){
+				System.out.println("\t" + intern.GetName() + " washed " 
+				+ vehicle.GetName() + " and made it clean" );
 				vehicle.makeClean();
 			}
 		}
@@ -94,8 +119,13 @@ class ElbowGrease implements Strategy{
 			boolean chance_of_sparkling = Helper.PercentChance(15); 
 			if(chance_of_dirty){
 				vehicle.makeDirty();
+				System.out.println("\t" + intern.GetName() + " washed "
+				 + vehicle.GetName() + " and made it dirty :(" );
 			}
 			else if (chance_of_sparkling){
+				System.out.println("\t" + intern.GetName() + " washed "
+				 + vehicle.GetName() + " and made it sparkling" );
+				intern.Bonus(vehicle);//IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE.
 				vehicle.makeSparkling();
 			}
 		}
@@ -104,6 +134,8 @@ class ElbowGrease implements Strategy{
 			boolean chance_of_like_new = Helper.PercentChance(10);
 			if(chance_of_like_new){
 				vehicle.makeLikeNew();
+				System.out.println("\t" + intern.GetName() + " washed " 
+				+ vehicle.GetName() + " and made it Like New!!" );
 			}
 		}
 	}
@@ -115,15 +147,20 @@ Detailed:
 	o No special effects as above methods 
 */
 class Detailed implements Strategy{
-	public void doOperation(Vehicle vehicle){
+	public void doOperation(Vehicle vehicle, Intern intern){
 		if(vehicle.isDirty()){
 			//do percent chance in here
 			boolean chance_of_clean = Helper.PercentChance(60);
 			boolean chance_of_sparkling = Helper.PercentChance(20); 
 			if(chance_of_sparkling){
+				System.out.println("\t" + intern.GetName() + " washed " + 
+				vehicle.GetName() + " and made it sparkling" );
+				intern.Bonus(vehicle);//IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE.
 				vehicle.makeSparkling();
 			}
 			else if (chance_of_clean){
+				System.out.println("\t" + intern.GetName() + " washed " 
+				+ vehicle.GetName() + " and made it clean" );
 				vehicle.makeClean();
 			}
 		}
@@ -132,9 +169,13 @@ class Detailed implements Strategy{
 			boolean chance_of_dirty = Helper.PercentChance(5);
 			boolean chance_of_sparkling = Helper.PercentChance(40); 
 			if(chance_of_dirty){
+				System.out.println("\t" + intern.GetName() + " washed " + 
+			vehicle.GetName() + " and made it dirty" );
 				vehicle.makeDirty();
 			}
 			else if (chance_of_sparkling){
+				System.out.println("\t" + intern.GetName() + " washed " + 
+				vehicle.GetName() + " and made it sparkling" );
 				vehicle.makeSparkling();
 			}
 		}
@@ -147,8 +188,8 @@ class Algorithm{
 	public Algorithm(Strategy strategy){
 		this.strategy = strategy;
 	}
-	public void executeStrategy(Vehicle vehicle){
-		strategy.doOperation(vehicle);
+	public void executeStrategy(Vehicle vehicle, Intern intern){
+		strategy.doOperation(vehicle, intern);
 	}
 }
 
