@@ -1,0 +1,12 @@
+Day: 28
+ Washing, Reparing, and Sales: 
+	Mechanic_24 just repaired MonsterTruck_Gunslinger_2 and made it Like New
+	salesperson_Intern_1056 just sold PerformanceCar_1221
+	salesperson_Intern_891 just sold MonsterTruck_Gunslinger_2
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+144800.0
+Daily money made by FNCD: 
+97603.17416250223

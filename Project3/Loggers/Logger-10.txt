@@ -1,0 +1,14 @@
+Day: 10
+ Washing, Reparing, and Sales: 
+	Mechanic_24 just repaired Car_416 and made it Used
+	Mechanic_24 just repaired MonsterTruck_Black_Smith and made it Used
+	mechanic_Intern_15 just repaired Car_416 and made it Like New
+	mechanic_Intern_367 just repaired MonsterTruck_Black_Smith and made it Like New
+	mechanic_Intern_367 just repaired Motorcycle_147 and made it Like New
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+49200.0
+Daily money made by FNCD: 
+0.0

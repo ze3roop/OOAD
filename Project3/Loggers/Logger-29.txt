@@ -1,0 +1,14 @@
+Day: 29
+ Washing, Reparing, and Sales: 
+	Mechanic_24 just repaired MonsterTruck_Sudden_Impact_2 and made it Used
+	Mechanic_24 just repaired MonsterTruck_Sudden_Impact_2 and made it Like New
+	salesperson_Intern_891 just sold PerformanceCar_2382
+	salesperson_Intern_891 just sold ElectricCar_1724, Undercoating
+	salesperson_Intern_891 just sold MonsterTruck_Sudden_Impact_2
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+152800.0
+Daily money made by FNCD: 
+128923.69047834692

@@ -1,0 +1,11 @@
+Day: 20
+ Washing, Reparing, and Sales: 
+	Salesperson_36 just sold ElectricCar_1476
+	Salesperson_36 just sold PerformanceCar_66
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+120000.0
+Daily money made by FNCD: 
+72978.70400335676

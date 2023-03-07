@@ -7,5 +7,4 @@
   - JavaSE-19
   
 ### Note:
-	- This repository is shared between the students listed above, the coure staff, and the professor.
-	- Each project will be in its own folder, branches are used to help resolve merge conflicts between VSCode (Aaron) and Eclipse (Evan)
+	- I used the same observer for both Logger and Tracker as this was the way I interpreted the instructions.

@@ -1,0 +1,15 @@
+Day: 1
+ Washing, Reparing, and Sales: 
+	Mechanic_18 just repaired Car_77 and made it Used
+	Mechanic_24 just repaired Car_88 and made it Used
+	Mechanic_24 just repaired MonsterTruck_Grinder and made it Used
+	mechanic_Intern_15 just repaired Motorcycle_138 and made it Used
+	Salesperson_31 just sold Car_93
+	Salesperson_37 just sold Motorcycle_144, Satellite Radio
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+8000.0
+Daily money made by FNCD: 
+60131.085047280096

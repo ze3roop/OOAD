@@ -1,0 +1,11 @@
+Day: 26
+ Washing, Reparing, and Sales: 
+	salesperson_Intern_1056 just sold Pickup_1942, Extended Warranty, Undercoating
+	salesperson_Intern_9 just sold MonsterTruck_Stone_Crusher_2, Extended Warranty
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+131300.0
+Daily money made by FNCD: 
+151792.32509352994

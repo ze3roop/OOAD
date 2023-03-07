@@ -1,0 +1,14 @@
+Day: 16
+ Washing, Reparing, and Sales: 
+	Mechanic_24 just repaired MonsterTruck_Cyborg_2 and made it Used
+	Mechanic_24 just repaired MonsterTruck_Cyborg_2 and made it Like New
+	salesperson_Intern_891 just sold ElectricCar_131
+	salesperson_Intern_891 just sold Motorcycle_697
+	salesperson_Intern_9 just sold Pickup_104, Extended Warranty
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+109200.0
+Daily money made by FNCD: 
+63919.8223397635

@@ -1,0 +1,16 @@
+Day: 22
+ Washing, Reparing, and Sales: 
+	Mechanic_24 just repaired PerformanceCar_1221 and made it Used
+	Mechanic_24 just repaired PerformanceCar_1721 and made it Used
+	mechanic_Intern_15 just repaired ElectricCar_1724 and made it Like New
+	mechanic_Intern_15 just repaired PerformanceCar_1221 and made it Like New
+	mechanic_Intern_1692 just repaired PerformanceCar_1721 and made it Like New
+	salesperson_Intern_891 just sold Motorcycle_1449
+	salesperson_Intern_891 just sold PerformanceCar_74, Undercoating
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+145800.0
+Daily money made by FNCD: 
+86262.33859053723
