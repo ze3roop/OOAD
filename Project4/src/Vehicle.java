@@ -1,9 +1,13 @@
 public class Vehicle {
 
 	// enums
-	protected enum Types_of_Vehicles {performanceCar, car, pickup, electricCar, motorcycle, monsterTruck, NILL}
+	protected enum Types_of_Vehicles {performanceCar, car, pickup, 
+		electricCar, motorcycle, monsterTruck, 
+		transformer, semiTruck, moped,
+		NILL}
 	protected enum Types_of_Cleanliness {dirty, clean, sparkling, NILL}
 	protected enum Types_of_Condition {broken, used, likeNew, NILL}
+	protected enum Transformer_Faction {Cybertronians, Autobot, Deceptecon, Maximal, Predacon, MiniCon, Dinobot, Combiner, NILL}
 
 	// variables
 	protected String name = "NILL";
@@ -20,6 +24,15 @@ public class Vehicle {
 
 	protected int range = 0;
 	protected double engineSize = 0.0;
+
+	protected Transformer_Faction Faction = Transformer_Faction.NILL;
+
+	// for decorator
+	String description = "Unknown";
+	public String getDescription(){
+		return description;
+	}
+
 	
 	// constructor
 	public Vehicle() {
@@ -74,10 +87,20 @@ public class Vehicle {
 	public Types_of_Vehicles GetType() { return vehicleType; }
 	
 	public String getInfo_asString() {
-		String condition_str = "NILL";
-		String cleanliness_str = "NILL";
-		String range_str = "NILL";
-		String engine_str = "NILL";
+
+		String name_str = name;
+		String salesPrice_Str = String.valueOf( (double) Math.round(salesPrice * 100) / 100);;
+		String condition_str = "N/A";
+		String cleanliness_str = "N/A";
+		String cost_str = String.valueOf( (double) Math.round(cost * 100) / 100);;
+
+		String vehicleType_str = "N/A";
+
+		String racesWon_Str = String.valueOf(racesWon);
+
+		String range_str = "N/A";
+		String engineSize_str = "N/A";
+		String Faction_str = "N/A";
 	
 		if (condition == Types_of_Condition.broken) { condition_str = "Broken";}
 		else if (condition == Types_of_Condition.likeNew) { condition_str = "Like New";}
@@ -87,42 +110,48 @@ public class Vehicle {
 		else if (cleanliness == Types_of_Cleanliness.dirty) {cleanliness_str = "Dirty";}
 		else if (cleanliness == Types_of_Cleanliness.sparkling) {cleanliness_str = "Sparkling";}
 
-		if (isElectricCar()){
+		if (isPerformanceCar()){ vehicleType_str = "Performance Car"; }
+		else if (isCar()){ vehicleType_str = "Car"; }
+		else if (isPickup()){ vehicleType_str = "Pickup"; }
+		
+		else if (isElectricCar()){
 			range_str = String.valueOf(range);
-
-			return String.format("%-40s$%-20s$%-20s%-20s%-20s%-20s%-20s",
-        	name,	
-			(double)Math.round(cost * 100) / 100,
-			(double)Math.round(salesPrice * 100) / 100,
-        	condition_str,
-			cleanliness_str,
-			range_str,
-        	"N/A");
-
+			vehicleType_str = "Electric Car";
 		}
 		else if (isMotorcycle()){
-			engine_str = String.valueOf(engineSize);
-
-			return String.format("%-40s$%-20s$%-20s%-20s%-20s%-20s%-20s",
-        	name,	
-			(double)Math.round(cost * 100) / 100,
-			(double)Math.round(salesPrice * 100) / 100,
-        	condition_str,
-			cleanliness_str,
-			"N/A",
-        	(double)Math.round(engineSize * 100) / 100) + "cc";
-
+			engineSize_str = String.valueOf((double)Math.round(engineSize * 100) / 100) + "cc";
+			vehicleType_str = "Motorcycle";
 		}
-		else {
-			return String.format("%-40s$%-20s$%-20s%-20s%-20s%-20s%-20s",
-        	name,	
-			(double)Math.round(cost * 100) / 100,
-			(double)Math.round(salesPrice * 100) / 100,
-        	condition_str,
-			cleanliness_str,
-			"N/A",
-        	"N/A");
+		else if (isMonserTruck()){ vehicleType_str = "Monster Truck"; }
+		
+		else if (isMoped()){
+			vehicleType_str = "Moped";
+			engineSize_str = String.valueOf((double)Math.round(engineSize * 100) / 100) + "cc";
 		}
+		else if (isSemiTruck()){vehicleType_str = "Semi Truck"; }
+		else if (isTransformer()){ 
+			vehicleType_str = "Transformer"; 
+			if (Faction == Transformer_Faction.Autobot) {Faction_str = "Autobot";}
+			else if (Faction == Transformer_Faction.Combiner) {Faction_str = "Combiner";}
+			else if (Faction == Transformer_Faction.Cybertronians) {Faction_str = "Cybertronian";}
+			else if (Faction == Transformer_Faction.Deceptecon) {Faction_str = "Deceptecon";}
+			else if (Faction == Transformer_Faction.Dinobot) {Faction_str = "DinoBot";}
+			else if (Faction == Transformer_Faction.Maximal) {Faction_str = "Maximal";}
+			else if (Faction == Transformer_Faction.MiniCon) {Faction_str = "Mini-Con";}
+			else if (Faction == Transformer_Faction.Predacon) {Faction_str = "Predacon";}
+		}
+
+		return String.format("%-35s%-20s%-20s%-20s%-20s%-20s%-20s%-20s%-20s%-20s",
+		name_str,
+		salesPrice_Str,
+		condition_str,
+		cleanliness_str,
+		cost_str,
+		vehicleType_str,
+		racesWon_Str,
+		range_str,
+		engineSize_str,
+		Faction_str);
 
 	}
 
@@ -173,5 +202,130 @@ public class Vehicle {
 		public Boolean isElectricCar() 		{ return vehicleType == Types_of_Vehicles.electricCar;}
 		public Boolean isMonserTruck() 		{ return vehicleType == Types_of_Vehicles.monsterTruck;}
 		public Boolean isMotorcycle() 		{ return vehicleType == Types_of_Vehicles.motorcycle;}
+		public Boolean isSemiTruck() 				{ return vehicleType == Types_of_Vehicles.semiTruck; }
+		public Boolean isTransformer() 				{ return vehicleType == Types_of_Vehicles.transformer; }
+		public Boolean isMoped() 				{ return vehicleType == Types_of_Vehicles.moped; }
 
 }
+/* =========== DECORATOR =========== */
+abstract class VehicleDecorator extends Vehicle {
+	String name = "NILL";
+	Double salesPrice = 0.0;
+
+	Types_of_Condition condition = Types_of_Condition.NILL;
+	Types_of_Cleanliness cleanliness = Types_of_Cleanliness.NILL;
+
+	Double cost = 0.0;
+	
+	Types_of_Vehicles vehicleType = Types_of_Vehicles.NILL;
+
+	int racesWon = 0;
+
+	int range = 0;
+	double engineSize = 0.0;
+	public abstract String GetName();
+	public abstract Double GetSalesPrice();
+}
+
+/* =========== Extended Warranty =========== */
+class ExtendedWarranty extends VehicleDecorator {
+	Vehicle vehicle;
+
+	public ExtendedWarranty(Vehicle vehicle){
+		this.vehicle = vehicle;
+		this.vehicle.cleanliness = vehicle.cleanliness;
+		this.vehicle.condition = vehicle.condition;
+		this.vehicle.cost = vehicle.cost;
+		this.vehicle.engineSize = vehicle.engineSize;
+		this.vehicle.name = vehicle.name;
+		this.vehicle.racesWon = vehicle.racesWon;
+		this.vehicle.range = vehicle.range;
+		this.vehicle.salesPrice = vehicle.salesPrice;
+		this.vehicle.vehicleType = vehicle.vehicleType;
+	}
+	public String GetName(){
+		return vehicle.GetName() + ", Extended Warranty";
+	}
+	public Double GetSalesPrice(){
+		//vehicle.salesPrice = ((vehicle.salesPrice * .2) + vehicle.salesPrice);
+		return ((vehicle.salesPrice * .2) + vehicle.salesPrice); // 20% of vehicle salesprice, 25% chance of Buyer adding
+	}
+}
+
+/* =========== Undercoating =========== */
+class Undercoating extends VehicleDecorator {
+	Vehicle vehicle;
+
+	public Undercoating(Vehicle vehicle){
+		this.vehicle = vehicle;
+		this.vehicle.cleanliness = vehicle.cleanliness;
+		this.vehicle.condition = vehicle.condition;
+		this.vehicle.cost = vehicle.cost;
+		this.vehicle.engineSize = vehicle.engineSize;
+		this.vehicle.name = vehicle.name;
+		this.vehicle.racesWon = vehicle.racesWon;
+		this.vehicle.range = vehicle.range;
+		this.vehicle.salesPrice = vehicle.salesPrice;
+		this.vehicle.vehicleType = vehicle.vehicleType;
+	}
+	public String GetName(){
+		return vehicle.GetName() + ", Undercoating";
+	}
+	public Double GetSalesPrice(){
+		//vehicle.salesPrice = ((vehicle.salesPrice * .05) + vehicle.salesPrice);
+		return ((vehicle.salesPrice * .05) + vehicle.salesPrice); // 5% of vehicle salesprice, 10% chance of Buyer adding
+	}
+}
+
+/* =========== Road Rescue Coverage =========== */
+class RoadRescueCoverage extends VehicleDecorator {
+	Vehicle vehicle;
+
+	public RoadRescueCoverage(Vehicle vehicle){
+		this.vehicle = vehicle;
+		this.vehicle.cleanliness = vehicle.cleanliness;
+		this.vehicle.condition = vehicle.condition;
+		this.vehicle.cost = vehicle.cost;
+		this.vehicle.engineSize = vehicle.engineSize;
+		this.vehicle.name = vehicle.name;
+		this.vehicle.racesWon = vehicle.racesWon;
+		this.vehicle.range = vehicle.range;
+		this.vehicle.salesPrice = vehicle.salesPrice;
+		this.vehicle.vehicleType = vehicle.vehicleType;
+	}
+	public String GetName(){
+		return vehicle.GetName() + ", Road Rescue Coverage";
+	}
+	public Double GetSalesPrice(){
+		//vehicle.salesPrice = ((vehicle.salesPrice * .02) + vehicle.salesPrice);
+		return ((vehicle.salesPrice * .02) + vehicle.salesPrice); // 2% of vehicle salesprice, 5% chance of Buyer adding
+	}
+}
+
+/* =========== Satellite Radio =========== */
+class SatelliteRadio extends VehicleDecorator {
+	Vehicle vehicle;
+
+	public SatelliteRadio(Vehicle vehicle){
+		this.vehicle = vehicle;
+		this.vehicle.cleanliness = vehicle.cleanliness;
+		this.vehicle.condition = vehicle.condition;
+		this.vehicle.cost = vehicle.cost;
+		this.vehicle.engineSize = vehicle.engineSize; 
+		this.vehicle.name = vehicle.name;
+		this.vehicle.racesWon = vehicle.racesWon;
+		this.vehicle.range = vehicle.range;
+		this.vehicle.salesPrice = vehicle.salesPrice;
+		this.vehicle.vehicleType = vehicle.vehicleType;
+	}
+	public String GetName(){
+		return vehicle.GetName() + ", Satellite Radio";
+	}
+	public Double GetSalesPrice(){
+		//vehicle.salesPrice = ((vehicle.salesPrice * .02) + vehicle.salesPrice);
+		return ((vehicle.salesPrice * .05) + vehicle.salesPrice); // 40% of vehicle salesprice, 5% chance of Buyer adding
+	}
+}
+//Since the percent of chance of buyer adding any of the addons is static, we can just do this in the FNCD
+//Like we do a undercoating chance, and if we get in that chance, then the buyer will add it
+//same goes with the other addons. 

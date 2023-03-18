@@ -13,4 +13,6 @@ public class Driver extends Staff {
 	// setter
 
 	public void increaseRacesWon() { racesWon ++;}
+
+	public int getRacedWon() { return racesWon;}
 }

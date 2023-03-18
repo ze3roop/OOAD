@@ -1,5 +1,3 @@
-import java.util.function.ToIntFunction;
-
 public class Racer {
     private String name = "Racer_" + Helper.GenerateUniqueID();
     public Vehicle vehicle;
@@ -15,6 +13,8 @@ public class Racer {
 		else if (vehicle_type == Vehicle.Types_of_Vehicles.motorcycle)     { vehicle = new Motorcycle();}
 		else if (vehicle_type == Vehicle.Types_of_Vehicles.performanceCar) { vehicle = new PerformanceCar();}
 		else if (vehicle_type == Vehicle.Types_of_Vehicles.pickup)         { vehicle = new Pickup();}
+        else if (vehicle_type == Vehicle.Types_of_Vehicles.moped)          { vehicle = new Moped();}
+        else if (vehicle_type == Vehicle.Types_of_Vehicles.semiTruck)      { vehicle = new SemiTruck();}
     }
 
     public Racer(Vehicle v, Boolean isFNCD_, String name_, int vehicle_ID, int driver_ID){

@@ -4,17 +4,29 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator; // FOR OBSERVER
 
 public class FNCD {
+	public String OBSwashing_repairing_sales; //Possibly change from public 
+	public String OBSraceAttendance_results;
+	public String OBSchangesInMoney; 
+	public String OBSday;
+	public Double OBSStaff_Money; 
+	public Double OBSFNCD_Money; 
+	//OBSERVER:
+	FNCD_Data fncd_data = new FNCD_Data();
+	Logger logger = new Logger();
+	Tracker tracker = new Tracker();
+
 
 	protected ArrayList<SalesPerson> salesPeople = new ArrayList<SalesPerson>();
 	protected ArrayList<Mechanic> mechanics = new ArrayList<Mechanic>();
-	protected ArrayList<Intern> interns = new ArrayList<Intern>();
+	public ArrayList<Intern> interns = new ArrayList<Intern>();
 	protected ArrayList<Driver> drivers = new ArrayList<Driver>();
 	final protected Integer MIN_STAFF = 3;
 
-	protected ArrayList<Vehicle> inventory = new ArrayList<Vehicle>();
-	final protected Integer MIN_VEHICLES = 4;
+	public ArrayList<Vehicle> inventory = new ArrayList<Vehicle>();
+	final protected Integer MIN_VEHICLES = 6;
 
 	protected Double budget_;
 	protected ArrayList<Vehicle> soldVehicles = new ArrayList<Vehicle>();
@@ -22,7 +34,7 @@ public class FNCD {
 	protected ArrayList<Staff> departedStaff = new ArrayList<Staff>();
 	protected ArrayList<Driver> hospitalizDrivers = new ArrayList<Driver>();
 	
-	protected int day;
+	protected Integer day;
 
 	protected int daysToSimulate_;
 	protected Double totalSalesPerDay;
@@ -123,6 +135,15 @@ public class FNCD {
 					else if (vehicle_type == Vehicle.Types_of_Vehicles.monsterTruck){
 						v = new MonsterTruck();
 					}
+					else if (vehicle_type == Vehicle.Types_of_Vehicles.transformer){
+						v = new Transformer();
+					}
+					else if (vehicle_type == Vehicle.Types_of_Vehicles.semiTruck){
+						v = new SemiTruck();
+					}
+					else if (vehicle_type == Vehicle.Types_of_Vehicles.moped){
+						v = new Moped();
+					}
 
 					inventory.add(v);
 
@@ -143,12 +164,20 @@ public class FNCD {
 
 		System.out.println("\t -------------- " + tittle + " Inventory: --------------");
 		
-		System.out.printf("\t%-40s%-20s%-20s%-20s%-20s%-20s%-20s%-20s\n",
-		"Name", "Cost", "Sale Price", "Condition", "Cleanliness", "Range" , "engine size" , "Sold or In Stock");
+		System.out.printf("\t%-35s%-20s%-20s%-20s%-20s%-20s%-20s%-20s%-20s%-20s\n",
+		"name",
+		"Sales Price",
+		"Condition",
+		"Cleanliness",
+		"Cost",
+		"VehicleType",
+		"Races Won",
+		"Range",
+		"EngineSize",
+		"Faction");
 		for(int i = 0; i < inventory.size(); i++) {
 			String str = "\t" + inventory.get(i).getInfo_asString();
-			str += String.format("%-20s\n","In Stock");
-			System.out.printf(str);
+			System.out.printf(str + "\n");
 		}
 
 		System.out.println("\t-------------------------------------------------------------");
@@ -157,7 +186,7 @@ public class FNCD {
 	public void Start() {
 		try {
 			// Redirect System.out to a file
-			FileOutputStream fos = new FileOutputStream("output.txt");
+			FileOutputStream fos = new FileOutputStream("SimResults.txt");
 			PrintStream ps = new PrintStream(fos);
 			System.setOut(ps);
 		}
@@ -179,11 +208,21 @@ public class FNCD {
 		catch (Exception e) {
 			e.printStackTrace();
 		}
-
+		tracker.display();
 		System.out.println("Exiting program");
 	}
 	
 	public void Opening() {
+		
+		OBSwashing_repairing_sales = ""; //Possibly change from public 
+		OBSraceAttendance_results = "";
+		OBSday = "";
+		OBSStaff_Money = 0.0; 
+		OBSFNCD_Money = 0.0; 
+		fncd_data.registerObserver(logger);
+
+		
+
 
 		// set the employess jobs completed to 0
 		for (int i = 0; i < interns.size(); i++){
@@ -198,6 +237,7 @@ public class FNCD {
 
 		System.out.println("\n\n******************************************************************************\n");
 		System.out.println("---- " + Helper.Week[day % 6] + " - FNCD DAY " + day + " ----");
+		OBSday = day.toString();
 
 		HireStaff();
 		BuyVehicles();
@@ -224,7 +264,11 @@ public class FNCD {
 
 		do{
 			race_Type = Vehicle.Types_of_Vehicles.values()[Helper.RandInt(0, Vehicle.Types_of_Vehicles.values().length - 1)];
-		}while ( (race_Type == Vehicle.Types_of_Vehicles.NILL) || (race_Type == Vehicle.Types_of_Vehicles.car) || (race_Type == Vehicle.Types_of_Vehicles.electricCar));
+		}while ( (race_Type == Vehicle.Types_of_Vehicles.NILL) || 
+		         (race_Type == Vehicle.Types_of_Vehicles.car) || 
+				 (race_Type == Vehicle.Types_of_Vehicles.electricCar) ||
+				 (race_Type == Vehicle.Types_of_Vehicles.transformer)
+				 );
 
 		/*
 		Three of the Vehicles in the current inventory of the selected type will be sent to the races to participate 
@@ -308,30 +352,35 @@ public class FNCD {
 		for (Racer r : racers) {
 			String message = "";
 			if (r.isInjured){
-				message = "got Injured in an accedent";
+				message = " got Injured in an accident";
+				OBSraceAttendance_results = OBSraceAttendance_results + "\t" + r.getName() + message + System.lineSeparator();
 			}
 			else if (r.isWinner){
-				message = "is a winner!";
+				message = " is a winner!";
+				OBSraceAttendance_results = OBSraceAttendance_results + "\t" + r.getName() + message + System.lineSeparator();
 			}
 			System.out.printf("\t%-10s%-20s%-20s%-40s%-30s\n",r.position, r.getName(), " racing in ", r.vehicle.GetName(), message);
 
 
-		// take care of FNCD things
-		if (r.isFNCD){
-			inventory.remove(r.FNCD_InventoryID);
-			inventory.add(r.vehicle);
+			// take care of FNCD things
+			if (r.isFNCD){
+				/*BUG: When these are uncommented we get duplicate cars put back into the inventory.
+				When these are commented, we get the cars put back into the inventory as "like new" */
 
-			if (r.isInjured){
-				hospitalizDrivers.add(drivers.get(r.FNCD_DriverID));
-				departedStaff.add(drivers.get(r.FNCD_DriverID));
-				drivers.remove(r.FNCD_DriverID);
-			}
-			else if (r.isWinner){
-				drivers.get(r.FNCD_DriverID).Bonus(r.vehicle);
-				inventory.get(r.FNCD_InventoryID).racesWon ++;
-				drivers.get(r.FNCD_DriverID).increaseRacesWon();
-			}
-		} 
+				// inventory.remove(r.FNCD_InventoryID);
+				// inventory.add(r.vehicle);
+
+				if (r.isInjured){
+					hospitalizDrivers.add(drivers.get(r.FNCD_DriverID));
+					departedStaff.add(drivers.get(r.FNCD_DriverID));
+					drivers.remove(r.FNCD_DriverID);
+				}
+				else if (r.isWinner){
+					drivers.get(r.FNCD_DriverID).Bonus(r.vehicle);
+					inventory.get(r.FNCD_InventoryID).racesWon ++;
+					drivers.get(r.FNCD_DriverID).increaseRacesWon();
+				}
+			} 
 
 		}
 		
@@ -349,61 +398,21 @@ public class FNCD {
 		sort each vehicle into their appropriate list
 		 */
 
-		
-		for (int i = 0; i < MIN_STAFF; i++) {
-			String internName = interns.get(i).GetName();
-
-			while(interns.get(i).doJob()) { //Loop through every intern one at a time, if the can do their job they will, oterwise skip them
-				boolean washedVehicile = false;
-				for(int j = 0; j < inventory.size(); j++){
-					if (!washedVehicile){
-						if (inventory.get(j).isDirty()){
-							washedVehicile = true;
-							if (Helper.PercentChance(10)){ // 10 percent chance to make dirty vehicle sparkling
-							
-								System.out.println("\t" + internName + " washed " + inventory.get(j).GetName() + " and made it sparkling" );
-								interns.get(i).Bonus(inventory.get(j));      //IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
-								
-								inventory.get(j).makeSparkling();
-		
-							} else if (Helper.PercentChance(80)){ // 80 percent chance to make dirty vehicle clean
-								
-								System.out.println("\t" + internName + " washed " + inventory.get(j).GetName() + " and made it clean" );
-								
-								inventory.get(j).makeClean();
-							} else { System.out.println("\t" + internName + " did not wash " + inventory.get(j).GetName() + " and did not do his job" ); }
+		for(int j = 0; j < inventory.size(); j++) {
+				for (int i = 0; i < MIN_STAFF; i++) {
+					if(interns.get(i).doJob()){ //automatically checks and adds 1 to job
+						if (!inventory.get(j).isSparkling()){
+							interns.get(i).Washing(inventory.get(j), interns.get(i), OBSwashing_repairing_sales);
 						}
-					}
 				}
-
-				if (!washedVehicile){
-					for(int j = 0; j < inventory.size(); j++){
-						if (!washedVehicile){
-							if (inventory.get(j).isClean()){
-								washedVehicile = true;
-								if (Helper.PercentChance(30)){ // 30 percent chance to make clean vehicle sparkling
-								
-									System.out.println("\t" + internName + " washed " + inventory.get(j).GetName() + " and made it sparkling" );
-									interns.get(i).Bonus(inventory.get(j));      //IF MAKES SPARKLING, INTERN GETS A BONUS BY TYPE OF VEHICLE. 
-									
-									inventory.get(j).makeSparkling();
-			
-								} else if (Helper.PercentChance(5)){ // 80 percent chance to make clean vehicle dirty
-									
-									System.out.println("\t" + internName + " washed " + inventory.get(j).GetName() + " and made it dirty" );
-									
-									inventory.get(j).makeDirty();
-								} else { System.out.println("\t" + internName + " did not wash " + inventory.get(j).GetName() + " and did not do his job" ); }
-							}
-						}
-					}
-				}
-
-				if (!washedVehicile) { System.out.println("\t" + internName + " tried to wash a car but there are none"); }
 			}
 		}
+		// for(int i = 0; i < MIN_STAFF; i++){
+		// 	interns.get(i).JobsDone = 2;
+		// }
 		Repairing();
 	}
+	
 	
 	public void Repairing() {
 		//Each mechanic can fix two vehicles per day. Broken vehicles that are fixed become Used.
@@ -440,6 +449,7 @@ public class FNCD {
 	
 								fixedVehicle = true;
 								System.out.println("\t" + MechanicName + " just repaired " + inventory.get(j).GetName() + " and made it Used");
+								OBSwashing_repairing_sales = OBSwashing_repairing_sales + ("\t" + MechanicName + " just repaired " + inventory.get(j).GetName() + " and made it Used" + System.lineSeparator());
 							}
 						}
 					}
@@ -454,6 +464,7 @@ public class FNCD {
 		
 									fixedVehicle = true;
 									System.out.println("\t" + MechanicName + " just repaired " + inventory.get(j).GetName() + " and made it Like New");
+									OBSwashing_repairing_sales = OBSwashing_repairing_sales + ("\t" + MechanicName + " just repaired " + inventory.get(j).GetName() + " and made it Like New" + System.lineSeparator());
 								}
 							}
 						}
@@ -511,13 +522,74 @@ public class FNCD {
 							found_car = true;
 							if (inventory.get(j).isSparkling()) { chance += 10;}
 							if (inventory.get(j).isLikeNew()) { chance += 10;}
+							// ========================= DECORATOR ========================
 							if (Helper.PercentChance(chance)){
+								/* TRY TO SELL ADDONS */
+								int extendedWarrantyChance = 25;
+								int undercoatingChance = 10;
+								int roadRescueChance = 5;
+								int satelliteChance = 5;
+								if(Helper.PercentChance(extendedWarrantyChance)){
+									//Sell extended Warranty
+									Vehicle vehicle = inventory.get(j);
+									Vehicle temp = inventory.get(j);
+									vehicle = new ExtendedWarranty(vehicle);
+									temp.name = vehicle.GetName();
+									temp.salesPrice = vehicle.GetSalesPrice();
+									//NOW PUT BACK INTO INVENTORY
+									inventory.set(j, temp);				
+								}
+								if(Helper.PercentChance(undercoatingChance)){
+									//Sell Undercoating
+									Vehicle vehicle = inventory.get(j);
+									Vehicle temp = inventory.get(j);
+									vehicle = new Undercoating(vehicle);
+
+									//KEEP EVERYTHING ABOUT THE ORIGINAL VEHICLE, EXCEPT UPDATE SALESPRICE AND NAME
+									temp.name = vehicle.GetName();
+									temp.salesPrice = vehicle.GetSalesPrice();
+									//NOW PUT BACK INTO INVENTORY
+									inventory.set(j, temp);
+								}
+
+								if(Helper.PercentChance(roadRescueChance)){
+									//Sell RoadRescue Coverage
+									Vehicle vehicle = inventory.get(j);
+									Vehicle temp = inventory.get(j);
+									vehicle = new RoadRescueCoverage(vehicle);
+
+									//KEEP EVERYTHING ABOUT THE ORIGINAL VEHICLE, EXCEPT UPDATE SALESPRICE AND NAME
+									temp.name = vehicle.GetName();
+									temp.salesPrice = vehicle.GetSalesPrice();
+									//NOW PUT BACK INTO INVENTORY
+									inventory.set(j, temp);
+
+								}	
+								
+								if(Helper.PercentChance(satelliteChance)){
+									//Sell Radio Satellite
+									Vehicle vehicle = inventory.get(j);
+									Vehicle temp = inventory.get(j);
+									vehicle = new SatelliteRadio(vehicle);
+
+									//KEEP EVERYTHING ABOUT THE ORIGINAL VEHICLE, EXCEPT UPDATE SALESPRICE AND NAME
+									temp.name = vehicle.GetName();
+									temp.salesPrice = vehicle.GetSalesPrice();
+									//NOW PUT BACK INTO INVENTORY
+									inventory.set(j, temp);
+
+								}
+								else{
+									
+								}	
+
 								// apply the winner bonus if there is one
 								inventory.get(i).applyWinnerBonus();
 								// increase the budget
 								budget_ += inventory.get(j).GetSalesPrice();
 								// display message
 								System.out.printf( "\t" + salesPeople.get(sellerID).GetName() + " just sold " + inventory.get(j).GetName() + " for $%.2f\n", inventory.get(j).GetSalesPrice());
+								OBSwashing_repairing_sales = OBSwashing_repairing_sales + ( "\t" + salesPeople.get(sellerID).GetName() + " just sold " + inventory.get(j).GetName()+ System.lineSeparator());
 								// increase the daily sales total
 								totalSalesPerDay = totalSalesPerDay + inventory.get(j).GetSalesPrice();
 								// give bonus to salesperson
@@ -534,13 +606,72 @@ public class FNCD {
 					chance -= 20;
 					if (inventory.get(0).isSparkling()) { chance += 10;}
 					if (inventory.get(0).isLikeNew()) {chance += 10;}
+					// ========================= DECORATOR ========================
 					if (Helper.PercentChance(chance)){
+						if (Helper.PercentChance(chance)){
+							/* TRY TO SELL ADDONS */
+							int extendedWarrantyChance = 25;
+							int undercoatingChance = 10;
+							int roadRescueChance = 5;
+							int satelliteChance = 5;
+							if(Helper.PercentChance(extendedWarrantyChance)){
+								//Sell extended Warranty
+								Vehicle vehicle = inventory.get(0);
+								Vehicle temp = inventory.get(0);
+								vehicle = new ExtendedWarranty(vehicle);
+								temp.name = vehicle.GetName();
+								temp.salesPrice = vehicle.GetSalesPrice();
+								//NOW PUT BACK INTO INVENTORY
+								inventory.set(0, temp);				
+							}
+							if(Helper.PercentChance(undercoatingChance)){
+								//Sell Undercoating
+								Vehicle vehicle = inventory.get(0);
+								Vehicle temp = inventory.get(0);
+								vehicle = new Undercoating(vehicle);
+
+								//KEEP EVERYTHING ABOUT THE ORIGINAL VEHICLE, EXCEPT UPDATE SALESPRICE AND NAME
+								temp.name = vehicle.GetName();
+								temp.salesPrice = vehicle.GetSalesPrice();
+								//NOW PUT BACK INTO INVENTORY
+								inventory.set(0, temp);
+							}
+
+							if(Helper.PercentChance(roadRescueChance)){
+								//Sell RoadRescue Coverage
+								Vehicle vehicle = inventory.get(0);
+								Vehicle temp = inventory.get(0);
+								vehicle = new RoadRescueCoverage(vehicle);
+
+								//KEEP EVERYTHING ABOUT THE ORIGINAL VEHICLE, EXCEPT UPDATE SALESPRICE AND NAME
+								temp.name = vehicle.GetName();
+								temp.salesPrice = vehicle.GetSalesPrice();
+								//NOW PUT BACK INTO INVENTORY
+								inventory.set(0, temp);
+
+							}	
+							
+							if(Helper.PercentChance(satelliteChance)){
+								//Sell Radio Satellite
+								Vehicle vehicle = inventory.get(0);
+								Vehicle temp = inventory.get(0);
+								vehicle = new SatelliteRadio(vehicle);
+
+								//KEEP EVERYTHING ABOUT THE ORIGINAL VEHICLE, EXCEPT UPDATE SALESPRICE AND NAME
+								temp.name = vehicle.GetName();
+								temp.salesPrice = vehicle.GetSalesPrice();
+								//NOW PUT BACK INTO INVENTORY
+								inventory.set(0, temp);
+
+							}
+						}
 						// apply the winner bonus if there is one
 						inventory.get(i).applyWinnerBonus();
 						// increase the budget
 						budget_ += inventory.get(0).GetSalesPrice();
 						// display message
 						System.out.printf( "\t" + salesPeople.get(sellerID).GetName() + " just sold " + inventory.get(0).GetName() + " for $%.2f\n", inventory.get(0).GetSalesPrice());
+						OBSwashing_repairing_sales = OBSwashing_repairing_sales + ( "\t" + salesPeople.get(sellerID).GetName() + " just sold " + inventory.get(0).GetName() + System.lineSeparator());
 						// increase the daily sales total
 						totalSalesPerDay = totalSalesPerDay + inventory.get(0).GetSalesPrice();
 						// give bonus to salesperson
@@ -653,13 +784,13 @@ public class FNCD {
 			}
 		}
 
-		// --------- Drivers who got into an accedent for the day
-		System.out.println("\t-------------- Drivers in accedent: --------------");
+		// --------- Drivers who got into an accident for the day
+		System.out.println("\t-------------- Drivers in accident: --------------");
 		if (hospitalizDrivers.isEmpty()){
-			System.out.println("\t no drivers gor into an accedent");
+			System.out.println("\t no drivers got into an accident");
 		} else {
 			while (!hospitalizDrivers.isEmpty()){
-				System.out.println("\t" + hospitalizDrivers.get(0).GetName() + "got into an accedent today and will no longer be working");
+				System.out.println("\t" + hospitalizDrivers.get(0).GetName() + "got into an accident today and will no longer be working");
 				departedStaff.add(hospitalizDrivers.get(0));
 				hospitalizDrivers.remove(0);			
 			}
@@ -672,24 +803,28 @@ public class FNCD {
 			System.out.println("\t \t" + salesPeople.get(i).GetName());
 			System.out.println("\t \t \t Total Normal Pay: " + salesPeople.get(i).GetTotalSalary());
 			System.out.println("\t \t \t Total Bonus Pay: " + salesPeople.get(i).GetBonus());
+			OBSStaff_Money = OBSStaff_Money + salesPeople.get(i).GetTotalSalary() + salesPeople.get(i).GetBonus();
 		}
 		System.out.println("\t  MECHANICS:");
 		for (int i = 0; i < mechanics.size(); i++) {
 			System.out.println("\t \t" + mechanics.get(i).GetName());
 			System.out.println("\t \t \t Total Normal Pay: " + mechanics.get(i).GetTotalSalary());
 			System.out.println("\t \t \t Total Bonus Pay: " + mechanics.get(i).GetBonus());
+			OBSStaff_Money = OBSStaff_Money + mechanics.get(i).GetTotalSalary() + mechanics.get(i).GetBonus();
 		}
 		System.out.println("\t INTERNS:");
 		for (int i = 0; i < interns.size(); i++) {
 			System.out.println("\t \t" + interns.get(i).GetName());
 			System.out.println("\t \t \t Total Normal Pay: " + interns.get(i).GetTotalSalary());
 			System.out.println("\t \t \t Total Bonus Pay: " + interns.get(i).GetBonus());
+			OBSStaff_Money = OBSStaff_Money + interns.get(i).GetTotalSalary() + interns.get(i).GetBonus();
 		}
 		System.out.println("\t DRIVERS:");
 		for (int i = 0; i < drivers.size(); i++) {
 			System.out.println("\t \t" + drivers.get(i).GetName());
 			System.out.println("\t \t \t Total Normal Pay: " + drivers.get(i).GetTotalSalary());
 			System.out.println("\t \t \t Total Bonus Pay: " + drivers.get(i).GetBonus());
+			OBSStaff_Money = OBSStaff_Money + drivers.get(i).GetTotalSalary() + drivers.get(i).GetBonus();
 		}
 		
 		// --------- Inventory
@@ -699,7 +834,7 @@ public class FNCD {
 		System.out.println("\t -------------- Sold Vehicles: --------------");
 
 		for(int i = 0; i < soldVehicles.size(); i++) {
-			System.out.printf("\t" + soldVehicles.get(i).getInfo_asString() + "%-20s\n","Sold");
+			System.out.println("\t" + soldVehicles.get(i).getInfo_asString());
 		}
 
 		// --------- Budget left
@@ -713,6 +848,139 @@ public class FNCD {
 		for(int i = 0; i < departedStaff.size(); i++) {
 			System.out.println("\t" + departedStaff.get(i).GetName());
 		}
+		OBSFNCD_Money = OBSFNCD_Money + totalSalesPerDay;
+		logger.update(OBSday, OBSwashing_repairing_sales, OBSraceAttendance_results, OBSStaff_Money, OBSFNCD_Money);
+		tracker.update(OBSday, OBSwashing_repairing_sales, OBSraceAttendance_results, OBSStaff_Money, OBSFNCD_Money);
 	}
 
 }	
+
+
+// Credit: https://www.geeksforgeeks.org/observer-pattern-set-2-implementation/
+interface Subject{
+	public void registerObserver(Observer o);
+	public void unregisterObserver(Observer o);
+	public void notifyObservers();
+}
+
+class FNCD_Data implements Subject{
+	String washing_repairing_sales;
+	String raceAttendance_results;
+	String changesInMoney; 
+	String day;
+	Double Staff_Money; 
+	Double FNCD_Money;
+	ArrayList<Observer> observerList;
+	// I can append to a global protected string in both washing, reparing, and sales function
+	public FNCD_Data(){
+		observerList = new ArrayList<Observer>();
+	}
+
+	@Override
+	public void registerObserver(Observer o){
+		observerList.add(o);
+	}
+
+	@Override
+	public void unregisterObserver(Observer o){
+		observerList.remove(observerList.indexOf(o));
+	}
+
+	@Override
+	public void notifyObservers(){
+		for(Iterator<Observer> it =
+				observerList.iterator(); it.hasNext();)
+		{
+			Observer o = it.next();
+			o.update(day, washing_repairing_sales, raceAttendance_results, Staff_Money, FNCD_Money);
+		}
+	}
+	private String getWash_Rep_Sales(){
+		return washing_repairing_sales;
+	}
+	private String getRachAttendance_Results(){
+		return raceAttendance_results;
+	}
+	private String getChangesInMoney(){
+		return changesInMoney;
+	}
+	public void dataChanged(){
+		washing_repairing_sales = getWash_Rep_Sales();
+		raceAttendance_results = getRachAttendance_Results();
+		changesInMoney = getChangesInMoney();
+
+		notifyObservers();
+	}
+}
+interface Observer{
+	/*
+	 * Publish the following events out to subscribers:
+		• Adding money to the FNCD budget due to low funds
+		• Washing, Repair, and Sales outcomes
+		• Race attendance and results
+		• Any changes in money (salary, bonus, sales, etc.) for staff or the FNCD
+	 */
+	public void update(String day, String washing_repairing_sales, String raceAttendance_results, Double Staff_Money, Double FNCD_Money);
+}
+class Logger implements Observer{
+	
+	/* 
+	 * Create an event consumer class called a Logger. 
+		The Logger object should be instantiated at the beginning
+		of each full simulation day and should close at the end of each day.
+		The Logger object should subscribe for the published events that occur during 
+		a simulated day and write each of them in a human readable form as
+		they are received to a text file named “Logger-n.txt” where n is the day number 
+		of the simulation.
+	 */
+	String day_;
+	String washing_repairing_sales_;
+	String raceAttendance_results_;
+	Double Staff_Money_; 
+	Double FNCD_Money_;
+	public void update(String day_, String washing_repairing_sales_, String raceAttendance_results_, Double Staff_Money_, Double FNCD_Money_){
+		this.day_ = day_;
+		this.washing_repairing_sales_ = washing_repairing_sales_;
+		this.raceAttendance_results_ = raceAttendance_results_;
+		this.Staff_Money_ = Staff_Money_;
+		this.FNCD_Money_ = FNCD_Money_;
+		display();
+	}
+
+	public void display(){
+		
+		
+		System.out.println("Day: " + day_ + System.lineSeparator() + " Washing, Reparing, and Sales: " + System.lineSeparator() +
+			washing_repairing_sales_ + System.lineSeparator() + "Race Attendance Results: " + System.lineSeparator() + raceAttendance_results_ + 
+			System.lineSeparator() + "Daily Money made by Staff: " + System.lineSeparator() + Staff_Money_  + System.lineSeparator() + "Daily money made by FNCD: " + System.lineSeparator() + FNCD_Money_
+			);
+	}
+	
+}
+class Tracker implements Observer{
+	/* 
+	 * Create an event consumer class called a Tracker. The Tracker object will be instantiated at the beginning of
+	the simulation run and stay active until the end. The Tracker will subscribe for the published events and
+	maintain a data structure in memory for tracking the total money earned by staff and by the FNCD since the
+	first day. At the end of each day the Tracker should print a summary of the cumulative data like:
+				Tracker: Day 4
+				Total money earned by all Staff: $27500.00
+				Total money earned by the FNCD: $56900.00
+	 */
+	String day_;
+	String washing_repairing_sales_;
+	String raceAttendance_results_;
+	Double Staff_Money_= 0.0; 
+	Double FNCD_Money_ = 0.0;
+	public void update(String day_, String washing_repairing_sales_, String raceAttendance_results_, Double Staff_Money_, Double FNCD_Money_){
+		this.day_ = day_;
+		this.washing_repairing_sales_ = washing_repairing_sales_;
+		this.raceAttendance_results_ = raceAttendance_results_;
+		this.Staff_Money_ = this.Staff_Money_ + Staff_Money_;
+		this.FNCD_Money_ = this.FNCD_Money_+ FNCD_Money_;
+	}
+	public void display(){
+		
+		System.out.println("Tracker: Day: " + day_ + System.lineSeparator() + "Total Money made by all Staff: " + Staff_Money_  + System.lineSeparator() + "Total money made by the FNCD: " + FNCD_Money_);
+	}
+}
