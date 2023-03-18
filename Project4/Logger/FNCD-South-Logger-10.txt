@@ -1,0 +1,16 @@
+Day: 10
+ Washing, Reparing, and Sales: 
+	Mechanic_324 just repaired Car_409 and made it Used
+	Mechanic_340 just repaired MonsterTruck_Air_Force_AfterBurner and made it Used
+	Mechanic_340 just repaired Car_409 and made it Like New
+	mechanic_Intern_308 just repaired ElectricCar_477 and made it Like New
+	mechanic_Intern_308 just repaired ElectricCar_486 and made it Like New
+	Salesperson_347 just sold MonsterTruck_Air_Force_AfterBurner
+	Salesperson_341 just sold Transformer_Crunk
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+53000.0
+Daily money made by FNCD: 
+5.417528963344692E8

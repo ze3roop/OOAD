@@ -1,0 +1,15 @@
+Day: 1
+ Washing, Reparing, and Sales: 
+	Mechanic_324 just repaired Car_409 and made it Used
+	Mechanic_324 just repaired Car_413 and made it Used
+	Mechanic_333 just repaired Car_422 and made it Used
+	Mechanic_333 just repaired Car_428 and made it Used
+	Mechanic_340 just repaired ElectricCar_486 and made it Used
+	Salesperson_341 just sold Transformer_Rodimus_Prime
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+6000.0
+Daily money made by FNCD: 
+6.403755661475598E8

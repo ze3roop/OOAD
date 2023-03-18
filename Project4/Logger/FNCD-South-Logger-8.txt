@@ -1,0 +1,15 @@
+Day: 8
+ Washing, Reparing, and Sales: 
+	Mechanic_324 just repaired Transformer_Thrust and made it Used
+	Mechanic_340 just repaired Car_409 and made it Like New
+	Mechanic_340 just repaired Car_413 and made it Like New
+	mechanic_Intern_308 just repaired Car_422 and made it Like New
+	mechanic_Intern_308 just repaired Car_428 and made it Like New
+	Salesperson_341 just sold Car_432, Extended Warranty, Undercoating
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+43000.0
+Daily money made by FNCD: 
+22646.760164901974

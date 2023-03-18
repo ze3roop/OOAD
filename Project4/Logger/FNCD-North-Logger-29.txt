@@ -1,0 +1,11 @@
+Day: 29
+ Washing, Reparing, and Sales: 
+	salesperson_Intern_1455 just sold ElectricCar_3352, Extended Warranty
+	salesperson_Intern_1455 just sold Car_116
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+113100.0
+Daily money made by FNCD: 
+39130.484622362055

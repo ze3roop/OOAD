@@ -1,0 +1,14 @@
+Day: 14
+ Washing, Reparing, and Sales: 
+	Mechanic_324 just repaired MonsterTruck_Swamp_thing_2 and made it Like New
+	Mechanic_324 just repaired Moped_602 and made it Like New
+	Mechanic_340 just repaired Motorcycle_1564 and made it Like New
+	Mechanic_340 just repaired Motorcycle_494 and made it Like New
+	Salesperson_347 just sold Motorcycle_508
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+52800.0
+Daily money made by FNCD: 
+18586.03803741274

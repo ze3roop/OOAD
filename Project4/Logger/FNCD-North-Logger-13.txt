@@ -1,0 +1,17 @@
+Day: 13
+ Washing, Reparing, and Sales: 
+	Mechanic_29 just repaired Motorcycle_2375 and made it Used
+	Mechanic_29 just repaired Transformer_MegatronI and made it Used
+	mechanic_Intern_17 just repaired Transformer_Optimus_PrimeI and made it Used
+	mechanic_Intern_17 just repaired Car_2369 and made it Like New
+	mechanic_Intern_1878 just repaired Moped_291 and made it Like New
+	mechanic_Intern_1878 just repaired Moped_298 and made it Like New
+	salesperson_Intern_1455 just sold ElectricCar_184
+	salesperson_Intern_1455 just sold Semi_245, Undercoating
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+42700.0
+Daily money made by FNCD: 
+189187.45249943284

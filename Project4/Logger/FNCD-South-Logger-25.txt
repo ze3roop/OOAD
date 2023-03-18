@@ -1,0 +1,16 @@
+Day: 25
+ Washing, Reparing, and Sales: 
+	Mechanic_324 just repaired Car_4346 and made it Used
+	Mechanic_324 just repaired Moped_4371 and made it Used
+	Mechanic_340 just repaired Pickup_441 and made it Used
+	mechanic_Intern_308 just repaired Car_4346 and made it Like New
+	mechanic_Intern_308 just repaired Car_4355 and made it Like New
+	Salesperson_347 just sold Moped_591
+	salesperson_Intern_307 just sold Motorcycle_3806
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+149300.0
+Daily money made by FNCD: 
+36798.16357627639

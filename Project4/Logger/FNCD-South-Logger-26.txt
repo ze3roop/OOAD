@@ -1,0 +1,13 @@
+Day: 26
+ Washing, Reparing, and Sales: 
+	Mechanic_324 just repaired Moped_4371 and made it Like New
+	Mechanic_340 just repaired PerformanceCar_4300 and made it Like New
+	Mechanic_340 just repaired Pickup_441 and made it Like New
+	mechanic_Intern_308 just repaired Semi_4358 and made it Like New
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+157800.0
+Daily money made by FNCD: 
+0.0

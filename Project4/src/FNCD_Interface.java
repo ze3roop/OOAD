@@ -58,14 +58,17 @@ public class FNCD_Interface {
             }
 
             System.out.println("-----------------" + FNCD_Name.get(0) + "-----------------");
-                arr.get(0).Ending();
+                arr.get(0).Ending("North");
                 System.out.println("-----------------" + FNCD_Name.get(1) + "-----------------");
-                arr.get(1).Ending();
+                arr.get(1).Ending("South");
         }
 
         System.out.println("=====================================================");
 		System.out.println("================= End of Simulation =================");
 		System.out.println("=====================================================");
+
+        arr.get(0).tracker.display();
+        arr.get(1).tracker.display();
 
 		try {
 			// Reset System.out to print to terminal

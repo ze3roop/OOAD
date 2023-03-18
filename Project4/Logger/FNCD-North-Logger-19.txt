@@ -1,0 +1,19 @@
+Day: 19
+ Washing, Reparing, and Sales: 
+	Mechanic_29 just repaired MonsterTruck_Black_Smith and made it Used
+	Mechanic_29 just repaired ElectricCar_3352 and made it Like New
+	mechanic_Intern_17 just repaired MonsterTruck_Black_Smith and made it Like New
+	mechanic_Intern_17 just repaired PerformanceCar_1546 and made it Like New
+	mechanic_Intern_2796 just repaired PerformanceCar_3408 and made it Like New
+	mechanic_Intern_2796 just repaired PerformanceCar_69 and made it Like New
+	salesperson_Intern_8 just sold Car_1073, Road Rescue Coverage
+	salesperson_Intern_1541 just sold ElectricCar_160, Extended Warranty
+	salesperson_Intern_1455 just sold Moped_303
+	salesperson_Intern_1541 just sold Pickup_2374
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+87000.0
+Daily money made by FNCD: 
+118386.46485189797

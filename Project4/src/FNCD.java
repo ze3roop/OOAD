@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -649,7 +652,7 @@ public class FNCD {
 		
 	}
 
-	void Ending() {
+	void Ending(String FNCDName) {
 
 		System.out.println("Ending...");
 
@@ -811,8 +814,10 @@ public class FNCD {
 			System.out.println("\t" + departedStaff.get(i).GetName());
 		}
 		OBSFNCD_Money = OBSFNCD_Money + totalSalesPerDay;
-		logger.update(OBSday, OBSwashing_repairing_sales, OBSraceAttendance_results, OBSStaff_Money, OBSFNCD_Money);
-		tracker.update(OBSday, OBSwashing_repairing_sales, OBSraceAttendance_results, OBSStaff_Money, OBSFNCD_Money);
+		logger.update(OBSday, OBSwashing_repairing_sales, OBSraceAttendance_results, OBSStaff_Money, OBSFNCD_Money,FNCDName);
+		tracker.update(OBSday, OBSwashing_repairing_sales, OBSraceAttendance_results, OBSStaff_Money, OBSFNCD_Money, FNCDName);
+
+		day++;
 	}
 
 }	
@@ -854,7 +859,7 @@ class FNCD_Data implements Subject{
 				observerList.iterator(); it.hasNext();)
 		{
 			Observer o = it.next();
-			o.update(day, washing_repairing_sales, raceAttendance_results, Staff_Money, FNCD_Money);
+			o.update(day, washing_repairing_sales, raceAttendance_results, Staff_Money, FNCD_Money,"Null");
 		}
 	}
 	private String getWash_Rep_Sales(){
@@ -882,7 +887,7 @@ interface Observer{
 		• Race attendance and results
 		• Any changes in money (salary, bonus, sales, etc.) for staff or the FNCD
 	 */
-	public void update(String day, String washing_repairing_sales, String raceAttendance_results, Double Staff_Money, Double FNCD_Money);
+	public void update(String day, String washing_repairing_sales, String raceAttendance_results, Double Staff_Money, Double FNCD_Money, String FNCDName);
 }
 class Logger implements Observer{
 	
@@ -896,26 +901,36 @@ class Logger implements Observer{
 		of the simulation.
 	 */
 	String day_;
+	String FNCDName_;
 	String washing_repairing_sales_;
 	String raceAttendance_results_;
 	Double Staff_Money_; 
 	Double FNCD_Money_;
-	public void update(String day_, String washing_repairing_sales_, String raceAttendance_results_, Double Staff_Money_, Double FNCD_Money_){
+	public void update(String day_, String washing_repairing_sales_, String raceAttendance_results_, Double Staff_Money_, Double FNCD_Money_, String FNCDName){
 		this.day_ = day_;
 		this.washing_repairing_sales_ = washing_repairing_sales_;
 		this.raceAttendance_results_ = raceAttendance_results_;
 		this.Staff_Money_ = Staff_Money_;
 		this.FNCD_Money_ = FNCD_Money_;
+		this.FNCDName_ = FNCDName;
 		display();
 	}
 
 	public void display(){
-		
-		
-		System.out.println("Day: " + day_ + System.lineSeparator() + " Washing, Reparing, and Sales: " + System.lineSeparator() +
+		String filePath = "./Logger/FNCD-"+ FNCDName_ + "-Logger-" + day_ + ".txt";
+
+		try{
+			File file = new File(filePath);
+			FileWriter writter = new FileWriter(file);
+			writter.write("Day: " + day_ + System.lineSeparator() + " Washing, Reparing, and Sales: " + System.lineSeparator() +
 			washing_repairing_sales_ + System.lineSeparator() + "Race Attendance Results: " + System.lineSeparator() + raceAttendance_results_ + 
 			System.lineSeparator() + "Daily Money made by Staff: " + System.lineSeparator() + Staff_Money_  + System.lineSeparator() + "Daily money made by FNCD: " + System.lineSeparator() + FNCD_Money_
 			);
+			writter.close();
+		} catch (IOException e) {
+			System.out.println("Could not open file " + filePath);
+			e.printStackTrace();
+		}	
 	}
 	
 }
@@ -932,17 +947,28 @@ class Tracker implements Observer{
 	String day_;
 	String washing_repairing_sales_;
 	String raceAttendance_results_;
+	String FNCDName_;
 	Double Staff_Money_= 0.0; 
 	Double FNCD_Money_ = 0.0;
-	public void update(String day_, String washing_repairing_sales_, String raceAttendance_results_, Double Staff_Money_, Double FNCD_Money_){
+	public void update(String day_, String washing_repairing_sales_, String raceAttendance_results_, Double Staff_Money_, Double FNCD_Money_, String FNCDName){
 		this.day_ = day_;
 		this.washing_repairing_sales_ = washing_repairing_sales_;
 		this.raceAttendance_results_ = raceAttendance_results_;
 		this.Staff_Money_ = this.Staff_Money_ + Staff_Money_;
 		this.FNCD_Money_ = this.FNCD_Money_+ FNCD_Money_;
+		this.FNCDName_ = FNCDName;
 	}
 	public void display(){
-		
-		System.out.println("Tracker: Day: " + day_ + System.lineSeparator() + "Total Money made by all Staff: " + Staff_Money_  + System.lineSeparator() + "Total money made by the FNCD: " + FNCD_Money_);
+		String filePath = "./Tracker-" + FNCDName_ + ".txt";
+
+		try{
+			File file = new File(filePath);
+			FileWriter writter = new FileWriter(file);
+			writter.write("Tracker: Day: " + day_ + System.lineSeparator() + "Total Money made by all Staff: " + Staff_Money_  + System.lineSeparator() + "Total money made by the FNCD: " + FNCD_Money_);
+			writter.close();
+		} catch (IOException e) {
+			System.out.println("Could not open file " + "Tracker.txt");
+			e.printStackTrace();
+		}
 	}
 }

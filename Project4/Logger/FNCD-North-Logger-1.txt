@@ -1,0 +1,17 @@
+Day: 1
+ Washing, Reparing, and Sales: 
+	Mechanic_24 just repaired Car_109 and made it Used
+	Mechanic_24 just repaired Car_111 and made it Used
+	Mechanic_29 just repaired Car_116 and made it Used
+	Mechanic_29 just repaired Car_98 and made it Used
+	Mechanic_38 just repaired ElectricCar_175 and made it Used
+	Mechanic_38 just repaired MonsterTruck_Captains_Curse and made it Used
+	Salesperson_45 just sold PerformanceCar_82
+	Salesperson_47 just sold PerformanceCar_88
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+16000.0
+Daily money made by FNCD: 
+89187.18324944878

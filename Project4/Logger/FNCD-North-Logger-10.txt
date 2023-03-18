@@ -1,0 +1,14 @@
+Day: 10
+ Washing, Reparing, and Sales: 
+	Mechanic_29 just repaired Moped_1893 and made it Used
+	mechanic_Intern_17 just repaired ElectricCar_175 and made it Like New
+	mechanic_Intern_17 just repaired ElectricCar_182 and made it Like New
+	mechanic_Intern_1536 just repaired ElectricCar_184 and made it Like New
+	mechanic_Intern_1536 just repaired MonsterTruck_Black_Smith and made it Like New
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+33000.0
+Daily money made by FNCD: 
+0.0

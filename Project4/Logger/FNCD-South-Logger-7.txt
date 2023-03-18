@@ -1,0 +1,14 @@
+Day: 7
+ Washing, Reparing, and Sales: 
+	Mechanic_324 just repaired Motorcycle_1564 and made it Used
+	Mechanic_333 just repaired Motorcycle_494 and made it Used
+	Mechanic_333 just repaired Semi_553 and made it Used
+	Mechanic_340 just repaired Transformer_Wheeljack and made it Used
+	Salesperson_347 just sold Transformer_Arcee
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+27500.0
+Daily money made by FNCD: 
+6.032612313167051E8

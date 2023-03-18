@@ -1,0 +1,18 @@
+Day: 2
+ Washing, Reparing, and Sales: 
+	Mechanic_24 just repaired MonsterTruck_Swamp_thing and made it Used
+	Mechanic_24 just repaired Moped_257 and made it Used
+	Mechanic_29 just repaired Moped_264 and made it Used
+	Mechanic_29 just repaired Moped_291 and made it Used
+	Mechanic_38 just repaired Moped_298 and made it Used
+	Mechanic_38 just repaired Moped_303 and made it Used
+	Salesperson_47 just sold Transformer_Starscream, Extended Warranty
+	Salesperson_45 just sold Car_125
+	Salesperson_47 just sold MonsterTruck_King_Krunch, Extended Warranty
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+20000.0
+Daily money made by FNCD: 
+1.680204828454657E9
