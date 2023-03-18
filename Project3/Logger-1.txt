@@ -1,0 +1,15 @@
+Day: 1
+ Washing, Reparing, and Sales: 
+	Mechanic_23 just repaired Car_88 and made it Used
+	Mechanic_28 just repaired ElectricCar_131 and made it Used
+	Mechanic_28 just repaired MonsterTruck_Backwards_Bob and made it Used
+	Mechanic_29 just repaired MonsterTruck_Raminator and made it Used
+	Mechanic_29 just repaired Motorcycle_157 and made it Used
+	Salesperson_32 just sold Pickup_106, Extended Warranty
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+8000.0
+Daily money made by FNCD: 
+25873.013214922263

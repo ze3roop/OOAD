@@ -1,0 +1,16 @@
+Day: 4
+ Washing, Reparing, and Sales: 
+	Mechanic_23 just repaired MonsterTruck_Backwards_Bob and made it Used
+	Mechanic_23 just repaired ElectricCar_126 and made it Like New
+	Mechanic_28 just repaired ElectricCar_131 and made it Like New
+	Mechanic_28 just repaired ElectricCar_139 and made it Like New
+	Mechanic_29 just repaired ElectricCar_140 and made it Like New
+	Mechanic_29 just repaired MonsterTruck_Backwards_Bob and made it Like New
+	salesperson_Intern_4 just sold Pickup_346
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+24700.0
+Daily money made by FNCD: 
+27644.745341081933

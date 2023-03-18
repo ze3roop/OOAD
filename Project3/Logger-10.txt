@@ -1,0 +1,15 @@
+Day: 10
+ Washing, Reparing, and Sales: 
+	Mechanic_23 just repaired PerformanceCar_492 and made it Used
+	Mechanic_23 just repaired MonsterTruck_Air_Force_AfterBurner and made it Like New
+	Mechanic_28 just repaired PerformanceCar_492 and made it Like New
+	salesperson_Intern_4 just sold PerformanceCar_493, Extended Warranty
+	salesperson_Intern_13 just sold ElectricCar_126, Undercoating
+	salesperson_Intern_4 just sold Motorcycle_159
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+65400.0
+Daily money made by FNCD: 
+85753.18108237589

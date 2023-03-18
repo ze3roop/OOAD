@@ -1,0 +1,13 @@
+Day: 8
+ Washing, Reparing, and Sales: 
+	Mechanic_23 just repaired Motorcycle_732 and made it Used
+	Mechanic_23 just repaired PerformanceCar_727 and made it Like New
+	Mechanic_28 just repaired Motorcycle_732 and made it Like New
+	Salesperson_36 just sold MonsterTruck_Lucas_Oil_Crusaider
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+62900.0
+Daily money made by FNCD: 
+104217.77504991266

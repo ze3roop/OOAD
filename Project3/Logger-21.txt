@@ -1,0 +1,12 @@
+Day: 21
+ Washing, Reparing, and Sales: 
+
+Race Attendance Results: 
+	Racer_1740 is a winner!
+	Racer_1701 is a winner!
+	Racer_1637 is a winner!
+
+Daily Money made by Staff: 
+93500.0
+Daily money made by FNCD: 
+0.0

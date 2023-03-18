@@ -1,0 +1,10 @@
+Day: 14
+ Washing, Reparing, and Sales: 
+	Mechanic_28 just repaired Pickup_458 and made it Like New
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+96400.0
+Daily money made by FNCD: 
+0.0

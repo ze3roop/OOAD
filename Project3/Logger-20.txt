@@ -1,0 +1,11 @@
+Day: 20
+ Washing, Reparing, and Sales: 
+	Mechanic_23 just repaired Car_1406 and made it Used
+	Mechanic_23 just repaired Car_1406 and made it Like New
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+124700.0
+Daily money made by FNCD: 
+0.0

@@ -1,0 +1,16 @@
+Day: 7
+ Washing, Reparing, and Sales: 
+	Mechanic_23 just repaired PerformanceCar_492 and made it Used
+	Mechanic_23 just repaired PerformanceCar_492 and made it Like New
+	Mechanic_28 just repaired Pickup_101 and made it Like New
+	Mechanic_29 just repaired Pickup_117 and made it Like New
+	Mechanic_29 just repaired Pickup_458 and made it Like New
+	Salesperson_36 just sold PerformanceCar_58
+	salesperson_Intern_4 just sold Motorcycle_145, Road Rescue Coverage, Satellite Radio
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+54900.0
+Daily money made by FNCD: 
+52782.717069429025
