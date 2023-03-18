@@ -2,13 +2,11 @@ Day: 6
  Washing, Reparing, and Sales: 
 
 Race Attendance Results: 
-	Racer_1576 is a winner!
-	Racer_1596 is a winner!
-	Racer_1585 is a winner!
-	Racer_1643 got Injured in an accident
-	Racer_1577 got Injured in an accident
+	Racer_1597 is a winner!
+	Driver_54 is a winner!
+	Racer_1643 is a winner!
 
 Daily Money made by Staff: 
-6100.0
+23000.0
 Daily money made by FNCD: 
 0.0

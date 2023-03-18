@@ -1,16 +1,13 @@
 Day: 5
  Washing, Reparing, and Sales: 
-	Mechanic_324 just repaired Pickup_454 and made it Used
-	Mechanic_333 just repaired Pickup_471 and made it Used
-	Mechanic_340 just repaired Semi_532 and made it Used
-	Salesperson_344 just sold MonsterTruck_Lucas_Oil_Crusaider, Road Rescue Coverage
-	Salesperson_344 just sold Transformer_Bonecrusher, Extended Warranty
-	Salesperson_341 just sold Motorcycle_519, Undercoating
-	Salesperson_344 just sold PerformanceCar_393, Extended Warranty, Road Rescue Coverage
+	Mechanic_341 just repaired Semi_555 and made it Used
+	Mechanic_345 just repaired Transformer_Arcee and made it Used
+	Mechanic_345 just repaired Transformer_Jazz and made it Used
+	Mechanic_346 just repaired Transformer_Ratchet and made it Used
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-30000.0
+21300.0
 Daily money made by FNCD: 
-7.41731375891775E8
+0.0

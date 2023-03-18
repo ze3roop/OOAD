@@ -1,9 +1,12 @@
 Day: 28
  Washing, Reparing, and Sales: 
+	mechanic_Intern_1466 just repaired Motorcycle_1515 and made it Used
+	mechanic_Intern_1466 just repaired Motorcycle_1515 and made it Like New
+	Salesperson_42 just sold Transformer_Grimlock, Undercoating
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-110400.0
+119800.0
 Daily money made by FNCD: 
-0.0
+3.105140140070388E8

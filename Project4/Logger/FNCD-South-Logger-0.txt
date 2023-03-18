@@ -2,10 +2,10 @@ Day: 0
  Washing, Reparing, and Sales: 
 
 Race Attendance Results: 
-	Driver_364 is a winner!
-	Racer_921 is a winner!
-	Racer_946 is a winner!
-	Racer_843 got Injured in an accident
+	Racer_870 is a winner!
+	Racer_906 is a winner!
+	Racer_1001 is a winner!
+	Racer_950 got Injured in an accident
 
 Daily Money made by Staff: 
 3000.0

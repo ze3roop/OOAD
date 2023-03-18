@@ -1,13 +1,14 @@
 Day: 13
  Washing, Reparing, and Sales: 
-	Mechanic_324 just repaired MonsterTruck_Grave_Digger and made it Used
-	Mechanic_324 just repaired MonsterTruck_Swamp_thing_2 and made it Used
-	Mechanic_340 just repaired MonsterTruck_Captains_Curse_2 and made it Like New
-	Mechanic_340 just repaired MonsterTruck_Grave_Digger and made it Like New
+	Mechanic_341 just repaired MonsterTruck_Bad_News_Travels_Fast and made it Used
+	Mechanic_341 just repaired Semi_2381 and made it Used
+	Mechanic_346 just repaired ElectricCar_2380 and made it Like New
+	Mechanic_346 just repaired MonsterTruck_Bad_News_Travels_Fast and made it Like New
+	mechanic_Intern_1534 just repaired Pickup_458 and made it Like New
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-49800.0
+63100.0
 Daily money made by FNCD: 
 0.0

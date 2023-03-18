@@ -1,13 +1,14 @@
 Day: 26
  Washing, Reparing, and Sales: 
-	Mechanic_324 just repaired Moped_4371 and made it Like New
-	Mechanic_340 just repaired PerformanceCar_4300 and made it Like New
-	Mechanic_340 just repaired Pickup_441 and made it Like New
-	mechanic_Intern_308 just repaired Semi_4358 and made it Like New
+	salesperson_Intern_333 just sold Motorcycle_528
+	salesperson_Intern_333 just sold Motorcycle_542, Extended Warranty
+	salesperson_Intern_333 just sold MonsterTruck_Stone_Crusher
+	salesperson_Intern_1877 just sold Transformer_Arcee
+	salesperson_Intern_2379 just sold PerformanceCar_404
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-157800.0
+97300.0
 Daily money made by FNCD: 
-0.0
+8.625431923975117E8

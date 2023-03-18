@@ -1,15 +1,14 @@
 Day: 16
  Washing, Reparing, and Sales: 
-	Mechanic_324 just repaired Motorcycle_2864 and made it Used
-	Mechanic_324 just repaired Motorcycle_2864 and made it Like New
-	Mechanic_340 just repaired Motorcycle_502 and made it Like New
-	Mechanic_340 just repaired Motorcycle_515 and made it Like New
-	mechanic_Intern_308 just repaired Motorcycle_525 and made it Like New
-	mechanic_Intern_308 just repaired PerformanceCar_373 and made it Like New
+	Mechanic_341 just repaired PerformanceCar_2735 and made it Like New
+	Mechanic_341 just repaired Semi_2381 and made it Like New
+	Mechanic_346 just repaired Semi_550 and made it Like New
+	mechanic_Intern_1534 just repaired Semi_563 and made it Like New
+	Salesperson_350 just sold Moped_619
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-63800.0
+83800.0
 Daily money made by FNCD: 
-0.0
+3807.0243600944796

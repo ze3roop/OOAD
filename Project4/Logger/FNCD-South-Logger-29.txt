@@ -1,12 +1,14 @@
 Day: 29
  Washing, Reparing, and Sales: 
-	Salesperson_341 just sold Transformer_Wheeljack, Undercoating
-	Salesperson_341 just sold Transformer_Ratchet
-	salesperson_Intern_307 just sold Motorcycle_4745, Satellite Radio
+	Mechanic_341 just repaired Pickup_3143 and made it Like New
+	salesperson_Intern_1877 just sold Car_432, Extended Warranty
+	salesperson_Intern_2379 just sold Semi_3150
+	salesperson_Intern_333 just sold Pickup_484
+	salesperson_Intern_2379 just sold Pickup_3143
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-166800.0
+99600.0
 Daily money made by FNCD: 
-5.652903050484388E8
+165130.54994301862

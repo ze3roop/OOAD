@@ -1,15 +1,20 @@
 Day: 5
  Washing, Reparing, and Sales: 
-	Mechanic_29 just repaired PerformanceCar_76 and made it Used
-	Mechanic_29 just repaired Semi_224 and made it Used
-	mechanic_Intern_17 just repaired Semi_249 and made it Used
-	mechanic_Intern_17 just repaired Semi_253 and made it Used
-	Salesperson_45 just sold ElectricCar_181, Extended Warranty, Undercoating
-	Salesperson_45 just sold PerformanceCar_1002
+	Mechanic_14 just repaired Pickup_133 and made it Used
+	Mechanic_14 just repaired Pickup_141 and made it Used
+	Mechanic_31 just repaired Pickup_145 and made it Used
+	Mechanic_31 just repaired Pickup_149 and made it Used
+	mechanic_Intern_7 just repaired Pickup_152 and made it Used
+	mechanic_Intern_7 just repaired Pickup_153 and made it Used
+	Salesperson_42 just sold ElectricCar_176
+	Salesperson_42 just sold Motorcycle_198
+	salesperson_Intern_13 just sold Moped_323
+	salesperson_Intern_13 just sold Motorcycle_218, Road Rescue Coverage
+	salesperson_Intern_13 just sold MonsterTruck_Jurassic_Attack, Extended Warranty, Satellite Radio
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-12200.0
+20000.0
 Daily money made by FNCD: 
-97604.25215849624
+199016.18795757962

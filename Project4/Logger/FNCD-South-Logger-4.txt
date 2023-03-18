@@ -1,14 +1,15 @@
 Day: 4
  Washing, Reparing, and Sales: 
-	Mechanic_324 just repaired PerformanceCar_373 and made it Used
-	Mechanic_324 just repaired PerformanceCar_376 and made it Used
-	Mechanic_333 just repaired PerformanceCar_402 and made it Used
-	Mechanic_340 just repaired Pickup_441 and made it Used
-	Mechanic_340 just repaired Pickup_449 and made it Used
+	Mechanic_341 just repaired Car_1074 and made it Used
+	Mechanic_341 just repaired Pickup_454 and made it Used
+	Mechanic_345 just repaired Pickup_458 and made it Used
+	Mechanic_345 just repaired Pickup_459 and made it Used
+	Mechanic_346 just repaired Pickup_468 and made it Used
+	Mechanic_346 just repaired Semi_550 and made it Used
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-22000.0
+22500.0
 Daily money made by FNCD: 
 0.0

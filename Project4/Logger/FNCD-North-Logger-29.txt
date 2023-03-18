@@ -1,11 +1,15 @@
 Day: 29
  Washing, Reparing, and Sales: 
-	salesperson_Intern_1455 just sold ElectricCar_3352, Extended Warranty
-	salesperson_Intern_1455 just sold Car_116
+	mechanic_Intern_1055 just repaired Transformer_Thrust and made it Used
+	mechanic_Intern_1055 just repaired Transformer_Thrust and made it Like New
+	Salesperson_42 just sold Pickup_152
+	Salesperson_34 just sold PerformanceCar_3641
+	Salesperson_42 just sold Semi_247
+	salesperson_Intern_13 just sold Motorcycle_209
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-113100.0
+129800.0
 Daily money made by FNCD: 
-39130.484622362055
+207596.755348698
