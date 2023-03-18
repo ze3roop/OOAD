@@ -202,9 +202,9 @@ public class Vehicle {
 		public Boolean isElectricCar() 		{ return vehicleType == Types_of_Vehicles.electricCar;}
 		public Boolean isMonserTruck() 		{ return vehicleType == Types_of_Vehicles.monsterTruck;}
 		public Boolean isMotorcycle() 		{ return vehicleType == Types_of_Vehicles.motorcycle;}
-		public Boolean isSemiTruck() 				{ return vehicleType == Types_of_Vehicles.semiTruck; }
-		public Boolean isTransformer() 				{ return vehicleType == Types_of_Vehicles.transformer; }
-		public Boolean isMoped() 				{ return vehicleType == Types_of_Vehicles.moped; }
+		public Boolean isSemiTruck() 		{ return vehicleType == Types_of_Vehicles.semiTruck; }
+		public Boolean isTransformer() 		{ return vehicleType == Types_of_Vehicles.transformer; }
+		public Boolean isMoped() 			{ return vehicleType == Types_of_Vehicles.moped; }
 
 }
 /* =========== DECORATOR =========== */

@@ -1,6 +1,3 @@
-import java.io.FileDescriptor;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -35,8 +32,6 @@ public class FNCD {
 	protected ArrayList<Driver> hospitalizDrivers = new ArrayList<Driver>();
 	
 	protected Integer day;
-
-	protected int daysToSimulate_;
 	protected Double totalSalesPerDay;
 	
 	/*
@@ -44,11 +39,10 @@ public class FNCD {
 	Condtructor
 	----------------------------------------------------------------------
 	 */
-	public FNCD(int daysToSimulate)
+	public FNCD()
 	{
 		budget_ = 500000.0; //INITIAL OPERATING BUDGET 
 		totalSalesPerDay = 0.0;
-		daysToSimulate_ = daysToSimulate;
 		day = 0;
 	}
 
@@ -59,6 +53,8 @@ public class FNCD {
 	private Boolean isBusy() { return (GetDay() == Helper.Names_of_Day.Friday) || (GetDay() == Helper.Names_of_Day.Saturday);}
 
 	private Boolean isRaceDay() { return GetDay() == Helper.Names_of_Day.Sunday || (GetDay() == Helper.Names_of_Day.Wednesday);}
+
+	public void ResetTotalSalesPerDay() {totalSalesPerDay = 0.0;}
 
 	private void HireStaff() {
 		int numInterns = interns.size();
@@ -149,6 +145,8 @@ public class FNCD {
 
 					budget_ -= v.GetCost();
 
+					while (budget_ < 0) {budget_ += 100000.0;}
+
 					System.out.printf("\tPurchased " + v.GetName() + ". For: $%.2f\n",v.GetCost());
 				}
 			}
@@ -183,36 +181,9 @@ public class FNCD {
 		System.out.println("\t-------------------------------------------------------------");
 	}
 	
-	public void Start() {
-		try {
-			// Redirect System.out to a file
-			FileOutputStream fos = new FileOutputStream("SimResults.txt");
-			PrintStream ps = new PrintStream(fos);
-			System.setOut(ps);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-		for (int i = 0; i <= daysToSimulate_; i++) {
-			Opening();
-			totalSalesPerDay = 0.0;
-		}
-		System.out.println("=====================================================");
-		System.out.println("================= End of Simulation =================");
-		System.out.println("=====================================================");
+	public Boolean Opening() {
 
-		try {
-			// Reset System.out to print to terminal
-			System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-		tracker.display();
-		System.out.println("Exiting program");
-	}
-	
-	public void Opening() {
+		System.out.println("Opening...");
 		
 		OBSwashing_repairing_sales = ""; //Possibly change from public 
 		OBSraceAttendance_results = "";
@@ -234,28 +205,22 @@ public class FNCD {
 		for (int i = 0; i < salesPeople.size(); i++){
 			salesPeople.get(i).ResetJobsDOne();
 		}
-
-		System.out.println("\n\n******************************************************************************\n");
-		System.out.println("---- " + Helper.Week[day % 6] + " - FNCD DAY " + day + " ----");
+		
 		OBSday = day.toString();
 
 		HireStaff();
 		BuyVehicles();
 
 		if (isRaceDay()){
-			System.out.println("Race Day...");
-
-			Racing();
+			return true;
 		} else { 
-			System.out.println("Opening...");
-
-			Washing(); 
+			return false;
 		}
-
-		day++;
 	}
 
 	public void Racing() {
+		System.out.println("Race Day...");
+
 		/*
 		Randomly select a type of vehicle to send to the races (regular Cars and Electric Cars do not race, all other types do).
 		*/
@@ -384,7 +349,7 @@ public class FNCD {
 
 		}
 		
-		Ending();
+		
 	}
 	
 	public void Washing() {
@@ -410,7 +375,6 @@ public class FNCD {
 		// for(int i = 0; i < MIN_STAFF; i++){
 		// 	interns.get(i).JobsDone = 2;
 		// }
-		Repairing();
 	}
 	
 	
@@ -475,8 +439,6 @@ public class FNCD {
 			}
 
 		}
-
-		Selling();
 	}
 	
 	public void Selling() {
@@ -685,8 +647,6 @@ public class FNCD {
 			} else { System.out.println("\tno vehiciles to sell, out of stock");}
 		}
 		
-		Ending();
-		
 	}
 
 	void Ending() {
@@ -836,6 +796,8 @@ public class FNCD {
 		for(int i = 0; i < soldVehicles.size(); i++) {
 			System.out.println("\t" + soldVehicles.get(i).getInfo_asString());
 		}
+
+		while (budget_ < 0) {budget_ += 100000.0;}
 
 		// --------- Budget left
 		System.out.printf("\n \t ---- TOTAL MONEY IN BUDGET: %.2f ----\n",budget_);
