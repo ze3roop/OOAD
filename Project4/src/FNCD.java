@@ -12,8 +12,8 @@ public class FNCD {
 	public Double OBSFNCD_Money; 
 	//OBSERVER:
 	FNCD_Data fncd_data = new FNCD_Data();
-	Logger logger = new Logger();
-	Tracker tracker = new Tracker();
+	Logger logger = Logger.getInstance();
+	Tracker tracker = Tracker.getInstance();
 
 
 	protected ArrayList<SalesPerson> salesPeople = new ArrayList<SalesPerson>();
@@ -62,30 +62,32 @@ public class FNCD {
 		int numSalesPeople = salesPeople.size();
 		int numDrivers = drivers.size();
 
+
+		// ============= FACTORY IMPLEMENTATION FOR STAFF ==============
 		if(numInterns < MIN_STAFF) {
 			for (; numInterns < MIN_STAFF; numInterns++) {
-				interns.add( new Intern() );
+				interns.add( (Intern) Staff.Create(Staff.Staff_Types.intern) );
 				System.out.println("\tHired " + interns.get(numInterns).GetName());
 			}
 		}
 
 		if(numMechanics < MIN_STAFF) {
 			for (; numMechanics < MIN_STAFF; numMechanics++) {
-				mechanics.add( new Mechanic() );
+				mechanics.add( (Mechanic) Staff.Create(Staff.Staff_Types.mechanic) );
 				System.out.println("\tHired " + mechanics.get(numMechanics).GetName());
 			}
 		}
 
 		if(numSalesPeople < MIN_STAFF) {
 			for (; numSalesPeople < MIN_STAFF; numSalesPeople++) {
-				salesPeople.add( new SalesPerson() );
+				salesPeople.add( (SalesPerson) Staff.Create(Staff.Staff_Types.salesperson) );
 				System.out.println("\tHired " + salesPeople.get(numSalesPeople).GetName());
 			}
 		}
 
 		if (numDrivers < MIN_STAFF){
 			for (; numDrivers < MIN_STAFF; numDrivers++){
-				drivers.add( new Driver());
+				drivers.add( (Driver) Staff.Create(Staff.Staff_Types.driver) );
 				System.out.println("\tHired " + drivers.get(numDrivers).GetName());
 			}
 		}
@@ -106,39 +108,41 @@ public class FNCD {
 				}
 			}
 
+
+			// ============= FACTORY IMPLEMENTATION FOR VEHICLES ==============
 			if (vehicleCount < MIN_VEHICLES){ // if a vehicle type needs to be bought of type vehicle_type (Vehicle.Types_of_Vehicles.values()[t])
 				int vehiclesNeeded = MIN_VEHICLES - vehicleCount;
 				for (int c = 0; c < vehiclesNeeded; c++){
 					Vehicle v = new Vehicle();
-					if (vehicle_type == Vehicle.Types_of_Vehicles.car){
-						v = new Car();
+					if (vehicle_type == Vehicle.Types_of_Vehicles.car){ //do the factory implementation for vehicles here. v = Vehicle.Create(car) 
+						v = Vehicle.Create(vehicle_type);
 					}
 					else if (vehicle_type == Vehicle.Types_of_Vehicles.electricCar){
-						v = new ElectricCar();
+						v = Vehicle.Create(vehicle_type);
 					}
 					else if (vehicle_type == Vehicle.Types_of_Vehicles.monsterTruck){
-						v = new MonsterTruck();
+						v = Vehicle.Create(vehicle_type);
 					}
 					else if (vehicle_type == Vehicle.Types_of_Vehicles.motorcycle){
-						v = new Motorcycle();
+						v = Vehicle.Create(vehicle_type);
 					}
 					else if (vehicle_type == Vehicle.Types_of_Vehicles.performanceCar){
-						v = new PerformanceCar();
+						v = Vehicle.Create(vehicle_type);
 					}
 					else if (vehicle_type == Vehicle.Types_of_Vehicles.pickup){
-						v = new Pickup();
+						v = Vehicle.Create(vehicle_type);
 					}
 					else if (vehicle_type == Vehicle.Types_of_Vehicles.monsterTruck){
-						v = new MonsterTruck();
+						v = Vehicle.Create(vehicle_type);
 					}
 					else if (vehicle_type == Vehicle.Types_of_Vehicles.transformer){
-						v = new Transformer();
+						v = Vehicle.Create(vehicle_type);
 					}
 					else if (vehicle_type == Vehicle.Types_of_Vehicles.semiTruck){
-						v = new SemiTruck();
+						v = Vehicle.Create(vehicle_type);
 					}
 					else if (vehicle_type == Vehicle.Types_of_Vehicles.moped){
-						v = new Moped();
+						v = Vehicle.Create(vehicle_type);
 					}
 
 					inventory.add(v);
@@ -895,6 +899,20 @@ class Logger implements Observer{
 		they are received to a text file named “Logger-n.txt” where n is the day number 
 		of the simulation.
 	 */
+
+	/* ============== SINGLETON LAZY INSTANTIATION ================ */
+
+	private static Logger instance;
+	private Logger(){}
+	
+	public static Logger getInstance(){
+		if(instance == null){
+			instance = new Logger();
+		}
+		return instance;
+	}
+
+
 	String day_;
 	String washing_repairing_sales_;
 	String raceAttendance_results_;
@@ -929,6 +947,17 @@ class Tracker implements Observer{
 				Total money earned by all Staff: $27500.00
 				Total money earned by the FNCD: $56900.00
 	 */
+
+	/* ============== SINGLETON EAGER INSTANTIATION ================ */
+	private static final Tracker instance = new Tracker();
+
+	private Tracker(){}
+
+	public static Tracker getInstance(){
+		return instance;
+	}
+
+
 	String day_;
 	String washing_repairing_sales_;
 	String raceAttendance_results_;
