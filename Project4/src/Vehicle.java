@@ -1,7 +1,7 @@
 public class Vehicle {
 
 	// enums
-	protected enum Types_of_Vehicles {performanceCar, car, pickup, 
+	public enum Types_of_Vehicles {performanceCar, car, pickup, 
 		electricCar, motorcycle, monsterTruck, 
 		transformer, semiTruck, moped,
 		NILL}
@@ -46,6 +46,43 @@ public class Vehicle {
 		else if (rand == 2) {cleanliness = Types_of_Cleanliness.dirty;}
 		else if (rand == 3) {cleanliness = Types_of_Cleanliness.sparkling;}
     }
+
+
+	// ================== FACTORY ==================
+	/* {performanceCar, car, pickup, 
+		electricCar, motorcycle, monsterTruck, 
+		transformer, semiTruck, moped } */ 
+	static Vehicle Create(Types_of_Vehicles vehicleType_){
+		if(Types_of_Vehicles.performanceCar.compareTo(vehicleType_) == 0){
+			return new PerformanceCar();
+		}
+		else if(Types_of_Vehicles.car.compareTo(vehicleType_) == 0){
+			return new Car();
+		}
+		else if(Types_of_Vehicles.pickup.compareTo(vehicleType_) == 0){
+			return new Pickup();
+		}
+		else if(Types_of_Vehicles.electricCar.compareTo(vehicleType_) == 0){
+			return new ElectricCar();
+		}
+		else if(Types_of_Vehicles.motorcycle.compareTo(vehicleType_) == 0){
+			return new Motorcycle();
+		}
+		else if(Types_of_Vehicles.monsterTruck.compareTo(vehicleType_) == 0){
+			return new MonsterTruck();
+		}
+		else if(Types_of_Vehicles.transformer.compareTo(vehicleType_) == 0){
+			return new Transformer();
+		}
+		else if(Types_of_Vehicles.semiTruck.compareTo(vehicleType_) == 0){
+			return new SemiTruck();
+		}
+		else if(Types_of_Vehicles.moped.compareTo(vehicleType_) == 0){
+			return new Moped();
+		}
+		return null;
+	}
+
 
 	// setter
 	public void SetSalesPrice(Double amount) { salesPrice = (salesPrice * amount) + salesPrice; }

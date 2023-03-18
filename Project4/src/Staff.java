@@ -1,5 +1,8 @@
 /* ============== STAFF SUPER CLASS ============= */
 public class Staff {
+
+	public enum Staff_Types { intern, mechanic, salesperson, driver }
+
 	protected String name = "NILL";
 	protected Double totalSalary = 0.0;
 	protected Integer JobsDone = 0;
@@ -15,6 +18,27 @@ public class Staff {
 	public Double GetTotalSalary() { return totalSalary; }
 	public Double GetBonus() { return bonus_; }
 	
+
+	// ================= FACTORY ====================
+	static Staff Create(Staff_Types staffType_){
+		if(Staff_Types.intern.compareTo(staffType_) == 0){
+			return new Intern();
+		}
+		else if(Staff_Types.mechanic.compareTo(staffType_) == 0){
+			return new Mechanic();
+		}
+		else if(Staff_Types.salesperson.compareTo(staffType_) == 0){
+			return new SalesPerson();
+		}
+		else if(Staff_Types.driver.compareTo(staffType_) == 0){
+			return new Driver();
+		}
+
+
+		return null;
+	}
+
+
 	// public functions
 	public void pay() { totalSalary = totalSalary + dailySalary; }
 	
