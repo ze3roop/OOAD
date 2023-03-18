@@ -1,0 +1,14 @@
+Day: 13
+ Washing, Reparing, and Sales: 
+	Mechanic_23 just repaired Pickup_1020 and made it Used
+	Mechanic_23 just repaired Pickup_458 and made it Used
+	Mechanic_28 just repaired ElectricCar_1021 and made it Like New
+	Mechanic_29 just repaired Pickup_1009 and made it Like New
+	Mechanic_29 just repaired Pickup_1020 and made it Like New
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+91400.0
+Daily money made by FNCD: 
+0.0

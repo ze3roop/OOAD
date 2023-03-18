@@ -1,0 +1,14 @@
+Day: 24
+ Washing, Reparing, and Sales: 
+
+Race Attendance Results: 
+	Racer_1889 is a winner!
+	Racer_1995 is a winner!
+	Racer_1906 is a winner!
+	Racer_1967 got Injured in an accident
+	Racer_1949 got Injured in an accident
+
+Daily Money made by Staff: 
+118000.0
+Daily money made by FNCD: 
+0.0

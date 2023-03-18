@@ -1,0 +1,15 @@
+Day: 11
+ Washing, Reparing, and Sales: 
+	Mechanic_23 just repaired PerformanceCar_958 and made it Like New
+	Mechanic_23 just repaired ElectricCar_967 and made it Like New
+	salesperson_Intern_4 just sold Pickup_113
+	salesperson_Intern_4 just sold Pickup_117
+	salesperson_Intern_13 just sold ElectricCar_140
+	salesperson_Intern_13 just sold Pickup_101
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+79400.0
+Daily money made by FNCD: 
+75216.20822083841

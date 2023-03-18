@@ -1,0 +1,12 @@
+Day: 29
+ Washing, Reparing, and Sales: 
+	Mechanic_23 just repaired Motorcycle_2273 and made it Used
+	Mechanic_23 just repaired Motorcycle_2273 and made it Like New
+	salesperson_Intern_938 just sold MonsterTruck_Predator_2
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+80800.0
+Daily money made by FNCD: 
+106224.17868745435

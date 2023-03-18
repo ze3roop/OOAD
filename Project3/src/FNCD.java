@@ -15,8 +15,8 @@ public class FNCD {
 	public Double OBSFNCD_Money; 
 	//OBSERVER:
 	FNCD_Data fncd_data = new FNCD_Data();
-	Logger logger = new Logger();
-	Tracker tracker = new Tracker();
+	Logger logger = Logger.getInstance();
+	Tracker tracker = Tracker.getInstance();
 
 
 	protected ArrayList<SalesPerson> salesPeople = new ArrayList<SalesPerson>();
@@ -913,6 +913,19 @@ class Logger implements Observer{
 		they are received to a text file named “Logger-n.txt” where n is the day number 
 		of the simulation.
 	 */
+
+	/* ============== SINGLETON LAZY INSTANTIATION ================ */
+
+	private static Logger instance;
+	private Logger(){}
+	
+	public static Logger getInstance(){
+		if(instance == null){
+			instance = new Logger();
+		}
+		return instance;
+	}
+
 	String day_;
 	String washing_repairing_sales_;
 	String raceAttendance_results_;
@@ -963,6 +976,18 @@ class Tracker implements Observer{
 				Total money earned by all Staff: $27500.00
 				Total money earned by the FNCD: $56900.00
 	 */
+
+
+	/* ============== SINGLETON EAGER INSTANTIATION ================ */
+	private static final Tracker instance = new Tracker();
+
+	private Tracker(){}
+
+	public static Tracker getInstance(){
+		return instance;
+	}
+
+
 	String day_;
 	String washing_repairing_sales_;
 	String raceAttendance_results_;

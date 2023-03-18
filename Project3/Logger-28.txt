@@ -1,0 +1,13 @@
+Day: 28
+ Washing, Reparing, and Sales: 
+	Mechanic_23 just repaired PerformanceCar_1827 and made it Used
+	Mechanic_23 just repaired PerformanceCar_1827 and made it Like New
+	salesperson_Intern_938 just sold Motorcycle_1841
+	salesperson_Intern_14 just sold MonsterTruck_Black_Stallion
+
+Race Attendance Results: 
+
+Daily Money made by Staff: 
+130400.0
+Daily money made by FNCD: 
+68505.05545024973
