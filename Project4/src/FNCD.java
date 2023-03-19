@@ -3,6 +3,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator; // FOR OBSERVER
 
+import org.junit.Test;
+
 public class FNCD {
 	public String OBSwashing_repairing_sales; //Possibly change from public 
 	public String OBSraceAttendance_results;
@@ -107,7 +109,6 @@ public class FNCD {
 					vehicleCount ++; // if found one, note it is there, to see how many to buy
 				}
 			}
-
 
 			// ============= FACTORY IMPLEMENTATION FOR VEHICLES ==============
 			if (vehicleCount < MIN_VEHICLES){ // if a vehicle type needs to be bought of type vehicle_type (Vehicle.Types_of_Vehicles.values()[t])
