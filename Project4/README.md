@@ -7,4 +7,5 @@
   - JavaSE-19
   
 ### Note:
-	- I used the same observer for both Logger and Tracker as this was the way I interpreted the instructions.
+	- The screenshot for testing is included in the repository as a PNG. 
+	  The only output confirmation I could find were the check marks next to the test classes, so that is what I sceenshoted. 
