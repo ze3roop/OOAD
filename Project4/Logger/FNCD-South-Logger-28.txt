@@ -1,15 +1,12 @@
 Day: 28
  Washing, Reparing, and Sales: 
-	Mechanic_341 just repaired MonsterTruck_Shell_Camino_3 and made it Used
-	Mechanic_341 just repaired Motorcycle_4466 and made it Used
-	Mechanic_346 just repaired Pickup_3143 and made it Used
-	Mechanic_346 just repaired MonsterTruck_Shell_Camino_3 and made it Like New
-	mechanic_Intern_1897 just repaired Motorcycle_4466 and made it Like New
-	salesperson_Intern_2379 just sold Transformer_Bonecrusher
+	Mechanic_290 just repaired Semi_1514 and made it Used
+	mechanic_Intern_267 just repaired Semi_1514 and made it Like New
+	mechanic_Intern_267 just repaired Transformer_Thrust and made it Like New
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-105300.0
+154800.0
 Daily money made by FNCD: 
-6.428127697017637E8
+0.0

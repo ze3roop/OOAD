@@ -1,15 +1,15 @@
 Day: 8
  Washing, Reparing, and Sales: 
-	Mechanic_14 just repaired Car_120 and made it Like New
-	Mechanic_31 just repaired Car_121 and made it Like New
-	Mechanic_31 just repaired Car_127 and made it Like New
-	mechanic_Intern_1055 just repaired ElectricCar_1508 and made it Like New
-	mechanic_Intern_1055 just repaired ElectricCar_162 and made it Like New
-	Salesperson_34 just sold ElectricCar_1508, Extended Warranty
+	Mechanic_25 just repaired Car_1400 and made it Like New
+	Mechanic_25 just repaired Car_1484 and made it Like New
+	Mechanic_28 just repaired Car_96 and made it Like New
+	mechanic_Intern_10 just repaired ElectricCar_1491 and made it Like New
+	mechanic_Intern_10 just repaired ElectricCar_158 and made it Like New
+	Salesperson_38 just sold Motorcycle_165, Extended Warranty
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-39000.0
+46700.0
 Daily money made by FNCD: 
-60308.650564595024
+53408.9161578379

@@ -1,15 +1,15 @@
 Day: 29
  Washing, Reparing, and Sales: 
-	mechanic_Intern_1055 just repaired Transformer_Thrust and made it Used
-	mechanic_Intern_1055 just repaired Transformer_Thrust and made it Like New
-	Salesperson_42 just sold Pickup_152
-	Salesperson_34 just sold PerformanceCar_3641
-	Salesperson_42 just sold Semi_247
-	salesperson_Intern_13 just sold Motorcycle_209
+	Mechanic_25 just repaired Car_5043 and made it Used
+	Mechanic_28 just repaired PerformanceCar_5034 and made it Like New
+	Mechanic_28 just repaired Car_5043 and made it Like New
+	salesperson_Intern_910 just sold Transformer_Thundercracker
+	Salesperson_38 just sold MonsterTruck_USA, Extended Warranty
+	Salesperson_38 just sold PerformanceCar_5034, Undercoating
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-129800.0
+172700.0
 Daily money made by FNCD: 
-207596.755348698
+6.868081642142545E8

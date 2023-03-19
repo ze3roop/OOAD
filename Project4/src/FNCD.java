@@ -36,6 +36,10 @@ public class FNCD {
 	
 	protected Integer day;
 	protected Double totalSalesPerDay;
+
+	// getters
+
+	public ArrayList<Vehicle> GetInventory() {return inventory;}
 	
 	/*
 	----------------------------------------------------------------------

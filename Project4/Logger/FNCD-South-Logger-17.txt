@@ -1,16 +1,17 @@
 Day: 17
  Washing, Reparing, and Sales: 
-	Mechanic_341 just repaired Semi_568 and made it Like New
-	Mechanic_346 just repaired Semi_574 and made it Like New
-	mechanic_Intern_1897 just repaired Transformer_Arcee and made it Like New
-	Salesperson_350 just sold Moped_1956
-	Salesperson_359 just sold Semi_563, Extended Warranty
-	Salesperson_350 just sold Pickup_468, Extended Warranty
-	salesperson_Intern_1877 just sold PerformanceCar_401, Extended Warranty
+	Mechanic_290 just repaired MonsterTruck_Shell_Camino and made it Like New
+	Mechanic_290 just repaired Moped_1855 and made it Like New
+	mechanic_Intern_281 just repaired Moped_2349 and made it Like New
+	mechanic_Intern_281 just repaired Moped_529 and made it Like New
+	mechanic_Intern_267 just repaired Moped_550 and made it Like New
+	salesperson_Intern_1407 just sold Motorcycle_2332
+	salesperson_Intern_1407 just sold MonsterTruck_BullDozer_2, Extended Warranty
+	salesperson_Intern_1407 just sold Car_366
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-73500.0
+113900.0
 Daily money made by FNCD: 
-251178.00090602765
+132072.50066585405

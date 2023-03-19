@@ -1,13 +1,15 @@
 Day: 20
  Washing, Reparing, and Sales: 
-	Mechanic_341 just repaired Semi_1942 and made it Like New
-	Mechanic_341 just repaired Transformer_Jazz and made it Like New
-	Mechanic_346 just repaired Transformer_Ratchet and made it Like New
-	Mechanic_346 just repaired Transformer_Wheeljack and made it Like New
+	Mechanic_290 just repaired Motorcycle_3340 and made it Like New
+	Mechanic_290 just repaired Motorcycle_452 and made it Like New
+	mechanic_Intern_281 just repaired Motorcycle_461 and made it Like New
+	mechanic_Intern_281 just repaired Motorcycle_466 and made it Like New
+	mechanic_Intern_267 just repaired Motorcycle_470 and made it Like New
+	mechanic_Intern_267 just repaired PerformanceCar_1416 and made it Like New
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-74300.0
+130400.0
 Daily money made by FNCD: 
 0.0

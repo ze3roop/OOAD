@@ -1,13 +1,15 @@
 Day: 1
  Washing, Reparing, and Sales: 
-	Mechanic_341 just repaired Car_421 and made it Used
-	Mechanic_345 just repaired ElectricCar_507 and made it Used
-	Mechanic_346 just repaired ElectricCar_510 and made it Used
-	Salesperson_350 just sold PerformanceCar_412, Extended Warranty
+	Mechanic_290 just repaired Car_385 and made it Used
+	Mechanic_290 just repaired Car_391 and made it Used
+	Mechanic_297 just repaired ElectricCar_424 and made it Used
+	Mechanic_297 just repaired ElectricCar_441 and made it Used
+	Salesperson_304 just sold Transformer_Ratchet
+	Salesperson_304 just sold Semi_495, Extended Warranty
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-11000.0
+5500.0
 Daily money made by FNCD: 
-77761.27059415544
+7.80452223469931E8

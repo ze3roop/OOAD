@@ -85,14 +85,32 @@ public class Vehicle {
 	public String GetName() { return name; }
 	public Double GetSalesPrice() { return salesPrice; }
 	public Types_of_Vehicles GetType() { return vehicleType; }
+	public int GetRange() {return range;}
+	public double getEngine() {return engineSize;}
+	public String getFaction_String() {
+		String Faction_str = "";
+		
+		if (isTransformer()){ 
+			if (Faction == Transformer_Faction.Autobot) {Faction_str = "Autobot";}
+			else if (Faction == Transformer_Faction.Combiner) {Faction_str = "Combiner";}
+			else if (Faction == Transformer_Faction.Cybertronians) {Faction_str = "Cybertronian";}
+			else if (Faction == Transformer_Faction.Deceptecon) {Faction_str = "Deceptecon";}
+			else if (Faction == Transformer_Faction.Dinobot) {Faction_str = "DinoBot";}
+			else if (Faction == Transformer_Faction.Maximal) {Faction_str = "Maximal";}
+			else if (Faction == Transformer_Faction.MiniCon) {Faction_str = "Mini-Con";}
+			else if (Faction == Transformer_Faction.Predacon) {Faction_str = "Predacon";}
+		} else {Faction_str = "N/A";}
+
+		return Faction_str;
+	}
 	
 	public String getInfo_asString() {
 
 		String name_str = name;
-		String salesPrice_Str = String.valueOf( (double) Math.round(salesPrice * 100) / 100);;
+		double salesPrice_Str = (double) Math.round(salesPrice * 100) / 100;
 		String condition_str = "N/A";
 		String cleanliness_str = "N/A";
-		String cost_str = String.valueOf( (double) Math.round(cost * 100) / 100);;
+		double cost_str = (double) Math.round(cost * 100) / 100;
 
 		String vehicleType_str = "N/A";
 
@@ -141,7 +159,7 @@ public class Vehicle {
 			else if (Faction == Transformer_Faction.Predacon) {Faction_str = "Predacon";}
 		}
 
-		return String.format("%-35s%-20s%-20s%-20s%-20s%-20s%-20s%-20s%-20s%-20s",
+		return String.format("%-35s%-20.2f%-20s%-20s%-20.2f%-20s%-20s%-20s%-20s%-20s",
 		name_str,
 		salesPrice_Str,
 		condition_str,

@@ -1,11 +1,14 @@
 Day: 23
  Washing, Reparing, and Sales: 
-	salesperson_Intern_1877 just sold ElectricCar_2380, Extended Warranty
-	salesperson_Intern_2379 just sold ElectricCar_507, Extended Warranty
+	Mechanic_290 just repaired Pickup_2811 and made it Like New
+	Mechanic_290 just repaired Pickup_404 and made it Like New
+	mechanic_Intern_267 just repaired Pickup_407 and made it Like New
+	mechanic_Intern_1500 just repaired Semi_1514 and made it Like New
+	Salesperson_313 just sold Transformer_Bonecrusher
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-83300.0
+139800.0
 Daily money made by FNCD: 
-89141.09074272202
+5.789222547521654E8
