@@ -47,6 +47,10 @@ public class test {
         Vehicle.Types_of_Vehicles type8 = Vehicle.Types_of_Vehicles.semiTruck;
         SemiTruck c8 = new SemiTruck();
         assertEquals(VehicleFactory(type8).GetType(),c8.GetType());
+
+        Vehicle.Types_of_Vehicles type9 = Vehicle.Types_of_Vehicles.moped;
+        Moped c9 = new Moped();
+        assertEquals(VehicleFactory(type9).GetType(),c9.GetType());
     }
 
 
