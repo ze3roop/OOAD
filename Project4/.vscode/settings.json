@@ -2,7 +2,8 @@
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
+        "lib/**/*.jar", "C:\\Users\\evant\\Downloads\\junit-4.10.jar"
+
     ],
     "files.watcherExclude": {
         "**/target": true

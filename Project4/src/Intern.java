@@ -2,6 +2,9 @@ class Intern extends Staff
 {
 	Algorithm alg = null;
 
+	//for testing purposes
+	public String algType;
+
 	public Intern() {
 		super(); // invoking base-class Staff constructor. (This will call the createName() function
 		dailySalary = 100.0; // whatever the base salary for Interns is 
@@ -12,12 +15,18 @@ class Intern extends Staff
 		int rand = Helper.RandInt(0, 2);
 		if(rand == 0){
 			alg = new Algorithm(new Chemical());
+			//for testing purposes
+			algType = "Chemical";
 		}
 		else if (rand == 1){
 			alg = new Algorithm(new ElbowGrease());
+			//for testing purposes
+			algType = "ElbowGrease";
 		}
 		else{
 			alg = new Algorithm(new Detailed());
+			//for testing purposes
+			algType = "Detailed";
 		}
 		
 	}

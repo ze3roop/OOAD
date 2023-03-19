@@ -4,6 +4,7 @@
 
 ---- Sunday - FNCD North DAY 0 ----
 Opening...
+<<<<<<< HEAD
 	Hired Intern_2
 	Hired Intern_10
 	Hired Intern_14
@@ -9247,3 +9248,166 @@ Ending...
 =====================================================
 ================= End of Simulation =================
 =====================================================
+=======
+	Hired Intern_4
+	Hired Intern_9
+	Hired Intern_11
+	Hired Mechanic_20
+	Hired Mechanic_22
+	Hired Mechanic_31
+	Hired Salesperson_37
+	Hired Salesperson_40
+	Hired Salesperson_43
+	Hired Driver_52
+	Hired Driver_56
+	Hired Driver_59
+	Purchased PerformanceCar_64. For: $13793.33
+	Purchased PerformanceCar_69. For: $10951.35
+	Purchased PerformanceCar_76. For: $6845.41
+	Purchased PerformanceCar_77. For: $15320.31
+	Purchased PerformanceCar_82. For: $17421.04
+	Purchased PerformanceCar_88. For: $15186.46
+	Purchased Car_92. For: $7967.50
+	Purchased Car_101. For: $5539.18
+	Purchased Car_102. For: $7879.74
+	Purchased Car_109. For: $6258.51
+	Purchased Car_116. For: $10677.43
+	Purchased Car_121. For: $3198.89
+	Purchased Pickup_130. For: $10466.53
+	Purchased Pickup_137. For: $11389.18
+	Purchased Pickup_145. For: $23045.26
+	Purchased Pickup_146. For: $17405.02
+	Purchased Pickup_155. For: $6294.48
+	Purchased Pickup_159. For: $5666.30
+	Purchased ElectricCar_163. For: $7247.78
+	Purchased ElectricCar_170. For: $14259.56
+	Purchased ElectricCar_176. For: $21546.51
+	Purchased ElectricCar_179. For: $31805.87
+	Purchased ElectricCar_181. For: $7037.48
+	Purchased ElectricCar_183. For: $22639.75
+	Purchased Motorcycle_187. For: $6013.17
+	Purchased Motorcycle_189. For: $12424.35
+	Purchased Motorcycle_198. For: $7278.39
+	Purchased Motorcycle_206. For: $15030.20
+	Purchased Motorcycle_209. For: $13201.84
+	Purchased Motorcycle_217. For: $6045.87
+	Purchased MonsterTruck_Blue_Thunder. For: $10253.62
+	Purchased MonsterTruck_Backwards_Bob. For: $27963.67
+	Purchased MonsterTruck_Bad_News_Travels_Fast. For: $27945.55
+	Purchased MonsterTruck_Grinder. For: $19920.82
+	Purchased MonsterTruck_Jurassic_Attack. For: $15974.11
+	Purchased MonsterTruck_Brutus. For: $21835.29
+	Purchased Transformer_BumbleBee. For: $382240743.27
+	Purchased Transformer_Optimus_Prime. For: $62588694.24
+	Purchased Transformer_Megatron. For: $225679691.74
+	Purchased Transformer_Starscream. For: $156277904.45
+	Purchased Transformer_Grimlock. For: $523739637.82
+	Purchased Transformer_Thundercracker. For: $218337474.81
+	Purchased Semi_225. For: $58022.63
+	Purchased Semi_230. For: $35152.26
+	Purchased Semi_234. For: $59328.14
+	Purchased Semi_240. For: $141431.90
+	Purchased Semi_249. For: $34203.29
+	Purchased Semi_255. For: $28312.05
+	Purchased Moped_267. For: $257.20
+	Purchased Moped_282. For: $395.15
+	Purchased Moped_290. For: $608.44
+	Purchased Moped_293. For: $853.19
+	Purchased Moped_303. For: $892.23
+	Purchased Moped_314. For: $567.31
+---- Sunday - FNCD South DAY 0 ----
+Opening...
+	Hired Intern_320
+	Hired Intern_328
+	Hired Intern_331
+	Hired Mechanic_336
+	Hired Mechanic_341
+	Hired Mechanic_343
+	Hired Salesperson_350
+	Hired Salesperson_354
+	Hired Salesperson_363
+	Hired Driver_368
+	Hired Driver_369
+	Hired Driver_372
+	Purchased PerformanceCar_380. For: $11363.59
+	Purchased PerformanceCar_385. For: $12298.79
+	Purchased PerformanceCar_386. For: $10079.03
+	Purchased PerformanceCar_394. For: $16490.16
+	Purchased PerformanceCar_395. For: $10809.76
+	Purchased PerformanceCar_399. For: $12201.76
+	Purchased Car_406. For: $8389.56
+	Purchased Car_413. For: $6724.98
+	Purchased Car_416. For: $7633.54
+	Purchased Car_419. For: $3528.54
+	Purchased Car_425. For: $5831.04
+	Purchased Car_434. For: $5881.78
+	Purchased Pickup_437. For: $9444.31
+	Purchased Pickup_440. For: $37816.34
+	Purchased Pickup_449. For: $26636.01
+	Purchased Pickup_457. For: $20512.36
+	Purchased Pickup_462. For: $17343.53
+	Purchased Pickup_464. For: $11235.34
+	Purchased ElectricCar_466. For: $12434.93
+	Purchased ElectricCar_474. For: $12173.40
+	Purchased ElectricCar_477. For: $32972.26
+	Purchased ElectricCar_483. For: $13270.59
+	Purchased ElectricCar_492. For: $9685.98
+	Purchased ElectricCar_495. For: $15502.09
+	Purchased Motorcycle_499. For: $22296.96
+	Purchased Motorcycle_500. For: $10714.93
+	Purchased Motorcycle_507. For: $19115.32
+	Purchased Motorcycle_508. For: $6407.84
+	Purchased Motorcycle_513. For: $17958.20
+	Purchased Motorcycle_518. For: $9904.88
+	Purchased MonsterTruck_Captains_Curse. For: $22615.47
+	Purchased MonsterTruck_Zombie. For: $24305.91
+	Purchased MonsterTruck_Monster_Mutt. For: $32952.78
+	Purchased MonsterTruck_King_Krunch. For: $56870.07
+	Purchased MonsterTruck_Avenger. For: $9660.31
+	Purchased MonsterTruck_Bearfoot. For: $29022.89
+	Purchased Transformer_Rodimus_Prime. For: $299475209.32
+	Purchased Transformer_Arcee. For: $197794291.60
+	Purchased Transformer_Jazz. For: $299219076.40
+	Purchased Transformer_Ratchet. For: $226117612.92
+	Purchased Transformer_Bonecrusher. For: $320256641.61
+	Purchased Transformer_Wheeljack. For: $718065922.67
+	Purchased Semi_520. For: $16812.02
+	Purchased Semi_526. For: $123296.73
+	Purchased Semi_531. For: $36416.04
+	Purchased Semi_535. For: $14639.72
+	Purchased Semi_541. For: $54678.85
+	Purchased Semi_545. For: $20360.71
+	Purchased Moped_552. For: $700.93
+	Purchased Moped_565. For: $170.68
+	Purchased Moped_578. For: $774.37
+	Purchased Moped_595. For: $744.58
+	Purchased Moped_604. For: $742.59
+	Purchased Moped_616. For: $2035.43
+-----------------North-----------------
+Race Day...
+	Position  Racer                racing in          Vehicle                                  message                      
+	1         Racer_667            racing in          Motorcycle_669                           is a winner!                 
+	2         Racer_660            racing in          Motorcycle_665                           is a winner!                 
+	3         Driver_56            racing in          Motorcycle_187                           is a winner!                 
+	4         Racer_713            racing in          Motorcycle_714                                                        
+	5         Racer_705            racing in          Motorcycle_706                                                        
+	6         Racer_739            racing in          Motorcycle_747                                                        
+	7         Racer_736            racing in          Motorcycle_738                                                        
+	8         Racer_773            racing in          Motorcycle_776                                                        
+	9         Driver_52            racing in          Motorcycle_187                                                        
+	10        Racer_787            racing in          Motorcycle_790                                                        
+	11        Racer_797            racing in          Motorcycle_799                                                        
+	12        Racer_680            racing in          Motorcycle_687                                                        
+	13        Racer_696            racing in          Motorcycle_698                                                        
+	14        Racer_778            racing in          Motorcycle_785                                                        
+	15        Racer_753            racing in          Motorcycle_757                                                        
+	16        Racer_723            racing in          Motorcycle_729                                                        
+	17        Driver_59            racing in          Motorcycle_187                                                        
+	18        Racer_764            racing in          Motorcycle_765                           got Injured in an accident   
+	19        Racer_670            racing in          Motorcycle_679                                                        
+	20        Racer_644            racing in          Motorcycle_652                                                        
+-----------------South-----------------
+Race Day...
+	Position  Racer                racing in          Vehicle                                  message                      
+	1         Racer_842            racing in          MonsterTruck_Snake_Bite                  is a winner!                 
+>>>>>>> 8c2a89345b50bb5d9cfc5d6a266e4a60b26cf04c
