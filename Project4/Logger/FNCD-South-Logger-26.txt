@@ -1,14 +1,10 @@
 Day: 26
  Washing, Reparing, and Sales: 
-	Mechanic_290 just repaired Semi_476 and made it Like New
-	mechanic_Intern_267 just repaired Semi_488 and made it Like New
-	mechanic_Intern_267 just repaired Semi_971 and made it Like New
-	mechanic_Intern_1500 just repaired Transformer_Jazz and made it Like New
-	mechanic_Intern_1500 just repaired Transformer_Rodimus_Prime and made it Like New
+	salesperson_Intern_2774 just sold Pickup_2779, Extended Warranty
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-148800.0
+111900.0
 Daily money made by FNCD: 
-0.0
+33732.37715851477

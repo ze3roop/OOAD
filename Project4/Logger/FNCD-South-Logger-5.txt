@@ -1,18 +1,15 @@
 Day: 5
  Washing, Reparing, and Sales: 
-	Mechanic_290 just repaired Motorcycle_470 and made it Used
-	Mechanic_290 just repaired Pickup_404 and made it Used
-	mechanic_Intern_281 just repaired Pickup_407 and made it Used
-	mechanic_Intern_281 just repaired Semi_476 and made it Used
-	mechanic_Intern_267 just repaired Transformer_Bonecrusher and made it Used
-	Salesperson_311 just sold PerformanceCar_346, Extended Warranty
-	Salesperson_311 just sold Semi_487
-	Salesperson_304 just sold ElectricCar_428
-	Salesperson_311 just sold Moped_502, Extended Warranty
+	Mechanic_297 just repaired Pickup_390 and made it Used
+	Mechanic_297 just repaired Pickup_403 and made it Used
+	Mechanic_303 just repaired Pickup_412 and made it Used
+	Mechanic_303 just repaired Pickup_419 and made it Used
+	Mechanic_307 just repaired Semi_514 and made it Used
+	salesperson_Intern_294 just sold Semi_527
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-21900.0
+23100.0
 Daily money made by FNCD: 
-254283.3411686039
+153693.30216549485

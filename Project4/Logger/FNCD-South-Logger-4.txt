@@ -1,13 +1,16 @@
 Day: 4
  Washing, Reparing, and Sales: 
-	Mechanic_290 just repaired MonsterTruck_Batman and made it Used
-	Mechanic_297 just repaired Motorcycle_452 and made it Used
-	mechanic_Intern_281 just repaired Motorcycle_461 and made it Used
-	Salesperson_313 just sold PerformanceCar_344, Undercoating
+	Mechanic_297 just repaired Motorcycle_457 and made it Used
+	Mechanic_303 just repaired Motorcycle_960 and made it Used
+	Mechanic_303 just repaired PerformanceCar_337 and made it Used
+	Mechanic_307 just repaired PerformanceCar_339 and made it Used
+	Mechanic_307 just repaired Pickup_387 and made it Used
+	Salesperson_312 just sold Car_360, Extended Warranty
+	salesperson_Intern_294 just sold Car_377, Road Rescue Coverage
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-17000.0
+20100.0
 Daily money made by FNCD: 
-54482.45720288274
+63338.85404150751

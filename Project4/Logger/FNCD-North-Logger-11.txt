@@ -1,15 +1,17 @@
 Day: 11
  Washing, Reparing, and Sales: 
-	Mechanic_25 just repaired MonsterTruck_Jurassic_Attack and made it Like New
-	Mechanic_25 just repaired MonsterTruck_Swamp_thing and made it Like New
-	Mechanic_28 just repaired Moped_223 and made it Like New
-	mechanic_Intern_10 just repaired Moped_232 and made it Like New
-	salesperson_Intern_1802 just sold MonsterTruck_Jurassic_Attack
-	Salesperson_30 just sold Pickup_132
+	Mechanic_13 just repaired Moped_265 and made it Like New
+	Mechanic_13 just repaired Motorcycle_1279 and made it Like New
+	Mechanic_19 just repaired Motorcycle_172 and made it Like New
+	Mechanic_28 just repaired Motorcycle_176 and made it Like New
+	Mechanic_28 just repaired Motorcycle_179 and made it Like New
+	salesperson_Intern_5 just sold Semi_219, Extended Warranty, Undercoating
+	salesperson_Intern_5 just sold Car_91, Extended Warranty
+	Salesperson_31 just sold Moped_265
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-57700.0
+46800.0
 Daily money made by FNCD: 
-99478.83519434575
+216207.64549331836

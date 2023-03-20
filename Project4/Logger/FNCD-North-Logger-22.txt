@@ -1,16 +1,16 @@
 Day: 22
  Washing, Reparing, and Sales: 
-	Mechanic_25 just repaired Pickup_118 and made it Used
-	Mechanic_28 just repaired Moped_3713 and made it Like New
-	mechanic_Intern_10 just repaired Pickup_118 and made it Like New
-	mechanic_Intern_10 just repaired Transformer_Starscream and made it Like New
-	Salesperson_30 just sold Car_116
-	Salesperson_30 just sold Moped_3713
-	Salesperson_38 just sold PerformanceCar_3315
+	Mechanic_28 just repaired Transformer_BumbleBee and made it Like New
+	mechanic_Intern_2 just repaired Transformer_Crunk and made it Like New
+	mechanic_Intern_2 just repaired Transformer_Megatron and made it Like New
+	mechanic_Intern_3178 just repaired Transformer_Optimus_Prime and made it Like New
+	mechanic_Intern_3178 just repaired Transformer_Starscream and made it Like New
+	Salesperson_33 just sold MonsterTruck_Shell_Camino
+	salesperson_Intern_2287 just sold Transformer_Megatron
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-133100.0
+73700.0
 Daily money made by FNCD: 
-48657.61660574301
+4.0968493477271426E8

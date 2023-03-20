@@ -1,12 +1,11 @@
 Day: 29
  Washing, Reparing, and Sales: 
-	Salesperson_311 just sold MonsterTruck_Batman, Extended Warranty, Satellite Radio
-	Salesperson_311 just sold Moped_2826
-	Salesperson_311 just sold Pickup_3233
+	salesperson_Intern_3291 just sold Car_373
+	salesperson_Intern_2774 just sold ElectricCar_4254
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-117800.0
+125400.0
 Daily money made by FNCD: 
-100680.32282325027
+46938.8663042063

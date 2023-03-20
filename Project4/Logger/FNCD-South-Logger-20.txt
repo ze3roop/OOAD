@@ -1,15 +1,16 @@
 Day: 20
  Washing, Reparing, and Sales: 
-	Mechanic_290 just repaired Motorcycle_3340 and made it Like New
-	Mechanic_290 just repaired Motorcycle_452 and made it Like New
-	mechanic_Intern_281 just repaired Motorcycle_461 and made it Like New
-	mechanic_Intern_281 just repaired Motorcycle_466 and made it Like New
-	mechanic_Intern_267 just repaired Motorcycle_470 and made it Like New
-	mechanic_Intern_267 just repaired PerformanceCar_1416 and made it Like New
+	Mechanic_303 just repaired PerformanceCar_3299 and made it Like New
+	Mechanic_307 just repaired Semi_1348 and made it Like New
+	mechanic_Intern_1753 just repaired Transformer_Arcee and made it Like New
+	mechanic_Intern_1753 just repaired Transformer_Bonecrusher and made it Like New
+	salesperson_Intern_2774 just sold Transformer_Thrust
+	salesperson_Intern_280 just sold Moped_560, Road Rescue Coverage
+	salesperson_Intern_280 just sold Transformer_Arcee, Satellite Radio
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-130400.0
+92800.0
 Daily money made by FNCD: 
-0.0
+1.4207370827557015E9

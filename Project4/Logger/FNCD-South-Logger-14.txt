@@ -1,16 +1,14 @@
 Day: 14
  Washing, Reparing, and Sales: 
-	Mechanic_290 just repaired Pickup_2752 and made it Used
-	Mechanic_290 just repaired Moped_2761 and made it Used
-	mechanic_Intern_281 just repaired MonsterTruck_Black_Smith and made it Like New
-	mechanic_Intern_267 just repaired MonsterTruck_King_Krunch and made it Like New
-	Salesperson_311 just sold Moped_2761
-	Salesperson_311 just sold PerformanceCar_333, Road Rescue Coverage
-	Salesperson_313 just sold Pickup_396
+	Mechanic_303 just repaired PerformanceCar_352 and made it Like New
+	Mechanic_307 just repaired PerformanceCar_354 and made it Like New
+	mechanic_Intern_1253 just repaired Pickup_387 and made it Like New
+	mechanic_Intern_1253 just repaired Pickup_403 and made it Like New
+	Salesperson_312 just sold PerformanceCar_349, Extended Warranty
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-100400.0
+83800.0
 Daily money made by FNCD: 
-73064.81502277333
+30224.233113324248

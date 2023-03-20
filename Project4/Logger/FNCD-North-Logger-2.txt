@@ -1,13 +1,15 @@
 Day: 2
  Washing, Reparing, and Sales: 
-	Mechanic_25 just repaired MonsterTruck_Swamp_thing and made it Used
-	Mechanic_25 just repaired Moped_223 and made it Used
-	Mechanic_28 just repaired Motorcycle_167 and made it Used
-	mechanic_Intern_10 just repaired Motorcycle_172 and made it Used
+	Mechanic_13 just repaired MonsterTruck_Stone_Crusher and made it Used
+	Mechanic_13 just repaired Moped_257 and made it Used
+	Mechanic_19 just repaired Motorcycle_179 and made it Used
+	Mechanic_28 just repaired PerformanceCar_64 and made it Used
+	Mechanic_28 just repaired PerformanceCar_71 and made it Used
+	Salesperson_31 just sold Transformer_Grimlock, Extended Warranty, Road Rescue Coverage
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-13500.0
+14000.0
 Daily money made by FNCD: 
-0.0
+5.092329602712353E8

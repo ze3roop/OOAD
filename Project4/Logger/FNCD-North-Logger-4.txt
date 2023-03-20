@@ -1,15 +1,15 @@
 Day: 4
  Washing, Reparing, and Sales: 
-	Mechanic_25 just repaired PerformanceCar_62 and made it Used
-	Mechanic_28 just repaired PerformanceCar_70 and made it Used
-	Mechanic_28 just repaired Pickup_141 and made it Used
-	mechanic_Intern_10 just repaired Semi_201 and made it Used
-	mechanic_Intern_10 just repaired Semi_204 and made it Used
-	Salesperson_38 just sold Car_90
+	Mechanic_13 just repaired MonsterTruck_Bounty_Hunter and made it Used
+	Mechanic_19 just repaired PerformanceCar_88 and made it Used
+	Mechanic_28 just repaired Pickup_128 and made it Used
+	Mechanic_28 just repaired Pickup_140 and made it Used
+	Salesperson_31 just sold Motorcycle_184
+	Salesperson_33 just sold Car_108, Satellite Radio
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-22000.0
+22500.0
 Daily money made by FNCD: 
-14793.179775318737
+59994.12803735417

@@ -1,12 +1,15 @@
 Day: 16
  Washing, Reparing, and Sales: 
-	Mechanic_290 just repaired Pickup_2811 and made it Used
-	mechanic_Intern_267 just repaired MonsterTruck_Grinder_2 and made it Like New
-	Salesperson_313 just sold Pickup_418
+	Mechanic_303 just repaired Motorcycle_2792 and made it Used
+	Mechanic_303 just repaired PerformanceCar_2822 and made it Used
+	Mechanic_307 just repaired Motorcycle_2792 and made it Like New
+	Mechanic_307 just repaired PerformanceCar_2822 and made it Like New
+	mechanic_Intern_1253 just repaired Pickup_2779 and made it Like New
+	mechanic_Intern_1253 just repaired Pickup_2784 and made it Like New
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-108400.0
+98800.0
 Daily money made by FNCD: 
-23558.47389051017
+0.0

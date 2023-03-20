@@ -1,13 +1,15 @@
 Day: 2
  Washing, Reparing, and Sales: 
-	Mechanic_290 just repaired ElectricCar_450 and made it Used
-	Mechanic_290 just repaired MonsterTruck_King_Krunch and made it Used
-	Mechanic_297 just repaired Moped_529 and made it Used
-	mechanic_Intern_281 just repaired Moped_550 and made it Used
+	Mechanic_297 just repaired ElectricCar_434 and made it Used
+	Mechanic_297 just repaired MonsterTruck_BullDozer and made it Used
+	Mechanic_303 just repaired Moped_539 and made it Used
+	Mechanic_307 just repaired Motorcycle_457 and made it Used
+	Mechanic_307 just repaired Motorcycle_481 and made it Used
+	Salesperson_314 just sold Transformer_Jazz
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-8500.0
+11500.0
 Daily money made by FNCD: 
-0.0
+1.0532230666115665E9

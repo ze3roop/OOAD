@@ -1,12 +1,9 @@
 Day: 26
  Washing, Reparing, and Sales: 
-	Mechanic_25 just repaired PerformanceCar_4007 and made it Like New
-	Mechanic_25 just repaired Semi_4094 and made it Like New
-	salesperson_Intern_910 just sold PerformanceCar_89, Undercoating, Road Rescue Coverage
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-138700.0
+47600.0
 Daily money made by FNCD: 
-32597.295254366098
+0.0

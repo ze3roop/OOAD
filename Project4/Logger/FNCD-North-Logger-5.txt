@@ -1,17 +1,14 @@
 Day: 5
  Washing, Reparing, and Sales: 
-	Mechanic_25 just repaired Transformer_BumbleBee and made it Used
-	Mechanic_25 just repaired Transformer_Starscream and made it Used
-	Mechanic_28 just repaired Car_1400 and made it Used
-	Mechanic_28 just repaired Car_100 and made it Like New
-	mechanic_Intern_10 just repaired Car_110 and made it Like New
-	Salesperson_40 just sold ElectricCar_155, Extended Warranty
-	Salesperson_30 just sold Car_103
-	Salesperson_40 just sold Transformer_Grimlock
+	Mechanic_13 just repaired Semi_194 and made it Used
+	Mechanic_19 just repaired Semi_197 and made it Used
+	Mechanic_28 just repaired Transformer_Megatron and made it Used
+	Mechanic_28 just repaired Transformer_Thundercracker and made it Used
+	Salesperson_31 just sold PerformanceCar_81
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-32500.0
+30500.0
 Daily money made by FNCD: 
-8.677250709736522E8
+56800.19877970148

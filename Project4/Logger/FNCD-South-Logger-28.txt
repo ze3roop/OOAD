@@ -1,12 +1,11 @@
 Day: 28
  Washing, Reparing, and Sales: 
-	Mechanic_290 just repaired Semi_1514 and made it Used
-	mechanic_Intern_267 just repaired Semi_1514 and made it Like New
-	mechanic_Intern_267 just repaired Transformer_Thrust and made it Like New
+	Mechanic_303 just repaired Pickup_2784 and made it Used
+	Mechanic_303 just repaired Pickup_2784 and made it Like New
 
 Race Attendance Results: 
 
 Daily Money made by Staff: 
-154800.0
+119900.0
 Daily money made by FNCD: 
 0.0
