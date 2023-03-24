@@ -12,11 +12,13 @@ and health that can be upgraded through leveling up.
 **Language:** C++
 
 ## workload
+
 **Evan Thompson:**
 - Environment
 - Main Character and Enemy Implementation
 - Implementing Weapons, including different types
 - Implementing Game Manager
+- 
 **Aaron Grissom:**
 - Inventory management including UI
 - Enemy Logic
