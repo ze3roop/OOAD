@@ -8,4 +8,10 @@ size 383
 
 The executible to run the game is in the main directory in the folder Build. The game should start when you run it. We had some trouble with using github with the Unity Editor. You have to downloand and install git lfs, but that sometimes doesn't work either. Whenever Anthony tried to pull the project, git would delete assets from the build. Let me know if you run into the same problem and I will do what I can to help. If worse comes to worse you may have to look at the code separately using an IDE or through github. If for some reason the executible doesn't work either (another problem we were having), try downloading  it through this google drive link: https://drive.google.com/drive/folders/1BkRyXLyCa7tqZTlGk4PGPuhQUcz_mAOS?usp=sharing 
 
+Here's the google drive to editor version of our project: https://drive.google.com/drive/folders/1NDUTqYAQS0EfFO_m9599uyy__n8q4UTB?usp=sharing
+
 Sorry, I don't know what to do with Github/Unity, thank you!
+
+Video presentation included in the main directory as a zip file (youtube wouldn't let us upload the video because it was too long). 
+
+
